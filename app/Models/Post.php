@@ -10,7 +10,7 @@ class Post extends Model
     use HasFactory;
 
     protected $fillable = [
-        'titlu', 'slug', 'continut', 'imagine_principala', 'meta_titlu', 'meta_descriere'
+        'titlu', 'slug', 'continut', 'imagine_principala', 'meta_titlu', 'meta_descriere', 'published_at'
     ];
 
     public function tags()

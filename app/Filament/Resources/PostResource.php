@@ -16,8 +16,9 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\FileUpload;
-use App\Filament\Resources\PostResource\Pages;
+use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\MarkdownEditor;
+use App\Filament\Resources\PostResource\Pages;
 
 class PostResource extends Resource
 {
@@ -39,6 +40,9 @@ class PostResource extends Resource
                 Textarea::make('meta_descriere')->required(),
                 MarkdownEditor::make('continut')->required()->columnSpanFull(),
                 FileUpload::make('imagine_principala')->image()->required(),
+                DateTimePicker::make('published_at')
+                ->label('Publicat la')
+                ->nullable(), 
                 
                 Select::make('tags')
                     ->multiple()
