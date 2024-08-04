@@ -1,172 +1,831 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="ro">
 
-        <title>Laravel</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agenția Click Studios Digital din Baia Mare oferă servicii profesionale de dezvoltare web, web design, marketing digital, SEO, și producție audio-video pentru creșterea prezenței online." />
+<meta name="keywords" content="Click Studios Digital, agenție marketing digital, dezvoltare web, servicii SEO, web design responsiv, e-commerce, strategii marketing online, optimizare site, creștere trafic organic, campanii PPC, social media marketing, content marketing, consultanță digitală, agenție web Baia Mare" />    
+    <!-- Open Graph Tags for Social Media Sharing -->
+    <meta property="og:title" content="Click Studios - Dezvoltare Web & Marketing Digital" />
+    <meta property="og:description" content="Agenția Click Studios Digital din Baia Mare oferă servicii profesionale de dezvoltare web, web design, marketing digital, SEO, și producție audio-video pentru creșterea prezenței online." />
+    <meta property="og:image" content="{{ asset('assets/OG-Click-Studios-Digital.jpg') }}" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content="Click Studios - Dezvoltare Web si Marketing Digital" />
+    <meta property="og:url" content="{{ url('/') }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ro_RO" />
+    <meta property="og:site_name" content="Click Studios Digital" />
+  
+    <!-- Local Business Schema Markup -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Click Studios Digital",
+  "description": "Agenție de dezvoltare web și marketing digital oferind servicii complete de web design, SEO, și strategii de marketing online pentru creșterea prezenței digitale a afacerii dumneavoastră.",
+  "image": "{{ asset('assets/logo.jpg') }}",
+  "url": "{{ url('/') }}",
+  "telephone": "+40734411115",
+  "email": "contact@clickstudios-digital.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Nisiparilor 35",
+    "addressLocality": "Baia Mare",
+    "addressRegion": "Maramures",
+    "postalCode": "430122",
+    "addressCountry": "RO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "47.6573",
+    "longitude": "23.5705"
+  },
+  "openingHours": [
+    "Mo-Fr 09:00-17:00"
+  ],
+  "sameAs": [
+    "https://web.facebook.com/profile.php?id=61560427317860",
+    
+    "https://www.instagram.com/clickstudios_digital"
+  ],
+  "priceRange": "$$",
+  "paymentAccepted": ["cash", "credit card"],
+  "currenciesAccepted": "RON",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "{{ asset('assets/logo.jpg') }}"
+  },
+  "services": [
+    "Web Design",
+    "Dezvoltare Web",
+    "SEO",
+    "Marketing Digital",
+    "Social Media Marketing",
+    "Content Marketing",
+    "PPC Advertising"
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Romania"
+  }
+}
+</script>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <title>Click Studios - Dezvoltare Web & Marketing Digital</title>
+    <link rel="canonical" href="{{ url('/') }}" />
 
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.absolute{position:absolute}.relative{position:relative}.-left-20{left:-5rem}.top-0{top:0px}.-bottom-16{bottom:-4rem}.-left-16{left:-4rem}.-mx-3{margin-left:-0.75rem;margin-right:-0.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.grid{display:grid}.hidden{display:none}.aspect-video{aspect-ratio:16 / 9}.size-12{width:3rem;height:3rem}.size-5{width:1.25rem;height:1.25rem}.size-6{width:1.5rem;height:1.5rem}.h-12{height:3rem}.h-40{height:10rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-full{width:100%}.w-\[calc\(100\%\+8rem\)\]{width:calc(100% + 8rem)}.w-auto{width:auto}.max-w-\[877px\]{max-width:877px}.max-w-2xl{max-width:42rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.self-center{align-self:center}.overflow-hidden{overflow:hidden}.rounded-\[10px\]{border-radius:10px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-sm{border-radius:0.125rem}.bg-\[\#FF2D20\]\/10{background-color:rgb(255 45 32 / 0.1)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-white{--tw-gradient-to:rgb(255 255 255 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #fff var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-white{--tw-gradient-to:#fff var(--tw-gradient-to-position)}.stroke-\[\#FF2D20\]{stroke:#FF2D20}.object-cover{object-fit:cover}.object-top{object-position:top}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.pt-3{padding-top:0.75rem}.text-center{text-align:center}.font-sans{font-family:Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-sm\/relaxed{font-size:0.875rem;line-height:1.625}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-semibold{font-weight:600}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-\[0px_14px_34px_0px_rgba\(0\2c 0\2c 0\2c 0\.08\)\]{--tw-shadow:0px 14px 34px 0px rgba(0,0,0,0.08);--tw-shadow-colored:0px 14px 34px 0px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-transparent{--tw-ring-color:transparent}.ring-white\/\[0\.05\]{--tw-ring-color:rgb(255 255 255 / 0.05)}.drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.06\)\]{--tw-drop-shadow:drop-shadow(0px 4px 34px rgba(0,0,0,0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.25\)\]{--tw-drop-shadow:drop-shadow(0px 4px 34px rgba(0,0,0,0.25));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.selection\:bg-\[\#FF2D20\] *::selection{--tw-bg-opacity:1;background-color:rgb(255 45 32 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-\[\#FF2D20\]::selection{--tw-bg-opacity:1;background-color:rgb(255 45 32 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-black:hover{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))}.hover\:text-black\/70:hover{color:rgb(0 0 0 / 0.7)}.hover\:ring-black\/20:hover{--tw-ring-color:rgb(0 0 0 / 0.2)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus-visible\:ring-1:focus-visible{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 45 32 / var(--tw-ring-opacity))}@media (min-width: 640px){.sm\:size-16{width:4rem;height:4rem}.sm\:size-6{width:1.5rem;height:1.5rem}.sm\:pt-5{padding-top:1.25rem}}@media (min-width: 768px){.md\:row-span-3{grid-row:span 3 / span 3}}@media (min-width: 1024px){.lg\:col-start-2{grid-column-start:2}.lg\:h-16{height:4rem}.lg\:max-w-7xl{max-width:80rem}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:flex-col{flex-direction:column}.lg\:items-end{align-items:flex-end}.lg\:justify-center{justify-content:center}.lg\:gap-8{gap:2rem}.lg\:p-10{padding:2.5rem}.lg\:pb-10{padding-bottom:2.5rem}.lg\:pt-0{padding-top:0px}.lg\:text-\[\#FF2D20\]{--tw-text-opacity:1;color:rgb(255 45 32 / var(--tw-text-opacity))}}@media (prefers-color-scheme: dark){.dark\:block{display:block}.dark\:hidden{display:none}.dark\:bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}.dark\:bg-zinc-900{--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity))}.dark\:via-zinc-900{--tw-gradient-to:rgb(24 24 27 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #18181b var(--tw-gradient-via-position), var(--tw-gradient-to)}.dark\:to-zinc-900{--tw-gradient-to:#18181b var(--tw-gradient-to-position)}.dark\:text-white\/50{color:rgb(255 255 255 / 0.5)}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:text-white\/70{color:rgb(255 255 255 / 0.7)}.dark\:ring-zinc-800{--tw-ring-opacity:1;--tw-ring-color:rgb(39 39 42 / var(--tw-ring-opacity))}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:hover\:text-white\/70:hover{color:rgb(255 255 255 / 0.7)}.dark\:hover\:text-white\/80:hover{color:rgb(255 255 255 / 0.8)}.dark\:hover\:ring-zinc-700:hover{--tw-ring-opacity:1;--tw-ring-color:rgb(63 63 70 / var(--tw-ring-opacity))}.dark\:focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 45 32 / var(--tw-ring-opacity))}.dark\:focus-visible\:ring-white:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 255 255 / var(--tw-ring-opacity))}}
-        </style>
-    </head>
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-            <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" />
-            <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-                <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                    <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
-                        <div class="flex lg:justify-center lg:col-start-2">
-                            <svg class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]" viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="currentColor"/></svg>
-                        </div>
-                        @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
-                                @auth
-                                    <a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Dashboard
-                                    </a>
-                                @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Log in
-                                    </a>
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('assets/favicon-click-studios-digital.jpg') }}" type="image/x-icon" />
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon-click-studios-digital.jpg') }}" />
 
-                                    @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                        >
-                                            Register
-                                        </a>
-                                    @endif
-                                @endauth
-                            </nav>
-                        @endif
-                    </header>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-                    <main class="mt-6">
-                        <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
-                            <a
-                                href="https://laravel.com/docs"
-                                id="docs-card"
-                                class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-light.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.06)] dark:hidden"
-                                        onerror="
-                                            document.getElementById('screenshot-container').classList.add('!hidden');
-                                            document.getElementById('docs-card').classList.add('!row-span-1');
-                                            document.getElementById('docs-card-content').classList.add('!flex-row');
-                                            document.getElementById('background').classList.add('!hidden');
-                                        "
-                                    />
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-dark.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"
-                                    />
-                                    <div
-                                        class="absolute -bottom-16 -left-16 h-40 w-[calc(100%+8rem)] bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900"
-                                    ></div>
-                                </div>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-                                <div class="relative flex items-center gap-6 lg:items-end">
-                                    <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
-                                        <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                            <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#FF2D20" d="M23 4a1 1 0 0 0-1.447-.894L12.224 7.77a.5.5 0 0 1-.448 0L2.447 3.106A1 1 0 0 0 1 4v13.382a1.99 1.99 0 0 0 1.105 1.79l9.448 4.728c.14.065.293.1.447.1.154-.005.306-.04.447-.105l9.453-4.724a1.99 1.99 0 0 0 1.1-1.789V4ZM3 6.023a.25.25 0 0 1 .362-.223l7.5 3.75a.251.251 0 0 1 .138.223v11.2a.25.25 0 0 1-.362.224l-7.5-3.75a.25.25 0 0 1-.138-.22V6.023Zm18 11.2a.25.25 0 0 1-.138.224l-7.5 3.75a.249.249 0 0 1-.329-.099.249.249 0 0 1-.033-.12V9.772a.251.251 0 0 1 .138-.224l7.5-3.75a.25.25 0 0 1 .362.224v11.2Z"/><path fill="#FF2D20" d="m3.55 1.893 8 4.048a1.008 1.008 0 0 0 .9 0l8-4.048a1 1 0 0 0-.9-1.785l-7.322 3.706a.506.506 0 0 1-.452 0L4.454.108a1 1 0 0 0-.9 1.785H3.55Z"/></svg>
-                                        </div>
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-                                        <div class="pt-3 sm:pt-5 lg:pt-0">
-                                            <h2 class="text-xl font-semibold text-black dark:text-white">Documentation</h2>
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-                                            <p class="mt-4 text-sm/relaxed">
-                                                Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                            </p>
-                                        </div>
-                                    </div>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFL38JS6PJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-                                    <svg class="size-6 shrink-0 stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                                </div>
-                            </a>
+      gtag('config', 'G-QFL38JS6PJ');
+    </script>
 
-                            <a
-                                href="https://laracasts.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M24 8.25a.5.5 0 0 0-.5-.5H.5a.5.5 0 0 0-.5.5v12a2.5 2.5 0 0 0 2.5 2.5h19a2.5 2.5 0 0 0 2.5-2.5v-12Zm-7.765 5.868a1.221 1.221 0 0 1 0 2.264l-6.626 2.776A1.153 1.153 0 0 1 8 18.123v-5.746a1.151 1.151 0 0 1 1.609-1.035l6.626 2.776ZM19.564 1.677a.25.25 0 0 0-.177-.427H15.6a.106.106 0 0 0-.072.03l-4.54 4.543a.25.25 0 0 0 .177.427h3.783c.027 0 .054-.01.073-.03l4.543-4.543ZM22.071 1.318a.047.047 0 0 0-.045.013l-4.492 4.492a.249.249 0 0 0 .038.385.25.25 0 0 0 .14.042h5.784a.5.5 0 0 0 .5-.5v-2a2.5 2.5 0 0 0-1.925-2.432ZM13.014 1.677a.25.25 0 0 0-.178-.427H9.101a.106.106 0 0 0-.073.03l-4.54 4.543a.25.25 0 0 0 .177.427H8.4a.106.106 0 0 0 .073-.03l4.54-4.543ZM6.513 1.677a.25.25 0 0 0-.177-.427H2.5A2.5 2.5 0 0 0 0 3.75v2a.5.5 0 0 0 .5.5h1.4a.106.106 0 0 0 .073-.03l4.54-4.543Z"/></g></svg>
-                                </div>
 
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laracasts</h2>
+</head>
 
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                    </p>
-                                </div>
 
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
+<body class="font-sans bg-gray-100 " x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">
 
-                            <a
-                                href="https://laravel-news.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M8.75 4.5H5.5c-.69 0-1.25.56-1.25 1.25v4.75c0 .69.56 1.25 1.25 1.25h3.25c.69 0 1.25-.56 1.25-1.25V5.75c0-.69-.56-1.25-1.25-1.25Z"/><path d="M24 10a3 3 0 0 0-3-3h-2V2.5a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2V20a3.5 3.5 0 0 0 3.5 3.5h17A3.5 3.5 0 0 0 24 20V10ZM3.5 21.5A1.5 1.5 0 0 1 2 20V3a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 .5.5v17c0 .295.037.588.11.874a.5.5 0 0 1-.484.625L3.5 21.5ZM22 20a1.5 1.5 0 1 1-3 0V9.5a.5.5 0 0 1 .5-.5H21a1 1 0 0 1 1 1v10Z"/><path d="M12.751 6.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 7.3v-.5a.75.75 0 0 1 .751-.753ZM12.751 10.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 11.3v-.5a.75.75 0 0 1 .751-.753ZM4.751 14.047h10a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-10A.75.75 0 0 1 4 15.3v-.5a.75.75 0 0 1 .751-.753ZM4.75 18.047h7.5a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-7.5A.75.75 0 0 1 4 19.3v-.5a.75.75 0 0 1 .75-.753Z"/></g></svg>
-                                </div>
 
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laravel News</h2>
 
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                    </p>
-                                </div>
-
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
-
-                            <div class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                        <g fill="#FF2D20">
-                                            <path
-                                                d="M16.597 12.635a.247.247 0 0 0-.08-.237 2.234 2.234 0 0 1-.769-1.68c.001-.195.03-.39.084-.578a.25.25 0 0 0-.09-.267 8.8 8.8 0 0 0-4.826-1.66.25.25 0 0 0-.268.181 2.5 2.5 0 0 1-2.4 1.824.045.045 0 0 0-.045.037 12.255 12.255 0 0 0-.093 3.86.251.251 0 0 0 .208.214c2.22.366 4.367 1.08 6.362 2.118a.252.252 0 0 0 .32-.079 10.09 10.09 0 0 0 1.597-3.733ZM13.616 17.968a.25.25 0 0 0-.063-.407A19.697 19.697 0 0 0 8.91 15.98a.25.25 0 0 0-.287.325c.151.455.334.898.548 1.328.437.827.981 1.594 1.619 2.28a.249.249 0 0 0 .32.044 29.13 29.13 0 0 0 2.506-1.99ZM6.303 14.105a.25.25 0 0 0 .265-.274 13.048 13.048 0 0 1 .205-4.045.062.062 0 0 0-.022-.07 2.5 2.5 0 0 1-.777-.982.25.25 0 0 0-.271-.149 11 11 0 0 0-5.6 2.815.255.255 0 0 0-.075.163c-.008.135-.02.27-.02.406.002.8.084 1.598.246 2.381a.25.25 0 0 0 .303.193 19.924 19.924 0 0 1 5.746-.438ZM9.228 20.914a.25.25 0 0 0 .1-.393 11.53 11.53 0 0 1-1.5-2.22 12.238 12.238 0 0 1-.91-2.465.248.248 0 0 0-.22-.187 18.876 18.876 0 0 0-5.69.33.249.249 0 0 0-.179.336c.838 2.142 2.272 4 4.132 5.353a.254.254 0 0 0 .15.048c1.41-.01 2.807-.282 4.117-.802ZM18.93 12.957l-.005-.008a.25.25 0 0 0-.268-.082 2.21 2.21 0 0 1-.41.081.25.25 0 0 0-.217.2c-.582 2.66-2.127 5.35-5.75 7.843a.248.248 0 0 0-.09.299.25.25 0 0 0 .065.091 28.703 28.703 0 0 0 2.662 2.12.246.246 0 0 0 .209.037c2.579-.701 4.85-2.242 6.456-4.378a.25.25 0 0 0 .048-.189 13.51 13.51 0 0 0-2.7-6.014ZM5.702 7.058a.254.254 0 0 0 .2-.165A2.488 2.488 0 0 1 7.98 5.245a.093.093 0 0 0 .078-.062 19.734 19.734 0 0 1 3.055-4.74.25.25 0 0 0-.21-.41 12.009 12.009 0 0 0-10.4 8.558.25.25 0 0 0 .373.281 12.912 12.912 0 0 1 4.826-1.814ZM10.773 22.052a.25.25 0 0 0-.28-.046c-.758.356-1.55.635-2.365.833a.25.25 0 0 0-.022.48c1.252.43 2.568.65 3.893.65.1 0 .2 0 .3-.008a.25.25 0 0 0 .147-.444c-.526-.424-1.1-.917-1.673-1.465ZM18.744 8.436a.249.249 0 0 0 .15.228 2.246 2.246 0 0 1 1.352 2.054c0 .337-.08.67-.23.972a.25.25 0 0 0 .042.28l.007.009a15.016 15.016 0 0 1 2.52 4.6.25.25 0 0 0 .37.132.25.25 0 0 0 .096-.114c.623-1.464.944-3.039.945-4.63a12.005 12.005 0 0 0-5.78-10.258.25.25 0 0 0-.373.274c.547 2.109.85 4.274.901 6.453ZM9.61 5.38a.25.25 0 0 0 .08.31c.34.24.616.561.8.935a.25.25 0 0 0 .3.127.631.631 0 0 1 .206-.034c2.054.078 4.036.772 5.69 1.991a.251.251 0 0 0 .267.024c.046-.024.093-.047.141-.067a.25.25 0 0 0 .151-.23A29.98 29.98 0 0 0 15.957.764a.25.25 0 0 0-.16-.164 11.924 11.924 0 0 0-2.21-.518.252.252 0 0 0-.215.076A22.456 22.456 0 0 0 9.61 5.38Z"
-                                            />
-                                        </g>
-                                    </svg>
-                                </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Vibrant Ecosystem</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white dark:focus-visible:ring-[#FF2D20]">Forge</a>, <a href="https://vapor.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Vapor</a>, <a href="https://nova.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Nova</a>, <a href="https://envoyer.io" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Envoyer</a>, and <a href="https://herd.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Herd</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Echo</a>, <a href="https://laravel.com/docs/horizon" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Telescope</a>, and more.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </main>
-
-                    <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </footer>
-                </div>
-            </div>
+    <section class="relative flex items-center justify-center h-screen text-white showcase">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden video-container">
+            <video src="/assets/bg-video.mp4" autoplay muted loop class="absolute object-cover min-w-full min-h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"></video>
+            <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
         </div>
-    </body>
+
+        <div class="z-10 px-2 text-center content">
+          <h1 class="mb-4 text-5xl md:text-5xl md:font-normal">Click Studios<br><span class="text-base text-gray-100 md:text-3xl md:font-light">Dezvoltare Web și Soluții Digitale Creative</span></h1>
+          <h3 class="mb-8 text-sm text-gray-100 md:text-lg">Ca o punte între artă și tehnologie, suntem aici pentru a vă ghida în călătoria către succesul digital.</h3>
+      
+                <div data-aos="zoom-in">
+                
+                  <div class="flex flex-col items-center">
+                    <a href="#about"
+                    class="inline-block w-40 px-2 py-1 mt-4 text-white transition duration-300 ease-in-out transform border border-white rounded-md btn bg-primary-color hover:scale-95 hover:bg-gray-800 hover:shadow-md">Despre noi</a>
+                    <a href="#dezvoltare-web"
+                    class="inline-block w-40 px-2 py-1 mt-4 text-white transition duration-300 ease-in-out transform border border-white rounded-md btn bg-primary-color hover:scale-95 hover:bg-gray-800 hover:shadow-md">Dezvoltare Web</a>
+                    <a href="#servicii"
+                    class="inline-block w-40 px-2 py-1 mt-4 text-white transition duration-300 ease-in-out transform border border-white rounded-md btn bg-primary-color hover:scale-95 hover:bg-gray-800 hover:shadow-md">Servicii</a>
+                    <a href="#portofoliu"
+                    class="inline-block w-40 px-2 py-1 mt-4 text-white transition duration-300 ease-in-out transform border border-white rounded-md btn bg-primary-color hover:scale-95 hover:bg-gray-800 hover:shadow-md">Portofoliu</a>
+                    <a href="#contact"
+                    class="inline-block w-40 px-2 py-1 mt-4 text-white transition duration-300 ease-in-out transform border border-white rounded-md btn bg-primary-color hover:scale-95 hover:bg-gray-800 hover:shadow-md">Contact</a>
+                    <a href="/blog"
+                    class="inline-block w-40 px-2 py-1 mt-4 text-white transition duration-300 ease-in-out transform border border-white rounded-md btn bg-emerald-900 bg-opacity-75  hover:scale-95 hover:bg-emerald-900 hover:bg-opacity-50 hover:shadow-md">Blog</a>
+                </div>
+
+        </div>
+        </div>
+        
+    </section>
+
+    <section id="about" class="px-4 py-16 bg-gray-100">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="mb-12 text-3xl font-bold text-center text-gray-800">Despre noi</h2>
+        
+     
+          <div data-aos="fade-right">
+            <img src="/assets/OG-Click-Studios-Digital.jpg" class="w-full mb-6 rounded-lg shadow-lg" alt="Click Studios Digital, Dezvoltare Web, Web Design">
+          </div>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+            
+      
+            <div data-aos="fade-down" class="p-6 bg-white rounded-lg shadow-md">
+              <i class="mb-4 text-3xl text-blue-500 fas fa-code"></i>
+              <p class="text-gray-700">Suntem o agenție de dezvoltare web și marketing digital cu sediul in Baia Mare, Maramures. Creăm site-uri web personalizate, aplicații web moderne și soluții e-commerce robuste care nu doar arată bine, ci și performează excelent.</p>
+            </div>
+            
+        
+            <div data-aos="fade-down" class="p-6 bg-white rounded-lg shadow-md">
+              <i class="mb-4 text-3xl text-blue-500 fas fas fa-lightbulb"></i>
+              <p class="text-gray-700">La Click Studios Digital, ne dedicăm să redefinim standardele în domeniul digital.  Abordăm fiecare provocare cu o combinație unică de expertiză tehnică, creativitate artistică și înțelegere profundă a nevoilor afacerii dumneavoastră.</p>
+            </div>
+         
+          <div data-aos="zoom-in-up" class="p-6 bg-white rounded-lg shadow-md">
+            <i class="mb-4 text-3xl text-blue-500 fas fa-laptop-code"></i>
+            <p class="text-gray-700"> Fie că este vorba de web design, strategii de publicitate digitală, optimizare pentru motoarele de căutare, marketing de conținut sau producție audio și video, echipa noastră este aici pentru a vă oferi soluții personalizate.</p>
+          </div>
+
+          <div data-aos="fade-down" class="p-6 bg-white rounded-lg shadow-md">
+            <i class="mb-4 text-3xl text-blue-500 fa-solid fa-palette"></i>
+            <p class="text-gray-700">Ne mândrim cu abilitatea noastră de a combina arta și tehnologia pentru a crea rezultate extraordinare. Cu o echipă dedicată și o pasiune pentru creativitate fără limite, suntem aici pentru a vă ghida în călătoria către succesul digital. Suntem mereu în căutare de noi modalități de a surprinde și de a impresiona, de a inova și de a influența.</p>
+          </div>
+
+          <div data-aos="zoom-in-up" class="p-6 bg-white rounded-lg shadow-md">
+            <i class="mb-4 text-3xl text-blue-500 fa-solid fa-globe"></i>
+            <p class="text-gray-700">Oferim o gamă completă de servicii de SEO și dezvoltare web, publicitate online și marketing digital, branding, producție muzicală și producție video. Dacă sunteți în căutarea unei echipe creative și dedicate pentru a vă ajuta să vă atingeți obiectivele de marketing și publicitate, contactați-ne și împreună vom construi ceva extraordinar!</p>
+          </div>
+
+        </div>
+       
+        
+       
+        </div>
+        
+    
+    </section>
+
+ <!--Expertiză în Dezvoltare Web-->
+
+    <section id="dezvoltare-web" class="px-4 py-16 bg-gray-100">
+  <div class="max-w-6xl mx-auto">
+      <h2 class="mb-8 text-3xl font-bold text-center text-gray-800">Expertiză în Dezvoltare Web</h2>
+      
+      <div class="grid grid-cols-1 gap-8 mx-auto md:grid-cols-2">
+        <div data-aos="fade-down" class="p-4 bg-white rounded-lg shadow">
+              <h3 class="mb-4 text-2xl font-semibold text-blue-600">Specialiști în TALL Stack</h3>
+              <p class="mb-4 text-gray-700">La Click Studios Digital, excelăm în dezvoltarea cu TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire), oferind aplicații web robuste, rapide și scalabile. Această combinație puternică ne permite să creăm experiențe web de înaltă performanță și ușor de întreținut.</p>
+              <ul class="pl-5 mb-6 text-gray-700 list-disc">
+                  <li>Frontend responsive cu Tailwind CSS</li>
+                  <li>Interactivitate fără efort cu Alpine.js</li>
+                  <li>Backend puternic cu Laravel</li>
+                  <li>Actualizări dinamice cu Livewire</li>
+              </ul>
+          </div>
+          <div data-aos="fade-right" class="p-4 bg-white rounded-lg shadow">
+              <h3 class="mb-4 text-2xl font-semibold text-blue-600">Servicii de Dezvoltare Web</h3>
+              <ul class="pl-5 mb-6 text-gray-700 list-disc">
+                  <li>Creare site-uri web personalizate</li>
+                  <li>Dezvoltare aplicații web complexe</li>
+                  <li>Integrare e-commerce și sisteme de plată</li>
+                  <li>Optimizare pentru motoare de căutare (SEO)</li>
+                  <li>Migrare și actualizare site-uri web existente</li>
+                  <li>Panouri de control (admin panel) profesionale și personalizate</li>
+                  <li>Implementare sisteme de autentificare și securitate avansată</li>
+                  <li>Creare de sisteme de comenzi și rezervări online</li>
+                  <li>Mentenanță și suport tehnic</li>
+              </ul>
+          </div>
+      </div>
+      
+      <div class="mt-8">
+          <h3 class="mb-4 text-2xl font-semibold text-center text-blue-600">Soluții Web pentru Afaceri</h3>
+          <p class="mb-4 text-center text-gray-700">Dezvoltăm site-uri de prezentare, magazine online și aplicații web personalizate pentru o gamă variată de afaceri, inclusiv:</p>
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+              <div data-aos="fade-up" class="p-3 bg-white rounded-lg shadow">
+                  <ul class="pl-5 text-gray-700 list-disc">
+                      <li>Restaurante și cafenele</li>
+                      <li>Saloane de cosmetică și frizerii</li>
+                      <li>Service-uri auto și vulcanizări</li>
+                  </ul>
+              </div>
+              <div data-aos="fade-up" class="p-3 bg-white rounded-lg shadow">
+                  <ul class="pl-5 text-gray-700 list-disc">
+                      <li>Cabinete medicale și stomatologice</li>
+                      <li>Magazine de produse locale și artizanale</li>
+                      <li>Firme de construcții și amenajări interioare</li>
+                  </ul>
+              </div>
+              <div data-aos="fade-up" class="p-3 bg-white rounded-lg shadow">
+                  <ul class="pl-5 text-gray-700 list-disc">
+                      <li>Școli de dans sau fitness</li>
+                      <li>Pensiuni și case de vacanță</li>
+                      <li>Și multe altele</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+        
+      <div class="mt-12 text-center">
+          <a href="#contact" class="px-4 py-1 text-lg font-semibold text-white transition duration-300 bg-blue-600 rounded-full hover:bg-blue-700">Consultanță gratuită</a>
+      </div>
+  </div>
+</section>
+
+
+  <!--Servicii-->
+ 
+  <div class="max-w-6xl mx-auto">
+    <h2 class="mb-8 text-3xl font-bold text-center text-gray-800">Serviciile noastre</h2>
+</div>
+  
+  <div id="servicii" class="container grid items-center grid-cols-1 mx-auto text-center md:grid-cols-2 lg:grid-cols-3">
+
+
+
+    <!-- Service Block 1: Dezvoltare de Website-uri și Aplicații Web -->
+
+  <div data-aos="fade-down">
+  
+  <div class="flex w-full h-full px-4 lg:px-6">
+    <div class="px-6 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg h-96 bg-gray-50 hover:-translate-y-2">
+        <div class="inline-block mb-4 text-gray-900">
+              <!-- icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="mx-auto mb-4 text-gray-900" viewBox="0 0 16 16">
+                  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                  <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0m2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0"/>
+              </svg>
+          </div>
+          <h3 class="mb-2 text-lg font-semibold leading-normal text-black">Dezvoltare de site-uri și Aplicații Web</h3>
+          <ul class="mt-2 text-center text-gray-700 list-none "> 
+          <li class="mt-2">Creare de site-uri personalizate, pagini web de prezentare, magazine online (e-commerce) pe platforme open source: Bagisto - Laravel, Prestashop etc </li>
+          <li class="mt-2"> Dezvoltare de aplicații web complexe pentru diferite nevoi și industrii. </li>
+
+          </ul>
+      </div>
+  </div>
+  </div>
+  <!-- end service block -->
+
+<!-- Service Block 2: Spoturi Audio și Video Publicitare -->
+
+<div data-aos="fade-right">
+
+<div class="flex w-full h-full px-4 lg:px-6">
+  <div class="px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg h-96 bg-gray-50 hover:-translate-y-2">
+    <div class="inline-block mb-4 text-gray-900">
+              <!-- icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="mx-auto mb-4 text-gray-900" viewBox="0 0 16 16">
+                  <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5"/>
+                  <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3"/>
+              </svg>
+          </div>
+          <h3 class="mb-2 text-lg font-semibold leading-normal text-black">Spoturi Audio și Video Publicitare</h3>
+          <ul class="mt-2 text-center text-gray-700 list-none "> 
+            <li class="mt-2"> Creare de filmulete de prezentare și promoționale pentru afaceri, produse sau evenimente </li>
+            <li class="mt-2"> Creare și producție de spoturi publicitare audio pentru radio și alte medii audio (Spotify etc).</li>
+                    
+          </ul>
+      </div>
+  </div>
+</div>
+
+  <!-- end service block -->
+
+  <!-- Service Block 3: Design și Implementare de Branding -->
+  <div data-aos="zoom-in-up">
+
+  <div class="flex w-full h-full px-4 lg:px-6">
+    <div class="px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg h-96 bg-gray-50 hover:-translate-y-2">
+        <div class="inline-block mb-4 text-gray-900">
+              <!-- icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="mx-auto mb-4 text-gray-900" viewBox="0 0 16 16">
+                  <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"></path>
+                  <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"></path>
+              </svg>
+          </div>
+          <h3 class="mb-2 text-lg font-semibold leading-normal text-black">Design și Implementare de Branding</h3>
+          <ul class="mt-2 text-center text-gray-700 list-none "> 
+            <li class="mt-2">Design de logo-uri și creare de identitate vizuală și branding pentru companii și evenimente.</li>
+            <li class="mt-2">Elaborare și implementare de strategii digitale personalizate pentru creșterea vizibilității online.</li> 
+          </ul>
+      </div>
+  </div>
+  </div>
+
+<!-- Service Block 4: Producție Muzicală și Audiovizuală -->
+<div data-aos="fade-right">
+<div class="flex w-full h-full px-4 lg:px-6">
+  <div class="px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg h-96 bg-gray-50 hover:-translate-y-2">
+      <div class="inline-block mb-4 text-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="mx-auto mb-4 text-gray-900" viewBox="0 0 16 16">
+          <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
+        </svg>
+     </div>
+      <h3 class="mb-2 text-lg font-semibold leading-normal text-black">Producție Muzicală și Audiovizuală</h3>
+      <ul class="mt-2 text-center text-gray-700 list-none ">
+        <li class="mt-2">Creare și înregistrare de piese muzicale originale, servicii de mixing si mastering, spoturi audio etc.</li>
+        <li class="mt-2">Producție și editare de materiale audiovizuale pentru diverse scopuri: reclame, videoclipuri, podcast-uri etc.</li> 
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Service Block 5: Fotografie Profesională și Retușare Foto -->
+<div data-aos="fade-down">
+
+<div class="flex w-full h-full px-4 lg:px-6">
+  <div class="px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg h-96 bg-gray-50 hover:-translate-y-2">
+      <div class="inline-block mb-4 text-gray-900">
+    <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="mx-auto mb-4 text-gray-900" viewBox="0 0 16 16">
+      <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z"/>
+      <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+    </svg>
+    </div>
+    <h3 class="mb-2 text-lg font-semibold leading-normal text-black">Fotografie Profesională și Retușare Foto</h3>
+    <ul class="mt-2 text-center text-gray-700 list-none">
+      <li class="mt-2">Servicii de fotografie de produs pentru magazine online și campanii publicitare.</li>
+      <li class="mt-2">Retușare foto și editare avansată pentru imagini de înaltă calitate.</li>
+      <li class="mt-2">Sedinte foto profesionale pentru diverse evenimente și produse.</li>
+     
+    </ul>
+  </div>
+</div>
+</div>
+
+
+<!-- Service Block 6: Videoclipuri Muzicale și Campanii Publicitare Video -->
+<div data-aos="zoom-in-up">
+<div class="flex w-full h-full px-4 lg:px-6">
+  <div class="px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg h-96 bg-gray-50 hover:-translate-y-2">
+      <div class="inline-block mb-4 text-gray-900">
+    <!-- icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="mx-auto mb-4 text-gray-900" viewBox="0 0 16 16">
+      <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0M1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+      <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm6 8.73V7.27l-3.5 1.555v4.35zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1"/>
+      <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6M7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+    </svg>
+</div>
+  <h3 class="mb-2 text-lg font-semibold leading-normal text-black">Videoclipuri Muzicale și Campanii Publicitare Video</h3>
+  <ul class="mt-2 text-center text-gray-700 list-none">
+    <li class="mt-2">Regie, filmare și editare de videoclipuri muzicale creative și de înaltă calitate.</li>
+    <li class="mt-2">Creare și editare de conținut video scurt și captivant pentru platformele populare de social media:YouTube Shorts, Instagram Reels și TikTok Videos</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<!-- Service Block 7: Implementare și Administrare Canale de Social Media  -->
+<div data-aos="fade-right">
+
+<div class="flex w-full h-full px-4 lg:px-6">
+  <div class="px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg h-96 bg-gray-50 hover:-translate-y-2">
+      <div class="inline-block mb-4 text-gray-900">
+    <!-- icon -->
+  
+    <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="mx-auto mb-4 text-gray-900" viewBox="0 0 16 16">
+      <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"></path>
+      <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+    </svg>
+
+</div>
+      <h3 class="mb-2 text-lg font-semibold leading-normal text-black">Implementare și Administrare Canale de Social Media</h3>
+      <ul class="mt-2 text-center text-gray-700 list-none">
+        <li class="mt-2">Creare și optimizare de profiluri pe diverse platforme de socializare (YouTube, Instagram, Facebook, TikTok etc.).</li>
+          <li class="mt-2">Administrare și creștere a audienței pe canalele de social media prin postări regulate și interacțiune cu urmăritorii.</li>
+      </ul>
+  </div>
+</div>
+</div>
+
+<!-- Service Block 8: Servicii de SEO (Optimizare pentru Motoarele de Căutare)  -->
+<div data-aos="fade-down">
+<div class="flex w-full h-full px-4 lg:px-6">
+  <div class="px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg h-96 bg-gray-50 hover:-translate-y-2">
+      <div class="inline-block mb-4 text-gray-900">
+    <!-- icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="mx-auto mb-4 text-gray-900" viewBox="0 0 16 16">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+    </svg>
+</div>
+
+<h3 class="mb-2 text-lg font-semibold leading-normal text-black">Servicii de SEO (Optimizare pentru Motoarele de Căutare)</h3>
+<ul class="mt-2 text-center text-gray-700 list-none">
+  <li class="mt-2">Implementarea de tehnici și strategii de optimizare pentru motoarele de căutare pentru a crește vizibilitatea și clasamentul website-urilor și aplicațiilor web în rezultatele căutărilor organice, generând astfel mai mult trafic și potențiali clienți pentru afacerile clienților tăi.</li> 
+</ul>
+</div>
+</div>
+</div>
+
+<!-- Service Block 9: Creare și gestionare de campanii de publicitate online -->
+<div data-aos="zoom-in-up">
+
+<div class="flex w-full h-full px-4 lg:px-6">
+  <div class="px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg h-96 bg-gray-50 hover:-translate-y-2">
+      <div class="inline-block mb-4 text-gray-900">
+    <!-- icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="mx-auto mb-4 text-gray-900" viewBox="0 0 16 16">
+      <path d="m3.7 11 .47-1.542h2.004L6.644 11h1.261L5.901 5.001H4.513L2.5 11zm1.503-4.852.734 2.426H4.416l.734-2.426zm4.759.128c-1.059 0-1.753.765-1.753 2.043v.695c0 1.279.685 2.043 1.74 2.043.677 0 1.222-.33 1.367-.804h.057V11h1.138V4.685h-1.16v2.36h-.053c-.18-.475-.68-.77-1.336-.77zm.387.923c.58 0 1.002.44 1.002 1.138v.602c0 .76-.396 1.2-.984 1.2-.598 0-.972-.449-.972-1.248v-.453c0-.795.37-1.24.954-1.24z"/>
+      <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
+    </svg>
+</div>
+  <h3 class="mb-2 text-lg font-semibold leading-normal text-black">Creare și gestionare de campanii de publicitate online</h3>
+  <ul class="mt-2 text-center text-gray-700 list-none">
+    <li class="mt-2">Dezvoltarea și implementarea de campanii publicitare eficiente pe platforme precum Google Ads, Facebook Ads, Instagram Ads, Tik Tok Ads pentru a ajuta afacerile să-și promoveze produsele și serviciile către audiențele relevante.</li>
+  </ul>
+</div>
+</div>
+</div>
+
+
+  <!-- End Service blocks -->
+</div>
+</div>
+
+<!--Oferta eCommerce-->
+
+<!-- <div data-aos="zoom-in-up">
+  <div class="flex w-full h-full px-4 lg:px-6">
+    <div class="px-8 py-8 mb-8 text-center transition duration-300 ease-in-out transform rounded-lg shadow-lg bg-gray-50 hover:-translate-y-2">
+      <div class="inline-block mx-auto mb-4 text-gray-900">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="mb-4" viewBox="0 0 16 16">
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+        </svg>
+      </div>
+      <h3 class="mb-2 text-lg font-semibold leading-normal text-center text-black">Dezvoltare de Magazin Online (platforma eCommerce)</h3>
+      <ul class="mt-2 text-center text-gray-700 list-none">
+        <li class="mt-2">Oferim pachete complete pentru dezvoltarea magazinului online pe platforme open source: Bagisto Laravel eCommerce, Prestashop sau WooCommerce. Platformele open source oferă flexibilitate, scalabilitate și securitate, chiar dacă prețurile de dezvoltare pot fi mai mari.</li>
+        <li class="mt-2"><strong>Pachetul Include:</strong></li>
+        <li class="mt-2">• Domeniu și hosting pe un an: Domeniul este adresa digitală a magazinului (ex: magazinulmeu.ro) și hostul găzduiește informațiile magazinului (prețul hostului crește în funcție de complexitatea magazinului).</li>
+        <li class="mt-2">• Pachet grafic: Logo, bannere web, favicon, open graph image și tot ce implică grafica platformei.</li>
+        <li class="mt-2">• Fotografii de produs: Fotografii profesionale pentru produsele dvs.</li>
+        <li class="mt-2">• Conținut optimizat SEO: Descrieri optimizate pentru produsele comercializate.</li>
+        <li class="mt-2">• Module standard de eCommerce: Funcționalități esențiale precum coș de cumpărături, procesare plăți, gestionare stocuri și integrare cu sisteme de livrare.</li>
+        <li class="mt-2"><strong>Opțiuni Extra:</strong></li>
+        <li class="mt-2">• Mentenanță lunară</li>
+        <li class="mt-2">• Campanii de publicitate (Ads)</li>
+        <li class="mt-2">• Implementare canale de social media</li>
+        <li class="mt-2">• Reclame video și spoturi audio</li>
+        <li class="mt-2">Contactați-ne pentru a personaliza pachetul ideal pentru afacerea dvs.!</li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+
+
+
+<!--Portofolio-->
+
+<section id="portofoliu" class="px-4 py-12 text-center bg-gray-100 ">
+  <div class="container mx-auto">
+    <h2 class="mb-8 text-3xl font-bold text-center">Portofoliu</h2>
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Portfolio Item Click Music App -->
+      <div x-data="{ open: false }" data-aos="fade-right" class="mb-4">
+        <button @click="open = !open" class="w-full px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg bg-gray-50 hover:-translate-y-2">
+          <div class="flex justify-between">
+            <h3 class="text-lg font-semibold">Click Music Streaming App</h3>
+            <span x-show="!open" class="text-blue-500">+</span>
+            <span x-show="open" class="text-blue-500">-</span>
+          </div>
+        </button>
+        <div x-show="open" x-transition class="px-8 py-8 bg-white border border-t-0">
+          <a href="https://clickmusic.ro" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+          <img src="/assets/clickmusicapp.jpg" alt="Click Music Streaming App" class="w-full h-auto transition duration-300 ease-in-out transform rounded-lg hover:scale-105 hover:opacity-80">
+          <div class="p-4">
+            <p class="text-base leading-relaxed text-left">
+              <span class="text-blue-500">✗</span> Click Music Streaming App este rezultatul eforturilor noastre constante de a crea soluții digitale de înaltă calitate, îmbunătățind experiența utilizatorilor în domeniul streaming-ului muzical. <br> <br>
+              <span class="text-blue-500">✗</span> Dezvoltată folosind tehnologii avansate PHP/Laravel, această aplicație web oferă o experiență de streaming captivantă și ușor de folosit.
+              <br><br>
+              <strong>Caracteristici Cheie:</strong>
+              <ul class="mt-2 text-left list-disc">
+                <li>Sistem de Autentificare</li>
+                <li>Bază de Date Avansată</li>
+                <li>Notificări Mail și Database</li>
+                <li>Sectiune de Comentarii</li>
+                <li>Streaming cu CDN</li>
+                <li>Blog integrat</li>
+                <li>Sistem de plata cu Stripe</li>
+                <li>Securitate Avansată a Datelor</li>
+              </ul>
+              <br>
+              <span class="text-blue-500">✗</span> Click Music Streaming App este un exemplu al angajamentului nostru față de excelență și inovație în dezvoltarea soluțiilor digitale, aducând muzica mai aproape de publicul său într-un mod interactiv și captivant.
+            </p>
+          </div>
+        </div>
+      </a>
+      </div>
+
+<!-- Portfolio Item Snow 'n' Stuff -->
+<div x-data="{ open: false }" data-aos="fade-right" class="mb-4">
+  <button @click="open = !open" class="w-full px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg bg-gray-50 hover:-translate-y-2">
+    <div class="flex justify-between">
+      <h3 class="text-lg font-semibold">Website Prezentare Snow 'n' Stuff</h3>
+      <span x-show="!open" class="text-blue-500">+</span>
+      <span x-show="open" class="text-blue-500">-</span>
+    </div>
+  </button>
+</a>
+<div x-show="open" x-transition class="px-8 py-8 bg-white border border-t-0">
+  <a href="https://www.snow-n-stuff.com/" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+
+  <img src="/assets/OG-SnownStuff.jpg" alt="Website Prezentare Snow 'n' Stuff" class="w-full h-auto transition duration-300 ease-in-out transform rounded-lg hover:scale-105 hover:opacity-80">
+  <div class="p-4">
+    <p class="text-base leading-relaxed text-left">
+      <span class="text-blue-500">✗</span> Snow 'n' Stuff este un label muzical internațional de top, specializat în genurile Tech House, Deep House, House și Techno. Pentru a reflecta profesionalismul și calitatea înaltă a acestui brand, am creat un website de prezentare captivant și modern. <br> <br>
+      <span class="text-blue-500">✗</span> Website-ul a fost conceput pentru a oferi o experiență digitală unică, prezentând artiștii labelului, piesele muzicale și playlisturile lor. <br> <br>
+      <span class="text-blue-500">✗</span> Am integrat elemente interactive, precum playere pentru ascultarea pieselor, creând o platformă engaging pentru fanii muzicii electronice. <br> <br>
+  
+      <strong>Caracteristici Cheie:</strong>
+      <ul class="pl-6 mt-2 text-left list-disc">
+        <li>Design Modern și Captivant</li>
+        <li>Prezentare Artiști și Playlisturi</li>
+        <li>Elemente Interactive (Playere, Previews)</li>
+        <li>Optimizare SEO pentru Vizibilitate Organică</li>
+        <li>Integrare cu Platforme Sociale și Streaming</li>
+      </ul>
+<br>
+    <span class="text-blue-500">✗</span> Prin intermediul acestui website de prezentare, am reușit să promovăm eficient brandul Snow 'n' Stuff și să oferim o experiență digitală de top pentru fanii muzicii electronice din întreaga lume. Optimizarea SEO a asigurat, de asemenea, vizibilitatea organică și accesibilitatea către publicul țintă, facilitând astfel creșterea și dezvoltarea continuă a labelului.
+    </p>
+  </div>
+</div>
+</a>
+</div>
+
+
+<!-- Portfolio Item Branding CS Victoria MM -->
+<div x-data="{ open: false }" data-aos="fade-right" class="mb-4">
+  <button @click="open = !open" class="w-full px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg bg-gray-50 hover:-translate-y-2">
+    <div class="flex justify-between">
+      <h3 class="text-lg font-semibold">Branding CS Victoria MM</h3>
+      <span x-show="!open" class="text-blue-500">+</span>
+      <span x-show="open" class="text-blue-500">-</span>
+    </div>
+  </button>
+</a>
+<div x-show="open" x-transition class="px-8 py-8 bg-white border border-t-0">
+  <a href="https://csvictoriamm.ro/" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+
+  <img src="/assets/victoria-maramures.jpg" alt="Branding Club Sportiv Victoria Maramureș" class="w-full h-auto transition duration-300 ease-in-out transform rounded-lg hover:scale-105 hover:opacity-80">
+  <div class="p-4">
+    <p class="text-base leading-relaxed text-left">
+      <span class="text-blue-500">✗</span> Proiectul de branding pentru Clubul Sportiv Victoria Maramureș a fost o călătorie fascinantă în definirea și exprimarea identității acestuia în mediul online și offline. <br> <br>
+      <span class="text-blue-500">✗</span> Am dezvoltat un logo unic și memorabil care să reprezinte valorile și pasiunea clubului pentru sport, îmbinând tradiția cu modernitatea. <br> <br>
+      <span class="text-blue-500">✗</span> Pe lângă crearea identității vizuale, am dezvoltat și un website atractiv și ușor de navigat, precum și conținut video captivant pentru platformele sociale ale clubului, inclusiv reeluri pe Instagram și videoclipuri pe YouTube. <br> <br>
+  
+      
+      <strong>Caracteristici Cheie:</strong>
+      <ul class="pl-6 mt-2 text-left list-disc">
+        <li>Creare Identitate Vizuală</li>
+        <li>Logo Unic și Memorabil</li>
+        <li>Website Atractiv și Ușor de Navigat</li>
+        <li>Conținut Video Captivant pentru Platforme Sociale si Gestionarea acestora</li>
+        <li class="font-semibold">     
+        Optimizare SEO pentru a ajunge organic în primele pagini ale căutărilor.
+        
+      </li>
+    </ul>
+<br>
+    <span class="text-blue-500">✗</span> Proiectul de branding pentru Clubul Sportiv Victoria Maramureș a fost o inițiativă care a contribuit semnificativ la consolidarea prezenței și notorietății clubului în mediul online. Optimizarea SEO a asigurat, de asemenea, vizibilitatea organică și accesibilitatea către publicul țintă, facilitând astfel creșterea și dezvoltarea continuă a clubului.
+    </p>
+  </div>
+</div>
+</a>
+</div>
+
+  
+<!-- Portfolio Item Podcast Morosenesc -->
+<div x-data="{ open: false }" data-aos="fade-down" class="mb-4">
+ 
+    <button @click="open = !open" class="w-full px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg bg-gray-50 hover:-translate-y-2">
+      <div class="flex justify-between">
+        <h3 class="text-lg font-semibold">Podcast Morosenesc</h3>
+        <span x-show="!open" class="text-blue-500">+</span>
+        <span x-show="open" class="text-blue-500">-</span>
+      </div>
+    </button>
+  <div x-show="open" x-transition class="px-8 py-8 bg-white border border-t-0">
+    <a href="https://www.youtube.com/@IoanaMihalca" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+    <img src="/assets/podcastmorosenesc.jpg" alt="Productie Podcast Morosenesc cu Ioana Mihalca" class="w-full h-auto transition duration-300 ease-in-out transform rounded-lg hover:scale-105 hover:opacity-80">
+    <div class="p-4">
+      <p class="text-base leading-relaxed text-left">
+        <span class="text-blue-500">✗</span> "Podcast Morosenesc cu Ioana Mihalca" este un proiect de succes din portofoliul Click Studios, dedicat explorării povestirilor autentice și discuțiilor captivante. <br> <br>
+        <span class="text-blue-500">✗</span> Acest podcast aduce în fața ascultătorilor povești de viață inspiratoare și conversații profunde cu personalități remarcabile din diverse domenii. <br><br>
+        
+        <strong>Caracteristici Cheie:</strong>
+        
+        <ul class="mt-2 text-left list-disc">
+          <li><strong>Înregistrare și Editare:</strong> Utilizarea echipamentelor de ultimă generație pentru a asigura o calitate impecabilă a sunetului și o editare profesionistă. <br>
+          </li>
+          <li>
+            <strong>Distribuție și Promovare:</strong> Implementarea unei strategii de marketing digital pentru a maximiza audiența și impactul podcastului. Disponibil pe Principalele Platforme de Podcasting(Spotify, Apple Podcasts, Google Podcasts) <br>
+
+          </li>
+            <li>Strategii Eficiente de Marketing Digital</li>
+        
+            
+        </ul>
+      
+        <br>
+      
+        <span class="text-blue-500">✗</span>"Podcast Morosenesc cu Ioana Mihalca" a contribuit la consolidarea brandului Click Studios, demonstrând capacitatea noastră de a crea conținut de calitate și de a gestiona proiecte media complexe. Acest proiect este un exemplu perfect al abilității noastre de a combina creativitatea si productia cu strategia de marketing digital pentru a obține rezultate remarcabile. <br><br>
+       
+      </p>
+    </div>
+  </div>
+</a>
+</div>
+
+    
+         <!-- Portfolio Item Click Music Youtube -->
+<div x-data="{ open: false }" data-aos="zoom-in-up" class="mb-4">
+    <button @click="open = !open" class="w-full px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg bg-gray-50 hover:-translate-y-2">
+      <div class="flex justify-between">
+        <h3 class="text-lg font-semibold">Click Music Youtube</h3>
+        <span x-show="!open" class="text-blue-500">+</span>
+        <span x-show="open" class="text-blue-500">-</span>
+      </div>
+    </button>
+  <div x-show="open" x-transition class="px-8 py-8 bg-white border border-t-0">
+    <a href="https://www.youtube.com/@clickmusicromania" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+
+    <img src="/assets/click youtube.jpg" alt="Click Music canal youtube" class="w-full h-auto transition duration-300 ease-in-out transform rounded-lg hover:scale-105 hover:opacity-80">
+    <div class="p-4">
+      <p class="text-base leading-relaxed text-left">
+        <span class="text-blue-500">✗</span> Suntem mândri să prezentăm Click Music Romania, un proiect emblematic în portofoliul nostru. <br> <br>
+        <span class="text-blue-500">✗</span> Acest canal YouTube reprezintă o extensie a serviciilor noastre, evidențiind expertiza noastră în crearea de conținut de cea mai înaltă calitate în domeniul muzicii și al vizualurilor captivante.
+
+  
+        <br><br>
+  
+        <strong>Caracteristici Cheie:</strong>
+  
+        <ul class="mt-2 text-left list-disc ">
+          <li><strong>Producții Audio de Înaltă Calitate</strong>: Cu o echipă de producție audio experimentată, ne străduim să oferim sunete impecabile și mixaje profesionale care să îmbogățească experiența auditivă a publicului nostru.
+          </li>
+          <li><strong>Videoclipuri Muzicale</strong>: Fiecare videoclip reprezintă o sinteză perfectă între muzică și imagine, capturând esența fiecărei piese.</li>
+     
+     
+        </ul>
+  <br>
+        <span class="text-blue-500">✗</span> Rezultate Demonstrabile: Canalul nostru, Click Music Romania, s-a remarcat prin obținerea a peste 50 de milioane de vizualizări, evidențiind eficacitatea și impactul strategiilor noastre de marketing în atragerea și implicarea publicului. Acest succes solidifică poziția noastră ca lideri în furnizarea de soluții de marketing digitale care generează rezultate tangibile și măsurabile pentru clienții noștri.
+      </p>
+    </div>
+  </div>
+</a>
+
+</div>
+
+ 
+   
+<!-- Portfolio Item 6 -->
+<div x-data="{ open: false }" data-aos="zoom-in-up" class="mb-4">
+    <button @click="open = !open" class="w-full px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg bg-gray-50 hover:-translate-y-2">
+      <div class="flex justify-between">
+        <h3 class="text-lg font-semibold">Proiectul tău → Aici</h3>
+        <span x-show="!open" class="text-blue-500">+</span>
+        <span x-show="open" class="text-blue-500">-</span>
+      </div>
+    </button>
+  <div x-show="open" x-transition class="px-8 py-8 bg-white border border-t-0">
+    <a href="#" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+
+    <img src="/assets/digital-marketing2.jpg" alt="digital marketing baia mare" class="w-full h-auto transition duration-300 ease-in-out transform rounded-lg hover:scale-105 hover:opacity-80">
+    <div class="p-4">
+      <p class="text-base leading-relaxed text-left">
+        <span class="text-blue-500">✗</span> Suntem în faza de planificare pentru noi proiecte incitante care vor schimba peisajul digital. <br> <br>
+        <span class="text-blue-500">✗</span> Ne pregătim să aducem inovație în proiectul tău prin noi idei și concepte creative de branding și promovare digitală. <br> <br>
+        <span class="text-blue-500">✗</span> Rămâi conectat pentru a fi primul care află despre noile noastre proiecte și pentru a te implica în construirea viitorului digital împreună cu noi.
+      </p>
+    </div>
+  </div>
+</a>
+</div>
+
+
+   <!--Alte itemuri-->
+    </div>
+  </div>
+</section>
+
+<!-- Team Section & Contact -->
+<div id="contact" class="mt-8">
+  <div class="max-w-4xl px-8 py-8 mx-auto transition duration-300 ease-in-out transform hover:-translate-y-2">
+    <h2 class="mb-12 text-2xl font-semibold text-center">Echipa Noastră:</h2>
+    <div data-aos="fade-up">
+    <div class="flex flex-wrap justify-center gap-8">
+      <!-- Member 1 -->
+     
+      <div class="w-64 p-4 text-center transition duration-300 ease-in-out transform bg-gray-100 rounded-lg hover:-translate-y-2">
+        <img src="/assets/Echipa - Ioan.jpg" alt="Ioan Mihalca" class="w-32 h-32 mx-auto mb-4 transition duration-300 ease-in-out transform rounded-full hover:scale-105 hover:opacity-80">
+        <h3 class="text-lg font-semibold">Ioan Mihalca</h3>
+        <p class="text-sm text-gray-700">Founder & CEO</p>
+        <p class="mt-2 text-sm text-gray-600">Expert în dezvoltare web full-stack si optimizare pentru motoarele de căutare(SEO), strategii digitale și producție audio.</p>
+      </div>
+      <!-- Member 2 -->
+      <div class="w-64 p-4 text-center transition duration-300 ease-in-out transform bg-gray-100 rounded-lg hover:-translate-y-2">
+        <img src="/assets/Echipa - Andreea.jpg" alt="Andreea Mihalca" class="w-32 h-32 mx-auto mb-4 transition duration-300 ease-in-out transform rounded-full hover:scale-105 hover:opacity-80">
+        <h3 class="text-lg font-semibold">Andreea Mihalca</h3>
+        <p class="text-sm text-gray-700">Expertă în Design și Multimedia</p>
+        <p class="mt-2 text-sm text-gray-600">Specializată în manipulare foto, design grafic, fotografie, video, editare video, copywriting și branding.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--Contact Form-->
+<div class="max-w-md px-2 mx-auto text-center">
+    <strong>Colaborați cu Noi:</strong> <br><br>
+    <span class="text-gray-700">Dacă sunteți interesați să colaborați cu noi pentru dezvoltare web, producția de conținut media sau alte servicii de publicitate și marketing digital, nu ezitați să ne contactați:</span>
+    
+    <!-- Contact Form -->
+    <div data-aos="fade-up">
+    <div class="px-2 mt-4">
+      <form
+        action="https://formspree.io/f/xjvndkvg"
+        method="POST"
+        class="p-6 space-y-4 bg-gray-200 rounded-2xl "
+      >
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Emailul dumneavoastra:</label>
+          <input type="email" id="email" name="email" class="block w-full mt-1 border-gray-700 rounded-md shadow-lg focus:ring-blue-500 focus:border-blue-500" required>
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">Mesaj:</label>
+          <textarea id="message" name="message" rows="4" class="block w-full mt-1 border-gray-700 rounded-md shadow-lg focus:ring-blue-500 focus:border-blue-500" required></textarea>
+        </div>
+        <div>
+          <button type="submit" class="w-full px-4 py-2 font-bold text-white bg-gray-700 rounded hover:bg-gray-500">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<footer class="mb-4 text-center bg-gray-100" x-data>
+    <p class="m-2 mt-6 text-gray-700">
+      <span class="font-bold">Email:</span> contact@clickstudios-digital.com <br>
+      <span class="font-bold">Telefon:</span> +4 0734 411 115 <br> 
+      <span class="font-bold">Adresa:</span> Nisiparilor 35, Baia-Mare, Maramures
+    </p>
+
+    <div class="flex justify-center mt-4">
+      <a href="https://www.facebook.com/profile.php?id=61560427317860" target="_blank" rel="noopener noreferrer" class="mr-4 text-gray-500 hover:text-blue-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+          </svg>
+      </a>
+      <a href="https://www.instagram.com/clickstudios_digital/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+          </svg>
+      </a>
+  </div>
+
+    <hr class="my-6 border-t border-gray-300">
+    <p class="text-gray-700">
+      &copy; <span x-text="new Date().getFullYear()"></span> <strong>Click Studios Digital</strong>. Toate drepturile rezervate.
+    </p>
+  </div>
+</footer>
+
+
+
+ <!-- Arrow Up Button -->
+    <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed flex items-center justify-center w-10 h-10 text-white bg-blue-500 rounded-full bottom-4 right-4 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
 </html>
