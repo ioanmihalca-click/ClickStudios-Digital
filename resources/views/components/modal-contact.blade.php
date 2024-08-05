@@ -1,6 +1,6 @@
 <div x-data="{ modalIsOpen: false }" class="p-4">
     <button @click="modalIsOpen = true" type="button"
-        class="cursor-pointer whitespace-nowrap rounded-xl bg-blue-500 px-4 py-2 text-center text-sm font-medium tracking-wide text-slate-100 transition hover:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:opacity-100 active:outline-offset-0">Contact</button>
+        class="cursor-pointer whitespace-nowrap rounded-xl bg-blue-500 px-4 py-2 text-center text-sm font-medium tracking-wide text-slate-100 transition hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:opacity-100 active:outline-offset-0">Contact</button>
     <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="modalIsOpen"
         @keydown.esc.window="modalIsOpen = false" @click.self="modalIsOpen = false"
         class="fixed inset-0 z-30 flex items-end justify-center bg-black/20 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8"
