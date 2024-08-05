@@ -1,3 +1,8 @@
 User-agent: *
 Allow: /
+
+# Disallow access to the admin panel
+Disallow: /admin
+
+# Point to your sitemap
 Sitemap: https://clickstudios-digital.com/sitemap.xml
