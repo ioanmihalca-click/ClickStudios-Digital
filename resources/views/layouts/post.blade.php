@@ -46,30 +46,33 @@
     </main>
 
 
-  <footer class="text-center bg-gray-100" x-data>
-   
-    <hr class="my-6 border-t border-gray-300">
-    <p class="text-gray-700">
-      &copy; <span x-text="new Date().getFullYear()"></span> <strong>Click Studios Digital</strong>. Toate drepturile rezervate.
-    </p>
-  </div>
-</footer>
+  <footer class="bg-gray-100 py-4 text-center text-xs md:text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+       
+            <p class="text-gray-700">
+                &copy; <span x-text="new Date().getFullYear()"></span> <strong>Click Studios Digital</strong>. Toate drepturile rezervate.
+            </p>
+        </div>
+    </footer>
 
-
-
- <!-- Arrow Up Button -->
-    <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed flex items-center justify-center w-10 h-10 text-white bg-blue-500 rounded-full bottom-4 right-4 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <!-- Scroll to Top Button -->
+    <button 
+        x-show="scrollToTop" 
+        @click="window.scrollTo({ top: 0, behavior: 'smooth' })" 
+        class="fixed bottom-4 right-4 p-2 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all duration-300"
+        aria-label="Scroll to top"
+    >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
         </svg>
     </button>
-    
+
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
     </script>
-
-      @livewireScripts
+    @livewireScripts
     @vite('resources/js/app.js')
 </body>
 </html>
