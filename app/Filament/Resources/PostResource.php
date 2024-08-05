@@ -33,7 +33,7 @@ class PostResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('titlu')
-                ->required(),
+                    ->required(),
                 // ->reactive()
                 // ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state))),
                 TextInput::make('slug')->required()->unique(ignoreRecord: true),
@@ -42,14 +42,14 @@ class PostResource extends Resource
                 MarkdownEditor::make('continut')->required()->columnSpanFull(),
                 FileUpload::make('imagine_principala')->image()->required(),
                 DateTimePicker::make('published_at')
-                ->label('Publicat la')
-                ->nullable(), 
-                
+                    ->label('Publicat la')
+                    ->nullable(),
+
                 Select::make('tags')
-                ->multiple()
-                ->required()
-                ->relationship('tags', 'nume')
-                ->options(Tag::all()->pluck('nume', 'id')),
+                    ->multiple()
+                    ->required()
+                    ->relationship('tags', 'nume')
+                    ->options(Tag::all()->pluck('nume', 'id')),
             ]);
     }
 
@@ -57,7 +57,10 @@ class PostResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('titlu')->searchable()->sortable(),
+                TextColumn::make('titlu')
+                    ->searchable()
+                    ->sortable()
+                    ->limit(50), 
                 ImageColumn::make('imagine_principala')->square(),
                 TextColumn::make('tags.nume')
                     ->badge()
@@ -72,14 +75,14 @@ class PostResource extends Resource
                 Tables\Actions\DeleteAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -87,5 +90,5 @@ class PostResource extends Resource
             'create' => Pages\CreatePost::route('/create'),
             'edit' => Pages\EditPost::route('/{record}/edit'),
         ];
-    }    
+    }
 }
