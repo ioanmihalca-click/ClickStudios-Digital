@@ -137,6 +137,35 @@
                     class="inline-block w-40 px-2 py-1 mt-4 text-white transition duration-300 ease-in-out transform border border-white rounded-md btn bg-emerald-900 bg-opacity-75  hover:scale-95 hover:bg-emerald-900 hover:bg-opacity-50 hover:shadow-md">Blog</a>
                 </div>
 
+<!--Modal Play Video -->
+<div x-data="{videoModalIsOpen: false}" class="mt-10">
+    <button @click="videoModalIsOpen = true, $refs.video.play()" type="button" class="inline-flex cursor-pointer items-center gap-2 whitespace-nowrap rounded-xl bg-blue-500 bg-opacity-75 px-4 py-2 text-center text-sm font-medium tracking-wide text-slate-100 transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:opacity-100 active:outline-offset-0 dark:bg-blue-600 dark:text-slate-100 dark:focus-visible:outline-blue-600">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"  class="w-4 h-4">
+            <path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd"/>
+        </svg>
+        Play Video
+    </button>
+    <div x-cloak x-show="videoModalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="videoModalIsOpen" @keydown.esc.window="videoModalIsOpen = false, $refs.video.pause()" @click.self="videoModalIsOpen = false, $refs.video.pause()" class="fixed inset-0 z-30 flex items-center justify-center bg-black/20 p-4 backdrop-blur-md lg:p-8" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+        <!-- Modal Dialog -->
+        <div x-show="videoModalIsOpen" x-transition:enter="transition ease-out duration-300 delay-200" x-transition:enter-start="opacity-0 translate-y-8" x-transition:enter-end="opacity-100 translate-y-0" class="max-w-56 w-full relative">
+            <!-- Close Button -->
+            <button type="button" x-show="videoModalIsOpen" @click="videoModalIsOpen = false, $refs.video.pause()" x-transition:enter="transition ease-out duration-200 delay-500" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100" class="absolute -top-6 -right-6 flex items-center justify-center rounded-full bg-slate-100 p-1.5 text-black hover:opacity-75 active:opacity-100 dark:bg-slate-800 dark:text-white" aria-label="close modal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" stroke="currentColor" fill="none" stroke-width="1.4" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+               </svg>
+            </button>
+            <!-- Video -->
+            <video x-ref="video" class="max-w-56 mx-auto rounded-xl aspect-auto" controls>
+                <track default kind="captions" srclang="ro" src="path to your .vtt file" />
+                
+                <source src="/assets/video-intro.mp4" type="video/mp4">
+                 Your browser does not support HTML video.
+            </video>
+        </div>
+    </div>
+</div>
+
+
         </div>
         </div>
         
@@ -465,37 +494,6 @@
   <!-- End Service blocks -->
 </div>
 </div>
-
-<!--Oferta eCommerce-->
-
-<!-- <div data-aos="zoom-in-up">
-  <div class="flex w-full h-full px-4 lg:px-6">
-    <div class="px-8 py-8 mb-8 text-center transition duration-300 ease-in-out transform rounded-lg shadow-lg bg-gray-50 hover:-translate-y-2">
-      <div class="inline-block mx-auto mb-4 text-gray-900">
-      
-        <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="mb-4" viewBox="0 0 16 16">
-          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-        </svg>
-      </div>
-      <h3 class="mb-2 text-lg font-semibold leading-normal text-center text-black">Dezvoltare de Magazin Online (platforma eCommerce)</h3>
-      <ul class="mt-2 text-center text-gray-700 list-none">
-        <li class="mt-2">Oferim pachete complete pentru dezvoltarea magazinului online pe platforme open source: Bagisto Laravel eCommerce, Prestashop sau WooCommerce. Platformele open source oferă flexibilitate, scalabilitate și securitate, chiar dacă prețurile de dezvoltare pot fi mai mari.</li>
-        <li class="mt-2"><strong>Pachetul Include:</strong></li>
-        <li class="mt-2">• Domeniu și hosting pe un an: Domeniul este adresa digitală a magazinului (ex: magazinulmeu.ro) și hostul găzduiește informațiile magazinului (prețul hostului crește în funcție de complexitatea magazinului).</li>
-        <li class="mt-2">• Pachet grafic: Logo, bannere web, favicon, open graph image și tot ce implică grafica platformei.</li>
-        <li class="mt-2">• Fotografii de produs: Fotografii profesionale pentru produsele dvs.</li>
-        <li class="mt-2">• Conținut optimizat SEO: Descrieri optimizate pentru produsele comercializate.</li>
-        <li class="mt-2">• Module standard de eCommerce: Funcționalități esențiale precum coș de cumpărături, procesare plăți, gestionare stocuri și integrare cu sisteme de livrare.</li>
-        <li class="mt-2"><strong>Opțiuni Extra:</strong></li>
-        <li class="mt-2">• Mentenanță lunară</li>
-        <li class="mt-2">• Campanii de publicitate (Ads)</li>
-        <li class="mt-2">• Implementare canale de social media</li>
-        <li class="mt-2">• Reclame video și spoturi audio</li>
-        <li class="mt-2">Contactați-ne pentru a personaliza pachetul ideal pentru afacerea dvs.!</li>
-      </ul>
-    </div>
-  </div>
-</div> -->
 
 
 

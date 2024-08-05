@@ -40,7 +40,7 @@
                 @foreach ($similarPosts as $similarPost)
                     <div class="bg-white rounded-lg shadow-md overflow-hidden">
                         @if ($similarPost->imagine_principala)
-                            <img src="{{ asset('storage/' . $similarPost->imagine_principala) }}" alt="{{ $similarPost->titlu }}" class="w-full h-48 object-cover">
+                            <img src="{{ asset('storage/' . $similarPost->imagine_principala) }}" alt="{{ $similarPost->titlu }}" class="w-full h-auto object-cover">
                         @endif
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">
