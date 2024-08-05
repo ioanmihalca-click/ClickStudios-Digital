@@ -42,10 +42,6 @@
 
     <main class="max-w-5xl mx-auto py-6 sm:px-6 lg:px-8">
         {{ $slot }}
-        <div class="p-4">
-        <x-modal-contact />
-        <a href="{{ route('blog') }}" class="text-blue-600 hover:text-blue-800">← Înapoi la Blog</a>
-        </div>
     </main>
 
 

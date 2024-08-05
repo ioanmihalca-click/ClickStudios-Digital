@@ -25,11 +25,17 @@
             {!! $post->continut !!}
         </div>
 
-        <div class="mt-6">
+        <div class="my-6">
             @foreach ($post->tags as $tag)
                 <a href="{{ route('etichete.show', $tag->slug) }}" class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300" itemprop="keywords">{{ $tag->nume }}</a>
             @endforeach
         </div>
+
+    <div class="p-4">
+        <x-modal-contact />
+        <a href="{{ route('blog') }}" class="text-blue-600 hover:text-blue-800">← Înapoi la Blog</a>
+        </div>
+
     </article>
 
     @if ($similarPosts->count() > 0)
