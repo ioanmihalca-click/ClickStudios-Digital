@@ -46,7 +46,7 @@
     </main>
 
 
-  <footer class="mb-4 text-center bg-gray-100" x-data>
+  <footer class="text-center bg-gray-100" x-data>
    
     <hr class="my-6 border-t border-gray-300">
     <p class="text-gray-700">
