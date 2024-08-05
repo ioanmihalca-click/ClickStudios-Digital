@@ -7,7 +7,8 @@
 
                     </a>
                 </div>
-                <div x-data="{ isOpen: false, openedWithKeyboard: false }" @keydown.esc.window="isOpen = false, openedWithKeyboard = false" class="relative mr-28 md:mr-2">
+                
+                <div x-data="{ isOpen: false, openedWithKeyboard: false }" @keydown.esc.window="isOpen = false, openedWithKeyboard = false" class="relative">
     <!-- Toggle Button -->
     <button type="button" @click="isOpen = ! isOpen" @keydown.space.prevent="openedWithKeyboard = true" @keydown.enter.prevent="openedWithKeyboard = true" @keydown.down.prevent="openedWithKeyboard = true" class="inline-flex cursor-pointer items-center gap-2 whitespace-nowrap rounded-xl border border-slate-300 bg-slate-100 px-4 py-2 text-sm font-medium tracking-wide transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-800  " :class="isOpen || openedWithKeyboard ? 'text-black  : 'text-slate-700'" :aria-expanded="isOpen || openedWithKeyboard" aria-haspopup="true">
         Meniu
@@ -16,7 +17,7 @@
         </svg>        
     </button>
     <!-- Dropdown Menu -->
-    <div x-cloak x-show="isOpen || openedWithKeyboard" x-transition x-trap="openedWithKeyboard" @click.outside="isOpen = false, openedWithKeyboard = false" @keydown.down.prevent="$focus.wrap().next()" @keydown.up.prevent="$focus.wrap().previous()" class="absolute top-11 flex w-full min-w-[12rem] flex-col divide-y divide-slate-300 overflow-hidden rounded-xl border border-slate-300 bg-slate-100 " role="menu">
+    <div x-cloak x-show="isOpen || openedWithKeyboard" x-transition x-trap="openedWithKeyboard" @click.outside="isOpen = false, openedWithKeyboard = false" @keydown.down.prevent="$focus.wrap().next()" @keydown.up.prevent="$focus.wrap().previous()" class="absolute top-11 right-1 flex w-full min-w-[12rem] flex-col divide-y divide-slate-300 overflow-hidden rounded-xl border border-slate-300 bg-slate-100 " role="menu">
         <!-- Dropdown Section -->
         <div class="flex flex-col py-1.5"> 
             <a href="/#about" class="flex items-center gap-2 bg-slate-100 px-4 py-2 text-sm text-slate-700 hover:bg-slate-800/5 hover:text-black focus-visible:bg-slate-800/10 focus-visible:text-black focus-visible:outline-none" role="menuitem">
