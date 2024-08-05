@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use Closure;
 use Filament\Forms;
 use App\Models\Post;
+use App\Models\Tag;
 use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
@@ -45,9 +46,10 @@ class PostResource extends Resource
                 ->nullable(), 
                 
                 Select::make('tags')
-                    ->multiple()
-                    ->required()
-                    ->relationship('tags', 'nume'),
+                ->multiple()
+                ->required()
+                ->relationship('tags', 'nume')
+                ->options(Tag::all()->pluck('nume', 'id')),
             ]);
     }
 
