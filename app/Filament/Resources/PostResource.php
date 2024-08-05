@@ -73,7 +73,8 @@ class PostResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
-            ]);
+            ])
+            ->defaultSort('published_at', 'desc'); // Apply defaultSort directly to the Table instance
     }
 
     public static function getRelations(): array
