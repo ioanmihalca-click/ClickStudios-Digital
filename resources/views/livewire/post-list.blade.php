@@ -11,7 +11,7 @@
                         @endif
                         <div class="p-6">
                             <h2 class="text-xl font-semibold mb-2">
-                                <a href="{{ route('postari.show', $post->slug) }}" class="text-blue-600 hover:text-blue-800">{{ $post->titlu }}</a>
+                                <a href="{{ route('postari.show', $post->slug) }}" class="text-gray-900 hover:text-blue-800">{{ $post->titlu }}</a>
                             </h2>
                             <p class="text-gray-600 mb-4">{{ $post->meta_descriere }}</p>
                             <div class="flex flex-wrap gap-2">
