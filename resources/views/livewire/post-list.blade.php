@@ -7,7 +7,7 @@
                 @foreach ($posts as $post)
                     <div class="bg-white rounded-lg shadow-md overflow-hidden">
                         @if ($post->imagine_principala)
-                            <img src="{{ asset('storage/' . $post->imagine_principala) }}" alt="{{ $post->titlu }}" class="w-full h-48 object-cover">
+                            <img src="{{ asset('storage/' . $post->imagine_principala) }}" alt="{{ $post->titlu }}" class="w-full h-auto object-cover">
                         @endif
                         <div class="p-6">
                             <h2 class="text-xl font-semibold mb-2">
