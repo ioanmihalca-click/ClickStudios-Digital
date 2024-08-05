@@ -11,7 +11,7 @@
         <h1 class="text-3xl font-bold mb-4" itemprop="headline">{{ $post->titlu }}</h1>
 
         <div class="text-gray-600 mb-4">
-             Publicat la data de {{ $post->created_at->isoFormat('D MMMM YYYY') }} de 
+             Publicat la data de {{ $post->published_at->isoFormat('D MMMM YYYY') }} de 
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <span itemprop="name">ClickStudios-Digital</span>
             </span>
