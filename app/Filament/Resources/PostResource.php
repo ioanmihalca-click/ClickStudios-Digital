@@ -65,7 +65,7 @@ class PostResource extends Resource
                 TextColumn::make('tags.nume')
                     ->badge()
                     ->separator(', '),
-                TextColumn::make('created_at')->dateTime('d-m-Y H:i')->sortable(),
+                TextColumn::make('published_at')->dateTime('d-m-Y H:i')->sortable(),
             ])
             ->filters([
                 //
