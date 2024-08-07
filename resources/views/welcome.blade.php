@@ -80,11 +80,13 @@
     <!-- Apple Touch Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon-click-studios-digital.jpg') }}" />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Font Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
 
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -102,83 +104,67 @@
       gtag('config', 'G-QFL38JS6PJ');
     </script>
 
-
+  @vite('resources/css/app.css')
 </head>
 
 
 <body class="font-sans bg-gray-100 " x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">
 
+   <nav x-data="{ isOpen: false }" class="fixed top-0 left-0 w-full z-50 bg-opacity-75 bg-black">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+        <a href="/" class="text-white text-xs tracking-[4px] uppercase font-roboto-condensed">Click Studios Digital</a>
+        
+        <!-- Hamburger menu button (visible on mobile) -->
+        <button @click="isOpen = !isOpen" class="md:hidden text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
 
+        <!-- Desktop menu -->
+        <div class="hidden md:flex space-x-4">
+            <a href="#about" class="text-white hover:text-emerald-500 font-roboto-condensed">Despre noi</a>
+            <a href="#dezvoltare-web" class="text-white hover:text-emerald-500 font-roboto-condensed">Dezvoltare Web</a>
+            <a href="#servicii" class="text-white hover:text-emerald-500 font-roboto-condensed">Servicii</a>
+            <a href="#portofoliu" class="text-white hover:text-emerald-500 font-roboto-condensed">Portofoliu</a>
+            <a href="/blog" class="text-white hover:text-emerald-500 font-roboto-condensed">Blog</a>
+            <a href="#contact" class="text-white hover:text-emerald-500 font-roboto-condensed">Contact</a>
 
-    <section class="relative flex items-center justify-center h-screen text-white showcase">
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden video-container">
-            <video src="/assets/bg-video.mp4" autoplay muted loop class="absolute object-cover min-w-full min-h-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"></video>
-            <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
-        </div>
-
-        <div class="z-10 px-2 text-center content">
-          <h1 class="mb-4 text-5xl md:text-5xl md:font-normal">Click Studios<br><span class="text-base text-gray-100 md:text-3xl md:font-light">Dezvoltare Web și Soluții Digitale Creative</span></h1>
-          <h3 class="mb-8 text-sm text-gray-100 md:text-lg">Ca o punte între artă și tehnologie, suntem aici pentru a vă ghida în călătoria către succesul digital.</h3>
-      
-                <div data-aos="zoom-in">
-                
-                  <div class="flex flex-col items-center">
-                    <a href="#about"
-                    class="inline-block w-40 px-2 py-1 mt-4 text-white transition duration-300 ease-in-out transform border border-white rounded-md btn bg-primary-color hover:scale-95 hover:bg-gray-800 hover:shadow-md">Despre noi</a>
-                    <a href="#dezvoltare-web"
-                    class="inline-block w-40 px-2 py-1 mt-4 text-white transition duration-300 ease-in-out transform border border-white rounded-md btn bg-primary-color hover:scale-95 hover:bg-gray-800 hover:shadow-md">Dezvoltare Web</a>
-                    <a href="#servicii"
-                    class="inline-block w-40 px-2 py-1 mt-4 text-white transition duration-300 ease-in-out transform border border-white rounded-md btn bg-primary-color hover:scale-95 hover:bg-gray-800 hover:shadow-md">Servicii</a>
-                    <a href="#portofoliu"
-                    class="inline-block w-40 px-2 py-1 mt-4 text-white transition duration-300 ease-in-out transform border border-white rounded-md btn bg-primary-color hover:scale-95 hover:bg-gray-800 hover:shadow-md">Portofoliu</a>
-                    <a href="#contact"
-                    class="inline-block w-40 px-2 py-1 mt-4 text-white transition duration-300 ease-in-out transform border border-white rounded-md btn bg-primary-color hover:scale-95 hover:bg-gray-800 hover:shadow-md">Contact</a>
-                    <a href="/blog"
-                    class="inline-block w-40 px-2 py-1 mt-4 text-white transition duration-300 ease-in-out transform border border-white rounded-md btn bg-emerald-900 bg-opacity-75  hover:scale-95 hover:bg-emerald-900 hover:bg-opacity-50 hover:shadow-md">Blog</a>
-                </div>
-
-<!--Modal Play Video -->
-<div x-data="{videoModalIsOpen: false}" class="mt-10">
-    <button @click="videoModalIsOpen = true, $refs.video.play()" type="button" class="inline-flex cursor-pointer items-center gap-2 whitespace-nowrap rounded-xl bg-blue-500 bg-opacity-75 px-4 py-2 text-center text-sm font-medium tracking-wide text-slate-100 transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:opacity-100 active:outline-offset-0 dark:bg-blue-600 dark:text-slate-100 dark:focus-visible:outline-blue-600">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"  class="w-4 h-4">
-            <path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd"/>
-        </svg>
-        Play Video
-    </button>
-    <div x-cloak x-show="videoModalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="videoModalIsOpen" @keydown.esc.window="videoModalIsOpen = false, $refs.video.pause()" @click.self="videoModalIsOpen = false, $refs.video.pause()" class="fixed inset-0 z-30 flex items-center justify-center bg-black/20 p-4 backdrop-blur-md lg:p-8" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
-        <!-- Modal Dialog -->
-        <div x-show="videoModalIsOpen" x-transition:enter="transition ease-out duration-300 delay-200" x-transition:enter-start="opacity-0 translate-y-8" x-transition:enter-end="opacity-100 translate-y-0" class="max-w-56 w-full relative">
-            <!-- Close Button -->
-            <button type="button" x-show="videoModalIsOpen" @click="videoModalIsOpen = false, $refs.video.pause()" x-transition:enter="transition ease-out duration-200 delay-500" x-transition:enter-start="opacity-0 scale-0" x-transition:enter-end="opacity-100 scale-100" class="absolute -top-6 -right-6 flex items-center justify-center rounded-full bg-slate-100 p-1.5 text-black hover:opacity-75 active:opacity-100 dark:bg-slate-800 dark:text-white" aria-label="close modal">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" stroke="currentColor" fill="none" stroke-width="1.4" class="w-4 h-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-               </svg>
-            </button>
-            <!-- Video -->
-            <video x-ref="video" class="max-w-56 mx-auto rounded-xl aspect-auto" controls>
-                <track default kind="captions" srclang="ro" src="path to your .vtt file" />
-                
-                <source src="/assets/video-intro.mp4" type="video/mp4">
-                 Your browser does not support HTML video.
-            </video>
         </div>
     </div>
-</div>
 
+    <!-- Mobile menu -->
+    <div x-show="isOpen" @click.away="isOpen = false" class="md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#about" class="text-white block px-3 py-2 font-roboto-condensed">Despre noi</a>
+            <a href="#dezvoltare-web" class="text-white block px-3 py-2 font-roboto-condensed">Dezvoltare Web</a>
+            <a href="#servicii" class="text-white block px-3 py-2 font-roboto-condensed">Servicii</a>
+            <a href="#portofoliu" class="text-white block px-3 py-2 font-roboto-condensed">Portofoliu</a>
+            <a href="/blog" class="text-white block px-3 py-2 font-roboto-condensed">Blog</a>
+            <a href="#contact" class="text-white block px-3 py-2 font-roboto-condensed">Contact</a>
+        </div>
+    </div>
+</nav>
 
-        </div>
-        </div>
-        
-    </section>
+    <section class="relative flex items-center justify-center h-screen text-white showcase" id="parallax-section">
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden video-container">
+        <video src="/assets/bg-video.mp4" autoplay muted loop class="absolute object-cover w-full h-full -z-10 scale-125" id="bg-video"></video>
+        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+    </div>
+
+    <div class="absolute text-center items-center justify-center fade-content" id="content">
+        <div class="font-roboto-condensed tracking-widest md:tracking-[6px] uppercase mb-12 text-sm md:text-base">Noi suntem</div>
+        <h1 class="font-roboto-condensed uppercase mb-16 tracking-[6px] md:tracking-[24px] font-normal text-3xl md:text-5xl">Click Studios Digital</h1>
+        <a href="#about" class="text-white hover:bg-white hover:text-black py-2 px-10 font-roboto-condensed tracking-widest uppercase text-xs transition-all duration-300 border border-white hover:border-transparent">Afla mai multe</a>
+    </div>
+</section>
 
     <section id="about" class="px-4 py-16 bg-gray-100">
       <div class="max-w-3xl mx-auto">
         <h2 class="mb-12 text-3xl font-bold text-center text-gray-800">Despre noi</h2>
         
      
-          <div data-aos="fade-right">
-            <img src="/assets/OG-Click-Studios-Digital.jpg" class="w-full mb-6 rounded-lg shadow-lg" alt="Click Studios Digital, Dezvoltare Web, Web Design">
-          </div>
+         
           <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
             
       
@@ -821,9 +807,33 @@
         </svg>
     </button>
     
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('bg-video');
+    const content = document.getElementById('content');
+    const section = document.getElementById('parallax-section');
+
+    window.addEventListener('scroll', function() {
+        let scrollPosition = window.pageYOffset;
+        let sectionTop = section.offsetTop;
+        let sectionHeight = section.offsetHeight;
+
+        if (scrollPosition > sectionTop && scrollPosition < (sectionTop + sectionHeight)) {
+            let parallaxValue = (scrollPosition - sectionTop) * 0.5;
+            let fadeValue = 1 - (parallaxValue / (sectionHeight * 0.5));
+
+            // Ensure fadeValue is between 0 and 1
+            fadeValue = Math.max(0, Math.min(1, fadeValue));
+
+            video.style.transform = `scale(1.25) translateY(${parallaxValue * 0.5}px)`;
+            content.style.transform = `translateY(${parallaxValue * 0.7}px)`;
+            content.style.opacity = fadeValue;
+        }
+    });
+});
+</script>
+
 </body>
 </html>
