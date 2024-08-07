@@ -91,9 +91,6 @@
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <!-- AOS Animation Library -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFL38JS6PJ"></script>
     <script>
@@ -168,28 +165,28 @@
           <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
             
       
-            <div data-aos="fade-down" class="p-6 bg-white rounded-lg shadow-md">
+            <div class="p-6 bg-white rounded-lg shadow-md">
               <i class="mb-4 text-3xl text-blue-500 fas fa-code"></i>
               <p class="text-gray-700">Suntem o agenție de dezvoltare web și marketing digital cu sediul in Baia Mare, Maramures. Creăm site-uri web personalizate, aplicații web moderne și soluții e-commerce robuste care nu doar arată bine, ci și performează excelent.</p>
             </div>
             
         
-            <div data-aos="fade-down" class="p-6 bg-white rounded-lg shadow-md">
+            <div  class="p-6 bg-white rounded-lg shadow-md">
               <i class="mb-4 text-3xl text-blue-500 fas fas fa-lightbulb"></i>
               <p class="text-gray-700">La Click Studios Digital, ne dedicăm să redefinim standardele în domeniul digital.  Abordăm fiecare provocare cu o combinație unică de expertiză tehnică, creativitate artistică și înțelegere profundă a nevoilor afacerii dumneavoastră.</p>
             </div>
          
-          <div data-aos="zoom-in-up" class="p-6 bg-white rounded-lg shadow-md">
+          <div  class="p-6 bg-white rounded-lg shadow-md">
             <i class="mb-4 text-3xl text-blue-500 fas fa-laptop-code"></i>
             <p class="text-gray-700"> Fie că este vorba de web design, strategii de publicitate digitală, optimizare pentru motoarele de căutare, marketing de conținut sau producție audio și video, echipa noastră este aici pentru a vă oferi soluții personalizate.</p>
           </div>
 
-          <div data-aos="fade-down" class="p-6 bg-white rounded-lg shadow-md">
+          <div  class="p-6 bg-white rounded-lg shadow-md">
             <i class="mb-4 text-3xl text-blue-500 fa-solid fa-palette"></i>
             <p class="text-gray-700">Ne mândrim cu abilitatea noastră de a combina arta și tehnologia pentru a crea rezultate extraordinare. Cu o echipă dedicată și o pasiune pentru creativitate fără limite, suntem aici pentru a vă ghida în călătoria către succesul digital. Suntem mereu în căutare de noi modalități de a surprinde și de a impresiona, de a inova și de a influența.</p>
           </div>
 
-          <div data-aos="zoom-in-up" class="p-6 bg-white rounded-lg shadow-md">
+          <div  class="p-6 bg-white rounded-lg shadow-md">
             <i class="mb-4 text-3xl text-blue-500 fa-solid fa-globe"></i>
             <p class="text-gray-700">Oferim o gamă completă de servicii de SEO și dezvoltare web, publicitate online și marketing digital, branding, producție muzicală și producție video. Dacă sunteți în căutarea unei echipe creative și dedicate pentru a vă ajuta să vă atingeți obiectivele de marketing și publicitate, contactați-ne și împreună vom construi ceva extraordinar!</p>
           </div>
@@ -210,7 +207,7 @@
       <h2 class="mb-8 text-3xl font-bold text-center text-gray-800">Expertiză în Dezvoltare Web</h2>
       
       <div class="grid grid-cols-1 gap-8 mx-auto md:grid-cols-2">
-        <div data-aos="fade-down" class="p-4 bg-white rounded-lg shadow">
+        <div  class="p-4 bg-white rounded-lg shadow">
               <h3 class="mb-4 text-2xl font-semibold text-blue-600">Specialiști în TALL Stack</h3>
               <p class="mb-4 text-gray-700">La Click Studios Digital, excelăm în dezvoltarea cu TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire), oferind aplicații web robuste, rapide și scalabile. Această combinație puternică ne permite să creăm experiențe web de înaltă performanță și ușor de întreținut.</p>
               <ul class="pl-5 mb-6 text-gray-700 list-disc">
@@ -220,7 +217,7 @@
                   <li>Actualizări dinamice cu Livewire</li>
               </ul>
           </div>
-          <div data-aos="fade-right" class="p-4 bg-white rounded-lg shadow">
+          <div  class="p-4 bg-white rounded-lg shadow">
               <h3 class="mb-4 text-2xl font-semibold text-blue-600">Servicii de Dezvoltare Web</h3>
               <ul class="pl-5 mb-6 text-gray-700 list-disc">
                   <li>Creare site-uri web personalizate</li>
