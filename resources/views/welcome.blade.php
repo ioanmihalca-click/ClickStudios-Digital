@@ -127,32 +127,35 @@
             <a href="#portofoliu" class="text-white hover:text-emerald-500 font-roboto-condensed">Portofoliu</a>
             <a href="/blog" class="text-white hover:text-emerald-500 font-roboto-condensed">Blog</a>
             <a href="#contact" class="text-white hover:text-emerald-500 font-roboto-condensed">Contact</a>
-
         </div>
     </div>
 
     <!-- Mobile menu -->
     <div x-show="isOpen" @click.away="isOpen = false" class="md:hidden">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#about" class="block px-3 py-2 text-white font-roboto-condensed">Despre noi</a>
-            <a href="#dezvoltare-web" class="block px-3 py-2 text-white font-roboto-condensed">Dezvoltare Web</a>
-            <a href="#servicii" class="block px-3 py-2 text-white font-roboto-condensed">Servicii</a>
-            <a href="#portofoliu" class="block px-3 py-2 text-white font-roboto-condensed">Portofoliu</a>
-            <a href="/blog" class="block px-3 py-2 text-white font-roboto-condensed">Blog</a>
-            <a href="#contact" class="block px-3 py-2 text-white font-roboto-condensed">Contact</a>
+            <a href="#about" @click="isOpen = false" class="block px-3 py-2 text-white font-roboto-condensed">Despre noi</a>
+            <a href="#dezvoltare-web" @click="isOpen = false" class="block px-3 py-2 text-white font-roboto-condensed">Dezvoltare Web</a>
+            <a href="#servicii" @click="isOpen = false" class="block px-3 py-2 text-white font-roboto-condensed">Servicii</a>
+            <a href="#portofoliu" @click="isOpen = false" class="block px-3 py-2 text-white font-roboto-condensed">Portofoliu</a>
+            <a href="/blog" @click="isOpen = false" class="block px-3 py-2 text-white font-roboto-condensed">Blog</a>
+            <a href="#contact" @click="isOpen = false" class="block px-3 py-2 text-white font-roboto-condensed">Contact</a>
         </div>
     </div>
 </nav>
 
+
  <section class="relative flex items-center justify-center h-screen text-white home-parallax home-fade">
     <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <video src="/assets/bg-video.mp4" autoplay muted loop class="absolute object-cover w-full h-full scale-125 -z-20"></video> <!-- Updated z-index -->
-        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 -z-10"></div> <!-- Ensure this is below other content -->
+        <video src="/assets/bg-video.mp4" autoplay muted loop class="absolute object-cover w-full h-full scale-125 -z-20"></video> 
+        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 -z-10"></div>
     </div>
 
-    <div class="relative z-10 items-center justify-center text-center caption-content"> <!-- Updated z-index -->
-        <div class="font-roboto-condensed tracking-widest md:tracking-[6px] uppercase mb-12 text-sm md:text-base">Noi suntem</div>
-        <h1 class="font-roboto-condensed uppercase mb-16 tracking-[6px] md:tracking-[24px] font-normal text-3xl md:text-5xl">Click Studios Digital</h1>
+    <div class="relative z-10 items-center justify-center text-center caption-content">
+        <div class="font-roboto-condensed tracking-widest md:tracking-[4px] uppercase mb-8 md:mb-10 text-sm md:text-base">Noi suntem</div>
+       <h1 class="font-roboto-condensed uppercase mb-10 md:mb-14 tracking-[6px] md:tracking-[24px] font-normal text-3xl md:text-5xl leading-relaxed md:leading-normal">
+    Click Studios Digital
+</h1>
+
         <a href="#about" class="px-10 py-2 text-xs tracking-widest text-white uppercase transition-all duration-300 border border-white hover:bg-white hover:text-black font-roboto-condensed hover:border-transparent">Afla mai multe</a>
     </div>
 </section>
