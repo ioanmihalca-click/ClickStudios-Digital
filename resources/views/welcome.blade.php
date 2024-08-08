@@ -477,29 +477,48 @@
 <!--Portofolio-->
 
 <section id="portofoliu" class="px-4 py-12 text-center">
-  <div class="container mx-auto">
-    <h2 class="mb-8 text-3xl font-bold text-center">Portofoliu</h2>
+
+<div class="relative h-screen bg-fixed bg-center bg-cover" style="background-image: url('assets/servicii.webp')">
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative z-10 flex flex-col items-center justify-center h-full">
+    <h2 class="font-roboto-condensed uppercase mb-10 md:mb-14 tracking-[6px] md:tracking-[24px] font-normal text-3xl md:text-5xl leading-relaxed md:leading-normal text-white">Portofoliu</h2>
+    <div class="max-w-2xl mx-auto">
+      <p class="mb-16 text-lg tracking-wide text-center text-white font-volkov">"Singurul mod de a face un lucru bine este să fii pasionat."</p>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="container mx-auto mt-8">
+   
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-      <!-- Portfolio Item Click Music App -->
-      <div x-data="{ open: false }" data-aos="fade-right" class="mb-4">
-        <button @click="open = !open" class="w-full px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg bg-gray-50 hover:-translate-y-2">
-          <div class="flex justify-between">
-            <h3 class="text-lg font-semibold">Click Music Streaming App</h3>
-            <span x-show="!open" class="text-blue-500">+</span>
-            <span x-show="open" class="text-blue-500">-</span>
+        <!-- Portfolio Item Click Music App -->
+      <div x-data="{ open: false }" data-aos="fade-right" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
+        <div class="relative">
+          <img src="/assets/ClickMusic-OG-Site.jpg" alt="Click Music Streaming App" class="object-cover w-full h-auto transition duration-300 ease-in-out transform rounded-t-lg hover:scale-105 hover:opacity-80">
+          <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/50" :class="{ 'opacity-100': open }">
+            <h3 class="text-xl font-bold text-white">Click Music RO</h3>
           </div>
-        </button>
-        <div x-show="open" x-transition class="px-8 py-8 bg-white border border-t-0">
-          <a href="https://clickmusic.ro" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
-          <img src="/assets/clickmusicapp.jpg" alt="Click Music Streaming App" class="w-full h-auto transition duration-300 ease-in-out transform rounded-lg hover:scale-105 hover:opacity-80">
-          <div class="p-4">
-            <p class="text-base leading-relaxed text-left">
-              <span class="text-blue-500">✗</span> Click Music Streaming App este rezultatul eforturilor noastre constante de a crea soluții digitale de înaltă calitate, îmbunătățind experiența utilizatorilor în domeniul streaming-ului muzical. <br> <br>
-              <span class="text-blue-500">✗</span> Dezvoltată folosind tehnologii avansate PHP/Laravel, această aplicație web oferă o experiență de streaming captivantă și ușor de folosit.
+        </div>
+        <div class="p-4">
+          <button @click="open = !open" class="flex items-center justify-between w-full">
+            <h3 class="text-base font-normal tracking-widest text-center text-gray-900 uppercase md:text-lg font-roboto-condensed">Click Music RO</h3>
+            <span :class="{ 'text-blue-500': !open, 'text-blue-500': open }">
+              <span x-show="!open">+</span>
+              <span x-show="open">-</span>
+            </span>
+          </button>
+          <div x-show="open" x-transition class="mt-4">
+                  <a href="https://clickmusic.ro" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+
+            <p class="text-left text-gray-900">
+               Clickmusic.ro este rezultatul eforturilor noastre constante de a crea soluții digitale de înaltă calitate, îmbunătățind experiența utilizatorilor în domeniul streaming-ului muzical. <br> <br>
+              Dezvoltată folosind tehnologiile TALL Stack, această aplicație web oferă o experiență de streaming captivantă și ușor de folosit.
               <br><br>
-              <strong>Caracteristici Cheie:</strong>
-              <ul class="mt-2 text-left list-disc">
+              <strong>Caracteristici:</strong>
+              <ul class="px-4 mt-2 text-left list-disc">
                 <li>Sistem de Autentificare</li>
                 <li>Bază de Date Avansată</li>
                 <li>Notificări Mail și Database</li>
@@ -508,91 +527,96 @@
                 <li>Blog integrat</li>
                 <li>Sistem de plata cu Stripe</li>
                 <li>Securitate Avansată a Datelor</li>
-              </ul>
-              <br>
-              <span class="text-blue-500">✗</span> Click Music Streaming App este un exemplu al angajamentului nostru față de excelență și inovație în dezvoltarea soluțiilor digitale, aducând muzica mai aproape de publicul său într-un mod interactiv și captivant.
-            </p>
+              </ul> </p>
+              <p class="mt-4 text-left text-gray-900">
+              Click Music Streaming App este un exemplu al angajamentului nostru față de excelență și inovație în dezvoltarea soluțiilor digitale, aducând muzica mai aproape de publicul său într-un mod interactiv și captivant.</p>
+            
           </div>
         </div>
       </a>
       </div>
 
 <!-- Portfolio Item Snow 'n' Stuff -->
-<div x-data="{ open: false }" data-aos="fade-right" class="mb-4">
-  <button @click="open = !open" class="w-full px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg bg-gray-50 hover:-translate-y-2">
-    <div class="flex justify-between">
-      <h3 class="text-lg font-semibold">Website Prezentare Snow 'n' Stuff</h3>
-      <span x-show="!open" class="text-blue-500">+</span>
-      <span x-show="open" class="text-blue-500">-</span>
+<div x-data="{ open: false }" data-aos="fade-right" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
+  <div class="relative">
+    <img src="/assets/OG-SnownStuff.jpg" alt="Website Prezentare Snow 'n' Stuff" class="object-cover w-full h-auto transition duration-300 ease-in-out transform rounded-t-lg hover:scale-105 hover:opacity-80">
+    <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/50" :class="{ 'opacity-100': open }">
+      <h3 class="text-xl font-bold text-white">Snow 'n' Stuff</h3>
     </div>
-  </button>
-</a>
-<div x-show="open" x-transition class="px-8 py-8 bg-white border border-t-0">
-  <a href="https://www.snow-n-stuff.com/" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
-
-  <img src="/assets/OG-SnownStuff.jpg" alt="Website Prezentare Snow 'n' Stuff" class="w-full h-auto transition duration-300 ease-in-out transform rounded-lg hover:scale-105 hover:opacity-80">
-  <div class="p-4">
-    <p class="text-base leading-relaxed text-left">
-      <span class="text-blue-500">✗</span> Snow 'n' Stuff este un label muzical internațional de top, specializat în genurile Tech House, Deep House, House și Techno. Pentru a reflecta profesionalismul și calitatea înaltă a acestui brand, am creat un website de prezentare captivant și modern. <br> <br>
-      <span class="text-blue-500">✗</span> Website-ul a fost conceput pentru a oferi o experiență digitală unică, prezentând artiștii labelului, piesele muzicale și playlisturile lor. <br> <br>
-      <span class="text-blue-500">✗</span> Am integrat elemente interactive, precum playere pentru ascultarea pieselor, creând o platformă engaging pentru fanii muzicii electronice. <br> <br>
-  
-      <strong>Caracteristici Cheie:</strong>
-      <ul class="pl-6 mt-2 text-left list-disc">
-        <li>Design Modern și Captivant</li>
-        <li>Prezentare Artiști și Playlisturi</li>
-        <li>Elemente Interactive (Playere, Previews)</li>
-        <li>Optimizare SEO pentru Vizibilitate Organică</li>
-        <li>Integrare cu Platforme Sociale și Streaming</li>
-      </ul>
-<br>
-    <span class="text-blue-500">✗</span> Prin intermediul acestui website de prezentare, am reușit să promovăm eficient brandul Snow 'n' Stuff și să oferim o experiență digitală de top pentru fanii muzicii electronice din întreaga lume. Optimizarea SEO a asigurat, de asemenea, vizibilitatea organică și accesibilitatea către publicul țintă, facilitând astfel creșterea și dezvoltarea continuă a labelului.
-    </p>
   </div>
-</div>
-</a>
+  <div class="p-4">
+    <button @click="open = !open" class="flex items-center justify-between w-full">
+      <h3 class="text-base font-normal tracking-widest text-center text-gray-900 uppercase md:text-lg font-roboto-condensed">Snow 'n' Stuff</h3>
+      <span :class="{ 'text-blue-500': !open, 'text-blue-500': open }">
+        <span x-show="!open">+</span>
+        <span x-show="open">-</span>
+      </span>
+    </button>
+    <div x-show="open" x-transition class="mt-4">
+    <a href="https://www.snow-n-stuff.com/" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+      <p class="text-left text-gray-900">
+        Snow 'n' Stuff este un label muzical internațional de top, specializat în genurile Tech House, Deep House, House și Techno. Pentru a reflecta profesionalismul și calitatea înaltă a acestui brand, am creat un website de prezentare captivant și modern. <br><br>
+        Website-ul a fost conceput pentru a oferi o experiență digitală unică, prezentând artiștii labelului, piesele muzicale și playlisturile lor. <br><br>
+        Am integrat elemente interactive, precum playere pentru ascultarea pieselor, creând o platformă engaging pentru fanii muzicii electronice.
+        <br><br>
+        <strong>Caracteristici Cheie:</strong>
+        <ul class="px-4 mt-2 text-left list-disc">
+          <li>Design Modern și Captivant</li>
+          <li>Prezentare Artiști și Playlisturi</li>
+          <li>Elemente Interactive (Playere, Previews)</li>
+          <li>Optimizare SEO pentru Vizibilitate Organică</li>
+          <li>Integrare cu Platforme Sociale și Streaming</li>
+        </ul>
+      </p>
+      <p class="mt-4 text-left text-gray-900">
+        Prin intermediul acestui website de prezentare, am reușit să promovăm eficient brandul Snow 'n' Stuff și să oferim o experiență digitală de top pentru fanii muzicii electronice din întreaga lume. Optimizarea SEO a asigurat, de asemenea, vizibilitatea organică și accesibilitatea către publicul țintă, facilitând astfel creșterea și dezvoltarea continuă a labelului.
+      </p>
+    </div>
+  </div>
+  </a>
 </div>
 
 
 <!-- Portfolio Item Branding CS Victoria MM -->
-<div x-data="{ open: false }" data-aos="fade-right" class="mb-4">
-  <button @click="open = !open" class="w-full px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg bg-gray-50 hover:-translate-y-2">
-    <div class="flex justify-between">
-      <h3 class="text-lg font-semibold">Branding CS Victoria MM</h3>
-      <span x-show="!open" class="text-blue-500">+</span>
-      <span x-show="open" class="text-blue-500">-</span>
+<div x-data="{ open: false }" data-aos="fade-right" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
+  <div class="relative">
+    <img src="/assets/victoria-maramures.jpg" alt="Branding Club Sportiv Victoria Maramureș" class="object-cover w-full h-full transition duration-300 ease-in-out transform rounded-t-lg hover:scale-105 hover:opacity-80">
+    <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/50" :class="{ 'opacity-100': open }">
+      <h3 class="text-xl font-bold text-white">CS Victoria MM</h3>
     </div>
-  </button>
-</a>
-<div x-show="open" x-transition class="px-8 py-8 bg-white border border-t-0">
-  <a href="https://csvictoriamm.ro/" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
-
-  <img src="/assets/victoria-maramures.jpg" alt="Branding Club Sportiv Victoria Maramureș" class="w-full h-auto transition duration-300 ease-in-out transform rounded-lg hover:scale-105 hover:opacity-80">
+  </div>
   <div class="p-4">
-    <p class="text-base leading-relaxed text-left">
-      <span class="text-blue-500">✗</span> Proiectul de branding pentru Clubul Sportiv Victoria Maramureș a fost o călătorie fascinantă în definirea și exprimarea identității acestuia în mediul online și offline. <br> <br>
-      <span class="text-blue-500">✗</span> Am dezvoltat un logo unic și memorabil care să reprezinte valorile și pasiunea clubului pentru sport, îmbinând tradiția cu modernitatea. <br> <br>
-      <span class="text-blue-500">✗</span> Pe lângă crearea identității vizuale, am dezvoltat și un website atractiv și ușor de navigat, precum și conținut video captivant pentru platformele sociale ale clubului, inclusiv reeluri pe Instagram și videoclipuri pe YouTube. <br> <br>
-  
-      
-      <strong>Caracteristici Cheie:</strong>
-      <ul class="pl-6 mt-2 text-left list-disc">
-        <li>Creare Identitate Vizuală</li>
-        <li>Logo Unic și Memorabil</li>
-        <li>Website Atractiv și Ușor de Navigat</li>
-        <li>Conținut Video Captivant pentru Platforme Sociale si Gestionarea acestora</li>
-        <li class="font-semibold">     
-        Optimizare SEO pentru a ajunge organic în primele pagini ale căutărilor.
-        
-      </li>
-    </ul>
-<br>
-    <span class="text-blue-500">✗</span> Proiectul de branding pentru Clubul Sportiv Victoria Maramureș a fost o inițiativă care a contribuit semnificativ la consolidarea prezenței și notorietății clubului în mediul online. Optimizarea SEO a asigurat, de asemenea, vizibilitatea organică și accesibilitatea către publicul țintă, facilitând astfel creșterea și dezvoltarea continuă a clubului.
-    </p>
+    <button @click="open = !open" class="flex items-center justify-between w-full">
+      <h3 class="text-base font-normal tracking-widest text-center text-gray-900 uppercase md:text-lg font-roboto-condensed">CS Victoria MM</h3>
+      <span :class="{ 'text-blue-500': !open, 'text-blue-500': open }">
+        <span x-show="!open">+</span>
+        <span x-show="open">-</span>
+      </span>
+    </button>
+    <div x-show="open" x-transition class="mt-4">
+      <a href="https://csvictoriamm.ro/" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+        <p class="text-left text-gray-900">
+          Proiectul de branding pentru Clubul Sportiv Victoria Maramureș a fost o călătorie fascinantă în definirea și exprimarea identității acestuia în mediul online și offline. <br><br>
+          Am dezvoltat un logo unic și memorabil care să reprezinte valorile și pasiunea clubului pentru sport, îmbinând tradiția cu modernitatea. <br><br>
+          Pe lângă crearea identității vizuale, am dezvoltat și un website atractiv și ușor de navigat, precum și conținut video captivant pentru platformele sociale ale clubului, inclusiv reeluri pe Instagram și videoclipuri pe YouTube.
+          <br><br>
+          <strong>Caracteristici Cheie:</strong>
+          <ul class="px-4 mt-2 text-left list-disc">
+            <li>Creare Identitate Vizuală</li>
+            <li>Logo Unic și Memorabil</li>
+            <li>Website Atractiv și Ușor de Navigat</li>
+            <li>Conținut Video Captivant pentru Platforme Sociale și Gestionarea acestora</li>
+            <li>Optimizare SEO pentru a ajunge organic în primele pagini ale căutărilor</li>
+          </ul>
+        </p>
+        <p class="mt-4 text-left text-gray-900">
+          Proiectul de branding pentru Clubul Sportiv Victoria Maramureș a fost o inițiativă care a contribuit semnificativ la consolidarea prezenței și notorietății clubului în mediul online. Optimizarea SEO a asigurat, de asemenea, vizibilitatea organică și accesibilitatea către publicul țintă, facilitând astfel creșterea și dezvoltarea continuă a clubului.
+        </p>
+      </a>
+    </div>
   </div>
 </div>
-</a>
-</div>
+
 
   
 <!-- Portfolio Item Podcast Morosenesc -->
@@ -708,6 +732,8 @@
     </div>
   </div>
 </section>
+
+
 
 <!-- Team Section & Contact -->
 {{-- <div id="contact" class="mt-8">
