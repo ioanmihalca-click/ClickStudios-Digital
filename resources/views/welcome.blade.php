@@ -736,7 +736,7 @@
 </div> --}}
 
 <!--Contact Form-->
-<div class="max-w-2xl px-2 mx-auto text-center">
+<div id="contact" class="max-w-2xl px-2 mx-auto text-center">
     <strong>Colaborați cu Noi:</strong> <br><br>
     <span class="text-gray-700">Dacă sunteți interesați să colaborați cu noi pentru dezvoltare web, producția de conținut media sau alte servicii de publicitate și marketing digital, nu ezitați să ne contactați:</span>
     
