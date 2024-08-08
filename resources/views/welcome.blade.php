@@ -710,7 +710,7 @@
 </section>
 
 <!-- Team Section & Contact -->
-<div id="contact" class="mt-8">
+{{-- <div id="contact" class="mt-8">
   <div class="max-w-4xl px-8 py-8 mx-auto transition duration-300 ease-in-out transform hover:-translate-y-2">
     <h2 class="mb-12 text-2xl font-semibold text-center">Echipa Noastră:</h2>
     <div data-aos="fade-up">
@@ -733,7 +733,8 @@
     </div>
   </div>
 </div>
-</div>
+</div> --}}
+
 <!--Contact Form-->
 <div class="max-w-md px-2 mx-auto text-center">
     <strong>Colaborați cu Noi:</strong> <br><br>
