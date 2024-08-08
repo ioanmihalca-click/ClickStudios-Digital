@@ -165,7 +165,7 @@
 
 <section id="about" class="relative z-30 px-4 py-16 bg-white"> 
       <div class="max-w-3xl mx-auto">
-        <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-10 mt-14">Despre noi</h2>
+        <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-10 ">Despre noi</h2>
         
                      <p class="mb-16 text-2xl tracking-wide text-center text-gray-900 font-volkov">Suntem o agentie de dezvoltare web si marketing digital cu sediul in Baia Mare, Maramures. Oferim o gama completa de servicii de SEO si web design, publicitate online si marketing digital, branding, productie video publicitara si producție muzicala. Ne mandrim cu abilitatea noastră de a combina arta si tehnologia pentru a crea rezultate extraordinare. </p>
 
@@ -182,47 +182,14 @@
 </div>
 <hr class="border-gray-300 border-solid mb-14 ">
 
-          {{-- <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-            
-      
         
-        
-            <div  class="p-6 bg-white rounded-lg shadow-md">
-              <i class="mb-4 text-3xl text-blue-500 fas fa-lightbulb"></i>
-              <p class="text-gray-700">La Click Studios Digital, ne dedicăm să redefinim standardele în domeniul digital.  Abordăm fiecare provocare cu o combinație unică de expertiză tehnică, creativitate artistică și înțelegere profundă a nevoilor afacerii dumneavoastră.</p>
-            </div>
-         
-          <div  class="p-6 bg-white rounded-lg shadow-md">
-            
-            <p class="text-gray-700"> Fie că este vorba de web design, strategii de publicitate digitală, optimizare pentru motoarele de căutare, marketing de conținut sau producție audio și video, echipa noastră este aici pentru a vă oferi soluții personalizate.</p>
-          </div>
-
-          <div  class="p-6 bg-white rounded-lg shadow-md">
-            <i class="mb-4 text-3xl text-blue-500 fa-solid fa-palette"></i>
-            <p class="text-gray-700">Ne mândrim cu abilitatea noastră de a combina arta și tehnologia pentru a crea rezultate extraordinare. Cu o echipă dedicată și o pasiune pentru creativitate fără limite, suntem aici pentru a vă ghida în călătoria către succesul digital. Suntem mereu în căutare de noi modalități de a surprinde și de a impresiona, de a inova și de a influența.</p>
-          </div>
-
-          <div  class="p-6 bg-white rounded-lg shadow-md">
-            <i class="mb-4 text-3xl text-blue-500 fa-solid fa-globe"></i>
-            <p class="text-gray-700">Oferim o gamă completă de servicii de SEO și dezvoltare web, publicitate online și marketing digital, branding, producție muzicală și producție video. Dacă sunteți în căutarea unei echipe creative și dedicate pentru a vă ajuta să vă atingeți obiectivele de marketing și publicitate, contactați-ne și împreună vom construi ceva extraordinar!</p>
-          </div>
-
-        </div>
-       
-        
-       
-        </div>
-        
-    
-    </section> --}}
-
  <!--Expertiză în Dezvoltare Web-->
 
     <section id="dezvoltare-web" class="px-4 py-16 bg-white">
   <div class="max-w-6xl mx-auto">
       <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-10">Expertiză în Dezvoltare Web</h2>
       <div class="max-w-2xl mx-auto">
-        <p class="mb-16 text-lg tracking-wide text-center text-gray-900 font-volkov">"Imaginatia este mai importanta decât cunoasterea."</p>
+        <p class="mb-8 text-lg tracking-wide text-center text-gray-900 font-volkov">"Imaginatia este mai importanta decât cunoasterea."</p>
         </div>
       
 <!--Carusel-->
@@ -236,16 +203,16 @@
             description: 'Excelăm în dezvoltarea cu TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire), oferind aplicații web robuste, rapide și scalabile. Această combinație puternică ne permite să creăm experiențe web de înaltă performanță și ușor de întreținut: Frontend responsive cu Tailwind CSS | Interactivitate fără efort cu Alpine.js | Backend puternic cu Laravel | Actualizări dinamice cu Livewire',              
         },                
         {                    
-            imgSrc: 'https://penguinui.s3.amazonaws.com/component-assets/carousel/default-slide-2.webp',                    
+            imgSrc: 'https://clickstudios-digital.com/assets/carusel-bg.webp',                    
             imgAlt: 'Click Studios Digital Web Design, Php Laravel, tailwind, alpine js',  
             title: 'Servicii de Dezvoltare Web',
-            description: 'Creare site-uri web personalizate, Dezvoltare aplicații web complexe, Integrare e-commerce și sisteme de plată, Optimizare pentru motoare de căutare (SEO), Migrare și actualizare site-uri web existente, Panouri de control (admin panel) profesionale și personalizate, Implementare sisteme de autentificare și securitate avansată, Creare de sisteme de comenzi și rezervări online, Mentenanță și suport tehnic',              
+            description: 'Creare site-uri web personalizate, Dezvoltare aplicații web complexe, e-commerce și sisteme de plată, SEO, Panouri de control (admin panel) profesionale și personalizate, Implementare sisteme de autentificare și securitate avansată, Creare de sisteme de comenzi și rezervări online, Mentenanță și suport tehnic',              
         },                
         {                    
-            imgSrc: 'https://penguinui.s3.amazonaws.com/component-assets/carousel/default-slide-3.webp',                    
+            imgSrc: 'https://clickstudios-digital.com/assets/carusel-bg.webp',                    
             imgAlt: 'Click Studios Digital Web Design, Php Laravel, tailwind, alpine js',    
-            title: 'Full stack developers',
-            description: 'Where &quot;burnout&quot; is just a fancy term for &quot;Tuesday&quot;.'             
+            title: 'Soluții Web pentru Afaceri',
+            description: 'Dezvoltăm site-uri de prezentare, magazine online și aplicații web personalizate pentru o gamă variată de afaceri, inclusiv: Restaurante și cafenele, Saloane de cosmetică și frizerii, Service-uri auto și vulcanizări, Cabinete medicale și stomatologice, Magazine de produse locale și artizanale, Firme de construcții și amenajări interioare,Școli de dans sau fitness, Pensiuni și case de vacanță, etc'             
         },            
     ],            
     currentSlideIndex: 1,
@@ -283,7 +250,7 @@
    
     <!-- slides -->
     <!-- Change min-h-[50svh] to your preferred height size -->
-    <div class="relative min-h-[50svh] w-full">
+    <div class="relative min-h-[65svh] md:min-h-[50svh] w-full ">
         <template x-for="(slide, index) in slides">
             <div x-cloak x-show="currentSlideIndex == index + 1" class="absolute inset-0" x-transition.opacity.duration.1000ms>
                 
@@ -291,7 +258,7 @@
                 <div class="absolute inset-0 z-10 flex flex-col items-center justify-end gap-2 px-16 py-12 text-center lg:px-32 lg:py-14 bg-gradient-to-t from-neutral-950/85 to-transparent">
                 
                     <h3 class="w-full font-normal tracking-widest uppercase font-roboto-condensed lg:w-[80%] text-balance text-xl md:text-2xl lg:text-3xl font-bold text-neutral-100" x-text="slide.title" x-bind:aria-describedby="'slide' + (index + 1) + 'Description'"></h3>
-                    <p class="w-full text-xs md:text-sm lg:w-1/2 text-pretty text-neutral-400" x-text="slide.description" x-bind:id="'slide' + (index + 1) + 'Description'"></p>
+                    <p class="w-full text-sm text-white md:text-base lg:w-1/2 text-pretty" x-text="slide.description" x-bind:id="'slide' + (index + 1) + 'Description'"></p>
                 </div>
 
                 <img class="absolute inset-0 object-cover w-full h-full text-neutral-600 dark:text-neutral-400" x-bind:src="slide.imgSrc" x-bind:alt="slide.imgAlt" />
@@ -300,48 +267,14 @@
     </div>
     
     <!-- indicators -->
-    <div class="absolute rounded-none bottom-3 md:bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-4 md:gap-3 px-1.5 py-1 md:px-2" role="group" aria-label="slides" >
+    <div class="absolute z-20 flex gap-4 px-1 py-1 -translate-x-1/2 rounded-none bottom-3 md:bottom-5 left-1/2 md:gap-3 md:px-2" role="group" aria-label="slides" >
         <template x-for="(slide, index) in slides">
             <button class="transition rounded-full cursor-pointer size-2" x-on:click="currentSlideIndex = index + 1" x-bind:class="[currentSlideIndex === index + 1 ? 'bg-neutral-400' : 'bg-neutral-400/50']" x-bind:aria-label="'slide ' + (index + 1)"></button>
         </template>
     </div>
-</div>
 
 
-
-
-  
-          
-                  
       
-      <div class="mt-8">
-          <h3 class="mb-4 text-2xl font-semibold text-center text-blue-600">Soluții Web pentru Afaceri</h3>
-          <p class="mb-4 text-center text-gray-700">Dezvoltăm site-uri de prezentare, magazine online și aplicații web personalizate pentru o gamă variată de afaceri, inclusiv:</p>
-          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-              <div data-aos="fade-up" class="p-3 bg-white rounded-lg shadow">
-                  <ul class="pl-5 text-gray-700 list-disc">
-                      <li>Restaurante și cafenele</li>
-                      <li>Saloane de cosmetică și frizerii</li>
-                      <li>Service-uri auto și vulcanizări</li>
-                  </ul>
-              </div>
-              <div data-aos="fade-up" class="p-3 bg-white rounded-lg shadow">
-                  <ul class="pl-5 text-gray-700 list-disc">
-                      <li>Cabinete medicale și stomatologice</li>
-                      <li>Magazine de produse locale și artizanale</li>
-                      <li>Firme de construcții și amenajări interioare</li>
-                  </ul>
-              </div>
-              <div data-aos="fade-up" class="p-3 bg-white rounded-lg shadow">
-                  <ul class="pl-5 text-gray-700 list-disc">
-                      <li>Școli de dans sau fitness</li>
-                      <li>Pensiuni și case de vacanță</li>
-                      <li>Și multe altele</li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-        
       <div class="mt-12 text-center">
           <a href="#contact" class="px-4 py-1 text-lg font-semibold text-white transition duration-300 bg-blue-600 rounded-full hover:bg-blue-700">Consultanță gratuită</a>
       </div>
