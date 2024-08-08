@@ -230,7 +230,7 @@
 <div x-data="{            
     slides: [                
         {
-            imgSrc: 'https://penguinui.s3.amazonaws.com/component-assets/carousel/default-slide-1.webp',
+            imgSrc: 'https://clickstudios-digital.com/assets/carusel-bg.webp',
             imgAlt: 'Click Studios Digital Web Design, Php Laravel, tailwind, alpine js',  
             title: 'Specialiști în TALL Stack',
             description: 'Excelăm în dezvoltarea cu TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire), oferind aplicații web robuste, rapide și scalabile. Această combinație puternică ne permite să creăm experiențe web de înaltă performanță și ușor de întreținut: Frontend responsive cu Tailwind CSS | Interactivitate fără efort cu Alpine.js | Backend puternic cu Laravel | Actualizări dinamice cu Livewire',              
