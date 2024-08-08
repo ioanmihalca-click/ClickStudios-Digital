@@ -2,20 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-#parallax-section {
-    overflow: hidden;
-}
-
-#bg-video {
-    transform: scale(1.25);
-    transition: transform 0.5s ease-out;
-}
-
-#content {
-    transform: translateY(0);
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-.fade-content {
-    opacity: 1;
-}

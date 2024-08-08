@@ -102,24 +102,25 @@
     </script>
 
   @vite('resources/css/app.css')
+  @vite('resources/js/app.js')
 </head>
 
 
 <body class="font-sans bg-gray-100 " x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">
 
-   <nav x-data="{ isOpen: false }" class="fixed top-0 left-0 w-full z-50 bg-opacity-75 bg-black">
-    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+   <nav x-data="{ isOpen: false }" class="fixed top-0 left-0 z-50 w-full bg-black bg-opacity-75">
+    <div class="container flex items-center justify-between px-4 py-2 mx-auto">
         <a href="/" class="text-white text-xs tracking-[4px] uppercase font-roboto-condensed">Click Studios Digital</a>
         
         <!-- Hamburger menu button (visible on mobile) -->
-        <button @click="isOpen = !isOpen" class="md:hidden text-white">
+        <button @click="isOpen = !isOpen" class="text-white md:hidden">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
 
         <!-- Desktop menu -->
-        <div class="hidden md:flex space-x-4">
+        <div class="hidden space-x-4 md:flex">
             <a href="#about" class="text-white hover:text-emerald-500 font-roboto-condensed">Despre noi</a>
             <a href="#dezvoltare-web" class="text-white hover:text-emerald-500 font-roboto-condensed">Dezvoltare Web</a>
             <a href="#servicii" class="text-white hover:text-emerald-500 font-roboto-condensed">Servicii</a>
@@ -133,30 +134,30 @@
     <!-- Mobile menu -->
     <div x-show="isOpen" @click.away="isOpen = false" class="md:hidden">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#about" class="text-white block px-3 py-2 font-roboto-condensed">Despre noi</a>
-            <a href="#dezvoltare-web" class="text-white block px-3 py-2 font-roboto-condensed">Dezvoltare Web</a>
-            <a href="#servicii" class="text-white block px-3 py-2 font-roboto-condensed">Servicii</a>
-            <a href="#portofoliu" class="text-white block px-3 py-2 font-roboto-condensed">Portofoliu</a>
-            <a href="/blog" class="text-white block px-3 py-2 font-roboto-condensed">Blog</a>
-            <a href="#contact" class="text-white block px-3 py-2 font-roboto-condensed">Contact</a>
+            <a href="#about" class="block px-3 py-2 text-white font-roboto-condensed">Despre noi</a>
+            <a href="#dezvoltare-web" class="block px-3 py-2 text-white font-roboto-condensed">Dezvoltare Web</a>
+            <a href="#servicii" class="block px-3 py-2 text-white font-roboto-condensed">Servicii</a>
+            <a href="#portofoliu" class="block px-3 py-2 text-white font-roboto-condensed">Portofoliu</a>
+            <a href="/blog" class="block px-3 py-2 text-white font-roboto-condensed">Blog</a>
+            <a href="#contact" class="block px-3 py-2 text-white font-roboto-condensed">Contact</a>
         </div>
     </div>
 </nav>
 
-    <section class="relative flex items-center justify-center h-screen text-white showcase" id="parallax-section">
-    <div class="absolute top-0 left-0 w-full h-full overflow-hidden video-container">
-        <video src="/assets/bg-video.mp4" autoplay muted loop class="absolute object-cover w-full h-full -z-10 scale-125" id="bg-video"></video>
-        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+ <section class="relative flex items-center justify-center h-screen text-white home-parallax home-fade">
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <video src="/assets/bg-video.mp4" autoplay muted loop class="absolute object-cover w-full h-full scale-125 -z-20"></video> <!-- Updated z-index -->
+        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 -z-10"></div> <!-- Ensure this is below other content -->
     </div>
 
-    <div class="absolute text-center items-center justify-center fade-content" id="content">
+    <div class="relative z-10 items-center justify-center text-center caption-content"> <!-- Updated z-index -->
         <div class="font-roboto-condensed tracking-widest md:tracking-[6px] uppercase mb-12 text-sm md:text-base">Noi suntem</div>
         <h1 class="font-roboto-condensed uppercase mb-16 tracking-[6px] md:tracking-[24px] font-normal text-3xl md:text-5xl">Click Studios Digital</h1>
-        <a href="#about" class="text-white hover:bg-white hover:text-black py-2 px-10 font-roboto-condensed tracking-widest uppercase text-xs transition-all duration-300 border border-white hover:border-transparent">Afla mai multe</a>
+        <a href="#about" class="px-10 py-2 text-xs tracking-widest text-white uppercase transition-all duration-300 border border-white hover:bg-white hover:text-black font-roboto-condensed hover:border-transparent">Afla mai multe</a>
     </div>
 </section>
 
-    <section id="about" class="px-4 py-16 bg-gray-100">
+<section id="about" class="relative z-30 px-4 py-16 bg-gray-100"> 
       <div class="max-w-3xl mx-auto">
         <h2 class="mb-12 text-3xl font-bold text-center text-gray-800">Despre noi</h2>
         
@@ -172,7 +173,7 @@
             
         
             <div  class="p-6 bg-white rounded-lg shadow-md">
-              <i class="mb-4 text-3xl text-blue-500 fas fas fa-lightbulb"></i>
+              <i class="mb-4 text-3xl text-blue-500 fas fa-lightbulb"></i>
               <p class="text-gray-700">La Click Studios Digital, ne dedicăm să redefinim standardele în domeniul digital.  Abordăm fiecare provocare cu o combinație unică de expertiză tehnică, creativitate artistică și înțelegere profundă a nevoilor afacerii dumneavoastră.</p>
             </div>
          
@@ -217,7 +218,7 @@
                   <li>Actualizări dinamice cu Livewire</li>
               </ul>
           </div>
-          <div  class="p-4 bg-white rounded-lg shadow">
+          <div class="p-4 bg-white rounded-lg shadow">
               <h3 class="mb-4 text-2xl font-semibold text-blue-600">Servicii de Dezvoltare Web</h3>
               <ul class="pl-5 mb-6 text-gray-700 list-disc">
                   <li>Creare site-uri web personalizate</li>
@@ -804,33 +805,5 @@
         </svg>
     </button>
     
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('bg-video');
-    const content = document.getElementById('content');
-    const section = document.getElementById('parallax-section');
-
-    window.addEventListener('scroll', function() {
-        let scrollPosition = window.pageYOffset;
-        let sectionTop = section.offsetTop;
-        let sectionHeight = section.offsetHeight;
-
-        if (scrollPosition > sectionTop && scrollPosition < (sectionTop + sectionHeight)) {
-            let parallaxValue = (scrollPosition - sectionTop) * 0.5;
-            let fadeValue = 1 - (parallaxValue / (sectionHeight * 0.5));
-
-            // Ensure fadeValue is between 0 and 1
-            fadeValue = Math.max(0, Math.min(1, fadeValue));
-
-            video.style.transform = `scale(1.25) translateY(${parallaxValue * 0.5}px)`;
-            content.style.transform = `translateY(${parallaxValue * 0.7}px)`;
-            content.style.opacity = fadeValue;
-        }
-    });
-});
-</script>
-
 </body>
 </html>
