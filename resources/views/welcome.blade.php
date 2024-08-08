@@ -218,7 +218,15 @@
 
  <!--Expertiză în Dezvoltare Web Carusel-->
 
- <div x-data="{            
+
+    <section id="dezvoltare-web" class="px-4 py-16 bg-white">
+  <div class="max-w-6xl mx-auto">
+      <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-10">Expertiză în Dezvoltare Web</h2>
+      <div class="max-w-2xl mx-auto">
+        <p class="mb-16 text-lg tracking-wide text-center text-gray-900 font-volkov">"Imaginatia este mai importanta decât cunoasterea."</p>
+        </div>
+
+         <div x-data="{            
     // Sets the time between each slides in milliseconds
     autoplayIntervalTime: 4000,
     slides: [                
@@ -309,13 +317,6 @@
         </template>
     </div>
 </div>
-
-    <section id="dezvoltare-web" class="px-4 py-16 bg-white">
-  <div class="max-w-6xl mx-auto">
-      <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-10">Expertiză în Dezvoltare Web</h2>
-      <div class="max-w-2xl mx-auto">
-        <p class="mb-16 text-lg tracking-wide text-center text-gray-900 font-volkov">"Imaginatia este mai importanta decât cunoasterea."</p>
-        </div>
       
       <div class="grid grid-cols-1 gap-8 mx-auto md:grid-cols-2">
         <div  class="p-4 ">
