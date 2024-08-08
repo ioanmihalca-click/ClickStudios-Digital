@@ -167,7 +167,7 @@
       <div class="max-w-3xl mx-auto">
         <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-10 mt-14">Despre noi</h2>
         
-                     <p class="mb-16 text-2xl tracking-wide text-center text-gray-900 font-volkov">Suntem o agentie de dezvoltare web si marketing digital cu sediul in Baia Mare, Maramures. Oferim o gama completa de servicii de SEO si web design, publicitate online si marketing digital, branding, productie video publicitara si producție muzicala. Ne mandrim cu abilitatea noastră de a combina arta si tehnologia pentru a crea rezultate extraordinare. </p>
+                     <p class="mb-8 text-2xl tracking-wide text-center text-gray-900 md:mb-16 font-volkov">Suntem o agentie de dezvoltare web si marketing digital cu sediul in Baia Mare, Maramures. Oferim o gama completa de servicii de SEO si web design, publicitate online si marketing digital, branding, productie video publicitara si producție muzicala. Ne mandrim cu abilitatea noastră de a combina arta si tehnologia pentru a crea rezultate extraordinare. </p>
 
          
            <div class="flex justify-center mb-48 animate-pulse">
@@ -182,40 +182,7 @@
 </div>
 <hr class="border-gray-300 border-solid mb-14 ">
 
-          {{-- <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-            
-      
-        
-        
-            <div  class="p-6 bg-white rounded-lg shadow-md">
-              <i class="mb-4 text-3xl text-blue-500 fas fa-lightbulb"></i>
-              <p class="text-gray-700">La Click Studios Digital, ne dedicăm să redefinim standardele în domeniul digital.  Abordăm fiecare provocare cu o combinație unică de expertiză tehnică, creativitate artistică și înțelegere profundă a nevoilor afacerii dumneavoastră.</p>
-            </div>
-         
-          <div  class="p-6 bg-white rounded-lg shadow-md">
-            
-            <p class="text-gray-700"> Fie că este vorba de web design, strategii de publicitate digitală, optimizare pentru motoarele de căutare, marketing de conținut sau producție audio și video, echipa noastră este aici pentru a vă oferi soluții personalizate.</p>
-          </div>
-
-          <div  class="p-6 bg-white rounded-lg shadow-md">
-            <i class="mb-4 text-3xl text-blue-500 fa-solid fa-palette"></i>
-            <p class="text-gray-700">Ne mândrim cu abilitatea noastră de a combina arta și tehnologia pentru a crea rezultate extraordinare. Cu o echipă dedicată și o pasiune pentru creativitate fără limite, suntem aici pentru a vă ghida în călătoria către succesul digital. Suntem mereu în căutare de noi modalități de a surprinde și de a impresiona, de a inova și de a influența.</p>
-          </div>
-
-          <div  class="p-6 bg-white rounded-lg shadow-md">
-            <i class="mb-4 text-3xl text-blue-500 fa-solid fa-globe"></i>
-            <p class="text-gray-700">Oferim o gamă completă de servicii de SEO și dezvoltare web, publicitate online și marketing digital, branding, producție muzicală și producție video. Dacă sunteți în căutarea unei echipe creative și dedicate pentru a vă ajuta să vă atingeți obiectivele de marketing și publicitate, contactați-ne și împreună vom construi ceva extraordinar!</p>
-          </div>
-
-        </div>
        
-        
-       
-        </div>
-        
-    
-    </section> --}}
-
  <!--Expertiză în Dezvoltare Web Carusel-->
 
 
@@ -226,32 +193,28 @@
         <p class="mb-16 text-lg tracking-wide text-center text-gray-900 font-volkov">"Imaginatia este mai importanta decât cunoasterea."</p>
         </div>
 
-         <div x-data="{            
-    // Sets the time between each slides in milliseconds
-    autoplayIntervalTime: 4000,
+<div x-data="{            
     slides: [                
         {
-            imgSrc: 'https://clickstudios-digital.com/assets/carusel-bg.webp',
-            imgAlt: 'Vibrant abstract painting with swirling blue and light pink hues on a canvas.',  
-            title: 'Front end developers',
-            description: 'The architects of the digital world, constantly battling against their mortal enemy – browser compatibility.',           
+            imgSrc: '{{ asset('assets/carusel-bg.webp') }}',
+            imgAlt: 'Click Studios Digital Web Design Laravel Alpine JS Tailwind Livewire',  
+            title: 'Specialiști în TALL Stack',
+            description: 'La Click Studios Digital, folosim stack-ul TALL (Tailwind CSS, Alpine.js, Laravel, Livewire) pentru a dezvolta aplicații web rapide, scalabile și ușor de întreținut. Ne specializăm în interfețe responsive cu Tailwind CSS, interactivitate cu Alpine.js, un backend solid cu Laravel și actualizări dinamice cu Livewire.',              
         },                
         {                    
-            imgSrc: 'https://clickstudios-digital.com/assets/carusel-bg.webp',                    
-            imgAlt: 'Vibrant abstract painting with swirling red, yellow, and pink hues on a canvas.',  
-            title: 'Back end developers',
-            description: 'Because not all superheroes wear capes, some wear headphones and stare at terminal screens',            
+            imgSrc: '{{ asset('assets/carusel-bg.webp') }}',                    
+            imgAlt: 'Click Studios Digital Web Design Laravel Alpine JS Tailwind Livewire',  
+            title: 'Servicii de Dezvoltare Web',
+            description: 'Website-uri personalizate, aplicații web complexe, soluții de e-commerce și sisteme de plată, SEO. Dezvoltăm panouri de control (admin panel) profesionale și personalizate, sisteme de autentificare și securitate avansată, creăm sisteme de comenzi și rezervări online, și asigurăm mentenanță și suport tehnic.',              
         },                
         {                    
-            imgSrc: 'https://clickstudios-digital.com/assets/carusel-bg.webp',                    
-            imgAlt: 'Vibrant abstract painting with swirling blue and purple hues on a canvas.',    
-            title: 'Full stack developers',
-            description: 'Where &quot;burnout&quot; is just a fancy term for &quot;Tuesday&quot;.',       
+            imgSrc: '{{ asset('assets/carusel-bg.webp') }}',                    
+            imgAlt: 'Click Studios Digital Web Design Laravel Alpine JS Tailwind Livewire',    
+            title: 'Soluții Web pentru Afaceri',
+            description: 'Dezvoltăm site-uri de prezentare și aplicații web complexe pentru diverse afaceri, inclusiv restaurante și cafenele, saloane de cosmetică și frizerii, service-uri auto și vulcanizări, cabinete medicale și stomatologice, magazine de produse locale și artizanale, firme de construcții și amenajări interioare, școli de dans sau fitness, pensiuni și case de vacanță, și multe altele.'             
         },            
     ],            
     currentSlideIndex: 1,
-    isPaused: false,
-    autoplayInterval: null,
     previous() {                
         if (this.currentSlideIndex > 1) {                    
             this.currentSlideIndex = this.currentSlideIndex - 1                
@@ -267,32 +230,19 @@
             // If it's the last slide, go to the first slide    
             this.currentSlideIndex = 1                
         }            
-    },    
-    autoplay() {
-        this.autoplayInterval = setInterval(() => {
-            if (! this.isPaused) {
-                this.next()
-            }
-        }, this.autoplayIntervalTime)
-    },
-    // Updates interval time   
-    setAutoplayInterval(newIntervalTime) {
-        clearInterval(this.autoplayInterval)
-        this.autoplayIntervalTime = newIntervalTime
-        this.autoplay()
-    },    
-}" x-init="autoplay" class="relative w-full overflow-hidden">
-   
+    },        
+}" class="relative w-full overflow-hidden">
+
     <!-- slides -->
     <!-- Change min-h-[50svh] to your preferred height size -->
     <div class="relative min-h-[50svh] w-full">
         <template x-for="(slide, index) in slides">
             <div x-cloak x-show="currentSlideIndex == index + 1" class="absolute inset-0" x-transition.opacity.duration.1000ms>
-                
+            
                 <!-- Title and description -->
-                <div class="absolute inset-0 z-10 flex flex-col items-center justify-end gap-2 px-16 py-12 text-center lg:px-32 lg:py-14 bg-gradient-to-t from-neutral-950/85 to-transparent">
-                    <h3 class="w-full lg:w-[80%] text-balance text-2xl lg:text-3xl font-bold text-neutral-100" x-text="slide.title" x-bind:aria-describedby="'slide' + (index + 1) + 'Description'"></h3>
-                    <p class="w-full text-sm lg:w-1/2 text-pretty text-neutral-400" x-text="slide.description" x-bind:id="'slide' + (index + 1) + 'Description'"></p>
+                <div class="absolute inset-0 z-10 flex flex-col items-center justify-end gap-2 px-8 py-12 text-center md:justify-center lg:px-32 lg:py-14 bg-gradient-to-t from-neutral-950/85 to-transparent">
+                    <h3 class="w-full uppercase font-roboto-condensed font-normal tracking-widest lg:w-[80%] text-balance text-2xl md:text-3xl font-bold text-neutral-50" x-text="slide.title" x-bind:aria-describedby="'slide' + (index + 1) + 'Description'"></h3>
+                    <p class="w-full text-sm md:text-base lg:w-1/2 text-pretty text-neutral-100" x-text="slide.description" x-bind:id="'slide' + (index + 1) + 'Description'"></p>
                 </div>
 
                 <img class="absolute inset-0 object-cover w-full h-full text-neutral-600 dark:text-neutral-400" x-bind:src="slide.imgSrc" x-bind:alt="slide.imgAlt" />
@@ -300,84 +250,34 @@
         </template>
     </div>
     
-    <!-- Pause/Play Button -->
-    <button type="button" class="absolute z-20 transition rounded-none opacity-50 bottom-5 right-5 text-neutral-400 hover:opacity-80 focus-visible:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:outline-offset-0" aria-label="pause carousel" x-on:click="(isPaused = !isPaused), setAutoplayInterval(autoplayIntervalTime)" x-bind:aria-pressed="isPaused">
-        <svg x-cloak x-show="isPaused" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="size-7">
-            <path fill-rule="evenodd" d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5 2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 0 0 1 .39-.658Z" clip-rule="evenodd">
-        </svg>
-        <svg x-cloak x-show="!isPaused" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="size-7">
-            <path fill-rule="evenodd" d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm5-2.25A.75.75 0 0 1 7.75 7h.5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-.75.75h-.5a.75.75 0 0 1-.75-.75v-4.5Zm4 0a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-.75.75h-.5a.75.75 0 0 1-.75-.75v-4.5Z" clip-rule="evenodd">
-        </svg>
-    </button>
-    
     <!-- indicators -->
     <div class="absolute rounded-none bottom-3 md:bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-4 md:gap-3 px-1.5 py-1 md:px-2" role="group" aria-label="slides" >
         <template x-for="(slide, index) in slides">
-            <button class="transition rounded-full cursor-pointer size-2" x-on:click="(currentSlideIndex = index + 1), setAutoplayInterval(autoplayIntervalTime)" x-bind:class="[currentSlideIndex === index + 1 ? 'bg-neutral-400' : 'bg-neutral-400/50']" x-bind:aria-label="'slide ' + (index + 1)"></button>
+            <button class="transition rounded-full cursor-pointer size-2" x-on:click="currentSlideIndex = index + 1" x-bind:class="[currentSlideIndex === index + 1 ? 'bg-neutral-400' : 'bg-neutral-400/50']" x-bind:aria-label="'slide ' + (index + 1)"></button>
         </template>
     </div>
+
+    <!-- Button container -->
+    <div class="absolute inset-x-0 bottom-0 z-20 flex justify-between px-4 py-2 md:top-1/2 md:left-0 md:right-0 md:justify-between md:py-0 md:px-5 md:translate-y-[-50%] md:items-center">
+        <!-- previous button -->
+        <button type="button" class="flex items-center justify-center block p-2 transition rounded-none md:absolute md:left-5 md:top-1/2 md:-translate-y-1/2 bg-white/40 text-neutral-600 hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:outline-offset-0 dark:bg-neutral-950/40 dark:text-neutral-400 dark:hover:bg-neutral-950/60 dark:focus-visible:outline-white" aria-label="previous slide" x-on:click="previous()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="3" class="size-5 md:size-6 pr-0.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+        </button>
+
+        <!-- next button -->
+        <button type="button" class="flex items-center justify-center block p-2 transition rounded-none md:absolute md:right-5 md:top-1/2 md:-translate-y-1/2 bg-white/40 text-neutral-600 hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:outline-offset-0 dark:bg-neutral-950/40 dark:text-neutral-400 dark:hover:bg-neutral-950/60 dark:focus-visible:outline-white" aria-label="next slide" x-on:click="next()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="3" class="size-5 md:size-6 pl-0.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+        </button>
+    </div>
 </div>
-      
-      <div class="grid grid-cols-1 gap-8 mx-auto md:grid-cols-2">
-        <div  class="p-4 ">
-        <i class="mb-4 text-3xl fas fa-code"></i>
-              <h3 class="mb-4 text-xl font-normal tracking-widest text-gray-900 uppercase font-roboto-condensed">Specialiști în TALL Stack</h3>
-              <p class="mb-4 text-sm text-gray-700">La Click Studios Digital, excelăm în dezvoltarea cu TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire), oferind aplicații web robuste, rapide și scalabile. Această combinație puternică ne permite să creăm experiențe web de înaltă performanță și ușor de întreținut.</p>
-              <ul class="pl-5 mb-6 text-sm text-gray-700 list-disc">
-                  <li>Frontend responsive cu Tailwind CSS</li>
-                  <li>Interactivitate fără efort cu Alpine.js</li>
-                  <li>Backend puternic cu Laravel</li>
-                  <li>Actualizări dinamice cu Livewire</li>
-              </ul>
-          </div>
-          <div class="p-4 ">
-          <i class="mb-4 text-3xl fas fa-laptop-code"></i>
-             <h3 class="mb-4 text-xl font-normal tracking-widest text-gray-900 uppercase font-roboto-condensed">Servicii de Dezvoltare Web</h3>
-              <ul class="pl-5 mb-6 text-sm text-gray-700 list-disc">
-                  <li>Creare site-uri web personalizate</li>
-                  <li>Dezvoltare aplicații web complexe</li>
-                  <li>Integrare e-commerce și sisteme de plată</li>
-                  <li>Optimizare pentru motoare de căutare (SEO)</li>
-                  <li>Migrare și actualizare site-uri web existente</li>
-                  <li>Panouri de control (admin panel) profesionale și personalizate</li>
-                  <li>Implementare sisteme de autentificare și securitate avansată</li>
-                  <li>Creare de sisteme de comenzi și rezervări online</li>
-                  <li>Mentenanță și suport tehnic</li>
-              </ul>
-          </div>
-      </div>
-      
-      <div class="mt-8">
-      <i class="mb-4 text-3xl fas fa-lightbulb"></i>
-         <h3 class="mb-4 text-xl font-normal tracking-widest text-gray-900 uppercase font-roboto-condensed">Soluții Web pentru Afaceri</h3>
-           <p class="mb-4 text-sm text-gray-700 max-2-2xl">Dezvoltăm site-uri de prezentare, magazine online și aplicații web personalizate pentru o gamă variată de afaceri, inclusiv:</p>
-          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-              <div class="p-3 bg-white rounded-lg shadow">
-                  <ul class="pl-5 text-gray-700 list-disc">
-                      <li>Restaurante și cafenele</li>
-                      <li>Saloane de cosmetică și frizerii</li>
-                      <li>Service-uri auto și vulcanizări</li>
-                  </ul>
-              </div>
-              <div class="p-3 bg-white rounded-lg shadow">
-                  <ul class="pl-5 text-gray-700 list-disc">
-                      <li>Cabinete medicale și stomatologice</li>
-                      <li>Magazine de produse locale și artizanale</li>
-                      <li>Firme de construcții și amenajări interioare</li>
-                  </ul>
-              </div>
-              <div  class="p-3 bg-white rounded-lg shadow">
-                  <ul class="pl-5 text-gray-700 list-disc">
-                      <li>Școli de dans sau fitness</li>
-                      <li>Pensiuni și case de vacanță</li>
-                      <li>Și multe altele</li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-        
+
+    
       <div class="mt-12 text-center">
-          <a href="#contact" class="px-4 py-1 text-lg font-semibold text-white transition duration-300 bg-blue-600 rounded-full hover:bg-blue-700">Consultanță gratuită</a>
+          <a href="#contact" class="px-10 py-2 text-xs tracking-widest text-black uppercase transition-all duration-300 border border-black scroll-link hover:bg-black hover:text-white font-roboto-condensed hover:border-transparent">Consultanta gratuita</a>
       </div>
   </div>
 </section>
