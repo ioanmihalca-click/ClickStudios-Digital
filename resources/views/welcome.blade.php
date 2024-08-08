@@ -87,6 +87,9 @@
     
     <!-- Font Roboto -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    
+    <!-- Font Volkov -->
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
 
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -106,7 +109,7 @@
 </head>
 
 
-<body class="font-sans bg-gray-100 " x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">
+<body class="font-sans bg-white " x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">
 
    <nav x-data="{ isOpen: false }" class="fixed top-0 left-0 z-50 w-full bg-black bg-opacity-75">
     <div class="container flex items-center justify-between px-4 py-2 mx-auto">
@@ -156,24 +159,33 @@
     Click Studios Digital
 </h1>
 
-        <a href="#about" class="px-10 py-2 text-xs tracking-widest text-white uppercase transition-all duration-300 border border-white hover:bg-white hover:text-black font-roboto-condensed hover:border-transparent">Afla mai multe</a>
+        <a href="#about" class="px-10 py-2 text-xs tracking-widest text-white uppercase transition-all duration-300 border border-white scroll-link hover:bg-white hover:text-black font-roboto-condensed hover:border-transparent">Afla mai multe</a>
     </div>
 </section>
 
-<section id="about" class="relative z-30 px-4 py-16 bg-gray-100"> 
+<section id="about" class="relative z-30 px-4 py-16 bg-white"> 
       <div class="max-w-3xl mx-auto">
-        <h2 class="mb-12 text-3xl font-bold text-center text-gray-800">Despre noi</h2>
+        <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-10 mt-14">Despre noi</h2>
         
-     
+                     <p class="mb-16 text-2xl tracking-wide text-center text-gray-900 font-volkov">Suntem o agentie de dezvoltare web si marketing digital cu sediul in Baia Mare, Maramures. Oferim o gama completa de servicii de SEO si web design, publicitate online si marketing digital, branding, productie video publicitara si producție muzicala. Ne mandrim cu abilitatea noastră de a combina arta si tehnologia pentru a crea rezultate extraordinare. </p>
+
          
-          <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+           <div class="flex justify-center mb-48 animate-pulse">
+  <div class="w-full sm:w-2/12 sm:mx-auto">
+    <div class="text-3xl text-center hover:text-gray-500">
+      <a href="#dezvoltare-web" class="scroll-link">
+        <i class="fa fa-angle-down"></i>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+<hr class="border-gray-300 border-solid mb-14 ">
+
+          {{-- <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
             
       
-            <div class="p-6 bg-white rounded-lg shadow-md">
-              <i class="mb-4 text-3xl text-blue-500 fas fa-code"></i>
-              <p class="text-gray-700">Suntem o agenție de dezvoltare web și marketing digital cu sediul in Baia Mare, Maramures. Creăm site-uri web personalizate, aplicații web moderne și soluții e-commerce robuste care nu doar arată bine, ci și performează excelent.</p>
-            </div>
-            
+        
         
             <div  class="p-6 bg-white rounded-lg shadow-md">
               <i class="mb-4 text-3xl text-blue-500 fas fa-lightbulb"></i>
@@ -181,7 +193,7 @@
             </div>
          
           <div  class="p-6 bg-white rounded-lg shadow-md">
-            <i class="mb-4 text-3xl text-blue-500 fas fa-laptop-code"></i>
+            
             <p class="text-gray-700"> Fie că este vorba de web design, strategii de publicitate digitală, optimizare pentru motoarele de căutare, marketing de conținut sau producție audio și video, echipa noastră este aici pentru a vă oferi soluții personalizate.</p>
           </div>
 
@@ -202,40 +214,105 @@
         </div>
         
     
-    </section>
+    </section> --}}
 
  <!--Expertiză în Dezvoltare Web-->
 
-    <section id="dezvoltare-web" class="px-4 py-16 bg-gray-100">
+    <section id="dezvoltare-web" class="px-4 py-16 bg-white">
   <div class="max-w-6xl mx-auto">
-      <h2 class="mb-8 text-3xl font-bold text-center text-gray-800">Expertiză în Dezvoltare Web</h2>
+      <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-10">Expertiză în Dezvoltare Web</h2>
+      <div class="max-w-2xl mx-auto">
+        <p class="mb-16 text-lg tracking-wide text-center text-gray-900 font-volkov">"Imaginatia este mai importanta decât cunoasterea."</p>
+        </div>
       
-      <div class="grid grid-cols-1 gap-8 mx-auto md:grid-cols-2">
-        <div  class="p-4 bg-white rounded-lg shadow">
-              <h3 class="mb-4 text-2xl font-semibold text-blue-600">Specialiști în TALL Stack</h3>
-              <p class="mb-4 text-gray-700">La Click Studios Digital, excelăm în dezvoltarea cu TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire), oferind aplicații web robuste, rapide și scalabile. Această combinație puternică ne permite să creăm experiențe web de înaltă performanță și ușor de întreținut.</p>
-              <ul class="pl-5 mb-6 text-gray-700 list-disc">
-                  <li>Frontend responsive cu Tailwind CSS</li>
-                  <li>Interactivitate fără efort cu Alpine.js</li>
-                  <li>Backend puternic cu Laravel</li>
-                  <li>Actualizări dinamice cu Livewire</li>
-              </ul>
-          </div>
-          <div class="p-4 bg-white rounded-lg shadow">
-              <h3 class="mb-4 text-2xl font-semibold text-blue-600">Servicii de Dezvoltare Web</h3>
-              <ul class="pl-5 mb-6 text-gray-700 list-disc">
-                  <li>Creare site-uri web personalizate</li>
-                  <li>Dezvoltare aplicații web complexe</li>
-                  <li>Integrare e-commerce și sisteme de plată</li>
-                  <li>Optimizare pentru motoare de căutare (SEO)</li>
-                  <li>Migrare și actualizare site-uri web existente</li>
-                  <li>Panouri de control (admin panel) profesionale și personalizate</li>
-                  <li>Implementare sisteme de autentificare și securitate avansată</li>
-                  <li>Creare de sisteme de comenzi și rezervări online</li>
-                  <li>Mentenanță și suport tehnic</li>
-              </ul>
-          </div>
-      </div>
+<!--Carusel-->
+
+<div x-data="{            
+    slides: [                
+        {
+            imgSrc: 'https://penguinui.s3.amazonaws.com/component-assets/carousel/default-slide-1.webp',
+            imgAlt: 'Click Studios Digital Web Design, Php Laravel, tailwind, alpine js',  
+            title: 'Specialiști în TALL Stack',
+            description: 'Excelăm în dezvoltarea cu TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire), oferind aplicații web robuste, rapide și scalabile. Această combinație puternică ne permite să creăm experiențe web de înaltă performanță și ușor de întreținut: Frontend responsive cu Tailwind CSS | Interactivitate fără efort cu Alpine.js | Backend puternic cu Laravel | Actualizări dinamice cu Livewire',              
+        },                
+        {                    
+            imgSrc: 'https://penguinui.s3.amazonaws.com/component-assets/carousel/default-slide-2.webp',                    
+            imgAlt: 'Click Studios Digital Web Design, Php Laravel, tailwind, alpine js',  
+            title: 'Servicii de Dezvoltare Web',
+            description: 'Creare site-uri web personalizate, Dezvoltare aplicații web complexe, Integrare e-commerce și sisteme de plată, Optimizare pentru motoare de căutare (SEO), Migrare și actualizare site-uri web existente, Panouri de control (admin panel) profesionale și personalizate, Implementare sisteme de autentificare și securitate avansată, Creare de sisteme de comenzi și rezervări online, Mentenanță și suport tehnic',              
+        },                
+        {                    
+            imgSrc: 'https://penguinui.s3.amazonaws.com/component-assets/carousel/default-slide-3.webp',                    
+            imgAlt: 'Click Studios Digital Web Design, Php Laravel, tailwind, alpine js',    
+            title: 'Full stack developers',
+            description: 'Where &quot;burnout&quot; is just a fancy term for &quot;Tuesday&quot;.'             
+        },            
+    ],            
+    currentSlideIndex: 1,
+    previous() {                
+        if (this.currentSlideIndex > 1) {                    
+            this.currentSlideIndex = this.currentSlideIndex - 1                
+        } else {   
+            // If it's the first slide, go to the last slide           
+            this.currentSlideIndex = this.slides.length                
+        }            
+    },            
+    next() {                
+        if (this.currentSlideIndex < this.slides.length) {                    
+            this.currentSlideIndex = this.currentSlideIndex + 1                
+        } else {                 
+            // If it's the last slide, go to the first slide    
+            this.currentSlideIndex = 1                
+        }            
+    },        
+}" class="relative w-full overflow-hidden">
+
+    <!-- previous button -->
+    <button type="button" class="absolute z-20 flex items-center justify-center p-2 transition -translate-y-1/2 rounded-none left-5 top-1/2 bg-white/40 text-neutral-600 hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:outline-offset-0 dark:bg-neutral-950/40 dark:text-neutral-400 dark:hover:bg-neutral-950/60 dark:focus-visible:outline-white" aria-label="previous slide" x-on:click="previous()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="3" class="size-5 md:size-6 pr-0.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+        </svg>
+    </button>
+
+    <!-- next button -->
+    <button type="button" class="absolute z-20 flex items-center justify-center p-2 transition -translate-y-1/2 rounded-none right-5 top-1/2 bg-white/40 text-neutral-600 hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:outline-offset-0 dark:bg-neutral-950/40 dark:text-neutral-400 dark:hover:bg-neutral-950/60 dark:focus-visible:outline-white" aria-label="next slide" x-on:click="next()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="3" class="size-5 md:size-6 pl-0.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+    </button>
+   
+    <!-- slides -->
+    <!-- Change min-h-[50svh] to your preferred height size -->
+    <div class="relative min-h-[50svh] w-full">
+        <template x-for="(slide, index) in slides">
+            <div x-cloak x-show="currentSlideIndex == index + 1" class="absolute inset-0" x-transition.opacity.duration.1000ms>
+                
+                <!-- Title and description -->
+                <div class="absolute inset-0 z-10 flex flex-col items-center justify-end gap-2 px-16 py-12 text-center lg:px-32 lg:py-14 bg-gradient-to-t from-neutral-950/85 to-transparent">
+                
+                    <h3 class="w-full font-normal tracking-widest uppercase font-roboto-condensed lg:w-[80%] text-balance text-xl md:text-2xl lg:text-3xl font-bold text-neutral-100" x-text="slide.title" x-bind:aria-describedby="'slide' + (index + 1) + 'Description'"></h3>
+                    <p class="w-full text-xs md:text-sm lg:w-1/2 text-pretty text-neutral-400" x-text="slide.description" x-bind:id="'slide' + (index + 1) + 'Description'"></p>
+                </div>
+
+                <img class="absolute inset-0 object-cover w-full h-full text-neutral-600 dark:text-neutral-400" x-bind:src="slide.imgSrc" x-bind:alt="slide.imgAlt" />
+            </div>
+        </template>
+    </div>
+    
+    <!-- indicators -->
+    <div class="absolute rounded-none bottom-3 md:bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-4 md:gap-3 px-1.5 py-1 md:px-2" role="group" aria-label="slides" >
+        <template x-for="(slide, index) in slides">
+            <button class="transition rounded-full cursor-pointer size-2" x-on:click="currentSlideIndex = index + 1" x-bind:class="[currentSlideIndex === index + 1 ? 'bg-neutral-400' : 'bg-neutral-400/50']" x-bind:aria-label="'slide ' + (index + 1)"></button>
+        </template>
+    </div>
+</div>
+
+
+
+
+  
+          
+                  
       
       <div class="mt-8">
           <h3 class="mb-4 text-2xl font-semibold text-center text-blue-600">Soluții Web pentru Afaceri</h3>
@@ -275,9 +352,10 @@
   <!--Servicii-->
  
   <div class="max-w-6xl mx-auto">
-    <h2 class="mb-8 text-3xl font-bold text-center text-gray-800">Serviciile noastre</h2>
-</div>
-  
+    <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-10">Servicii</h2>
+      <div class="max-w-2xl mx-auto">
+        <p class="mb-16 text-lg tracking-wide text-center text-gray-900 font-volkov">"O magie digitala a cuprins întreaga noastra creatie, precum aceste momente stralucitoare ale inovatiei pe care le traim cu toata pasiunea noastra."</p>
+        </div>
   <div id="servicii" class="container grid items-center grid-cols-1 mx-auto text-center md:grid-cols-2 lg:grid-cols-3">
 
 
@@ -802,10 +880,8 @@
 
 
  <!-- Arrow Up Button -->
-    <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed flex items-center justify-center w-10 h-10 text-white bg-blue-500 rounded-full bottom-4 right-4 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-        </svg>
+    <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4 ">
+       <i class="fa-solid fa-angles-up"></i>
     </button>
     
 </body>

@@ -1,6 +1,6 @@
 import './bootstrap';
 
-
+//Parallax effect
 function effectsHomeSection() {
     const homeSection = document.querySelector('.home-parallax, .home-fade');
   
@@ -28,3 +28,13 @@ window.addEventListener('scroll', effectsHomeSection);
 effectsHomeSection();
 
 
+//Smooth scroll
+
+document.querySelectorAll('.scroll-link').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
