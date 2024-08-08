@@ -736,7 +736,7 @@
 </div> --}}
 
 <!--Contact Form-->
-<div class="max-w-md px-2 mx-auto text-center">
+<div class="max-w-2xl px-2 mx-auto text-center">
     <strong>Colaborați cu Noi:</strong> <br><br>
     <span class="text-gray-700">Dacă sunteți interesați să colaborați cu noi pentru dezvoltare web, producția de conținut media sau alte servicii de publicitate și marketing digital, nu ezitați să ne contactați:</span>
     
@@ -763,7 +763,7 @@
     </div>
   </div>
 
-<footer class="mb-4 text-center bg-gray-100" x-data>
+<footer class="my-8 text-center x-data>
     <p class="m-2 mt-6 text-gray-700">
       <span class="font-bold">Email:</span> contact@clickstudios-digital.com <br>
       <span class="font-bold">Telefon:</span> +4 0734 411 115 <br> 
