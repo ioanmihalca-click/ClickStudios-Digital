@@ -285,7 +285,7 @@
 
   <!--Servicii-->
  
-<div id="portofoliu" class="px-4 py-12">
+<div id="servicii" class="px-4 py-12">
 
 <div class="relative h-screen bg-fixed bg-center bg-cover" style="background-image: url('assets/servicii.webp')">
   <div class="absolute inset-0 bg-black/50"></div>
@@ -299,7 +299,7 @@
 </div>
 </div>
 
-<div id="servicii" class="container grid items-center grid-cols-1 mx-auto mt-12 text-center md:grid-cols-3">
+<div class="container grid items-center grid-cols-1 mx-auto mt-12 text-center md:grid-cols-3">
 
     <!-- Service Block 1: Dezvoltare de Website-uri și Aplicații Web -->
 
