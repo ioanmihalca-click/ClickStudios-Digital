@@ -190,7 +190,7 @@
   <div class="max-w-6xl mx-auto">
       <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-10">Expertiză în Dezvoltare Web</h2>
       <div class="max-w-2xl mx-auto">
-        <p class="mb-16 text-lg tracking-wide text-center text-gray-900 font-volkov">"Imaginatia este mai importanta decât cunoasterea."</p>
+        <p class="mb-10 text-lg tracking-wide text-center text-gray-900 font-volkov">"Imaginatia este mai importanta decât cunoasterea."</p>
         </div>
 
 <div x-data="{            
