@@ -766,33 +766,13 @@
 
 <!--Contact Form-->
 <div id="contact" class="max-w-2xl px-2 mx-auto text-center">
-    <strong>Colaborați cu Noi:</strong> <br><br>
-    <span class="text-gray-700">Dacă sunteți interesați să colaborați cu noi pentru dezvoltare web, producția de conținut media sau alte servicii de publicitate și marketing digital, nu ezitați să ne contactați:</span>
+ <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-10 mt-4 md:mt-14 ">Despre noi</h2>
+      <p class="px-2 mb-16 text-lg tracking-wide text-center text-gray-900 font-volkov">Dacă sunteti interesati sa colaborati cu noi pentru dezvoltare web, productia de conținut media sau alte servicii de publicitate și marketing digital, nu ezitati sa ne contactati</p>
+  <x-modal-contact />
     
-    <!-- Contact Form -->
-    <div data-aos="fade-up">
-    <div class="px-2 mt-4">
-      <form
-        action="https://formspree.io/f/xjvndkvg"
-        method="POST"
-        class="p-6 space-y-4 bg-gray-200 rounded-2xl "
-      >
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">Emailul dumneavoastra:</label>
-          <input type="email" id="email" name="email" class="block w-full mt-1 border-gray-700 rounded-md shadow-lg focus:ring-blue-500 focus:border-blue-500" required>
-        </div>
-        <div>
-          <label for="message" class="block text-sm font-medium text-gray-700">Mesaj:</label>
-          <textarea id="message" name="message" rows="4" class="block w-full mt-1 border-gray-700 rounded-md shadow-lg focus:ring-blue-500 focus:border-blue-500" required></textarea>
-        </div>
-        <div>
-          <button type="submit" class="w-full px-4 py-2 font-bold text-white bg-gray-700 rounded hover:bg-gray-500">Send</button>
-        </div>
-      </form>
     </div>
-  </div>
 
-<footer class="my-8 text-center x-data>
+<footer class="mt-8 text-center x-data">
     <p class="m-2 mt-6 text-gray-700">
       <span class="font-bold">Email:</span> contact@clickstudios-digital.com <br>
       <span class="font-bold">Telefon:</span> +4 0734 411 115 <br> 

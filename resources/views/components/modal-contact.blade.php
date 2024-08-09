@@ -1,9 +1,9 @@
 <div x-data="{ modalIsOpen: false }" class="p-4">
     <button @click="modalIsOpen = true" type="button"
-        class="cursor-pointer whitespace-nowrap rounded-xl bg-blue-500 px-4 py-2 text-center text-sm font-medium tracking-wide text-slate-100 transition hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 active:opacity-100 active:outline-offset-0">Contact</button>
+        class="px-10 py-2 text-xs tracking-widest text-black uppercase transition-all duration-300 border border-black hover:bg-black hover:text-white font-roboto-condensed hover:border-transparent">Contact</button>
     <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="modalIsOpen"
         @keydown.esc.window="modalIsOpen = false" @click.self="modalIsOpen = false"
-        class="fixed inset-0 z-30 flex items-end justify-center bg-black/20 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8"
+        class="fixed inset-0 z-30 flex items-end justify-center p-4 pb-8 bg-black/20 backdrop-blur-md sm:items-center lg:p-8"
         role="dialog" aria-modal="true" aria-labelledby="defaultModalTitle">
         <!-- Modal Dialog -->
         <div x-show="modalIsOpen"
@@ -14,7 +14,7 @@
 
             <!-- Dialog Header -->
             <div
-                class="flex items-center justify-between border-b border-slate-300 bg-slate-100/60 p-4">
+                class="flex items-center justify-between p-4 border-b border-slate-300 bg-slate-100/60">
                 <h3 id="defaultModalTitle" class="font-semibold tracking-wide text-black">Contacteaza-ne:
                 </h3>
                 <button @click="modalIsOpen = false" aria-label="close modal">
@@ -27,7 +27,7 @@
             <!-- Dialog Body -->
             <div class="px-4 py-8">
                 <form action="https://formspree.io/f/xjvndkvg" method="POST"
-                    class="p-6 w-full space-y-4 bg-gray-200 rounded-2xl ">
+                    class="w-full p-6 space-y-4 bg-gray-200 rounded-2xl ">
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-700">Emailul
                             dumneavoastra:</label>
