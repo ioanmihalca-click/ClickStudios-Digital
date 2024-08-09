@@ -276,7 +276,7 @@
 </div>
 
     
-      <div class="mt-12 mb-48 text-center">
+      <div class="mt-12 mb-12 text-center">
           <a href="#contact" class="px-10 py-2 text-xs tracking-widest text-black uppercase transition-all duration-300 border border-black hover:bg-black hover:text-white font-roboto-condensed hover:border-transparent">Consultanta gratuita</a>
       </div>
   </div>
