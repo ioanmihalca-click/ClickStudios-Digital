@@ -285,14 +285,20 @@
 
   <!--Servicii-->
  
-  <div class="max-w-6xl mx-auto">
-    <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-10">Servicii</h2>
-      <div class="max-w-2xl mx-auto">
-        <p class="mb-16 text-lg tracking-wide text-center text-gray-900 font-volkov">"O magie digitala a cuprins întreaga noastra creatie, precum aceste momente stralucitoare ale inovatiei pe care le traim cu toata pasiunea noastra."</p>
-        </div>
-  <div id="servicii" class="container grid items-center grid-cols-1 mx-auto text-center md:grid-cols-2 lg:grid-cols-3">
+<section id="portofoliu" class="px-4 py-12 text-center">
 
+<div class="relative h-screen bg-fixed bg-center bg-cover" style="background-image: url('assets/servicii.webp')">
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative z-10 flex flex-col items-center justify-center h-full">
+  
+    <h2 class="font-roboto-condensed uppercase mb-10 md:mb-14 tracking-[6px] md:tracking-[24px] font-normal text-3xl md:text-5xl leading-relaxed md:leading-normal text-white ">Servicii</h2>
+    <div class="max-w-2xl mx-auto">
+      <p class="mb-16 text-lg tracking-wide text-center text-white font-volkov">"O magie digitala a cuprins întreaga noastra creatie, precum aceste momente stralucitoare ale inovatiei pe care le traim cu toata pasiunea noastra."</p>
+    </div>
+  </div>
+</div>
 
+<div id="servicii" class="container grid items-center grid-cols-1 mx-auto mt-12 text-center md:grid-cols-3">
 
     <!-- Service Block 1: Dezvoltare de Website-uri și Aplicații Web -->
 
@@ -471,14 +477,14 @@
   <!-- End Service blocks -->
 </div>
 </div>
-
+</section>
 
 
 <!--Portofolio-->
 
 <section id="portofoliu" class="px-4 py-12 text-center">
 
-<div class="relative h-screen bg-fixed bg-center bg-cover" style="background-image: url('assets/servicii.webp')">
+<div class="relative h-screen bg-fixed bg-center bg-cover" style="background-image: url('assets/portofoliu.webp')">
   <div class="absolute inset-0 bg-black/50"></div>
   <div class="relative z-10 flex flex-col items-center justify-center h-full">
     <h2 class="font-roboto-condensed uppercase mb-10 md:mb-14 tracking-[6px] md:tracking-[24px] font-normal text-3xl md:text-5xl leading-relaxed md:leading-normal text-white">Portofoliu</h2>
@@ -618,114 +624,110 @@
 </div>
 
 
-  
-<!-- Portfolio Item Podcast Morosenesc -->
-<div x-data="{ open: false }" data-aos="fade-down" class="mb-4">
- 
-    <button @click="open = !open" class="w-full px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg bg-gray-50 hover:-translate-y-2">
-      <div class="flex justify-between">
-        <h3 class="text-lg font-semibold">Podcast Morosenesc</h3>
-        <span x-show="!open" class="text-blue-500">+</span>
-        <span x-show="open" class="text-blue-500">-</span>
-      </div>
+ <!-- Portfolio Item Podcast Morosenesc -->
+<div x-data="{ open: false }" data-aos="fade-down" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
+  <div class="relative">
+    <img src="/assets/podcastmorosenesc.jpg" alt="Productie Podcast Morosenesc cu Ioana Mihalca" class="object-cover w-full h-auto transition duration-300 ease-in-out transform rounded-t-lg hover:scale-105 hover:opacity-80">
+    <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/50" :class="{ 'opacity-100': open }">
+      <h3 class="text-xl font-bold text-white">Podcast Morosenesc</h3>
+    </div>
+  </div>
+  <div class="p-4">
+    <button @click="open = !open" class="flex items-center justify-between w-full">
+      <h3 class="text-base font-normal tracking-widest text-center text-gray-900 uppercase md:text-lg font-roboto-condensed">Podcast Morosenesc</h3>
+      <span :class="{ 'text-blue-500': !open, 'text-blue-500': open }">
+        <span x-show="!open">+</span>
+        <span x-show="open">-</span>
+      </span>
     </button>
-  <div x-show="open" x-transition class="px-8 py-8 bg-white border border-t-0">
-    <a href="https://www.youtube.com/@IoanaMihalca" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
-    <img src="/assets/podcastmorosenesc.jpg" alt="Productie Podcast Morosenesc cu Ioana Mihalca" class="w-full h-auto transition duration-300 ease-in-out transform rounded-lg hover:scale-105 hover:opacity-80">
-    <div class="p-4">
-      <p class="text-base leading-relaxed text-left">
-        <span class="text-blue-500">✗</span> "Podcast Morosenesc cu Ioana Mihalca" este un proiect de succes din portofoliul Click Studios, dedicat explorării povestirilor autentice și discuțiilor captivante. <br> <br>
-        <span class="text-blue-500">✗</span> Acest podcast aduce în fața ascultătorilor povești de viață inspiratoare și conversații profunde cu personalități remarcabile din diverse domenii. <br><br>
-        
-        <strong>Caracteristici Cheie:</strong>
-        
-        <ul class="mt-2 text-left list-disc">
-          <li><strong>Înregistrare și Editare:</strong> Utilizarea echipamentelor de ultimă generație pentru a asigura o calitate impecabilă a sunetului și o editare profesionistă. <br>
-          </li>
-          <li>
-            <strong>Distribuție și Promovare:</strong> Implementarea unei strategii de marketing digital pentru a maximiza audiența și impactul podcastului. Disponibil pe Principalele Platforme de Podcasting(Spotify, Apple Podcasts, Google Podcasts) <br>
-
-          </li>
+    <div x-show="open" x-transition class="mt-4">
+      <a href="https://www.youtube.com/@IoanaMihalca" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+        <p class="text-left text-gray-900">
+          "Podcast Morosenesc cu Ioana Mihalca" este un proiect de succes din portofoliul Click Studios, dedicat explorării povestirilor autentice și discuțiilor captivante. <br><br>
+          Acest podcast aduce în fața ascultătorilor povești de viață inspiratoare și conversații profunde cu personalități remarcabile din diverse domenii. <br><br>
+          <strong>Caracteristici Cheie:</strong>
+          <ul class="px-4 mt-2 text-left list-disc">
+            <li><strong>Înregistrare și Editare:</strong> Utilizarea echipamentelor de ultimă generație pentru a asigura o calitate impecabilă a sunetului și o editare profesionistă.</li>
+            <li><strong>Distribuție și Promovare:</strong> Implementarea unei strategii de marketing digital pentru a maximiza audiența și impactul podcastului. Disponibil pe principalele platforme de podcasting (Spotify, Apple Podcasts, Google Podcasts).</li>
             <li>Strategii Eficiente de Marketing Digital</li>
-        
-            
-        </ul>
-      
-        <br>
-      
-        <span class="text-blue-500">✗</span>"Podcast Morosenesc cu Ioana Mihalca" a contribuit la consolidarea brandului Click Studios, demonstrând capacitatea noastră de a crea conținut de calitate și de a gestiona proiecte media complexe. Acest proiect este un exemplu perfect al abilității noastre de a combina creativitatea si productia cu strategia de marketing digital pentru a obține rezultate remarcabile. <br><br>
-       
-      </p>
+          </ul>
+        </p>
+        <p class="mt-4 text-left text-gray-900">
+          "Podcast Morosenesc cu Ioana Mihalca" a contribuit la consolidarea brandului Click Studios, demonstrând capacitatea noastră de a crea conținut de calitate și de a gestiona proiecte media complexe. Acest proiect este un exemplu perfect al abilității noastre de a combina creativitatea și producția cu strategia de marketing digital pentru a obține rezultate remarcabile.
+        </p>
+      </a>
     </div>
   </div>
-</a>
 </div>
+ 
 
-    
-         <!-- Portfolio Item Click Music Youtube -->
-<div x-data="{ open: false }" data-aos="zoom-in-up" class="mb-4">
-    <button @click="open = !open" class="w-full px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg bg-gray-50 hover:-translate-y-2">
-      <div class="flex justify-between">
-        <h3 class="text-lg font-semibold">Click Music Youtube</h3>
-        <span x-show="!open" class="text-blue-500">+</span>
-        <span x-show="open" class="text-blue-500">-</span>
-      </div>
-    </button>
-  <div x-show="open" x-transition class="px-8 py-8 bg-white border border-t-0">
-    <a href="https://www.youtube.com/@clickmusicromania" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
 
-    <img src="/assets/click youtube.jpg" alt="Click Music canal youtube" class="w-full h-auto transition duration-300 ease-in-out transform rounded-lg hover:scale-105 hover:opacity-80">
-    <div class="p-4">
-      <p class="text-base leading-relaxed text-left">
-        <span class="text-blue-500">✗</span> Suntem mândri să prezentăm Click Music Romania, un proiect emblematic în portofoliul nostru. <br> <br>
-        <span class="text-blue-500">✗</span> Acest canal YouTube reprezintă o extensie a serviciilor noastre, evidențiind expertiza noastră în crearea de conținut de cea mai înaltă calitate în domeniul muzicii și al vizualurilor captivante.
-
-  
-        <br><br>
-  
-        <strong>Caracteristici Cheie:</strong>
-  
-        <ul class="mt-2 text-left list-disc ">
-          <li><strong>Producții Audio de Înaltă Calitate</strong>: Cu o echipă de producție audio experimentată, ne străduim să oferim sunete impecabile și mixaje profesionale care să îmbogățească experiența auditivă a publicului nostru.
-          </li>
-          <li><strong>Videoclipuri Muzicale</strong>: Fiecare videoclip reprezintă o sinteză perfectă între muzică și imagine, capturând esența fiecărei piese.</li>
-     
-     
-        </ul>
-  <br>
-        <span class="text-blue-500">✗</span> Rezultate Demonstrabile: Canalul nostru, Click Music Romania, s-a remarcat prin obținerea a peste 50 de milioane de vizualizări, evidențiind eficacitatea și impactul strategiilor noastre de marketing în atragerea și implicarea publicului. Acest succes solidifică poziția noastră ca lideri în furnizarea de soluții de marketing digitale care generează rezultate tangibile și măsurabile pentru clienții noștri.
-      </p>
+    <!-- Portfolio Item Click Music Youtube -->
+<div x-data="{ open: false }" data-aos="zoom-in-up" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
+  <div class="relative">
+    <img src="/assets/clickmusicyt.jpg" alt="Click Music canal youtube" class="object-cover w-full h-auto transition duration-300 ease-in-out transform rounded-t-lg hover:scale-105 hover:opacity-80">
+    <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/50" :class="{ 'opacity-100': open }">
+      <h3 class="text-xl font-bold text-white">Click Music YouTube</h3>
     </div>
   </div>
-</a>
-
+  <div class="p-4">
+    <button @click="open = !open" class="flex items-center justify-between w-full">
+      <h3 class="text-base font-normal tracking-widest text-center text-gray-900 uppercase md:text-lg font-roboto-condensed">Click Music YouTube</h3>
+      <span :class="{ 'text-blue-500': !open, 'text-blue-500': open }">
+        <span x-show="!open">+</span>
+        <span x-show="open">-</span>
+      </span>
+    </button>
+    <div x-show="open" x-transition class="mt-4">
+      <a href="https://www.youtube.com/@clickmusicromania" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+        <p class="text-left text-gray-900">
+          Suntem mândri să prezentăm Click Music Romania, un proiect emblematic în portofoliul nostru. <br><br>
+          Acest canal YouTube reprezintă o extensie a serviciilor noastre, evidențiind expertiza noastră în crearea de conținut de cea mai înaltă calitate în domeniul muzicii și al vizualurilor captivante.
+          <br><br>
+          <strong>Caracteristici Cheie:</strong>
+          <ul class="px-4 mt-2 text-left list-disc">
+            <li><strong>Producții Audio de Înaltă Calitate</strong>: Cu o echipă de producție audio experimentată, ne străduim să oferim sunete impecabile și mixaje profesionale care să îmbogățească experiența auditivă a publicului nostru.</li>
+            <li><strong>Videoclipuri Muzicale</strong>: Fiecare videoclip reprezintă o sinteză perfectă între muzică și imagine, capturând esența fiecărei piese.</li>
+          </ul>
+        </p>
+        <p class="mt-4 text-left text-gray-900">
+          Rezultate Demonstrabile: Canalul nostru, Click Music Romania, s-a remarcat prin obținerea a peste 50 de milioane de vizualizări, evidențiind eficacitatea și impactul strategiilor noastre de marketing în atragerea și implicarea publicului. Acest succes solidifică poziția noastră ca lideri în furnizarea de soluții de marketing digitale care generează rezultate tangibile și măsurabile pentru clienții noștri.
+        </p>
+      </a>
+    </div>
+  </div>
 </div>
 
  
    
-<!-- Portfolio Item 6 -->
-<div x-data="{ open: false }" data-aos="zoom-in-up" class="mb-4">
-    <button @click="open = !open" class="w-full px-8 py-8 mb-8 transition duration-300 ease-in-out transform rounded-lg shadow-lg bg-gray-50 hover:-translate-y-2">
-      <div class="flex justify-between">
-        <h3 class="text-lg font-semibold">Proiectul tău → Aici</h3>
-        <span x-show="!open" class="text-blue-500">+</span>
-        <span x-show="open" class="text-blue-500">-</span>
-      </div>
-    </button>
-  <div x-show="open" x-transition class="px-8 py-8 bg-white border border-t-0">
-    <a href="#" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
-
-    <img src="/assets/digital-marketing2.jpg" alt="digital marketing baia mare" class="w-full h-auto transition duration-300 ease-in-out transform rounded-lg hover:scale-105 hover:opacity-80">
-    <div class="p-4">
-      <p class="text-base leading-relaxed text-left">
-        <span class="text-blue-500">✗</span> Suntem în faza de planificare pentru noi proiecte incitante care vor schimba peisajul digital. <br> <br>
-        <span class="text-blue-500">✗</span> Ne pregătim să aducem inovație în proiectul tău prin noi idei și concepte creative de branding și promovare digitală. <br> <br>
-        <span class="text-blue-500">✗</span> Rămâi conectat pentru a fi primul care află despre noile noastre proiecte și pentru a te implica în construirea viitorului digital împreună cu noi.
-      </p>
+<!-- Portfolio Item Truland - Magazin Online de Încălțăminte -->
+<div x-data="{ open: false }" data-aos="zoom-in-up" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
+  <div class="relative">
+    <img src="/assets/truland.jpg" alt="Truland Magazin Online" class="object-cover w-full h-auto transition duration-300 ease-in-out transform rounded-t-lg hover:scale-105 hover:opacity-80">
+    <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/50" :class="{ 'opacity-100': open }">
+      <h3 class="text-xl font-bold text-white">Truland Magazin Online</h3>
     </div>
   </div>
-</a>
+  <div class="p-4">
+    <button @click="open = !open" class="flex items-center justify-between w-full">
+      <h3 class="text-base font-normal tracking-widest text-center text-gray-900 uppercase md:text-lg font-roboto-condensed">Truland Magazin Online</h3>
+      <span :class="{ 'text-blue-500': !open, 'text-blue-500': open }">
+        <span x-show="!open">+</span>
+        <span x-show="open">-</span>
+      </span>
+    </button>
+    <div x-show="open" x-transition class="mt-4">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+        <p class="text-left text-gray-900">
+          Truland este un magazin online specializat în încălțăminte de calitate, oferind o gamă variată de pantofi, mocasini, ghete și sandale pentru femei. <br><br>
+          Realizat cu pasiune de către echipa Click Studios Digital pe o platforma Prestashop, Truland se evidențiază printr-un design modern, navigare ușoară și o experiență de cumpărături fără egal. <br><br>
+          Platforma a fost optimizată pentru a oferi o experiență intuitivă și plăcută utilizatorilor, punând în valoare produsele din piele naturală și confortul oferit de acestea.
+        </p>
+      </a>
+    </div>
+  </div>
 </div>
+
 
 
    <!--Alte itemuri-->
