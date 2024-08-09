@@ -76,9 +76,9 @@
     <link rel="canonical" href="{{ url('/') }}" />
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('assets/favicon-click-studios-digital.jpg') }}" type="image/x-icon" />
+    <link rel="icon" href="{{ asset('assets/favicon.ico') }}" type="image/x-icon" />
     <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon-click-studios-digital.jpg') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/apple-touch-icon.png') }}" />
 
 
 
