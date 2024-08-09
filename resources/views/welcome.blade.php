@@ -285,7 +285,7 @@
 
   <!--Servicii-->
  
-<section id="portofoliu" class="px-4 py-12 text-center">
+<div id="portofoliu" class="px-4 py-12">
 
 <div class="relative h-screen bg-fixed bg-center bg-cover" style="background-image: url('assets/servicii.webp')">
   <div class="absolute inset-0 bg-black/50"></div>
@@ -293,9 +293,10 @@
   
     <h2 class="font-roboto-condensed uppercase mb-10 md:mb-14 tracking-[6px] md:tracking-[24px] font-normal text-3xl md:text-5xl leading-relaxed md:leading-normal text-white ">Servicii</h2>
     <div class="max-w-2xl mx-auto">
-      <p class="mb-16 text-lg tracking-wide text-center text-white font-volkov">"O magie digitala a cuprins întreaga noastra creatie, precum aceste momente stralucitoare ale inovatiei pe care le traim cu toata pasiunea noastra."</p>
+      <p class="px-2 mb-16 text-lg tracking-wide text-center text-white font-volkov">"O magie digitala a cuprins întreaga noastra creatie, precum aceste momente stralucitoare ale inovatiei pe care le traim cu toata pasiunea noastra."</p>
     </div>
   </div>
+</div>
 </div>
 
 <div id="servicii" class="container grid items-center grid-cols-1 mx-auto mt-12 text-center md:grid-cols-3">
@@ -477,7 +478,7 @@
   <!-- End Service blocks -->
 </div>
 </div>
-</section>
+
 
 
 <!--Portofolio-->
