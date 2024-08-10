@@ -731,7 +731,7 @@
       </span>
     </button>
     <div x-show="open" x-transition class="mt-4">
-      <a href="#" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+      <a href="https://truland.ro" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
         <p class="text-left text-gray-900">
           Truland este un magazin online specializat în încălțăminte de calitate, oferind o gamă variată de pantofi, mocasini, ghete și sandale pentru femei. <br><br>
           Realizat cu pasiune de către echipa Click Studios Digital pe o platforma Prestashop, Truland se evidențiază printr-un design modern, navigare ușoară și o experiență de cumpărături fără egal. <br><br>
