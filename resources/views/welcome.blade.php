@@ -109,9 +109,13 @@
 </head>
 
 
-<body class="font-sans bg-white " x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">
+<body class="font-sans bg-white" x-data="{ scrollToTop: false, loading: true }" 
+      x-on:scroll.window="scrollToTop = window.scrollY > 100"
+      x-init="$nextTick(() => { setTimeout(() => loading = false, 700) })">
 
-   <nav x-data="{ isOpen: false }" class="fixed top-0 left-0 z-50 w-full bg-black bg-opacity-75">
+    <!-- Navigation -->
+      <nav x-data="{ isOpen: false }" class="fixed top-0 left-0 z-50 w-full bg-black bg-opacity-75">
+     
     <div class="container flex items-center justify-between px-4 py-2 mx-auto">
         <a href="/" class="text-white text-xs tracking-[4px] uppercase font-roboto-condensed">Click Studios Digital</a>
         
@@ -147,21 +151,30 @@
 </nav>
 
 
- <section class="relative flex items-center justify-center h-screen text-white home-parallax home-fade">
-    <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <video src="/assets/bg-video.mp4" autoplay muted loop class="absolute object-cover w-full h-full scale-125 -z-20"></video> 
-        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 -z-10"></div>
-    </div>
 
-    <div class="relative z-10 items-center justify-center text-center caption-content">
-        <div class="font-roboto-condensed tracking-widest md:tracking-[4px] uppercase mb-8 md:mb-10 text-sm md:text-base">Noi suntem</div>
-       <h1 class="font-roboto-condensed uppercase mb-10 md:mb-14 tracking-[6px] md:tracking-[24px] font-normal text-3xl md:text-5xl leading-relaxed md:leading-normal">
-    Click Studios Digital
-</h1>
+    <section class="relative flex items-center justify-center h-screen text-white home-parallax home-fade">
+      <!-- Loading Spinner -->
+      <div x-show="loading" class="absolute inset-0 z-50 flex items-center justify-center bg-black">
+         <div class="w-16 h-16 border-t-4 border-solid rounded-full border-emerald-700 animate-spin"></div>
+      </div>
 
-        <a href="#about" class="px-10 py-2 text-xs tracking-widest text-white uppercase transition-all duration-300 border border-white scroll-link hover:bg-white hover:text-black font-roboto-condensed hover:border-transparent">Afla mai multe</a>
-    </div>
-</section>
+      <!-- Video background -->
+      <div 
+           class="absolute top-0 left-0 w-full h-full overflow-hidden">
+         <video src="/assets/bg-video.mp4" autoplay muted loop class="absolute object-cover w-full h-full scale-125 -z-20"></video> 
+         <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 -z-10"></div>
+      </div>
+
+      <!-- Content -->
+      <div 
+           class="relative z-10 items-center justify-center text-center caption-content">
+         <div class="font-roboto-condensed tracking-widest md:tracking-[4px] uppercase mb-8 md:mb-10 text-sm md:text-base">Noi suntem</div>
+         <h1 class="font-roboto-condensed uppercase mb-10 md:mb-14 tracking-[6px] md:tracking-[24px] font-normal text-3xl md:text-5xl leading-relaxed md:leading-normal">
+            Click Studios Digital
+         </h1>
+         <a href="#about" class="px-10 py-2 text-xs tracking-widest text-white uppercase transition-all duration-300 border border-white scroll-link hover:bg-white hover:text-black font-roboto-condensed hover:border-transparent">Afla mai multe</a>
+      </div>
+   </section>
 
 <section id="about" class="relative z-30 px-4 py-16 bg-white"> 
       <div class="max-w-3xl mx-auto">
