@@ -193,7 +193,7 @@
   </div>
 </div>
 </div>
-<hr class="border-gray-300 border-solid mb-14 ">
+
 
        
  <!--Expertiză în Dezvoltare Web Carusel-->
@@ -201,91 +201,140 @@
 
     <section id="dezvoltare-web" class="px-4 py-16 bg-white">
   <div class="max-w-6xl mx-auto">
-      <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-10">Expertiză în Dezvoltare Web</h2>
-      <div class="max-w-2xl mx-auto">
-        <p class="mb-10 text-lg tracking-wide text-center text-gray-900 font-volkov">"Imaginatia este mai importanta decât cunoasterea."</p>
-        </div>
 
-<div x-data="{            
-    slides: [                
-        {
-            imgSrc: '{{ asset('assets/carusel-bg.webp') }}',
-            imgAlt: 'Click Studios Digital Web Design Laravel Alpine JS Tailwind Livewire',  
-            title: 'Specialiști în TALL Stack',
-            description: 'La Click Studios Digital, folosim stack-ul TALL (Tailwind CSS, Alpine.js, Laravel, Livewire) pentru a dezvolta aplicații web rapide, scalabile și ușor de întreținut. Ne specializăm în interfețe responsive cu Tailwind CSS, interactivitate cu Alpine.js, un backend solid cu Laravel și actualizări dinamice cu Livewire.',              
-        },                
-        {                    
-            imgSrc: '{{ asset('assets/carusel-bg.webp') }}',                    
-            imgAlt: 'Click Studios Digital Web Design Laravel Alpine JS Tailwind Livewire',  
-            title: 'Servicii de Dezvoltare Web',
-            description: 'Website-uri personalizate, aplicații web complexe, soluții de e-commerce și sisteme de plată, SEO. Dezvoltăm panouri de control (admin panel) profesionale și personalizate, sisteme de autentificare și securitate avansată, creăm sisteme de comenzi și rezervări online, și asigurăm mentenanță și suport tehnic.',              
-        },                
-        {                    
-            imgSrc: '{{ asset('assets/carusel-bg.webp') }}',                    
-            imgAlt: 'Click Studios Digital Web Design Laravel Alpine JS Tailwind Livewire',    
-            title: 'Soluții Web pentru Afaceri',
-            description: 'Site-uri de prezentare și aplicații web complexe pentru diverse afaceri, inclusiv restaurante și cafenele, saloane de cosmetică și frizerii, service-uri auto și vulcanizări, cabinete medicale și stomatologice, magazine online, firme de construcții și amenajări interioare, școli de dans sau fitness, pensiuni și case de vacanță, etc.'             
-        },            
-    ],            
-    currentSlideIndex: 1,
-    previous() {                
-        if (this.currentSlideIndex > 1) {                    
-            this.currentSlideIndex = this.currentSlideIndex - 1                
-        } else {   
-            // If it's the first slide, go to the last slide           
-            this.currentSlideIndex = this.slides.length                
-        }            
-    },            
-    next() {                
-        if (this.currentSlideIndex < this.slides.length) {                    
-            this.currentSlideIndex = this.currentSlideIndex + 1                
-        } else {                 
-            // If it's the last slide, go to the first slide    
-            this.currentSlideIndex = 1                
-        }            
-    },        
-}" class="relative w-full overflow-hidden">
+<div class="relative h-screen bg-fixed bg-center bg-cover" style="background-image: url('assets/carusel-bg.webp')">
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative z-10 flex flex-col items-center justify-center h-full">
+  
+    <h2 class="font-roboto-condensed uppercase mb-10 md:mb-14 tracking-[6px] md:tracking-[24px] font-normal text-3xl md:text-5xl text-center leading-relaxed md:leading-normal text-white ">Expertiză în Dezvoltare Web</h2>
+    <div class="max-w-2xl mx-auto">
+      <p class="px-2 mb-16 text-lg tracking-wide text-center text-white font-volkov">"Imaginatia este mai importanta decât cunoasterea."</p>
+    </div>
+  </div>
+</div>
 
-    <!-- slides -->
-    <!-- Change min-h-[50svh] to your preferred height size -->
-    <div class="relative min-h-[55svh]  md:min-h-[50svh] w-full">
-        <template x-for="(slide, index) in slides">
-            <div x-cloak x-show="currentSlideIndex == index + 1" class="absolute inset-0" x-transition.opacity.duration.1000ms>
-            
-                <!-- Title and description -->
-                <div class="absolute inset-0 z-10 flex flex-col items-center justify-end gap-2 px-8 py-12 text-center md:justify-center lg:px-32 lg:py-14 bg-gradient-to-t from-neutral-950/85 to-transparent">
-                    <h3 class="w-full uppercase font-roboto-condensed font-normal tracking-widest lg:w-[80%] text-balance text-2xl md:text-3xl font-bold text-neutral-50" x-text="slide.title" x-bind:aria-describedby="'slide' + (index + 1) + 'Description'"></h3>
-                    <p class="w-full text-sm md:text-base lg:w-1/2 text-pretty text-neutral-100" x-text="slide.description" x-bind:id="'slide' + (index + 1) + 'Description'"></p>
-                </div>
-
-                <img class="absolute inset-0 object-cover w-full h-full text-neutral-600 dark:text-neutral-400" x-bind:src="slide.imgSrc" x-bind:alt="slide.imgAlt" />
+        <div x-data="{
+activeAccordion: '',
+setActiveAccordion(id) {
+this.activeAccordion = (this.activeAccordion == id) ? '' : id
+}
+}" class="relative w-full mx-auto my-8 overflow-hidden text-sm font-normal bg-white border border-gray-200 divide-y divide-gray-200 rounded-md">
+<div x-data="{ id: $id('accordion') }" class="cursor-pointer group">
+<button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left select-none group-hover:underline">
+<span>Specialiști în TALL Stack</span>
+<svg class="w-4 h-4 duration-200 ease-out" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+<div x-show="activeAccordion==id" x-collapse x-cloak>
+<div class="p-4 pt-0 opacity-70">
+<section class="px-4 py-12 sm:px-6 lg:px-8">
+    <div class="max-w-3xl">
+        
+        <p class="mb-6 text-lg text-gray-700">
+            La Click Studios Digital, suntem specializați în dezvoltarea de aplicații web de înaltă performanță utilizând stack-ul TALL:
+        </p>
+        
+        <ul class="pl-5 mb-6 space-y-2 text-gray-700 list-disc">
+            <li><span class="font-semibold text-blue-600">Tailwind CSS</span> pentru design responsive și eficient</li>
+            <li><span class="font-semibold text-green-600">Alpine.js</span> pentru interactivitate fluidă în partea de client</li>
+            <li><span class="font-semibold text-red-600">Laravel</span> ca fundație robustă pentru backend</li>
+            <li><span class="font-semibold text-purple-600">Livewire</span> pentru actualizări dinamice în timp real</li>
+        </ul>
+        
+        <p class="text-lg text-gray-700">
+            Această combinație puternică ne permite să creăm soluții web rapide, scalabile și ușor de întreținut. Avem capacitatea de a livra proiecte complexe într-un mod eficient, oferind clienților noștri aplicații web inovatoare care se remarcă în peisajul digital actual.
+        </p>
+    </div>
+</section>
+</div>
+</div>
+</div>
+<div x-data="{ id: $id('accordion') }" class="cursor-pointer group">
+<button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left select-none group-hover:underline">
+<span>Servicii de Dezvoltare Web</span>
+<svg class="w-4 h-4 duration-200 ease-out" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+<div x-show="activeAccordion==id" x-collapse x-cloak>
+<div class="p-4 pt-0 opacity-70">
+<section class= "px-4 py-12 sm:px-6 lg:px-8">
+    <div class="max-w-3xl">
+        
+        <div class="space-y-8">
+            <div>
+                <h3 class="mb-3 text-xl font-semibold text-blue-600">Soluții Web Complexe</h3>
+                <ul class="pl-5 space-y-2 text-gray-700 list-disc">
+                    <li>Website-uri personalizate</li>
+                    <li>Aplicații web complexe</li>
+                    <li>Soluții de e-commerce și sisteme de plată</li>
+                    <li>Optimizare pentru motoare de căutare (SEO)</li>
+                </ul>
             </div>
-        </template>
+            
+            <div>
+                <h3 class="mb-3 text-xl font-semibold text-green-600">Funcționalități Avansate</h3>
+                <ul class="pl-5 space-y-2 text-gray-700 list-disc">
+                    <li>Panouri de control (admin panel) profesionale și personalizate</li>
+                    <li>Sisteme de autentificare și securitate avansată</li>
+                    <li>Sisteme de comenzi și rezervări online</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="mb-3 text-xl font-semibold text-purple-600">Suport și Mentenanță</h3>
+                <ul class="pl-5 space-y-2 text-gray-700 list-disc">
+                    <li>Mentenanță continuă a aplicațiilor web</li>
+                    <li>Suport tehnic dedicat</li>
+                </ul>
+            </div>
+        </div>
+        
+        <p class="mt-8 text-lg text-gray-700">
+            Oferim soluții web complete și personalizate, de la dezvoltare și implementare până la mentenanță și suport, asigurând succesul proiectului dumneavoastră online.
+        </p>
     </div>
-    
-    <!-- indicators -->
-    <div class="absolute rounded-none bottom-3 md:bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-4 md:gap-3 px-1.5 py-1 md:px-2" role="group" aria-label="slides" >
-        <template x-for="(slide, index) in slides">
-            <button class="transition rounded-full cursor-pointer size-2" x-on:click="currentSlideIndex = index + 1" x-bind:class="[currentSlideIndex === index + 1 ? 'bg-neutral-400' : 'bg-neutral-400/50']" x-bind:aria-label="'slide ' + (index + 1)"></button>
-        </template>
+</section>
+</div>
+</div>
+</div>
+<div x-data="{ id: $id('accordion') }" class="cursor-pointer group">
+<button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left select-none group-hover:underline">
+<span>Soluții Web pentru Afaceri</span>
+<svg class="w-4 h-4 duration-200 ease-out" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+<div x-show="activeAccordion==id" x-collapse x-cloak>
+<div class="p-4 pt-0 opacity-70">
+<section class="px-4 py-12 sm:px-6 lg:px-8">
+    <div class="max-w-3xl ">
+        
+        <p class="mb-6 text-lg text-center text-gray-700">
+            Dezvoltăm site-uri de prezentare și aplicații web complexe adaptate nevoilor specifice ale afacerii dumneavoastră.
+        </p>
+        
+        <div class="grid grid-cols-1 gap-6 mb-8 md:grid-cols-2">
+            <ul class="pl-5 space-y-2 text-gray-700 list-disc">
+                <li>Restaurante și cafenele</li>
+                <li>Saloane de cosmetică și frizerii</li>
+                <li>Service-uri auto și vulcanizări</li>
+                <li>Cabinete medicale și stomatologice</li>
+                <li>Magazine online</li>
+            </ul>
+            <ul class="pl-5 space-y-2 text-gray-700 list-disc">
+                <li>Firme de construcții și amenajări interioare</li>
+                <li>Școli de dans sau fitness</li>
+                <li>Pensiuni și case de vacanță</li>
+                <li>Agenții imobiliare</li>
+                <li>Birouri de avocatură</li>
+            </ul>
+        </div>
+        
+        <p class="text-lg text-gray-700">
+            Indiferent de domeniul în care activați, vă oferim soluții web personalizate care să vă ajute să vă creșteți vizibilitatea online și să vă îmbunătățiți interacțiunea cu clienții.
+        </p>
     </div>
-
-    <!-- Button container -->
-    <div class="absolute inset-x-0 bottom-0 z-20 flex justify-between px-4 py-2 md:top-1/2 md:left-0 md:right-0 md:justify-between md:py-0 md:px-5 md:translate-y-[-50%] md:items-center">
-        <!-- previous button -->
-        <button type="button" class="flex items-center justify-center block p-2 transition rounded-none md:absolute md:left-5 md:top-1/2 md:-translate-y-1/2 bg-white/40 text-neutral-600 hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:outline-offset-0 dark:bg-neutral-950/40 dark:text-neutral-400 dark:hover:bg-neutral-950/60 dark:focus-visible:outline-white" aria-label="previous slide" x-on:click="previous()">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="3" class="size-5 md:size-6 pr-0.5" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-            </svg>
-        </button>
-
-        <!-- next button -->
-        <button type="button" class="flex items-center justify-center block p-2 transition rounded-none md:absolute md:right-5 md:top-1/2 md:-translate-y-1/2 bg-white/40 text-neutral-600 hover:bg-white/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:outline-offset-0 dark:bg-neutral-950/40 dark:text-neutral-400 dark:hover:bg-neutral-950/60 dark:focus-visible:outline-white" aria-label="next slide" x-on:click="next()">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="3" class="size-5 md:size-6 pl-0.5" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-        </button>
-    </div>
+</section>
+</div>
+</div>
+</div>
+</div>
 </div>
 
     
