@@ -42,9 +42,7 @@
     <link rel="icon" href="/assets/favicon-click-studios-digital.jpg" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-click-studios-digital.jpg">
 
-    <!-- Styles -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
     @vite('resources/css/app.css')
     @livewireStyles
 
@@ -86,11 +84,7 @@
         </svg>
     </button>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+   
     @livewireScripts
     @vite('resources/js/app.js')
 </body>

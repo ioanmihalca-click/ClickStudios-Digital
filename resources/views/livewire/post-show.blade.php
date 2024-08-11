@@ -6,11 +6,11 @@
 @section('og_type', 'article')
 @section('header', $post->titlu)
 
-<div class="container mx-auto px-4 py-8">
+<div class="container px-4 py-8 mx-auto">
     <article class="prose lg:prose-xl" itemscope itemtype="http://schema.org/BlogPosting">
-        <h1 class="text-3xl font-bold mb-4" itemprop="headline">{{ $post->titlu }}</h1>
+        <h1 class="mb-4 text-3xl font-bold" itemprop="headline">{{ $post->titlu }}</h1>
 
-        <div class="text-gray-600 mb-4">
+        <div class="mb-4 text-gray-600">
              Publicat la data de {{ $post->published_at->isoFormat('D MMMM YYYY') }} de 
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <span itemprop="name">ClickStudios-Digital</span>
@@ -32,7 +32,6 @@
         </div>
 
     <div class="p-4">
-        <x-modal-contact />
         <a href="{{ route('blog') }}" class="text-blue-600 hover:text-blue-800">← Înapoi la Blog</a>
         </div>
 
@@ -40,16 +39,16 @@
 
     @if ($similarPosts->count() > 0)
         <div class="mt-8">
-            <h2 class="text-2xl font-semibold mb-4">Articole similare</h2>
+            <h2 class="mb-4 text-2xl font-semibold">Articole similare</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
                 @foreach ($similarPosts as $similarPost)
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="overflow-hidden bg-white rounded-lg shadow-md">
                         @if ($similarPost->imagine_principala)
-                            <img src="{{ asset('storage/' . $similarPost->imagine_principala) }}" alt="{{ $similarPost->titlu }}" class="w-full h-auto object-cover">
+                            <img src="{{ asset('storage/' . $similarPost->imagine_principala) }}" alt="{{ $similarPost->titlu }}" class="object-cover w-full h-auto">
                         @endif
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2">
+                            <h3 class="mb-2 text-xl font-semibold">
                                 <a href="{{ route('postari.show', $similarPost->slug) }}">{{ $similarPost->titlu }}</a>
                             </h3>
                             <p class="text-gray-600">{{ $similarPost->meta_descriere }}</p>
