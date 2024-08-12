@@ -212,7 +212,7 @@
     </div>
   </div>
 </div>
-{{-- 
+
         <div x-data="{
 activeAccordion: '',
 setActiveAccordion(id) {
@@ -342,7 +342,7 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
           <a href="#contact" class="px-10 py-2 text-xs tracking-widest text-black uppercase transition-all duration-300 border border-black hover:bg-black hover:text-white font-roboto-condensed hover:border-transparent">Consultanta gratuita</a>
       </div>
   </div>
-</section> --}}
+</section>
 
 
   <!--Servicii-->
@@ -830,7 +830,7 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
 <div id="contact" class="max-w-2xl px-2 mx-auto text-center">
  <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-10 mt-4 md:mt-14 ">Despre noi</h2>
       <p class="px-2 mb-16 text-lg tracking-wide text-center text-gray-900 font-volkov">Dacă sunteti interesati sa colaborati cu noi pentru dezvoltare web, productia de conținut media sau alte servicii de publicitate și marketing digital, nu ezitati sa ne contactati</p>
-  {{-- <x-modal-contact /> --}}
+  <x-modal-contact />
     
     </div>
 
