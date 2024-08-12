@@ -13,7 +13,7 @@
         <div class="mb-4 text-gray-600">
              Publicat la data de {{ $post->published_at->isoFormat('D MMMM YYYY') }} de 
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <span itemprop="name">ClickStudios-Digital</span>
+                <span class="font-semibold" itemprop="name">Click Studios Digital</span>
             </span>
         </div>
 
