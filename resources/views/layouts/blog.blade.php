@@ -39,8 +39,10 @@
 
     <title>Blogul Click Studios Digital - Dezvoltare Web, Marketing Digital, SEO</title>
     <link rel="canonical" href="{{ url()->current() }}">
-    <link rel="icon" href="/assets/favicon-click-studios-digital.jpg" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-click-studios-digital.jpg">
+   <!-- Favicon -->
+    <link rel="icon" href="{{ asset('assets/favicon.ico') }}" type="image/x-icon" />
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/apple-touch-icon.png') }}" />
 
 
     @vite('resources/css/app.css')

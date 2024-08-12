@@ -14,9 +14,9 @@
 
     <link rel="canonical" href="{{ url()->current() }}">
     <!-- Favicon -->
-    <link rel="icon" href="/assets/favicon-click-studios-digital.jpg" type="image/x-icon" />
+    <link rel="icon" href="{{ asset('assets/favicon.ico') }}" type="image/x-icon" />
     <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-click-studios-digital.jpg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/apple-touch-icon.png') }}" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFL38JS6PJ"></script>
