@@ -604,6 +604,7 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
         </div>
       </a>
       </div>
+    
 
 <!-- Portfolio Item Snow 'n' Stuff -->
 <div x-data="{ open: false }" data-aos="fade-right" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
@@ -686,6 +687,34 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
   </div>
 </div>
 
+<!-- Portfolio Item Truland - Magazin Online de Încălțăminte -->
+<div x-data="{ open: false }" data-aos="zoom-in-up" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
+  <div class="relative">
+    <img src="/assets/truland.jpg" alt="Truland Magazin Online" class="object-cover w-full h-auto transition duration-300 ease-in-out transform rounded-t-lg hover:scale-105 hover:opacity-80">
+    <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/50" :class="{ 'opacity-100': open }">
+      <h3 class="text-xl font-bold text-white">Truland Magazin Online</h3>
+    </div>
+  </div>
+  <div class="p-4">
+    <button @click="open = !open" class="flex items-center justify-between w-full">
+      <h3 class="text-base font-normal tracking-widest text-center text-gray-900 uppercase md:text-lg font-roboto-condensed">Truland Magazin Online</h3>
+      <span :class="{ 'text-blue-500': !open, 'text-blue-500': open }">
+        <span x-show="!open">+</span>
+        <span x-show="open">-</span>
+      </span>
+    </button>
+    <div x-show="open" x-transition class="mt-4">
+      <a href="https://truland.ro" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+        <p class="text-left text-gray-900">
+          Truland este un magazin online specializat în încălțăminte de calitate, oferind o gamă variată de pantofi, mocasini, ghete și sandale pentru femei. <br><br>
+          Realizat cu pasiune de către echipa Click Studios Digital pe o platforma Prestashop, Truland se evidențiază printr-un design modern, navigare ușoară și o experiență de cumpărături fără egal. <br><br>
+          Platforma a fost optimizată pentru a oferi o experiență intuitivă și plăcută utilizatorilor, punând în valoare produsele din piele naturală și confortul oferit de acestea.
+        </p>
+      </a>
+    </div>
+  </div>
+</div>
+
 
  <!-- Portfolio Item Podcast Morosenesc -->
 <div x-data="{ open: false }" data-aos="fade-down" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
@@ -755,36 +784,6 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
         </p>
         <p class="mt-4 text-left text-gray-900">
           Rezultate Demonstrabile: Canalul nostru, Click Music Romania, s-a remarcat prin obținerea a peste 50 de milioane de vizualizări, evidențiind eficacitatea și impactul strategiilor noastre de marketing în atragerea și implicarea publicului. Acest succes solidifică poziția noastră ca lideri în furnizarea de soluții de marketing digitale care generează rezultate tangibile și măsurabile pentru clienții noștri.
-        </p>
-      </a>
-    </div>
-  </div>
-</div>
-
- 
-   
-<!-- Portfolio Item Truland - Magazin Online de Încălțăminte -->
-<div x-data="{ open: false }" data-aos="zoom-in-up" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
-  <div class="relative">
-    <img src="/assets/truland.jpg" alt="Truland Magazin Online" class="object-cover w-full h-auto transition duration-300 ease-in-out transform rounded-t-lg hover:scale-105 hover:opacity-80">
-    <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/50" :class="{ 'opacity-100': open }">
-      <h3 class="text-xl font-bold text-white">Truland Magazin Online</h3>
-    </div>
-  </div>
-  <div class="p-4">
-    <button @click="open = !open" class="flex items-center justify-between w-full">
-      <h3 class="text-base font-normal tracking-widest text-center text-gray-900 uppercase md:text-lg font-roboto-condensed">Truland Magazin Online</h3>
-      <span :class="{ 'text-blue-500': !open, 'text-blue-500': open }">
-        <span x-show="!open">+</span>
-        <span x-show="open">-</span>
-      </span>
-    </button>
-    <div x-show="open" x-transition class="mt-4">
-      <a href="https://truland.ro" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
-        <p class="text-left text-gray-900">
-          Truland este un magazin online specializat în încălțăminte de calitate, oferind o gamă variată de pantofi, mocasini, ghete și sandale pentru femei. <br><br>
-          Realizat cu pasiune de către echipa Click Studios Digital pe o platforma Prestashop, Truland se evidențiază printr-un design modern, navigare ușoară și o experiență de cumpărături fără egal. <br><br>
-          Platforma a fost optimizată pentru a oferi o experiență intuitivă și plăcută utilizatorilor, punând în valoare produsele din piele naturală și confortul oferit de acestea.
         </p>
       </a>
     </div>
