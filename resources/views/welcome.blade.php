@@ -113,6 +113,10 @@
       x-on:scroll.window="scrollToTop = window.scrollY > 100"
       x-init="$nextTick(() => { setTimeout(() => loading = false, 700) })">
 
+      <!--JS embedded fb reel-->
+      <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v20.0&appId=819059106273620" nonce="7pZctJEG"></script>
+
     <!-- Navigation -->
       <nav x-data="{ isOpen: false }" class="fixed top-0 left-0 z-50 w-full bg-black bg-opacity-75">
      
@@ -797,7 +801,16 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
   </div>
 </section>
 
+   <!--Videouri scurte-->
 
+<div class="container mx-auto mt-8">
+  <h3 class="mb-8 text-xl font-bold text-center text-black md:text-2xl">Reclame video scurte</h3>
+   
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+    <div class="mx-auto fb-video" data-href="https://www.facebook.com/reel/998070601980625" data-width="300" data-show-text="false"></div>
+    <div class="mx-auto fb-video" data-href="https://www.facebook.com/reel/1468041527410822" data-width="300" data-show-text="false"></div>
+  </div>
+</div>
 
 <!-- Team Section & Contact -->
 {{-- <div id="contact" class="mt-8">
