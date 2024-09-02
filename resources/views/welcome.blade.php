@@ -225,7 +225,7 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
 }" class="relative w-full mx-auto my-8 overflow-hidden text-sm font-normal bg-white border border-gray-200 divide-y divide-gray-200 rounded-md">
 <div x-data="{ id: $id('accordion') }" class="cursor-pointer group">
 <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left select-none group-hover:underline">
-<span>Specialiști în TALL Stack</span>
+<h2>Specializați în TALL Stack, Vue Js si Wordpress</h2>
 <svg class="w-4 h-4 duration-200 ease-out" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </button>
 <div x-show="activeAccordion==id" x-collapse x-cloak>
@@ -247,6 +247,17 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
         <p class="text-lg text-gray-700">
             Această combinație puternică ne permite să creăm soluții web rapide, scalabile și ușor de întreținut. Avem capacitatea de a livra proiecte complexe într-un mod eficient, oferind clienților noștri aplicații web inovatoare care se remarcă în peisajul digital actual.
         </p>
+
+ 
+     
+        <p class="my-4 text-lg text-gray-700">
+            Noi credem că un website nu este doar o carte de vizită, ci un instrument puternic pentru a atrage și converti clienți. In functie de cerintele proiectului, utilizam si WordPress, cel mai popular sistem de gestionare a conținutului (CMS) din lume. Indiferent dacă ai nevoie de un blog simplu, un magazin online complex sau un portal de informații, WordPress ne permite să creăm soluții personalizate care se pot adapta oricăror nevoi de afacere.
+          </p>
+          <p class="my-4 text-lg text-gray-700">
+              <span class="font-semibold">Ușurință în gestionare</span>: Cu o interfață intuitivă, vei putea actualiza conținutul site-ului tău în câteva click-uri, fără a fi nevoie de cunoștințe tehnice.
+        </p>
+        
+    
     </div>
 </section>
 </div>
