@@ -245,13 +245,13 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
         </ul>
         
         <p class="text-lg text-gray-700">
-            Această combinație puternică ne permite să creăm soluții web rapide, scalabile și ușor de întreținut. Avem capacitatea de a livra proiecte complexe într-un mod eficient, oferind clienților noștri aplicații web inovatoare care se remarcă în peisajul digital actual.
+            Această combinație puternică ne permite să creăm soluții web foarte rapide, scalabile și ușor de întreținut. Dezvoltam panouri de control personalizate pentru a usura gestionarea continutului de catre client. Avem capacitatea de a livra proiecte complexe într-un mod eficient, oferind clienților noștri aplicații web inovatoare care se remarcă în peisajul digital actual.
         </p>
 
  
      
         <p class="my-4 text-lg text-gray-700">
-            Noi credem că un website nu este doar o carte de vizită, ci un instrument puternic pentru a atrage și converti clienți. In functie de cerintele proiectului, utilizam si WordPress, cel mai popular sistem de gestionare a conținutului (CMS) din lume. Indiferent dacă ai nevoie de un blog simplu, un magazin online complex sau un portal de informații, WordPress ne permite să creăm soluții personalizate care se pot adapta oricăror nevoi de afacere.
+            Noi credem că un website nu este doar o carte de vizită, ci un instrument puternic pentru a atrage și converti clienți. In functie de cerintele proiectului, utilizam si WordPress, cel mai popular sistem de gestionare a conținutului (CMS) din lume. 
           </p>
           <p class="my-4 text-lg text-gray-700">
               <span class="font-semibold">Ușurință în gestionare</span>: Cu o interfață intuitivă, vei putea actualiza conținutul site-ului tău în câteva click-uri, fără a fi nevoie de cunoștințe tehnice.
@@ -578,233 +578,423 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
    
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-        <!-- Portfolio Item Click Music App -->
-      <div x-data="{ open: false }" data-aos="fade-right" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
-        <div class="relative">
-          <img src="/assets/ClickMusic-OG-Site.jpg" alt="Click Music Streaming App" class="object-cover w-full h-auto transition duration-300 ease-in-out transform rounded-t-lg hover:scale-105 hover:opacity-80">
-          <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/50" :class="{ 'opacity-100': open }">
-            <h3 class="text-xl font-bold text-white">Click Music RO</h3>
-          </div>
+       <!-- Portfolio Item Click Music App - Modern Version -->
+<div x-data="{ open: false }" class="overflow-hidden transition-all duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl">
+  <div class="relative group">
+    <img src="/assets/ClickMusic-OG-Site.jpg" alt="Click Music Streaming App" class="object-cover w-full h-full transition duration-300 ease-in-out group-hover:opacity-75">
+    <div class="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 opacity-0 bg-gradient-to-b from-transparent to-black group-hover:opacity-100">
+      <h3 class="text-2xl font-bold text-white transition-transform duration-300 transform translate-y-2 group-hover:translate-y-0">Click Music RO</h3>
+    </div>
+  </div>
+  <div class="p-6">
+    <button @click="open = !open" class="flex items-center justify-between w-full text-left focus:outline-none">
+      <h3 class="text-xl font-semibold text-gray-900">Click Music RO</h3>
+      <svg :class="{'rotate-180': open}" class="w-5 h-5 text-blue-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+    <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="mt-4">
+      <a href="https://clickmusic.ro" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+        <p class="mb-4 leading-relaxed text-gray-700">
+          Clickmusic.ro este rezultatul eforturilor noastre constante de a crea soluții digitale de înaltă calitate, îmbunătățind experiența utilizatorilor în domeniul streaming-ului muzical. Dezvoltată folosind tehnologiile TALL Stack, această aplicație web oferă o experiență de streaming captivantă și ușor de folosit.
+        </p>
+        <div class="p-4 mb-4 bg-gray-100 rounded-lg">
+          {{-- <h4 class="mb-2 text-lg font-semibold text-gray-900">Caracteristici Cheie:</h4> --}}
+          <ul class="grid grid-cols-2 gap-2">
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Sistem de Autentificare
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Bază de Date Avansată
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Notificări Mail și Database
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Secțiune de Comentarii
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Streaming cu CDN
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Blog Integrat
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Sistem de Plată cu Stripe
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Panou de control
+            </li>
+          </ul>
         </div>
-        <div class="p-4">
-          <button @click="open = !open" class="flex items-center justify-between w-full">
-            <h3 class="text-base font-normal tracking-widest text-center text-gray-900 uppercase md:text-lg font-roboto-condensed">Click Music RO</h3>
-            <span :class="{ 'text-blue-500': !open, 'text-blue-500': open }">
-              <span x-show="!open">+</span>
-              <span x-show="open">-</span>
-            </span>
-          </button>
-          <div x-show="open" x-transition class="mt-4">
-                  <a href="https://clickmusic.ro" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
-
-            <p class="text-left text-gray-900">
-               Clickmusic.ro este rezultatul eforturilor noastre constante de a crea soluții digitale de înaltă calitate, îmbunătățind experiența utilizatorilor în domeniul streaming-ului muzical. <br> <br>
-              Dezvoltată folosind tehnologiile TALL Stack, această aplicație web oferă o experiență de streaming captivantă și ușor de folosit.
-              <br><br>
-              <strong>Caracteristici:</strong>
-              <ul class="px-4 mt-2 text-left list-disc">
-                <li>Sistem de Autentificare</li>
-                <li>Bază de Date Avansată</li>
-                <li>Notificări Mail și Database</li>
-                <li>Sectiune de Comentarii</li>
-                <li>Streaming cu CDN</li>
-                <li>Blog integrat</li>
-                <li>Sistem de plata cu Stripe</li>
-                <li>Securitate Avansată a Datelor</li>
-              </ul> </p>
-              <p class="mt-4 text-left text-gray-900">
-              Click Music Streaming App este un exemplu al angajamentului nostru față de excelență și inovație în dezvoltarea soluțiilor digitale, aducând muzica mai aproape de publicul său într-un mod interactiv și captivant.</p>
-            
-          </div>
+        <p class="leading-relaxed text-gray-700">
+          Click Music Streaming App este un exemplu al angajamentului nostru față de excelență și inovație în dezvoltarea soluțiilor digitale, aducând muzica mai aproape de publicul său într-un mod interactiv și captivant.
+        </p>
+        <div class="mt-4">
+          <a href="https://clickmusic.ro" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 bg-blue-600 rounded-lg hover:bg-blue-700">
+            Vizitează Site-ul
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
         </div>
       </a>
-      </div>
+    </div>
+  </div>
+</div>
     
 
-<!-- Portfolio Item Snow 'n' Stuff -->
-<div x-data="{ open: false }" data-aos="fade-right" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
-  <div class="relative">
-    <img src="/assets/OG-SnownStuff.jpg" alt="Website Prezentare Snow 'n' Stuff" class="object-cover w-full h-auto transition duration-300 ease-in-out transform rounded-t-lg hover:scale-105 hover:opacity-80">
-    <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/50" :class="{ 'opacity-100': open }">
-      <h3 class="text-xl font-bold text-white">Snow 'n' Stuff</h3>
+<!-- Portfolio Item Snow 'n' Stuff - Modern Version -->
+<div x-data="{ open: false }" class="overflow-hidden transition-all duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl">
+  <div class="relative group">
+    <img src="/assets/OG-SnownStuff.jpg" alt="Website Prezentare Snow 'n' Stuff" class="object-cover w-full h-full transition duration-300 ease-in-out group-hover:opacity-75">
+    <div class="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 opacity-0 bg-gradient-to-b from-transparent to-black group-hover:opacity-100">
+      <h3 class="text-2xl font-bold text-white transition-transform duration-300 transform translate-y-2 group-hover:translate-y-0">Snow 'n' Stuff</h3>
     </div>
   </div>
-  <div class="p-4">
-    <button @click="open = !open" class="flex items-center justify-between w-full">
-      <h3 class="text-base font-normal tracking-widest text-center text-gray-900 uppercase md:text-lg font-roboto-condensed">Snow 'n' Stuff</h3>
-      <span :class="{ 'text-blue-500': !open, 'text-blue-500': open }">
-        <span x-show="!open">+</span>
-        <span x-show="open">-</span>
-      </span>
+  <div class="p-6">
+    <button @click="open = !open" class="flex items-center justify-between w-full text-left focus:outline-none">
+      <h3 class="text-xl font-semibold text-gray-900">Snow 'n' Stuff</h3>
+      <svg :class="{'rotate-180': open}" class="w-5 h-5 text-blue-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
     </button>
-    <div x-show="open" x-transition class="mt-4">
-    <a href="https://www.snow-n-stuff.com/" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
-      <p class="text-left text-gray-900">
-        Snow 'n' Stuff este un label muzical internațional de top, specializat în genurile Tech House, Deep House, House și Techno. Pentru a reflecta profesionalismul și calitatea înaltă a acestui brand, am creat un website de prezentare captivant și modern. <br><br>
-        Website-ul a fost conceput pentru a oferi o experiență digitală unică, prezentând artiștii labelului, piesele muzicale și playlisturile lor. <br><br>
-        Am integrat elemente interactive, precum playere pentru ascultarea pieselor, creând o platformă engaging pentru fanii muzicii electronice.
-        <br><br>
-        <strong>Caracteristici Cheie:</strong>
-        <ul class="px-4 mt-2 text-left list-disc">
-          <li>Design Modern și Captivant</li>
-          <li>Prezentare Artiști și Playlisturi</li>
-          <li>Elemente Interactive (Playere, Previews)</li>
-          <li>Optimizare SEO pentru Vizibilitate Organică</li>
-          <li>Integrare cu Platforme Sociale și Streaming</li>
-        </ul>
-      </p>
-      <p class="mt-4 text-left text-gray-900">
-        Prin intermediul acestui website de prezentare, am reușit să promovăm eficient brandul Snow 'n' Stuff și să oferim o experiență digitală de top pentru fanii muzicii electronice din întreaga lume. Optimizarea SEO a asigurat, de asemenea, vizibilitatea organică și accesibilitatea către publicul țintă, facilitând astfel creșterea și dezvoltarea continuă a labelului.
-      </p>
+    <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="mt-4">
+      <a href="https://www.snow-n-stuff.com/" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+        <p class="mb-4 leading-relaxed text-gray-700">
+          Snow 'n' Stuff este un label muzical internațional de top, specializat în genurile Tech House, Deep House, House și Techno. Pentru a reflecta profesionalismul și calitatea înaltă a acestui brand, am creat un website de prezentare captivant și modern.
+        </p>
+        <div class="p-4 mb-4 bg-gray-100 rounded-lg">
+          {{-- <h4 class="mb-2 text-lg font-semibold text-gray-900">Caracteristici Cheie:</h4> --}}
+          <ul class="grid grid-cols-2 gap-2">
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Dezvoltat în Laravel
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Design Modern
+            </li>
+              <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Blog Integrat
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Prezentare Artiști
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Piese Muzicale și Playlisturi
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Panou de Control Personalizat
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Optimizare SEO
+            </li>
+          </ul>
+        </div>
+        <p class="leading-relaxed text-gray-700">
+          Prin intermediul acestui website de prezentare, am reușit să promovăm eficient brandul Snow 'n' Stuff și să oferim o experiență digitală de top pentru fanii muzicii electronice din întreaga lume. Optimizarea SEO a asigurat, de asemenea, vizibilitatea organică și accesibilitatea către publicul țintă, facilitând astfel creșterea și dezvoltarea continuă a labelului.
+        </p>
+        <div class="mt-4">
+          <a href="https://snow-n-stuff.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 bg-blue-600 rounded-lg hover:bg-blue-700">
+            Vizitează Site-ul
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
+        </div>
+      </a>
     </div>
   </div>
-  </a>
 </div>
 
 
-<!-- Portfolio Item Branding CS Victoria MM -->
-<div x-data="{ open: false }" data-aos="fade-right" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
-  <div class="relative">
-    <img src="/assets/victoria-maramures.jpg" alt="Branding Club Sportiv Victoria Maramureș" class="object-cover w-full h-full transition duration-300 ease-in-out transform rounded-t-lg hover:scale-105 hover:opacity-80">
-    <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/50" :class="{ 'opacity-100': open }">
-      <h3 class="text-xl font-bold text-white">CS Victoria MM</h3>
+<!-- Portfolio Item Ioana Mihalca - Modern Version -->
+<div x-data="{ open: false }" class="overflow-hidden transition-all duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl">
+  <div class="relative group">
+    <img src="/assets/ioanamihalca.ro.jpg" alt="Site-ul Ioanei Mihalca" class="object-cover w-full h-full transition duration-300 ease-in-out group-hover:opacity-75">
+    <div class="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 opacity-0 bg-gradient-to-b from-transparent to-black group-hover:opacity-100">
+      <h3 class="text-2xl font-bold text-white transition-transform duration-300 transform translate-y-2 group-hover:translate-y-0">Ioana Mihalca</h3>
     </div>
   </div>
-  <div class="p-4">
-    <button @click="open = !open" class="flex items-center justify-between w-full">
-      <h3 class="text-base font-normal tracking-widest text-center text-gray-900 uppercase md:text-lg font-roboto-condensed">CS Victoria MM</h3>
-      <span :class="{ 'text-blue-500': !open, 'text-blue-500': open }">
-        <span x-show="!open">+</span>
-        <span x-show="open">-</span>
-      </span>
+  <div class="p-6">
+    <button @click="open = !open" class="flex items-center justify-between w-full text-left focus:outline-none">
+      <h3 class="text-xl font-semibold text-gray-900">Ioana Mihalca</h3>
+      <svg :class="{'rotate-180': open}" class="w-5 h-5 text-blue-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
     </button>
-    <div x-show="open" x-transition class="mt-4">
-      <a href="https://csvictoriamm.ro/" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
-        <p class="text-left text-gray-900">
-          Proiectul de branding pentru Clubul Sportiv Victoria Maramureș a fost o călătorie fascinantă în definirea și exprimarea identității acestuia în mediul online și offline. <br><br>
-          Am dezvoltat un logo unic și memorabil care să reprezinte valorile și pasiunea clubului pentru sport, îmbinând tradiția cu modernitatea. <br><br>
-          Pe lângă crearea identității vizuale, am dezvoltat și un website atractiv și ușor de navigat, precum și conținut video captivant pentru platformele sociale ale clubului, inclusiv reeluri pe Instagram și videoclipuri pe YouTube.
-          <br><br>
-          <strong>Caracteristici Cheie:</strong>
-          <ul class="px-4 mt-2 text-left list-disc">
-            <li>Creare Identitate Vizuală</li>
-            <li>Logo Unic și Memorabil</li>
-            <li>Website Atractiv și Ușor de Navigat</li>
-            <li>Conținut Video Captivant pentru Platforme Sociale și Gestionarea acestora</li>
-            <li>Optimizare SEO pentru a ajunge organic în primele pagini ale căutărilor</li>
-          </ul>
+    <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="mt-4">
+      <a href="https://ioanamihalca.ro/" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+        <p class="mb-4 leading-relaxed text-gray-700">
+          Am creat un site de prezentare și blog pentru Ioana Mihalca, jurnalistă și moderatoare de emisiuni și evenimente. Proiectul a fost dezvoltat în WordPress, oferind o platformă robustă și flexibilă pentru gestionarea conținutului și interacțiunea cu publicul.
         </p>
-        <p class="mt-4 text-left text-gray-900">
+        <div class="p-4 mb-4 bg-gray-100 rounded-lg">
+          {{-- <h4 class="mb-2 text-lg font-semibold text-gray-900">Caracteristici Cheie:</h4> --}}
+          <ul class="grid grid-cols-2 gap-2">
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Dezvoltat în WordPress
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Design Profesional
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Funcționalități de Blog
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Prezentare Profesională
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Gestionare Ușoară a Conținutului
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Flexibilitate pentru Actualizări
+            </li>
+          </ul>
+        </div>
+        <p class="leading-relaxed text-gray-700">
+          Site-ul îmbină elementele de prezentare profesională cu funcționalitățile unui blog, permițând Ioanei să-și împărtășească experiențele, opiniile și realizările într-un mod dinamic și atractiv. Acest proiect a oferit Ioanei Mihalca o platformă digitală puternică pentru a-și consolida prezența online, a interacționa cu publicul său și a-și prezenta activitatea profesională într-un mod elegant și eficient.
+        </p>
+        <div class="mt-4">
+          <a href="https://ioanamihalca.ro/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 bg-blue-600 rounded-lg hover:bg-blue-700">
+            Vizitează Site-ul
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Portfolio Item Branding CS Victoria MM - Modern Version -->
+<div x-data="{ open: false }" class="overflow-hidden transition-all duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl">
+  <div class="relative group">
+    <img src="/assets/victoria-maramures.jpg" alt="Branding Club Sportiv Victoria Maramureș" class="object-cover w-full h-full transition duration-300 ease-in-out group-hover:opacity-75">
+    <div class="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 opacity-0 bg-gradient-to-b from-transparent to-black group-hover:opacity-100">
+      <h3 class="text-2xl font-bold text-white transition-transform duration-300 transform translate-y-2 group-hover:translate-y-0">CS Victoria MM</h3>
+    </div>
+  </div>
+  <div class="p-6">
+    <button @click="open = !open" class="flex items-center justify-between w-full text-left focus:outline-none">
+      <h3 class="text-xl font-semibold text-gray-900">CS Victoria MM</h3>
+      <svg :class="{'rotate-180': open}" class="w-5 h-5 text-blue-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+    <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="mt-4">
+      <a href="https://csvictoriamm.ro/" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+        <p class="mb-4 leading-relaxed text-gray-700">
+          Proiectul de branding pentru Clubul Sportiv Victoria Maramureș este o călătorie fascinantă în definirea și exprimarea identității acestuia în mediul online și offline. Andreea a dezvoltat un logo unic și memorabil care să reprezinte valorile și pasiunea clubului pentru sport, îmbinând tradiția cu modernitatea.
+        </p>
+        <p class="mb-4 leading-relaxed text-gray-700">
+          Pe lângă crearea identității vizuale, am dezvoltat și un website atractiv și ușor de navigat, precum și conținut video captivant pentru platformele sociale ale clubului, inclusiv reeluri pe Instagram și videoclipuri pe YouTube.
+        </p>
+        <div class="p-4 mb-4 bg-gray-100 rounded-lg">
+          {{-- <h4 class="mb-2 text-lg font-semibold text-gray-900">Caracteristici Cheie:</h4> --}}
+          <ul class="grid grid-cols-2 gap-2">
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Creare Identitate Vizuală
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Logo Unic și Memorabil
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Website Atractiv
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Conținut Video Captivant
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Optimizare SEO
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Gestionare Platforme Sociale
+            </li>
+          </ul>
+        </div>
+        <p class="leading-relaxed text-gray-700">
           Proiectul de branding pentru Clubul Sportiv Victoria Maramureș a fost o inițiativă care a contribuit semnificativ la consolidarea prezenței și notorietății clubului în mediul online. Optimizarea SEO a asigurat, de asemenea, vizibilitatea organică și accesibilitatea către publicul țintă, facilitând astfel creșterea și dezvoltarea continuă a clubului.
         </p>
+        <div class="mt-4">
+          <a href="https://csvictoriamm.ro/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 bg-blue-600 rounded-lg hover:bg-blue-700">
+            Vizitează Site-ul
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
+        </div>
       </a>
     </div>
   </div>
 </div>
 
-<!-- Portfolio Item Truland - Magazin Online de Încălțăminte -->
-<div x-data="{ open: false }" data-aos="zoom-in-up" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
-  <div class="relative">
-    <img src="/assets/truland.jpg" alt="Truland Magazin Online" class="object-cover w-full h-auto transition duration-300 ease-in-out transform rounded-t-lg hover:scale-105 hover:opacity-80">
-    <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/50" :class="{ 'opacity-100': open }">
-      <h3 class="text-xl font-bold text-white">Truland Magazin Online</h3>
+<!-- Portfolio Item Truland - Magazin Online de Încălțăminte - Modern Version -->
+<div x-data="{ open: false }" class="overflow-hidden transition-all duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl">
+  <div class="relative group">
+    <img src="/assets/truland.jpg" alt="Truland Magazin Online" class="object-cover w-full h-full transition duration-300 ease-in-out group-hover:opacity-75">
+    <div class="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 opacity-0 bg-gradient-to-b from-transparent to-black group-hover:opacity-100">
+      <h3 class="text-2xl font-bold text-white transition-transform duration-300 transform translate-y-2 group-hover:translate-y-0">Truland Magazin Online</h3>
     </div>
   </div>
-  <div class="p-4">
-    <button @click="open = !open" class="flex items-center justify-between w-full">
-      <h3 class="text-base font-normal tracking-widest text-center text-gray-900 uppercase md:text-lg font-roboto-condensed">Truland Magazin Online</h3>
-      <span :class="{ 'text-blue-500': !open, 'text-blue-500': open }">
-        <span x-show="!open">+</span>
-        <span x-show="open">-</span>
-      </span>
+  <div class="p-6">
+    <button @click="open = !open" class="flex items-center justify-between w-full text-left focus:outline-none">
+      <h3 class="text-xl font-semibold text-gray-900">Truland Magazin Online</h3>
+      <svg :class="{'rotate-180': open}" class="w-5 h-5 text-blue-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
     </button>
-    <div x-show="open" x-transition class="mt-4">
+    <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="mt-4">
       <a href="https://truland.ro" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
-        <p class="text-left text-gray-900">
-          Truland este un magazin online specializat în încălțăminte de calitate, oferind o gamă variată de pantofi, mocasini, ghete și sandale pentru femei. <br><br>
-          Realizat cu pasiune de către echipa Click Studios Digital pe o platforma Prestashop, Truland se evidențiază printr-un design modern, navigare ușoară și o experiență de cumpărături fără egal. <br><br>
-          Platforma a fost optimizată pentru a oferi o experiență intuitivă și plăcută utilizatorilor, punând în valoare produsele din piele naturală și confortul oferit de acestea.
+        <p class="mb-4 leading-relaxed text-gray-700">
+          Truland este un magazin online specializat în încălțăminte de calitate, oferind o gamă variată de pantofi, mocasini, ghete și sandale pentru femei. Realizat pe o platforma Prestashop, Truland se evidențiază printr-un design modern, navigare ușoară și o experiență de cumpărături fără egal.
         </p>
+        <div class="p-4 mb-4 bg-gray-100 rounded-lg">
+          {{-- <h4 class="mb-2 text-lg font-semibold text-gray-900">Caracteristici Cheie:</h4> --}}
+          <ul class="grid grid-cols-2 gap-2">
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Platformă Prestashop
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Design Modern
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Navigare Ușoară
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Experiență de Cumpărături Optimizată
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Produse din Piele Naturală
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Interfață Intuitivă
+            </li>
+          </ul>
+        </div>
+        <p class="leading-relaxed text-gray-700">
+          Platforma a fost optimizată pentru a oferi o experiență intuitivă și plăcută utilizatorilor, punând în valoare produsele din piele naturală și confortul oferit de acestea. Truland reprezintă o soluție completă pentru comerțul electronic în domeniul încălțămintei, oferind clienților o experiență de shopping online de înaltă calitate.
+        </p>
+        <div class="mt-4">
+          <a href="https://truland.ro" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 bg-blue-600 rounded-lg hover:bg-blue-700">
+            Vizitează Site-ul
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
+        </div>
       </a>
     </div>
   </div>
 </div>
 
 
- <!-- Portfolio Item Podcast Morosenesc -->
-<div x-data="{ open: false }" data-aos="fade-down" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
-  <div class="relative">
-    <img src="/assets/podcastmorosenesc.jpg" alt="Productie Podcast Morosenesc cu Ioana Mihalca" class="object-cover w-full h-auto transition duration-300 ease-in-out transform rounded-t-lg hover:scale-105 hover:opacity-80">
-    <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/50" :class="{ 'opacity-100': open }">
-      <h3 class="text-xl font-bold text-white">Podcast Morosenesc</h3>
+ <!-- Portfolio Item Podcast Morosenesc - Modern Version -->
+<div x-data="{ open: false }" class="overflow-hidden transition-all duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl">
+  <div class="relative group">
+    <img src="/assets/podcastmorosenesc.jpg" alt="Productie Podcast Morosenesc cu Ioana Mihalca" class="object-cover w-full h-full transition duration-300 ease-in-out group-hover:opacity-75">
+    <div class="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 opacity-0 bg-gradient-to-b from-transparent to-black group-hover:opacity-100">
+      <h3 class="text-2xl font-bold text-white transition-transform duration-300 transform translate-y-2 group-hover:translate-y-0">Podcast Morosenesc</h3>
     </div>
   </div>
-  <div class="p-4">
-    <button @click="open = !open" class="flex items-center justify-between w-full">
-      <h3 class="text-base font-normal tracking-widest text-center text-gray-900 uppercase md:text-lg font-roboto-condensed">Podcast Morosenesc</h3>
-      <span :class="{ 'text-blue-500': !open, 'text-blue-500': open }">
-        <span x-show="!open">+</span>
-        <span x-show="open">-</span>
-      </span>
+  <div class="p-6">
+    <button @click="open = !open" class="flex items-center justify-between w-full text-left focus:outline-none">
+      <h3 class="text-xl font-semibold text-gray-900">Podcast Morosenesc</h3>
+      <svg :class="{'rotate-180': open}" class="w-5 h-5 text-blue-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
     </button>
-    <div x-show="open" x-transition class="mt-4">
+    <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="mt-4">
       <a href="https://www.youtube.com/@IoanaMihalca" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
-        <p class="text-left text-gray-900">
-          "Podcast Morosenesc cu Ioana Mihalca" este un proiect de succes din portofoliul Click Studios, dedicat explorării povestirilor autentice și discuțiilor captivante. <br><br>
-          Acest podcast aduce în fața ascultătorilor povești de viață inspiratoare și conversații profunde cu personalități remarcabile din diverse domenii. <br><br>
-          <strong>Caracteristici Cheie:</strong>
-          <ul class="px-4 mt-2 text-left list-disc">
-            <li><strong>Înregistrare și Editare:</strong> Utilizarea echipamentelor de ultimă generație pentru a asigura o calitate impecabilă a sunetului și o editare profesionistă.</li>
-            <li><strong>Distribuție și Promovare:</strong> Implementarea unei strategii de marketing digital pentru a maximiza audiența și impactul podcastului. Disponibil pe principalele platforme de podcasting (Spotify, Apple Podcasts, Google Podcasts).</li>
-            <li>Strategii Eficiente de Marketing Digital</li>
+        <p class="mb-4 leading-relaxed text-gray-700">
+          "Podcast Morosenesc cu Ioana Mihalca" este un proiect de succes dedicat explorării povestirilor autentice și discuțiilor captivante. Acest podcast aduce în fața ascultătorilor povești de viață inspiraționale și conversații profunde cu personalități remarcabile din diverse domenii.
+        </p>
+        <div class="p-4 mb-4 bg-gray-100 rounded-lg">
+          {{-- <h4 class="mb-2 text-lg font-semibold text-gray-900">Caracteristici Cheie:</h4> --}}
+          <ul class="space-y-2">
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-2 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span class="text-sm text-gray-700"><strong>Înregistrare și Editare:</strong> Utilizarea echipamentelor de ultimă generație pentru a asigura o calitate impecabilă a sunetului și o editare profesionistă.</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 mr-2 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span class="text-sm text-gray-700"><strong>Distribuție și Promovare:</strong> Implementarea unei strategii de marketing digital pentru a maximiza audiența și impactul podcastului. Disponibil pe principalele platforme de podcasting (Spotify, Apple Podcasts, Google Podcasts).</span>
+            </li>
+           
           </ul>
+        </div>
+        <h4 class="mb-2 text-lg font-semibold text-gray-900">Servicii de productie audio si editare video:</h4>
+        <p class="leading-relaxed text-gray-700">
+          "Podcast Morosenesc cu Ioana Mihalca" a contribuit la consolidarea brandului Click Studios, demonstrând capacitatea noastră de a crea conținut de calitate și de a gestiona proiecte media complexe. 
         </p>
-        <p class="mt-4 text-left text-gray-900">
-          "Podcast Morosenesc cu Ioana Mihalca" a contribuit la consolidarea brandului Click Studios, demonstrând capacitatea noastră de a crea conținut de calitate și de a gestiona proiecte media complexe. Acest proiect este un exemplu perfect al abilității noastre de a combina creativitatea și producția cu strategia de marketing digital pentru a obține rezultate remarcabile.
-        </p>
+        <div class="mt-4">
+          <a href="https://www.youtube.com/@IoanaMihalca" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 bg-blue-600 rounded-lg hover:bg-blue-700">
+            Vizionează pe YouTube
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
+        </div>
       </a>
     </div>
   </div>
 </div>
- 
 
 
-    <!-- Portfolio Item Click Music Youtube -->
-<div x-data="{ open: false }" data-aos="zoom-in-up" class="overflow-hidden bg-white rounded-lg shadow-lg cursor-pointer">
-  <div class="relative">
-    <img src="/assets/clickmusicyt.jpg" alt="Click Music canal youtube" class="object-cover w-full h-auto transition duration-300 ease-in-out transform rounded-t-lg hover:scale-105 hover:opacity-80">
-    <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-black/50" :class="{ 'opacity-100': open }">
-      <h3 class="text-xl font-bold text-white">Click Music YouTube</h3>
+  <!-- Portfolio Item Click Music YouTube - Revised Version -->
+<div x-data="{ open: false }" class="overflow-hidden transition-all duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl">
+  <div class="relative group">
+    <img src="/assets/clickmusicyt.jpg" alt="Click Music canal youtube" class="object-cover w-full h-full transition duration-300 ease-in-out group-hover:opacity-75">
+    <div class="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 opacity-0 bg-gradient-to-b from-transparent to-black group-hover:opacity-100">
+      <h3 class="text-2xl font-bold text-white transition-transform duration-300 transform translate-y-2 group-hover:translate-y-0">Click Music YouTube</h3>
     </div>
   </div>
-  <div class="p-4">
-    <button @click="open = !open" class="flex items-center justify-between w-full">
-      <h3 class="text-base font-normal tracking-widest text-center text-gray-900 uppercase md:text-lg font-roboto-condensed">Click Music YouTube</h3>
-      <span :class="{ 'text-blue-500': !open, 'text-blue-500': open }">
-        <span x-show="!open">+</span>
-        <span x-show="open">-</span>
-      </span>
+  <div class="p-6">
+    <button @click="open = !open" class="flex items-center justify-between w-full text-left focus:outline-none">
+      <h3 class="text-xl font-semibold text-gray-900">Click Music YouTube</h3>
+      <svg :class="{'rotate-180': open}" class="w-5 h-5 text-blue-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
     </button>
-    <div x-show="open" x-transition class="mt-4">
+    <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="mt-4">
       <a href="https://www.youtube.com/@clickmusicromania" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
-        <p class="text-left text-gray-900">
-          Suntem mândri să prezentăm Click Music Romania, un proiect emblematic în portofoliul nostru. <br><br>
-          Acest canal YouTube reprezintă o extensie a serviciilor noastre, evidențiind expertiza noastră în crearea de conținut de cea mai înaltă calitate în domeniul muzicii și al vizualurilor captivante.
-          <br><br>
-          <strong>Caracteristici Cheie:</strong>
-          <ul class="px-4 mt-2 text-left list-disc">
-            <li><strong>Producții Audio de Înaltă Calitate</strong>: Cu o echipă de producție audio experimentată, ne străduim să oferim sunete impecabile și mixaje profesionale care să îmbogățească experiența auditivă a publicului nostru.</li>
-            <li><strong>Videoclipuri Muzicale</strong>: Fiecare videoclip reprezintă o sinteză perfectă între muzică și imagine, capturând esența fiecărei piese.</li>
-          </ul>
+        <p class="mb-4 leading-relaxed text-gray-700">
+          Click Music Romania reprezintă o parte importantă a activității noastre în domeniul producției muzicale și al conținutului video. Prin acest canal YouTube, ne-am propus să creăm conținut de calitate pentru iubitorii de muzică.
         </p>
-        <p class="mt-4 text-left text-gray-900">
-          Rezultate Demonstrabile: Canalul nostru, Click Music Romania, s-a remarcat prin obținerea a peste 50 de milioane de vizualizări, evidențiind eficacitatea și impactul strategiilor noastre de marketing în atragerea și implicarea publicului. Acest succes solidifică poziția noastră ca lideri în furnizarea de soluții de marketing digitale care generează rezultate tangibile și măsurabile pentru clienții noștri.
+      
+        <p class="leading-relaxed text-gray-700">
+          De-a lungul timpului, am avut plăcerea să vedem cum comunitatea noastră a crescut, ajungând la peste 50 de milioane de vizualizări. Această cifră reflectă interesul publicului pentru conținutul nostru și ne motivează să continuăm să îmbunătățim calitatea producțiilor noastre.
         </p>
+        <div class="mt-4">
+          <a href="https://www.youtube.com/@clickmusicromania" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 bg-blue-600 rounded-lg hover:bg-blue-700">
+            Explorează Canalul Nostru
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
+        </div>
       </a>
     </div>
   </div>
-</div>
-
+</div> 
 
 
    <!--Alte itemuri-->
