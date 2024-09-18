@@ -388,7 +388,7 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
         <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0m2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0" />
       </svg>
     </div>
-    <h3 class="mb-4 text-base font-normal tracking-widest text-center text-gray-900 uppercase font-roboto-condensed">Dezvoltare de site-uri și Aplicații Web</h3>
+    <h3 class="mb-4 text-base font-normal tracking-widest text-center text-gray-900 uppercase font-roboto-condensed">Website-uri și Aplicații Web</h3>
     <ul class="mt-2 text-sm text-center text-gray-700 list-none">
       <li class="mt-2">Creare de site-uri personalizate, pagini web de prezentare, magazine online (e-commerce) pe platforme open source: Bagisto - Laravel, Prestashop etc</li>
       <li class="mt-2">Dezvoltare de aplicații web complexe pentru diferite nevoi și industrii.</li>
@@ -402,7 +402,7 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
 <div class="flex w-full h-full px-4 lg:px-6">
   <div class="px-6 py-8 mb-8 transition duration-300 ease-in-out transform bg-white rounded-lg shadow-lg h-96 hover:-translate-y-2">
     <div class="inline-block mb-4 text-gray-900">
-      <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="mx-auto mb-4 text-gray-900" viewBox="0 0 16 16">
+      <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="mx-auto text-gray-900" viewBox="0 0 16 16">
         <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5" />
         <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z" />
       </svg>
