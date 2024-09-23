@@ -203,7 +203,7 @@
  <!--Expertiză în Dezvoltare Web Carusel-->
 
 
-    <section id="dezvoltare-web" class="px-4 py-16 bg-white">
+    <section id="dezvoltare-web" class="py-16 bg-white">
   <div class="max-w-6xl mx-auto">
 
 <div class="relative h-screen bg-fixed bg-center bg-cover" style="background-image: url('assets/carusel-bg.webp')">
@@ -362,7 +362,7 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
 
   <!--Servicii-->
  
-<div id="servicii" class="px-4 py-12">
+<div id="servicii" class="py-12">
 
 <div class="relative h-screen bg-fixed bg-center bg-cover" style="background-image: url('assets/servicii.webp')">
   <div class="absolute inset-0 bg-black/50"></div>
@@ -560,7 +560,7 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
 
 <!--Portofolio-->
 
-<section id="portofoliu" class="px-4 py-12 text-center">
+<section id="portofoliu" class="py-12 text-center ">
 
 <div class="relative h-screen bg-fixed bg-center bg-cover" style="background-image: url('assets/portofoliu.webp')">
   <div class="absolute inset-0 bg-black/50"></div>
