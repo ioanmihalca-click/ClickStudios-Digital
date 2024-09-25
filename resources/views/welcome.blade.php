@@ -556,8 +556,6 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
 </div>
 </div>
 
-
-
 <!--Portofolio-->
 
 <section id="portofoliu" class="py-12 text-center ">
@@ -640,6 +638,69 @@ this.activeAccordion = (this.activeAccordion == id) ? '' : id
         </p>
         <div class="mt-4">
           <a href="https://clickmusic.ro" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 bg-blue-600 rounded-lg hover:bg-blue-700">
+            Vizitează Site-ul
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Item de Portofoliu InstaCapture - Versiune Modernă -->
+<div x-data="{ open: false }" class="overflow-hidden transition-all duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl">
+  <div class="relative group">
+    <img src="/assets/OG-instacapture.jpg" alt="Aplicație de Fotografie Profesională InstaCapture" class="object-cover w-full h-full transition duration-300 ease-in-out group-hover:opacity-75">
+    <div class="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 opacity-0 bg-gradient-to-b from-transparent to-black group-hover:opacity-100">
+      <h3 class="text-2xl font-bold text-white transition-transform duration-300 transform translate-y-2 group-hover:translate-y-0">InstaCapture</h3>
+    </div>
+  </div>
+  <div class="p-6">
+    <button @click="open = !open" class="flex items-center justify-between w-full text-left focus:outline-none">
+      <h3 class="text-xl font-semibold text-gray-900">InstaCapture</h3>
+      <svg :class="{'rotate-180': open}" class="w-5 h-5 text-blue-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+    <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="mt-4">
+      <a href="https://instacapture.ro" target="_blank" rel="noopener noreferrer" class="hover:no-underline">
+        <p class="mb-4 leading-relaxed text-gray-700">
+          InstaCapture.ro este o aplicație web inovatoare dezvoltată de agenția noastră pentru firma de fotografie profesională InstaCapture din Cluj-Napoca.
+        </p>
+        <div class="p-4 mb-4 bg-gray-100 rounded-lg">
+          <ul class="grid grid-cols-2 gap-2">
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Dezvoltată în Laravel
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Panou de Control 
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Integrare CDN prin API
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Performanță Ridicată
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Design Modern
+            </li>
+            <li class="flex text-sm text-left text-gray-700">
+              <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Încărcare Rapidă a Pozelor
+            </li>
+          </ul>
+        </div>
+        <p class="leading-relaxed text-gray-700">
+          Aplicația InstaCapture oferă o soluție eficientă pentru gestionarea și prezentarea portofoliului de fotografie, combinând un design modern cu funcționalități avansate. Platforma noastră demonstrează capacitatea agenției de a crea soluții web personalizate, rapide și ușor de utilizat, adaptate nevoilor specifice ale clienților noștri din industria creativă.
+        </p>
+        <div class="mt-4">
+          <a href="https://instacapture.ro" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 bg-blue-600 rounded-lg hover:bg-blue-700">
             Vizitează Site-ul
             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
           </a>
