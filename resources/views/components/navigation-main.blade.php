@@ -8,7 +8,7 @@
             <svg class="absolute w-10 h-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="6">
                 <!-- First line -->
                 <line x1="30" y1="40" x2="90" y2="40" 
-                      :class="isOpen ? 'rotate-45 translate-y-[12px]' : ''" 
+                      :class="isOpen ? 'rotate-45 translate-y-[14px]' : ''" 
                       class="transition-transform duration-300 ease-in-out origin-center"></line>
 
                 <!-- Second line -->
@@ -18,7 +18,7 @@
 
                 <!-- Third line -->
                 <line x1="30" y1="80" x2="90" y2="80" 
-                      :class="isOpen ? '-rotate-45 -translate-y-[12px]' : ''" 
+                      :class="isOpen ? '-rotate-45 -translate-y-[14px]' : ''" 
                       class="transition-transform duration-300 ease-in-out origin-center"></line>
             </svg>
         </button>
