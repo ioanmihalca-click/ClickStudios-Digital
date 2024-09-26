@@ -1,5 +1,5 @@
         <section id="dezvoltare-web" class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto">
+            
 
                 <div class="relative h-screen bg-fixed bg-center bg-cover"
                     style="background-image: url('assets/carusel-bg.webp')">
@@ -22,7 +22,7 @@
                         this.activeAccordion = (this.activeAccordion == id) ? '' : id
                     }
                 }"
-                    class="relative w-full mx-auto my-8 overflow-hidden text-sm font-normal bg-white border border-gray-200 divide-y divide-gray-200 rounded-md">
+                    class="relative mx-auto my-8 overflow-hidden text-sm font-normal bg-white border border-gray-200 divide-y divide-gray-200 rounded-md max-w-7xl">
                     <div x-data="{ id: $id('accordion') }" class="cursor-pointer group">
                         <button @click="setActiveAccordion(id)"
                             class="flex items-center justify-between w-full p-4 text-left select-none group-hover:underline">
@@ -199,5 +199,5 @@
                     class="px-10 py-2 text-xs tracking-widest text-black uppercase transition-all duration-300 border border-black hover:bg-black hover:text-white font-roboto-condensed hover:border-transparent">Consultanta
                     gratuita</a>
             </div>
-            </div>
+            
         </section>
