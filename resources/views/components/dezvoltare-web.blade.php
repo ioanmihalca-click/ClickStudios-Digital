@@ -26,7 +26,7 @@
                     <div x-data="{ id: $id('accordion') }" class="cursor-pointer group">
                         <button @click="setActiveAccordion(id)"
                             class="flex items-center justify-between w-full p-4 text-left select-none group-hover:underline">
-                            <h2>Specializați în TALL Stack, Vue Js si Wordpress</h2>
+                            <h2>Specializați în Laravel si TALL Stack, Vue Js si Wordpress</h2>
                             <svg class="w-4 h-4 duration-200 ease-out" :class="{ 'rotate-180': activeAccordion == id }"
                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round"
