@@ -2,3 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+/* Stilizare scrollbar pentru WebKit (Chrome, Safari, newer versions of Opera) */
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #10B981; /* Tailwind emerald-500 */
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #d1d5db; /* Tailwind gray-300 */
+    border-radius: 3px;
+}
+
+/* Stilizare scrollbar pentru Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #10B981 #d1d5db;
+}
+
+/* Stilizare scrollbar pentru IE și Edge */
+body {
+    -ms-overflow-style: none;
+}
+
+/* Stilizare scrollbar personalizată pentru IE și Edge */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    body {
+        scrollbar-face-color: #10B981;
+        scrollbar-track-color: #d1d5db;
+        scrollbar-arrow-color: #10B981;
+        scrollbar-shadow-color: #10B981;
+    }
+}
+
+/* Asigură că stilizarea se aplică și pe dispozitive mobile */
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 6px; /* Scrollbar puțin mai subțire pe mobile */
+    }
+}
