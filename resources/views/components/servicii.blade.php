@@ -1,6 +1,6 @@
  <!--Servicii-->
 
-        <div id="servicii" class="py-12">
+        <div id="servicii" class="bg-white">
 
             <div class="relative h-screen bg-fixed bg-center bg-cover"
                 style="background-image: url('assets/servicii.webp')">
@@ -10,7 +10,7 @@
                     <h2
                         class="font-roboto-condensed uppercase mb-10 md:mb-14 tracking-[6px] md:tracking-[24px] font-normal text-3xl md:text-5xl leading-relaxed md:leading-normal text-white ">
                         Servicii</h2>
-                    <div class="max-w-2xl mx-auto">
+                    <div class="max-w-5xl mx-auto">
                         <p class="px-2 mb-16 text-lg tracking-wide text-center text-white font-volkov">"O magie
                             digitala a cuprins întreaga noastra creatie, precum aceste momente stralucitoare ale
                             inovatiei pe care le traim cu toata pasiunea noastra."</p>

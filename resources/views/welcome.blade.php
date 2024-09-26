@@ -158,17 +158,21 @@
     <x-servicii />
     <x-portofoliu />   
     
-        <!--Contact Form-->
-        <div id="contact" class="max-w-2xl px-2 mx-auto text-center">
-            <h2
-                class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-10 mt-4 md:mt-14 ">
-                Contact</h2>
-            <p class="px-2 mb-16 text-lg tracking-wide text-center text-gray-900 font-volkov">Dacă sunteti interesati
-                sa colaborati cu noi pentru dezvoltare web, productia de conținut media sau alte servicii de publicitate
-                și marketing digital, nu ezitati sa ne contactati</p>
+        <!--Contact -->
+      
+<div id="contact" class="flex items-center justify-center min-h-screen p-4">
+    <div class="w-full max-w-xl px-4 py-8 mx-auto bg-white border border-gray-200 rounded-lg">
+        <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-6">
+            Contact
+        </h2>
+        <p class="px-2 mb-8 text-lg tracking-wide text-center text-gray-700 font-volkov">
+            Dacă doriti sa colaborati cu noi pentru dezvoltare web (site-uri de prezentare sau aplicatii web complexe), productia de continut media sau alte servicii de publicitate și marketing digital, nu ezitati să ne contactati:
+        </p>
+        <div class="flex justify-center">
             <x-modal-contact />
-
         </div>
+    </div>
+</div>
 
       <x-footer /> 
 

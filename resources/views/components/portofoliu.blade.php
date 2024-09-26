@@ -1,6 +1,6 @@
  <!--Portofolio-->
 
-        <section id="portofoliu" class="py-12 text-center ">
+        <section id="portofoliu" class="bg-white">
 
             <div class="relative h-screen bg-fixed bg-center bg-cover"
                 style="background-image: url('assets/portofoliu.webp')">
