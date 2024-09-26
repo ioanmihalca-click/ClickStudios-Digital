@@ -10,7 +10,7 @@
                         class="font-roboto-condensed uppercase mb-10 md:mb-14 tracking-[6px] md:tracking-[24px] font-normal text-3xl md:text-5xl leading-relaxed md:leading-normal text-white">
                         Portofoliu</h2>
                     <div class="max-w-2xl mx-auto">
-                        <p class="mb-16 text-lg tracking-wide text-center text-white font-volkov">"Singurul mod de a
+                        <p class="p-2 mb-16 text-lg tracking-wide text-center text-white font-volkov">"Singurul mod de a
                             face un lucru bine este să fii pasionat."</p>
                     </div>
                 </div>
