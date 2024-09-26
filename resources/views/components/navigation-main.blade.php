@@ -6,7 +6,7 @@
                 Digital</a>
 
         <!-- Modern SVG Hamburger menu button (visible on mobile) -->
-        <button @click="isOpen = !isOpen" class="relative w-10 h-10 text-white md:hidden" aria-label="Toggle Menu">
+        <button @click="isOpen = !isOpen" class="relative w-10 h-10 text-white md:hidden" x-cloak aria-label="Toggle Menu">
             <span class="sr-only">Deschide meniul</span>
             <svg class="absolute w-6 h-6 transition duration-300 ease-in-out transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                  :class="{'opacity-0 scale-80': isOpen, 'opacity-100 scale-100': !isOpen}"
