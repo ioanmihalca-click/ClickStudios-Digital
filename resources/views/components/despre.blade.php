@@ -7,7 +7,7 @@
             stats: [
                 { label: 'Proiecte Finalizate', value: 0, target: 37 },
                 { label: 'Clienți Mulțumiți', value: 0, target: 37 },
-                { label: 'Ani de Experiență', value: 0, target: 5 }
+                { label: 'Ani de Experiență', value: 0, target: 3 }
             ],
             currentParagraph: 0,
             paragraphs: [
