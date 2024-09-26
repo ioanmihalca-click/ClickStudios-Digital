@@ -66,7 +66,7 @@
             x-text="typewriter"
         ></h2>
 
-        <div class="h-24 mb-12 text-2xl tracking-wide text-center text-gray-900 md:mb-8 md:mb-16 font-volkov"
+        <div class="h-24 mb-12 text-2xl tracking-wide text-center text-gray-900 md:mb-16 font-volkov"
              x-show="show"
              x-transition:enter="transition ease-out duration-1000"
              x-transition:enter-start="opacity-0 transform translate-y-10"
