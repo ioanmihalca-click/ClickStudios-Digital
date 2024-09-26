@@ -12,7 +12,7 @@
     <meta property="og:image" content="{{ asset('assets/OG-Click-Studios-Digital.jpg') }}" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:alt" content="Click Studios - Dezvoltare Web si Marketing Digital" />
-    <meta property="og:url" content="{{ url('/') }}" />
+    <meta property="og:url" content="{{ url()->current() }}" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ro_RO" />
     <meta property="og:site_name" content="Click Studios Digital" />
@@ -73,7 +73,7 @@
 </script>
 
     <title>Click Studios - Dezvoltare Web & Marketing Digital</title>
-    <link rel="canonical" href="{{ url('/') }}" />
+    <link rel="canonical" href="{{ url()->current() }}">
 
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('assets/favicon.ico') }}" type="image/x-icon" />

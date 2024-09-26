@@ -10,6 +10,7 @@ Route::get('/', function () {
 });
 
 
+    // Blog
     Route::prefix('blog')->group(function () {
     Route::get('/', PostList::class)->name('blog'); 
     Route::get('/postari/{post:slug}', PostShow::class)->name('postari.show');
