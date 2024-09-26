@@ -109,7 +109,7 @@
         gtag('config', 'G-QFL38JS6PJ');
     </script>
 
- @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 
@@ -123,7 +123,7 @@
         src="https://connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v20.0&appId=819059106273620" nonce="7pZctJEG">
     </script>
 
-  <x-navigation-main />
+    <x-navigation-main />
 
     <section class="relative flex items-center justify-center h-screen text-white home-parallax home-fade">
         <!-- Loading Spinner -->
@@ -156,31 +156,34 @@
     <x-despre />
     <x-dezvoltare-web />
     <x-servicii />
-    <x-portofoliu />   
-    
-        <!--Contact -->
-      
-<div id="contact" class="flex items-center justify-center min-h-screen p-4">
-    <div class="w-full max-w-xl px-4 py-8 mx-auto bg-white border border-gray-200 rounded-lg">
-        <h2 class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-6">
-            Contact
-        </h2>
-        <p class="px-2 mb-8 text-lg tracking-wide text-center text-gray-700 font-volkov">
-            Dacă doriti sa colaborati cu noi pentru dezvoltare web (site-uri de prezentare sau aplicatii web complexe), productia de continut media sau alte servicii de publicitate și marketing digital, nu ezitati să ne contactati:
-        </p>
-        <div class="flex justify-center">
-            <x-modal-contact />
+    <x-portofoliu />
+
+    <!--Contact -->
+
+    <div id="contact" class="flex items-center justify-center min-h-screen p-4">
+        <div class="w-full max-w-xl px-4 py-8 mx-auto bg-white border border-gray-200 rounded-lg">
+            <h2
+                class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-6">
+                Contact
+            </h2>
+            <p class="px-2 mb-8 text-lg tracking-wide text-center text-gray-700 font-volkov">
+                Dacă doriti sa colaborati cu noi pentru dezvoltare web (site-uri de prezentare sau aplicatii web
+                complexe), productia de continut media sau alte servicii de publicitate și marketing digital, nu ezitati
+                să ne contactati:
+            </p>
+            <div class="flex justify-center">
+                <x-modal-contact />
+            </div>
         </div>
     </div>
-</div>
 
-      <x-footer /> 
+    <x-footer />
 
-        <!-- Arrow Up Button -->
-        <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
-            class="fixed flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4 ">
-            <i class="fa-solid fa-angles-up"></i>
-        </button>
+    <!-- Arrow Up Button -->
+    <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="fixed flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4 ">
+        <i class="fa-solid fa-angles-up"></i>
+    </button>
 
 </body>
 
