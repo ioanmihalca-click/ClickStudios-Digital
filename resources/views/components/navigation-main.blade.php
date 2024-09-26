@@ -1,6 +1,6 @@
 <nav x-data="{ isOpen: false }" class="fixed top-0 left-0 z-50 w-full bg-black bg-opacity-75">
     <div class="container flex items-center justify-between px-4 py-1 mx-auto">
-        <a href="/" class="text-white text-xs tracking-[4px] uppercase font-roboto-condensed">Click Studios Digital</a>
+        <a href="/" class="text-white text-sm tracking-[4px] uppercase font-roboto-condensed">Click Studios Digital</a>
 
         <!-- Modern Animated SVG Menu Button -->
         <button @click="isOpen = !isOpen" class="relative w-10 h-10 text-white md:hidden focus:outline-none" aria-label="Toggle Menu">

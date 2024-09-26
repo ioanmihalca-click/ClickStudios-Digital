@@ -18,8 +18,10 @@
 
 
 
-            <div class="container mx-auto mt-8">
+            <div class="container px-2 mx-auto mt-8">
 
+
+             <h2 class="mb-8 text-xl font-bold text-center text-black uppercase font-roboto-condensed md:text-2xl">Aplicatii Web si Site-uri</h2>
                 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
                     <!-- Portfolio Item Click Music App - Modern Version -->
@@ -413,6 +415,134 @@
                         </div>
                     </div>
 
+                    
+                    <!-- Portfolio Item Branding CS Victoria MM - Modern Version -->
+                    <div x-data="{ open: false }"
+                        class="overflow-hidden transition-all duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl">
+                        <div class="relative group">
+                            <img src="/assets/victoria-maramures.jpg" alt="Branding Club Sportiv Victoria Maramureș"
+                                class="object-cover w-full h-full transition duration-300 ease-in-out group-hover:opacity-75">
+                            <div
+                                class="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 opacity-0 bg-gradient-to-b from-transparent to-black group-hover:opacity-100">
+                                <h3
+                                    class="text-2xl font-bold text-white transition-transform duration-300 transform translate-y-2 group-hover:translate-y-0">
+                                    CS Victoria MM</h3>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <button @click="open = !open"
+                                class="flex items-center justify-between w-full text-left focus:outline-none">
+                                <h3 class="text-xl font-semibold text-gray-900">CS Victoria MM</h3>
+                                <svg :class="{ 'rotate-180': open }"
+                                    class="w-5 h-5 text-blue-500 transition-transform duration-300 transform"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div x-show="open" x-transition:enter="transition ease-out duration-300"
+                                x-transition:enter-start="opacity-0 transform scale-95"
+                                x-transition:enter-end="opacity-100 transform scale-100"
+                                x-transition:leave="transition ease-in duration-200"
+                                x-transition:leave-start="opacity-100 transform scale-100"
+                                x-transition:leave-end="opacity-0 transform scale-95" class="mt-4">
+                                <a href="https://csvictoriamm.ro/" target="_blank" rel="noopener noreferrer"
+                                    class="hover:no-underline">
+                                    <p class="mb-4 leading-relaxed text-gray-700">
+                                        Proiectul de branding pentru Clubul Sportiv Victoria Maramureș este o călătorie
+                                        fascinantă în definirea și exprimarea identității acestuia în mediul online și
+                                        offline. Andreea a dezvoltat un logo unic și memorabil care să reprezinte
+                                        valorile și pasiunea clubului pentru sport, îmbinând tradiția cu modernitatea.
+                                    </p>
+                                    <p class="mb-4 leading-relaxed text-gray-700">
+                                        Pe lângă crearea identității vizuale, am dezvoltat și un website atractiv și
+                                        ușor de navigat, precum și conținut video captivant pentru platformele sociale
+                                        ale clubului, inclusiv reeluri pe Instagram și videoclipuri pe YouTube.
+                                    </p>
+                                    <div class="p-4 mb-4 bg-gray-100 rounded-lg">
+                                        {{-- <h4 class="mb-2 text-lg font-semibold text-gray-900">Caracteristici Cheie:</h4> --}}
+                                        <ul class="grid grid-cols-2 gap-2">
+                                            <li class="flex text-sm text-left text-gray-700">
+                                                <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                Creare Identitate Vizuală
+                                            </li>
+                                            <li class="flex text-sm text-left text-gray-700">
+                                                <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                Logo Unic și Memorabil
+                                            </li>
+                                            <li class="flex text-sm text-left text-gray-700">
+                                                <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                Dezvoltat in Laravel 
+                                            </li>
+                                            <li class="flex text-sm text-left text-gray-700">
+                                                <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                Panou de Control
+                                            </li>
+                                            <li class="flex text-sm text-left text-gray-700">
+                                                <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                Optimizare SEO
+                                            </li>
+                                            <li class="flex text-sm text-left text-gray-700">
+                                                <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
+                                                    stroke="currentColor" viewBox="0 0 24 24"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                                Platforme Sociale
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="leading-relaxed text-gray-700">
+                                        Proiectul de branding pentru Clubul Sportiv Victoria Maramureș a fost o
+                                        inițiativă care a contribuit semnificativ la consolidarea prezenței și
+                                        notorietății clubului în mediul online. Optimizarea SEO a asigurat, de asemenea,
+                                        vizibilitatea organică și accesibilitatea către publicul țintă, facilitând
+                                        astfel creșterea și dezvoltarea continuă a clubului.
+                                    </p>
+                                    <div class="mt-4">
+                                        <a href="https://csvictoriamm.ro/" target="_blank" rel="noopener noreferrer"
+                                            class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 bg-blue-600 rounded-lg hover:bg-blue-700">
+                                            Vizitează Site-ul
+                                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                                </path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
 
                     <!-- Portfolio Item Ioana Mihalca - Modern Version -->
                     <div x-data="{ open: false }"
@@ -537,132 +667,6 @@
                         </div>
                     </div>
 
-                    <!-- Portfolio Item Branding CS Victoria MM - Modern Version -->
-                    <div x-data="{ open: false }"
-                        class="overflow-hidden transition-all duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl">
-                        <div class="relative group">
-                            <img src="/assets/victoria-maramures.jpg" alt="Branding Club Sportiv Victoria Maramureș"
-                                class="object-cover w-full h-full transition duration-300 ease-in-out group-hover:opacity-75">
-                            <div
-                                class="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 opacity-0 bg-gradient-to-b from-transparent to-black group-hover:opacity-100">
-                                <h3
-                                    class="text-2xl font-bold text-white transition-transform duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                    CS Victoria MM</h3>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <button @click="open = !open"
-                                class="flex items-center justify-between w-full text-left focus:outline-none">
-                                <h3 class="text-xl font-semibold text-gray-900">CS Victoria MM</h3>
-                                <svg :class="{ 'rotate-180': open }"
-                                    class="w-5 h-5 text-blue-500 transition-transform duration-300 transform"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div x-show="open" x-transition:enter="transition ease-out duration-300"
-                                x-transition:enter-start="opacity-0 transform scale-95"
-                                x-transition:enter-end="opacity-100 transform scale-100"
-                                x-transition:leave="transition ease-in duration-200"
-                                x-transition:leave-start="opacity-100 transform scale-100"
-                                x-transition:leave-end="opacity-0 transform scale-95" class="mt-4">
-                                <a href="https://csvictoriamm.ro/" target="_blank" rel="noopener noreferrer"
-                                    class="hover:no-underline">
-                                    <p class="mb-4 leading-relaxed text-gray-700">
-                                        Proiectul de branding pentru Clubul Sportiv Victoria Maramureș este o călătorie
-                                        fascinantă în definirea și exprimarea identității acestuia în mediul online și
-                                        offline. Andreea a dezvoltat un logo unic și memorabil care să reprezinte
-                                        valorile și pasiunea clubului pentru sport, îmbinând tradiția cu modernitatea.
-                                    </p>
-                                    <p class="mb-4 leading-relaxed text-gray-700">
-                                        Pe lângă crearea identității vizuale, am dezvoltat și un website atractiv și
-                                        ușor de navigat, precum și conținut video captivant pentru platformele sociale
-                                        ale clubului, inclusiv reeluri pe Instagram și videoclipuri pe YouTube.
-                                    </p>
-                                    <div class="p-4 mb-4 bg-gray-100 rounded-lg">
-                                        {{-- <h4 class="mb-2 text-lg font-semibold text-gray-900">Caracteristici Cheie:</h4> --}}
-                                        <ul class="grid grid-cols-2 gap-2">
-                                            <li class="flex text-sm text-left text-gray-700">
-                                                <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                Creare Identitate Vizuală
-                                            </li>
-                                            <li class="flex text-sm text-left text-gray-700">
-                                                <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                Logo Unic și Memorabil
-                                            </li>
-                                            <li class="flex text-sm text-left text-gray-700">
-                                                <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                Website Atractiv
-                                            </li>
-                                            <li class="flex text-sm text-left text-gray-700">
-                                                <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                Conținut Video Captivant
-                                            </li>
-                                            <li class="flex text-sm text-left text-gray-700">
-                                                <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                Optimizare SEO
-                                            </li>
-                                            <li class="flex text-sm text-left text-gray-700">
-                                                <svg class="w-4 h-4 mr-2 text-green-500" fill="none"
-                                                    stroke="currentColor" viewBox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                Gestionare Platforme Sociale
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <p class="leading-relaxed text-gray-700">
-                                        Proiectul de branding pentru Clubul Sportiv Victoria Maramureș a fost o
-                                        inițiativă care a contribuit semnificativ la consolidarea prezenței și
-                                        notorietății clubului în mediul online. Optimizarea SEO a asigurat, de asemenea,
-                                        vizibilitatea organică și accesibilitatea către publicul țintă, facilitând
-                                        astfel creșterea și dezvoltarea continuă a clubului.
-                                    </p>
-                                    <div class="mt-4">
-                                        <a href="https://csvictoriamm.ro/" target="_blank" rel="noopener noreferrer"
-                                            class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 bg-blue-600 rounded-lg hover:bg-blue-700">
-                                            Vizitează Site-ul
-                                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
-                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- Portfolio Item Truland - Magazin Online de Încălțăminte - Modern Version -->
                     <div x-data="{ open: false }"
@@ -785,8 +789,10 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-
+                 <h2 class="my-12 text-xl font-bold text-center text-black uppercase font-roboto-condensed md:text-2xl">Multimedia</h2>
+ <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
                     <!-- Portfolio Item Podcast Morosenesc - Modern Version -->
                     <div x-data="{ open: false }"
                         class="overflow-hidden transition-all duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl">
@@ -958,7 +964,7 @@
         <!--Videouri scurte-->
 
         <div class="container mx-auto mt-8">
-            <h3 class="mb-8 text-xl font-bold text-center text-black md:text-2xl">Reclame video scurte</h3>
+            <h2 class="mb-8 text-xl font-bold text-center text-black uppercase font-roboto-condensed md:text-2xl">Reclame video scurte</h2>
 
             <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
                 <div class="mx-auto fb-video" data-href="https://www.facebook.com/reel/998070601980625"
