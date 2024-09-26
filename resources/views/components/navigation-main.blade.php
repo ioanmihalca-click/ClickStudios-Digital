@@ -1,24 +1,31 @@
 <!-- Navigation -->
     <nav x-data="{ isOpen: false }" class="fixed top-0 left-0 z-50 w-full bg-black bg-opacity-75">
 
-        <div class="container flex items-center justify-between px-4 py-2 mx-auto">
+        <div class="container flex items-center justify-between px-4 py-0 mx-auto">
             <a href="/" class="text-white text-xs tracking-[4px] uppercase font-roboto-condensed">Click Studios
                 Digital</a>
 
         <!-- Modern SVG Hamburger menu button (visible on mobile) -->
-        <button @click="isOpen = !isOpen" class="relative w-10 h-10 text-white md:hidden" x-cloak aria-label="Toggle Menu">
-            <span class="sr-only">Deschide meniul</span>
-            <svg class="absolute w-6 h-6 transition duration-300 ease-in-out transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                 :class="{'opacity-0 scale-80': isOpen, 'opacity-100 scale-100': !isOpen}"
-                 fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-            <svg class="absolute w-6 h-6 transition duration-300 ease-in-out transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                 :class="{'opacity-100 scale-100': isOpen, 'opacity-0 scale-80': !isOpen}"
-                 fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
+<button @click="isOpen = !isOpen" class="relative w-10 h-10 text-white md:hidden focus:outline-none" aria-label="Toggle Menu">
+    <span class="sr-only">Deschide meniul</span>
+    <!-- Hamburger Icon -->
+    <svg class="absolute w-6 h-6 transition-all duration-300 ease-in-out transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+         :class="{'opacity-0 translate-y-4 scale-50': isOpen, 'opacity-100 translate-y-0 scale-100': !isOpen}"
+         fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" 
+              :class="{'opacity-0 translate-x-4': isOpen, 'opacity-100 translate-x-0': !isOpen}"
+              style="transition: all 0.3s ease-in-out;"></path>
+    </svg>
+    <!-- Close Icon -->
+    <svg class="absolute w-6 h-6 transition-all duration-300 ease-in-out transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+         :class="{'opacity-100 scale-100': isOpen, 'opacity-0 scale-50 -translate-y-4': !isOpen}"
+         fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              :d="isOpen ? 'M6 18L18 6M6 6l12 12' : 'M6 6l12 12M6 18L18 6'"
+              :class="{'opacity-100 scale-100': isOpen, 'opacity-0 scale-0': !isOpen}"
+              style="transition: all 0.3s ease-in-out;"></path>
+    </svg>
+</button>
 
         <!-- Desktop menu -->
         <div class="hidden space-x-4 md:flex">
