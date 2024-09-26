@@ -176,7 +176,7 @@
                 </div>
             </div>
         </div>
-
+      </section>
 
 
         <!--Expertiză în Dezvoltare Web Carusel-->
