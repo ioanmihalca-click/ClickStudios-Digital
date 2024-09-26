@@ -5,19 +5,21 @@
         <!-- Modern Animated SVG Menu Button -->
         <button @click="isOpen = !isOpen" class="relative w-10 h-10 text-white md:hidden focus:outline-none" aria-label="Toggle Menu">
             <span class="sr-only">Deschide meniul</span>
-            <svg class="absolute w-6 h-6 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5">
-                <path class="transition-all duration-300 ease-in-out" 
-                      :d="isOpen ? 'M18 18L82 82' : 'M20 30h60'"
-                      :stroke-dasharray="isOpen ? '90 90' : '60 60'"
-                      :stroke-dashoffset="isOpen ? '0' : '0'"></path>
-                <path class="transition-all duration-300 ease-in-out" 
-                      :d="isOpen ? 'M18 82L82 18' : 'M20 50h60'"
-                      :stroke-dasharray="isOpen ? '90 90' : '60 60'"
-                      :stroke-dashoffset="isOpen ? '0' : '0'"></path>
-                <path class="transition-all duration-300 ease-in-out" 
-                      :d="isOpen ? 'M18 82L82 18' : 'M20 70h60'"
-                      :stroke-dasharray="isOpen ? '90 90' : '60 60'"
-                      :stroke-dashoffset="isOpen ? '0' : '120'"></path>
+            <svg class="absolute w-10 h-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="6">
+                <!-- First line -->
+                <line x1="30" y1="40" x2="90" y2="40" 
+                      :class="isOpen ? 'rotate-45 translate-y-[12px]' : ''" 
+                      class="transition-transform duration-300 ease-in-out origin-center"></line>
+
+                <!-- Second line -->
+                <line x1="30" y1="60" x2="90" y2="60" 
+                      :class="isOpen ? 'opacity-0' : ''" 
+                      class="transition-opacity duration-300 ease-in-out"></line>
+
+                <!-- Third line -->
+                <line x1="30" y1="80" x2="90" y2="80" 
+                      :class="isOpen ? '-rotate-45 -translate-y-[12px]' : ''" 
+                      class="transition-transform duration-300 ease-in-out origin-center"></line>
             </svg>
         </button>
 
