@@ -20,6 +20,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\MarkdownEditor;
 use App\Filament\Resources\PostResource\Pages;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class PostResource extends Resource
 {
@@ -39,7 +40,7 @@ class PostResource extends Resource
                 TextInput::make('slug')->required()->unique(ignoreRecord: true),
                 TextInput::make('meta_titlu')->required(),
                 Textarea::make('meta_descriere')->required(),
-                MarkdownEditor::make('continut')->required()->columnSpanFull(),
+                TinyEditor::make('continut')->required()->columnSpanFull(),
                 FileUpload::make('imagine_principala')->image()->required(),
                 DateTimePicker::make('published_at')
                     ->label('Publicat la')
