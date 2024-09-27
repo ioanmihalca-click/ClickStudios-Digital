@@ -1,17 +1,18 @@
 <?php
 
-use App\Http\Controllers\SubscriberController;
-use Illuminate\Support\Facades\Route;
+use App\Livewire\TagShow;
 use App\Livewire\PostList;
 use App\Livewire\PostShow;
-use App\Livewire\TagShow;
+use App\Livewire\Unsubscribe;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SubscriberController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::post('/subscribers', [SubscriberController::class, 'store'])->name('subscribers.store');
-
+Route::get('/unsubscribe/{token}', Unsubscribe::class)->name('unsubscribe');
 
     // Blog
     Route::prefix('blog')->group(function () {

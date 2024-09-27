@@ -81,13 +81,13 @@ class NewsletterResource extends Resource
     }
 
     public static function sendNewsletter(Newsletter $newsletter)
-    {
-        $subscribers = Subscriber::where('is_active', true)->get();
-    
-        foreach ($subscribers as $subscriber) {
-            Mail::to($subscriber->email)->queue(new NewsletterMail($newsletter));
-        }
-    
-        $newsletter->update(['sent_at' => now()]);
+{
+    $subscribers = Subscriber::where('is_active', true)->get();
+
+    foreach ($subscribers as $subscriber) {
+        Mail::to($subscriber->email)->queue(new NewsletterMail($newsletter, $subscriber));
     }
+
+    $newsletter->update(['sent_at' => now()]);
+}
 }
