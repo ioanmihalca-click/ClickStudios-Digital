@@ -2,19 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Support\Str;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Subscriber extends Model
 {
     use HasFactory;
 
     protected $fillable = ['email', 'is_active', 'unsubscribe_token'];
-
-    protected $casts = [
-        'is_active' => 'boolean',
-    ];
 
     protected static function boot()
     {

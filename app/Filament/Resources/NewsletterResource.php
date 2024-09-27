@@ -7,10 +7,11 @@ use Filament\Tables;
 use Filament\Forms\Form;
 use App\Models\Newsletter;
 use App\Models\Subscriber;
-use App\Mail\NewsletterMail;
-use Illuminate\Support\Facades\Mail;
 use Filament\Tables\Table;
+use App\Mail\NewsletterMail;
 use Filament\Resources\Resource;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\NewsletterResource\Pages;
@@ -85,7 +86,14 @@ class NewsletterResource extends Resource
     $subscribers = Subscriber::where('is_active', true)->get();
 
     foreach ($subscribers as $subscriber) {
-        Mail::to($subscriber->email)->queue(new NewsletterMail($newsletter, $subscriber));
+        try {
+            Mail::to($subscriber->email)->queue(new NewsletterMail($newsletter, $subscriber));
+        } catch (\Exception $e) {
+            Log::error('Eroare la trimiterea newsletter-ului', [
+                'subscriber_id' => $subscriber->id,
+                'error' => $e->getMessage()
+            ]);
+        }
     }
 
     $newsletter->update(['sent_at' => now()]);
