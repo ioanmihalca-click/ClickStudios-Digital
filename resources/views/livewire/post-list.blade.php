@@ -7,7 +7,7 @@
                 <div class="overflow-hidden transition duration-300 ease-in-out transform bg-white rounded-lg shadow-lg hover:-translate-y-2 hover:shadow-xl">
                     @if ($post->imagine_principala)
                         <div class="relative overflow-hidden h-60">
-                            <img src="{{ asset('storage/' . $post->imagine_principala) }}" alt="{{ $post->titlu }}" class="object-cover w-full h-full transition-transform duration-300 transform hover:scale-110">
+                            <img src="{{ asset('storage/' . $post->imagine_principala) }}" alt="{{ $post->titlu }}" class="object-cover w-full h-auto transition-transform duration-300 transform hover:scale-110">
                         </div>
                     @endif
                     <div class="p-6">
