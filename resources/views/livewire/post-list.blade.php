@@ -1,5 +1,5 @@
 <div class="container px-4 py-12 mx-auto">
-    <h1 class="mb-12 text-4xl font-bold text-center text-gray-800">Articole Blog</h1>
+    <h1 class="mb-12 text-4xl font-bold text-center text-gray-800">Articole pe Blog</h1>
 
     @if ($posts->count() > 0)
         <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">

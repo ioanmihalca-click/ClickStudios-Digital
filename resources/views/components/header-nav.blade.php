@@ -1,6 +1,6 @@
 <header x-data="{ isOpen: false }" class="bg-white shadow-md">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between py-4">
+        <div class="flex items-center justify-between py-2">
             <div class="flex items-center">
                 <a href="/" class="flex items-center">
                     <img src="{{ asset('assets/logo.jpg') }}" alt="Logo" class="w-auto h-12 mr-3">
