@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Blogul Click Studios Digital - Dezvoltare Web, Marketing Digital, SEO</title>
+    <link rel="canonical" href="{{ url()->current() }}">
+
     <meta name="description" content="Descoperiți cele mai noi tendințe și informații din dezvoltare web si marketing digital.">
     <meta name="keywords" content="Click Studios Digital, blog, marketing digital, sfaturi SEO, dezvoltare web, e-commerce, marketing online, web design, blog marketing">
     
@@ -37,12 +40,21 @@
         }
     </script>
 
-    <title>Blogul Click Studios Digital - Dezvoltare Web, Marketing Digital, SEO</title>
-    <link rel="canonical" href="{{ url()->current() }}">
+   
    <!-- Favicon -->
     <link rel="icon" href="{{ asset('assets/favicon.ico') }}" type="image/x-icon" />
     <!-- Apple Touch Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/apple-touch-icon.png') }}" />
+
+     <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+      <!-- Font Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+
+    <!-- Font Volkov -->
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
 
 
     @vite('resources/css/app.css')
@@ -59,20 +71,14 @@
 </head>
 
 <body class="flex flex-col min-h-screen font-sans bg-white" x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">
+   
     <x-header-nav />
 
     <main class="flex-grow px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {{ $slot }}
     </main>
 
-    <footer class="py-4 text-xs text-center bg-gray-100 md:text-sm">
-        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-       
-            <p class="text-gray-700">
-                &copy; <span x-text="new Date().getFullYear()"></span> <strong>Click Studios Digital</strong>. Toate drepturile rezervate.
-            </p>
-        </div>
-    </footer>
+ <x-footer />
 
     <!-- Scroll to Top Button -->
     <button 

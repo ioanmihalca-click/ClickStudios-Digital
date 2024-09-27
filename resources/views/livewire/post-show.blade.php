@@ -2,60 +2,68 @@
 @section('meta_description', $post->meta_descriere ?? Str::limit(strip_tags($post->continut), 160))
 @section('og_title', $post->titlu)
 @section('og_description', $post->meta_descriere ?? Str::limit(strip_tags($post->continut), 200))
-@section('og_image', $post->imagine_principala ? asset('storage/' . $post->imagine_principala) : '')
+@section('og_image', $post->imagine_principala ? asset('storage/' . $post->imagine_principala) : asset('path/to/default-og-image.jpg'))
 @section('og_type', 'article')
-@section('header', $post->titlu)
-
-<div class="container px-4 py-8 mx-auto">
-    <article class="prose lg:prose-xl" itemscope itemtype="http://schema.org/BlogPosting">
-        <h1 class="mb-4 text-3xl font-bold" itemprop="headline">{{ $post->titlu }}</h1>
-
-        <div class="mb-4 text-gray-600">
-             Publicat la data de {{ $post->published_at->isoFormat('D MMMM YYYY') }} de 
+<div>
+<article class="container max-w-4xl px-4 py-12 mx-auto" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="mb-8 text-center">
+        <h1 class="mb-4 text-4xl font-bold text-gray-900" itemprop="headline">{{ $post->titlu }}</h1>
+        <div class="flex items-center justify-center mb-6 text-sm text-gray-600">
+            <time datetime="{{ $post->published_at->toDateString() }}" itemprop="datePublished">
+                <i class="mr-2 far fa-calendar"></i>{{ $post->published_at->isoFormat('D MMMM YYYY') }}
+            </time>
+            <span class="mx-3">|</span>
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <span class="font-semibold" itemprop="name">Click Studios Digital</span>
+                <i class="mr-2 far fa-user"></i><span itemprop="name">Click Studios Digital</span>
             </span>
         </div>
-
-        @if ($post->imagine_principala)
-            <img src="{{ asset('storage/' . $post->imagine_principala) }}" alt="{{ $post->titlu }}" class="mb-4 rounded" itemprop="image">
-        @endif
-
-        <div itemprop="articleBody">
-            {!! $post->continut !!}
-        </div>
-
-        <div class="my-6">
+        <div class="flex flex-wrap justify-center gap-2 mb-6">
             @foreach ($post->tags as $tag)
-                <a href="{{ route('etichete.show', $tag->slug) }}" class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300" itemprop="keywords">{{ $tag->nume }}</a>
+                <a href="{{ route('etichete.show', $tag->slug) }}" class="px-3 py-1 text-sm font-medium transition duration-300 rounded-full text-emerald-700 bg-emerald-100 hover:bg-emerald-200" itemprop="keywords">{{ $tag->nume }}</a>
             @endforeach
         </div>
+    </header>
 
-    <div class="p-4">
-        <a href="{{ route('blog') }}" class="text-blue-600 hover:text-blue-800">← Înapoi la Blog</a>
-        </div>
+    @if ($post->imagine_principala)
+        <figure class="mb-8">
+            <img src="{{ asset('storage/' . $post->imagine_principala) }}" alt="{{ $post->titlu }}" class="w-full h-auto rounded-lg shadow-lg" itemprop="image">
+        </figure>
+    @endif
 
-    </article>
+    <div class="p-2 prose prose-lg border rounded border-emerald-500 max-w-none" itemprop="articleBody">
+        {!! $post->continut !!}
+    </div>
 
-    @if ($similarPosts->count() > 0)
-        <div class="mt-8">
-            <h2 class="mb-4 text-2xl font-semibold">Articole similare</h2>
+    <footer class="mt-12">
+        <a href="{{ route('blog') }}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white transition duration-300 rounded-lg bg-emerald-600 hover:bg-emerald-500">
+            <i class="mr-2 fas fa-arrow-left"></i> Înapoi la Blog
+        </a>
+    </footer>
+</article>
 
-            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+@if ($similarPosts->count() > 0)
+    <section class="py-12 bg-gray-100">
+        <div class="container max-w-6xl px-4 mx-auto">
+            <h2 class="mb-8 text-3xl font-bold text-center text-gray-900">Articole similare</h2>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 @foreach ($similarPosts as $similarPost)
-                    <div class="overflow-hidden bg-white rounded-lg shadow-md">
+                    <div class="overflow-hidden transition duration-300 bg-white rounded-lg shadow-md hover:shadow-xl">
                         @if ($similarPost->imagine_principala)
-                            <img src="{{ asset('storage/' . $similarPost->imagine_principala) }}" alt="{{ $similarPost->titlu }}" class="object-cover w-full h-auto">
+                            <img src="{{ asset('storage/' . $similarPost->imagine_principala) }}" alt="{{ $similarPost->titlu }}" class="object-cover w-full h-48">
                         @endif
                         <div class="p-6">
                             <h3 class="mb-2 text-xl font-semibold">
-                                <a href="{{ route('postari.show', $similarPost->slug) }}">{{ $similarPost->titlu }}</a>
+                                <a href="{{ route('postari.show', $similarPost->slug) }}" class="text-gray-900 transition duration-300 line-clamp-2 hover:text-blue-600">{{ $similarPost->titlu }}</a>
                             </h3>
-                            <p class="text-gray-600">{{ $similarPost->meta_descriere }}</p>
+                            <p class="mb-4 text-gray-600 line-clamp-3">{{ $similarPost->meta_descriere }}</p>
+                            <a href="{{ route('postari.show', $similarPost->slug) }}" class="inline-block px-4 py-2 text-sm font-medium transition duration-300 border rounded-lg text-emerald-600 border-emerald-600 hover:bg-emerald-600 hover:text-white">
+                                Citește mai mult
+                            </a>
                         </div>
                     </div>
                 @endforeach
             </div>
         </div>
-    @endif
+    </section>
+@endif
 </div>
