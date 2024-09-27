@@ -3,7 +3,7 @@
         <div class="flex items-center justify-between py-2">
             <div class="flex items-center">
                 <a href="/" class="flex items-center">
-                    <img src="{{ asset('assets/logo.jpg') }}" alt="Logo" class="w-auto h-12 mr-3">
+                    <img src="{{ asset('assets/logo.jpg') }}" alt="Logo Click Studios Digital" class="w-auto h-12 mr-3">
                    
                 </a>
             </div>
