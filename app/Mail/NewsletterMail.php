@@ -17,13 +17,7 @@ class NewsletterMail extends Mailable
 
     public function build()
     {
-        $profileImageUrl = asset('assets/logo.jpg');
-    
         return $this->subject($this->newsletter->subject)
-                    ->view('emails.newsletter')
-                    ->with([
-                        'content' => $this->newsletter->content,
-                        'profileImageUrl' => $profileImageUrl,
-                    ]);
+                    ->html($this->newsletter->content);
     }
 }
