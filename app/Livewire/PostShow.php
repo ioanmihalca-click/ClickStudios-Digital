@@ -3,8 +3,10 @@
 namespace App\Livewire;
 
 use App\Models\Post;
+use Livewire\Attributes\Layout;
 use Livewire\Component;
 
+#[Layout('layouts.post')]
 class PostShow extends Component
 {
     public Post $post;
@@ -24,6 +26,6 @@ class PostShow extends Component
 
     public function render()
     {
-        return view('livewire.post-show')->layout('layouts.post');
+        return view('livewire.post-show');
     }
 }

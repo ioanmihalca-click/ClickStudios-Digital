@@ -2,10 +2,12 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
 use App\Models\Post;
+use Livewire\Component;
 use Livewire\WithPagination;
+use Livewire\Attributes\Layout;
 
+#[Layout('layouts.blog')]
 class PostList extends Component
 {
     use WithPagination;
@@ -14,6 +16,6 @@ class PostList extends Component
     {
         return view('livewire.post-list', [
             'posts' => Post::latest()->paginate(10),
-        ])->layout('layouts.blog');
+        ]);
     }
 }
