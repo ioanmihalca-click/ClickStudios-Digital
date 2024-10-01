@@ -17,11 +17,11 @@ $scrollIntoViewJsSnippet = ($scrollTo !== false)
                 <span>
                     @if ($paginator->onFirstPage())
                         <span class="relative inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-gray-500 bg-white border border-gray-300 rounded-md cursor-default dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:focus:border-blue-700 dark:active:bg-gray-700 dark:active:text-gray-300">
-                            {!! __('pagination.previous') !!}
+                            {!! __('Precedenta) !!}
                         </span>
                     @else
                         <button type="button" wire:click="previousPage('{{ $paginator->getPageName() }}')" x-on:click="{{ $scrollIntoViewJsSnippet }}" wire:loading.attr="disabled" dusk="previousPage{{ $paginator->getPageName() == 'page' ? '' : '.' . $paginator->getPageName() }}.before" class="relative inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:ring ring-blue-300 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:focus:border-blue-700 dark:active:bg-gray-700 dark:active:text-gray-300">
-                            {!! __('pagination.previous') !!}
+                            {!! __('Precedenta) !!}
                         </button>
                     @endif
                 </span>
@@ -29,17 +29,17 @@ $scrollIntoViewJsSnippet = ($scrollTo !== false)
                 <span>
                     @if ($paginator->hasMorePages())
                         <button type="button" wire:click="nextPage('{{ $paginator->getPageName() }}')" x-on:click="{{ $scrollIntoViewJsSnippet }}" wire:loading.attr="disabled" dusk="nextPage{{ $paginator->getPageName() == 'page' ? '' : '.' . $paginator->getPageName() }}.before" class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:ring ring-blue-300 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:focus:border-blue-700 dark:active:bg-gray-700 dark:active:text-gray-300">
-                            {!! __('pagination.next') !!}
+                            {!! __('Urmatoarea') !!}
                         </button>
                     @else
                         <span class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium leading-5 text-gray-500 bg-white border border-gray-300 rounded-md cursor-default dark:text-gray-600 dark:bg-gray-800 dark:border-gray-600">
-                            {!! __('pagination.next') !!}
+                            {!! __('Urmatoarea') !!}
                         </span>
                     @endif
                 </span>
             </div>
 
-            <div class="hidden mx-auto sm:flex-1 sm:flex sm:items-center sm:justify-between">
+            <div class="hidden mx-auto ">
                 <div>
                     <p class="text-sm leading-5 text-gray-700 dark:text-gray-400">
                         <span>{!! __('Arata') !!}</span>
