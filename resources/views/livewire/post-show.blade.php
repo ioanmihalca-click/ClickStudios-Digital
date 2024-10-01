@@ -57,7 +57,7 @@
                 @foreach ($similarPosts as $similarPost)
                     <div class="overflow-hidden transition duration-300 transform bg-white shadow-md rounded-xl hover:-translate-y-1 hover:shadow-xl">
                         @if ($similarPost->imagine_principala)
-                            <img src="{{ asset('storage/' . $similarPost->imagine_principala) }}" alt="{{ $similarPost->titlu }}" class="object-cover w-full h-48">
+                            <img src="{{ asset('storage/' . $similarPost->imagine_principala) }}" alt="{{ $similarPost->titlu }}" class="object-cover w-full h-auto">
                         @endif
                         <div class="p-6">
                             <h3 class="mb-3 text-xl font-semibold">
