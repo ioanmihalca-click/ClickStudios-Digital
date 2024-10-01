@@ -33,27 +33,20 @@
     @livewireStyles
 </head>
 
-<body class="font-sans bg-white " x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">
-<x-header-nav />
+<body class="flex flex-col min-h-screen font-sans bg-white" x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">
+<x-navigation-main />
 
     <main class="max-w-5xl py-6 mx-auto sm:px-6 lg:px-8">
         {{ $slot }}
     </main>
 
 
-  <footer class="py-4 text-xs text-center bg-gray-100 md:text-sm">
-        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-       
-            <p class="text-gray-700">
-                &copy; <span x-text="new Date().getFullYear()"></span> <strong>Click Studios Digital</strong>. Toate drepturile rezervate.
-            </p>
-        </div>
-    </footer>
+ <x-footer />
 
    
-    <!-- Scroll to Top Button -->
+   <!-- Scroll to Top Button -->
     <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
-        class="fixed flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4 ">
+        class="fixed flex items-center justify-center w-8 h-8 text-xs bg-gray-300 rounded-sm text-emerald-500 animate-pulse hover:bg-white bottom-4 right-4 ">
         <i class="fa-solid fa-angles-up"></i>
     </button>
 
