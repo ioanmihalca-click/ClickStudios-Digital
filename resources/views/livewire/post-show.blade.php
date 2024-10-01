@@ -42,7 +42,7 @@
 </article>
 
 @if ($similarPosts->count() > 0)
-    <section class="py-12 bg-gray-100">
+    <section class="py-12">
         <div class="container max-w-6xl px-4 mx-auto">
             <h2 class="mb-8 text-3xl font-bold text-center text-gray-900">Articole similare</h2>
             <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
