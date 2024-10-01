@@ -7,13 +7,14 @@
     <title>Click Studios - Dezvoltare Web & Marketing Digital</title>
     <link rel="canonical" href="{{ url()->current() }}">
     <meta name="description"
-        content="Agenția Click Studios Digital din Baia Mare oferă servicii profesionale de dezvoltare web, web design, marketing digital, SEO, și producție audio-video pentru creșterea prezenței online." />
+        content="Agentia Click Studios Digital din Baia Mare, dezvoltatori Laravel si TALL Stack, aplicatii web complexe, web design, marketing digital, SEO, și producție audio-video." />
     <meta name="keywords"
-        content="Click Studios Digital, agenție marketing digital, dezvoltare web, servicii SEO, web design responsiv, e-commerce, strategii marketing online, optimizare site, creștere trafic organic, campanii PPC, social media marketing, content marketing, consultanță digitală, agenție web Baia Mare" />
+        content="Click Studios Digital, Laravel, TALL stack, agenție marketing digital, dezvoltare web, servicii SEO, web design responsiv, e-commerce, strategii marketing online, optimizare site, creștere trafic organic, campanii PPC, social media marketing, content marketing, consultanță digitală, agenție web Baia Mare" />
+
     <!-- Open Graph Tags for Social Media Sharing -->
     <meta property="og:title" content="Click Studios - Dezvoltare Web & Marketing Digital" />
     <meta property="og:description"
-        content="Agenția Click Studios Digital din Baia Mare oferă servicii profesionale de dezvoltare web, web design, marketing digital, SEO, și producție audio-video pentru creșterea prezenței online." />
+        content="Agentia Click Studios Digital din Baia Mare, dezvoltatori Laravel si TALL Stack, aplicatii web complexe, web design, marketing digital, SEO, și producție audio-video." />
     <meta property="og:image" content="{{ asset('assets/OG-Click-Studios-Digital.jpg') }}" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:alt" content="Click Studios - Dezvoltare Web si Marketing Digital" />
@@ -28,7 +29,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Click Studios Digital",
-  "description": "Agenție de dezvoltare web și marketing digital oferind servicii complete de web design, SEO, și strategii de marketing online pentru creșterea prezenței digitale a afacerii dumneavoastră.",
+  "description": "Agentia Click Studios Digital din Baia Mare, dezvoltatori Laravel si TALL Stack, aplicatii web complexe, web design, marketing digital, SEO, și producție audio-video.",
   "image": "{{ asset('assets/logo.jpg') }}",
   "url": "{{ url('/') }}",
   "telephone": "+40734411115",
@@ -78,9 +79,13 @@
 </script>
 
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('assets/favicon.ico') }}" type="image/x-icon" />
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/apple-touch-icon.png') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
 
 
@@ -154,28 +159,63 @@
     </section>
 
     <x-despre />
+
     <x-dezvoltare-web />
-    <x-servicii />
-    <x-portofoliu />
 
-    <!--Contact -->
 
-    <div id="contact" class="flex items-center justify-center min-h-screen p-4">
-        <div class="w-full max-w-xl px-4 py-8 mx-auto bg-white border border-gray-200 rounded-lg">
+
+    <section id="contact"
+        class="relative flex items-center justify-center min-h-screen p-4 bg-gradient-to-br from-emerald-100 to-blue-100">
+        <div class="absolute inset-0 bg-opacity-50 bg-pattern"></div>
+        <div
+            class="relative w-full max-w-4xl p-4 mx-auto bg-white border-2 shadow-2xl sm:p-6 md:p-8 border-emerald-200 rounded-xl">
             <h2
-                class="font-roboto-condensed uppercase tracking-[4px] text-center font-normal text-3xl text-gray-900 mb-6">
-                Contact
+                class="mb-4 text-3xl font-bold text-center text-gray-800 uppercase sm:text-4xl font-roboto-condensed tracking-[4px]">
+                Contactează-ne
             </h2>
-            <p class="px-2 mb-8 text-lg tracking-wide text-center text-gray-700 font-volkov">
-                Dacă doriti sa colaborati cu noi pentru dezvoltare web (site-uri de prezentare sau aplicatii web
-                complexe), productia de continut media sau alte servicii de publicitate și marketing digital, nu ezitati
-                să ne contactati:
-            </p>
-            <div class="flex justify-center">
-                <x-modal-contact />
+
+            <div class="grid gap-6 md:grid-cols-2">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                            </path>
+                        </svg>
+                        <a href="tel:+40734411115"
+                            class="text-gray-700 transition-colors duration-300 hover:text-emerald-600">+40 734 411
+                            115</a>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                        <span class="text-gray-700">contact@clickstudios-digital.com</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span class="text-gray-700">Str. Nisiparilor, Nr. 35, Baia-MAre</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <x-modal-contact />
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+
 
     <x-footer />
 

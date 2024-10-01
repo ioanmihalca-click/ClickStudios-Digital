@@ -1,4 +1,4 @@
-<footer class="py-16 mt-16 text-white bg-gradient-to-r from-gray-800 to-gray-900">
+<footer class="py-16 text-white bg-gradient-to-r from-gray-800 to-gray-900">
     <div class="container px-4 mx-auto">
         <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
             <!-- Contact Information -->

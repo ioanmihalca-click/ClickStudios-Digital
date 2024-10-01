@@ -11,7 +11,7 @@
             ],
             currentParagraph: 0,
             paragraphs: [
-                'Suntem o agenție de dezvoltare web și marketing digital cu sediul în Baia Mare, Maramures.',
+                'Suntem o agentie de dezvoltare web și marketing digital cu sediul în Baia Mare, Maramures.',
                 'Oferim o gamă completă de servicii de SEO și web design, publicitate online și marketing digital.',
                 'Avem abilitatea de a combina arta și tehnologia pentru a crea rezultate extraordinare.'
             ],

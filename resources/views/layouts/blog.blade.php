@@ -72,7 +72,7 @@
 
 <body class="flex flex-col min-h-screen font-sans bg-white" x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">
    
-    <x-header-nav />
+    <x-navigation-main />
 
     <main class="flex-grow px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {{ $slot }}
@@ -81,15 +81,9 @@
  <x-footer />
 
     <!-- Scroll to Top Button -->
-    <button 
-        x-show="scrollToTop" 
-        @click="window.scrollTo({ top: 0, behavior: 'smooth' })" 
-        class="fixed p-2 text-white transition-all duration-300 bg-blue-500 rounded-full shadow-lg bottom-4 right-4 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
-        aria-label="Scroll to top"
-    >
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-        </svg>
+    <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="fixed flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4 ">
+        <i class="fa-solid fa-angles-up"></i>
     </button>
 
    
