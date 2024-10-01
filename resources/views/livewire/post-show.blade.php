@@ -7,7 +7,7 @@
 <div>
 <article class="container max-w-4xl px-4 py-12 mx-auto" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="mb-8 text-center">
-        <h1 class="mb-4 text-4xl font-bold text-gray-900" itemprop="headline">{{ $post->titlu }}</h1>
+        <h1 class="mb-4 text-3xl font-bold text-gray-900 md:text-5xl" itemprop="headline">{{ $post->titlu }}</h1>
         <div class="flex items-center justify-center mb-6 text-sm text-gray-600">
             <time datetime="{{ $post->published_at->toDateString() }}" itemprop="datePublished">
                 <i class="mr-2 far fa-calendar"></i>{{ $post->published_at->isoFormat('D MMMM YYYY') }}
