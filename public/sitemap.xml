@@ -12,6 +12,20 @@
     </url>
 
     <url>
+        <loc>https://clickstudios-digital.com/servicii</loc>
+        <lastmod>2024-10-01T07:10:06+00:00</lastmod>
+        <changefreq>weekly</changefreq> 
+        <priority>0.90</priority>
+    </url>
+
+    <url>
+        <loc>https://clickstudios-digital.com/portofoliu</loc>
+        <lastmod>2024-10-01T07:10:06+00:00</lastmod>
+        <changefreq>weekly</changefreq> 
+        <priority>0.90</priority>
+    </url>
+
+    <url>
         <loc>https://clickstudios-digital.com/blog</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
         <changefreq>weekly</changefreq> 
