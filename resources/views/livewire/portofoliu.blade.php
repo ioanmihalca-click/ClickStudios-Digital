@@ -15,7 +15,7 @@
                  </div>
 
                   <a href="#portofoliu"
-                class="px-10 py-2 text-xs tracking-widest text-white uppercase transition-all duration-300 border border-white scroll-link hover:bg-white hover:text-black font-roboto-condensed hover:border-transparent">Vezi Portofoliul</a>
+                class="px-10 py-2 text-xs tracking-widest text-white uppercase transition-all duration-300 border border-white hover:bg-white hover:text-black font-roboto-condensed hover:border-transparent">Vezi Portofoliul</a>
 
              </div>
 

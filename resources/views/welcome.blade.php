@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html class="scroll-smooth" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="UTF-8">
@@ -150,7 +150,7 @@
                 Click Studios Digital
             </h1>
             <a href="#about"
-                class="px-10 py-2 text-xs tracking-widest text-white uppercase transition-all duration-300 border border-white scroll-link hover:bg-white hover:text-black font-roboto-condensed hover:border-transparent">Afla
+                class="px-10 py-2 text-xs tracking-widest text-white uppercase transition-all duration-300 border border-white hover:bg-white hover:text-black font-roboto-condensed hover:border-transparent">Afla
                 mai multe</a>
         </div>
     </section>

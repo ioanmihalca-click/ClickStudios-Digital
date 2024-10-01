@@ -68,7 +68,7 @@
             </div>
             
             <div class="mt-8 text-center md:mt-10">
-                <a href="#contact" class="inline-block px-8 py-2 text-xs tracking-widest text-white uppercase transition-all duration-300 border border-white scroll-link md:px-10 md:text-sm hover:bg-white hover:text-black font-roboto-condensed hover:border-transparent">
+                <a href="#contact" class="inline-block px-8 py-2 text-xs tracking-widest text-white uppercase transition-all duration-300 border border-white md:px-10 md:text-sm hover:bg-white hover:text-black font-roboto-condensed hover:border-transparent">
                     Consultanță Gratuită
                 </a>
             </div>

@@ -23,21 +23,7 @@ function effectsHomeSection() {
     }
 }
 
-// Call the function on scroll and initial load
-window.addEventListener('scroll', effectsHomeSection);
-effectsHomeSection();
 
-
-//Smooth scroll
-
-document.querySelectorAll('.scroll-link').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
 
 
 
