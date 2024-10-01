@@ -33,6 +33,13 @@
     </url>
 
     <url>
+        <loc>https://clickstudios-digital.com/blog/postari/baia-mare-hub-emergent-de-tehnologie</loc>
+        <lastmod>2024-10-01T14:50:13+00:00</lastmod>
+        <changefreq>monthly</changefreq> 
+        <priority>0.80</priority>
+    </url>
+
+    <url>
         <loc>https://clickstudios-digital.com/blog/postari/cum-sa-dezvolti-un-site-web-utilizand-tall-stack</loc>
         <lastmod>2024-08-12T13:01:19+00:00</lastmod>
         <changefreq>monthly</changefreq> 
@@ -90,58 +97,86 @@
         <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
+
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/seo</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
         <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
+
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/dezvoltare-web</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
         <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
+
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/magazin-online</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
         <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
+
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/marketing-digital</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
         <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
+
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/promovare-afacere</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
         <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
+
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/branding</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
         <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
+
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/e-commerce</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
         <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
+
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/spoturi-video</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
         <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
+
     <url>
-    <loc>https://clickstudios-digital.com/blog/etichete/productie-video</loc>
-    <lastmod>2024-08-05T09:10:40+00:00</lastmod>
-    <changefreq>monthly</changefreq> 
-    <priority>0.70</priority> 
+        <loc>https://clickstudios-digital.com/blog/etichete/productie-video</loc>
+        <lastmod>2024-08-05T09:10:40+00:00</lastmod>
+        <changefreq>monthly</changefreq> 
+        <priority>0.70</priority> 
     </url>
+
+    <url>
+        <loc>https://clickstudios-digital.com/blog/etichete/prestashop</loc>
+        <lastmod>2024-10-01T14:50:13+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+
+    <url>
+        <loc>https://clickstudios-digital.com/blog/etichete/IT</loc>
+        <lastmod>2024-10-01T14:50:13+00:00</lastmod>
+        <priority>0.70</priority>
+    </url>
+
+    <url>
+        <loc>https://clickstudios-digital.com/blog/etichete/tech</loc>
+        <lastmod>2024-10-01T14:50:13+00:00</lastmod>
+        <priority>0.70</priority>
+    </url>
+
     </urlset> 
