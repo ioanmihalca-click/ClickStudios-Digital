@@ -60,10 +60,6 @@
     <!-- Font Volkov -->
     <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
 
-
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @livewireStyles
-
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFL38JS6PJ"></script>
     <script>
@@ -72,6 +68,9 @@
         gtag('js', new Date());
         gtag('config', 'G-QFL38JS6PJ');
     </script>
+    
+     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
 </head>
 
 <body class="flex flex-col min-h-screen font-sans bg-white" x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">

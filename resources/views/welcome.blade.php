@@ -98,9 +98,6 @@
     <!-- Font Volkov -->
     <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
 
-    <!-- Alpine.js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFL38JS6PJ"></script>
     <script>
@@ -115,7 +112,7 @@
     </script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+@livewireStyles
 </head>
 
 
@@ -225,6 +222,7 @@
         <i class="fa-solid fa-angles-up"></i>
     </button>
 
+@livewireScripts
 </body>
 
 </html>
