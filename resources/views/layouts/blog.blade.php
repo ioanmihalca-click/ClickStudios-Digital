@@ -57,7 +57,7 @@
     <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
 
 
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 
     <!-- Google Analytics -->
@@ -88,6 +88,6 @@
 
    
     @livewireScripts
-    @vite('resources/js/app.js')
+  
 </body>
 </html>
