@@ -158,8 +158,6 @@
 
     <x-dezvoltare-web />
 
-    <x-contact />
-
     <x-footer />
 
     <!-- Arrow Up Button -->

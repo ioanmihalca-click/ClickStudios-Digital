@@ -1,4 +1,4 @@
-<footer class="py-16 text-white bg-gradient-to-r from-gray-800 to-gray-900">
+<footer id="contact" class="py-16 text-white bg-gradient-to-r from-gray-800 to-gray-900">
     <div class="container px-4 mx-auto">
         <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
             <!-- Contact Information -->
@@ -24,8 +24,11 @@
                         </a>
                     </li>
                     <li class="flex items-center justify-center md:justify-start">
-                        <i class="mr-3 fas fa-map-marker-alt"></i> Nisiparilor 35, Baia-Mare, Maramures
+                        <i class="mr-3 fas fa-map-marker-alt"></i>Baia-Mare, Maramures
                     </li>
+                    <li class="flex items-center justify-center md:justify-start">
+                     <x-modal-contact />
+                     </li>
                 </ul>
             </div>
 
