@@ -23,11 +23,10 @@
     <meta name="msapplication-TileColor" content="#10b981">
     <meta name="theme-color" content="#ffffff">
 
-     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/669bfeabc1.js" crossorigin="anonymous"></script>
 
-
-      <!-- Font Roboto -->
+    <!-- Font Roboto -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
 
     <!-- Font Volkov -->
@@ -50,18 +49,19 @@
     @livewireStyles
 </head>
 
-<body class="flex flex-col min-h-screen font-sans bg-white" x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">
-<x-navigation-main />
+<body class="flex flex-col min-h-screen font-sans bg-white" x-data="{ scrollToTop: false }"
+    x-on:scroll.window="scrollToTop = window.scrollY > 100">
+    <x-navigation-main />
 
     <main class="max-w-5xl py-6 mx-auto sm:px-6 lg:px-8">
         {{ $slot }}
     </main>
 
 
- <x-footer />
+    <x-footer />
 
-   
-   <!-- Scroll to Top Button -->
+
+    <!-- Scroll to Top Button -->
     <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
         class="fixed flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4 ">
         <i class="fa-solid fa-angles-up"></i>
@@ -70,4 +70,5 @@
     @livewireScripts
 
 </body>
+
 </html>

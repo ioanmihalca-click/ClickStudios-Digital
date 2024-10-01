@@ -90,8 +90,7 @@
 
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <script src="https://kit.fontawesome.com/669bfeabc1.js" crossorigin="anonymous"></script>
     <!-- Font Roboto -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
 
@@ -112,7 +111,7 @@
     </script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-@livewireStyles
+    @livewireStyles
 </head>
 
 
@@ -222,7 +221,7 @@
         <i class="fa-solid fa-angles-up"></i>
     </button>
 
-@livewireScripts
+    @livewireScripts
 </body>
 
 </html>
