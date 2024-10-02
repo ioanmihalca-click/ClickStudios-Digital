@@ -90,25 +90,27 @@
         <priority>0.80</priority>
     </url>
 
+    <url>
+        <loc>https://clickstudios-digital.com/blog/etichete/blog-audio</loc>
+        <lastmod>2024-10-02T22:33:21+00:00</lastmod>
+        <priority>0.70</priority>
+    </url>
 
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/web-design</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
-        <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
 
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/seo</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
-        <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
 
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/dezvoltare-web</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
-        <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
 
@@ -145,49 +147,42 @@
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/magazin-online</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
-        <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
 
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/marketing-digital</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
-        <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
 
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/promovare-afacere</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
-        <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
 
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/branding</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
-        <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
 
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/e-commerce</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
-        <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
 
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/spoturi-video</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
-        <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
 
     <url>
         <loc>https://clickstudios-digital.com/blog/etichete/productie-video</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod>
-        <changefreq>monthly</changefreq> 
         <priority>0.70</priority> 
     </url>
 
