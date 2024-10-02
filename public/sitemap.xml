@@ -113,6 +113,36 @@
     </url>
 
     <url>
+        <loc>https://clickstudios-digital.com/blog/etichete/IT</loc>
+        <lastmod>2024-10-01T14:50:13+00:00</lastmod>
+        <priority>0.70</priority>
+    </url>
+
+    <url>
+        <loc>https://clickstudios-digital.com/blog/etichete/tech</loc>
+        <lastmod>2024-10-01T14:50:13+00:00</lastmod>
+        <priority>0.70</priority>
+    </url>
+
+    <url>
+        <loc>https://clickstudios-digital.com/blog/etichete/smart-city</loc>
+        <lastmod>2024-10-02T09:47:51+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+
+    <url>
+        <loc>https://clickstudios-digital.com/blog/etichete/baia-mare</loc>
+        <lastmod>2024-10-02T09:47:51+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+    
+    <url>
+        <loc>https://clickstudios-digital.com/blog/etichete/maramures</loc>
+        <lastmod>2024-10-02T09:47:51+00:00</lastmod>
+        <priority>0.51</priority>
+    </url>
+
+    <url>
         <loc>https://clickstudios-digital.com/blog/etichete/magazin-online</loc>
         <lastmod>2024-08-05T09:10:40+00:00</lastmod> 
         <changefreq>monthly</changefreq> 
@@ -165,18 +195,6 @@
         <loc>https://clickstudios-digital.com/blog/etichete/prestashop</loc>
         <lastmod>2024-10-01T14:50:13+00:00</lastmod>
         <priority>0.51</priority>
-    </url>
-
-    <url>
-        <loc>https://clickstudios-digital.com/blog/etichete/IT</loc>
-        <lastmod>2024-10-01T14:50:13+00:00</lastmod>
-        <priority>0.70</priority>
-    </url>
-
-    <url>
-        <loc>https://clickstudios-digital.com/blog/etichete/tech</loc>
-        <lastmod>2024-10-01T14:50:13+00:00</lastmod>
-        <priority>0.70</priority>
     </url>
 
     </urlset> 
