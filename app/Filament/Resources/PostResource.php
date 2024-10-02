@@ -55,15 +55,15 @@ class PostResource extends Resource
                 Forms\Components\MarkdownEditor::make('continut')
                     ->required()
                     ->columnSpanFull(),
-                
+
                 Forms\Components\Group::make([
                     Forms\Components\FileUpload::make('imagine_principala')
                         ->image()
                         ->required()
                         ->columnSpan(2),
-                    
-                        Forms\Components\FileUpload::make('audio_file')
-                        ->label('Fișier audio')
+
+                    Forms\Components\FileUpload::make('audio_file')
+                        ->label('Fișier audio (optional')
                         ->disk('public')
                         ->directory('temp-audio-uploads')
                         ->acceptedFileTypes(['audio/mpeg', 'audio/wav', 'audio/mp3'])
@@ -74,28 +74,28 @@ class PostResource extends Resource
                             if (!$state) {
                                 return;
                             }
-                    
+
                             if ($state instanceof TemporaryUploadedFile) {
                                 Log::info('Procesare fișier audio încărcat', ['fileName' => $state->getClientOriginalName()]);
-                    
+
                                 try {
                                     $fileContent = file_get_contents($state->getRealPath());
                                     $mimeType = $state->getMimeType();
-                    
+
                                     Log::info('Încercare de încărcare pe Cloudinary', [
                                         'fileSize' => strlen($fileContent),
                                         'mimeType' => $mimeType
                                     ]);
-                    
+
                                     $result = Cloudinary::upload("data:{$mimeType};base64," . base64_encode($fileContent), [
                                         'folder' => 'blog_audio',
                                         'resource_type' => 'auto'
                                     ]);
-                    
+
                                     Log::info('Fișier audio încărcat cu succes pe Cloudinary', ['publicId' => $result->getPublicId()]);
-                    
+
                                     $set('audio_cloudinary_id', $result->getPublicId());
-                    
+
                                     // Funcție pentru ștergerea fișierelor temporare
                                     $deleteTemporaryFile = function (TemporaryUploadedFile $file) {
                                         $paths = [
@@ -103,34 +103,33 @@ class PostResource extends Resource
                                             storage_path("app/public/temp-audio-uploads/{$file->getFilename()}"),
                                             public_path("storage/temp-audio-uploads/{$file->getFilename()}")
                                         ];
-                    
+
                                         foreach ($paths as $path) {
                                             if (file_exists($path)) {
                                                 unlink($path);
                                                 Log::info('Fișier temporar șters', ['path' => $path]);
                                             }
                                         }
-                    
+
                                         // Verificăm și ștergem și din disk-ul 'public' folosind Laravel Storage
                                         if (Storage::disk('public')->exists("temp-audio-uploads/{$file->getFilename()}")) {
                                             Storage::disk('public')->delete("temp-audio-uploads/{$file->getFilename()}");
                                             Log::info('Fișier temporar șters din storage public', ['fileName' => $file->getFilename()]);
                                         }
                                     };
-                    
+
                                     // Apelăm funcția de ștergere
                                     $deleteTemporaryFile($state);
-                    
+
                                     // Resetăm starea componentei FileUpload
                                     $set('audio_file', null);
-                    
                                 } catch (\Exception $e) {
                                     Log::error('Eroare la încărcarea fișierului audio pe Cloudinary', [
                                         'error' => $e->getMessage(),
                                         'trace' => $e->getTraceAsString()
                                     ]);
-                    
-                                  Notification::make()
+
+                                    Notification::make()
                                         ->title('Eroare la încărcarea fișierului audio')
                                         ->body($e->getMessage())
                                         ->danger()
@@ -142,7 +141,7 @@ class PostResource extends Resource
                         ->afterStateHydrated(function ($state, callable $set) {
                             // Dacă avem un ID Cloudinary, afișăm un mesaj că fișierul audio există
                             if ($state) {
-                              Notification::make()
+                                Notification::make()
                                     ->title('Fișier audio existent')
                                     ->body('Un fișier audio este deja asociat cu acest articol.')
                                     ->success()
@@ -172,7 +171,7 @@ class PostResource extends Resource
                 TextColumn::make('titlu')
                     ->searchable()
                     ->sortable()
-                    ->limit(50), 
+                    ->limit(50),
                 ImageColumn::make('imagine_principala')->square(),
                 TextColumn::make('tags.nume')
                     ->badge()
@@ -197,26 +196,26 @@ class PostResource extends Resource
     }
 
     private function deleteTemporaryFile(TemporaryUploadedFile $file)
-{
-    $paths = [
-        storage_path("app/livewire-tmp/{$file->getFilename()}"),
-        storage_path("app/public/temp-audio-uploads/{$file->getFilename()}"),
-        public_path("storage/temp-audio-uploads/{$file->getFilename()}")
-    ];
+    {
+        $paths = [
+            storage_path("app/livewire-tmp/{$file->getFilename()}"),
+            storage_path("app/public/temp-audio-uploads/{$file->getFilename()}"),
+            public_path("storage/temp-audio-uploads/{$file->getFilename()}")
+        ];
 
-    foreach ($paths as $path) {
-        if (file_exists($path)) {
-            unlink($path);
-            Log::info('Fișier temporar șters', ['path' => $path]);
+        foreach ($paths as $path) {
+            if (file_exists($path)) {
+                unlink($path);
+                Log::info('Fișier temporar șters', ['path' => $path]);
+            }
+        }
+
+        // Verificăm și ștergem și din disk-ul 'public' folosind Laravel Storage
+        if (Storage::disk('public')->exists("temp-audio-uploads/{$file->getFilename()}")) {
+            Storage::disk('public')->delete("temp-audio-uploads/{$file->getFilename()}");
+            Log::info('Fișier temporar șters din storage public', ['fileName' => $file->getFilename()]);
         }
     }
-
-    // Verificăm și ștergem și din disk-ul 'public' folosind Laravel Storage
-    if (Storage::disk('public')->exists("temp-audio-uploads/{$file->getFilename()}")) {
-        Storage::disk('public')->delete("temp-audio-uploads/{$file->getFilename()}");
-        Log::info('Fișier temporar șters din storage public', ['fileName' => $file->getFilename()]);
-    }
-}
 
     public static function getPages(): array
     {
