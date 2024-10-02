@@ -30,6 +30,13 @@
         </figure>
     @endif
 
+     @if ($post->audio_cloudinary_id)
+        <div class="mb-8">
+            <h2 class="mb-4 text-2xl font-semibold">Ascultă articolul</h2>
+            <div id="audioplayer"></div>
+        </div>
+    @endif
+
     <div class="p-2 prose prose-lg rounded shadow-lg max-w-none" itemprop="articleBody">
         {!! $post->continut !!}
     </div>
@@ -66,4 +73,27 @@
         </div>
     </section>
 @endif
+
+@if ($post->audio_cloudinary_id)
+    @push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/2.0.4/wavesurfer.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var wavesurfer = WaveSurfer.create({
+                container: '#audioplayer',
+                waveColor: 'violet',
+                progressColor: 'purple',
+                responsive: true
+            });
+
+            wavesurfer.load('{{ $post->audio_url }}');
+
+            wavesurfer.on('ready', function () {
+                wavesurfer.play();
+            });
+        });
+    </script>
+    @endpush
+@endif
+
 </div>

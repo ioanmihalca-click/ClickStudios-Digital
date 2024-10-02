@@ -16,11 +16,10 @@ class PostShow extends Component
     {
         $this->post = $post;
 
-        // Căutăm postări similare pe baza etichetelor comune
         $this->similarPosts = Post::whereHas('tags', function ($query) {
             $query->whereIn('id', $this->post->tags->pluck('id'));
         })->where('id', '!=', $this->post->id)
-          ->limit(5)  // or any other number you prefer
+          ->limit(5)
           ->get();
     }
 

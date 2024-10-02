@@ -11,6 +11,7 @@ use App\Livewire\Unsubscribe;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubscriberController;
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -26,3 +27,4 @@ Route::get('/unsubscribe/{token}', Unsubscribe::class)->name('unsubscribe');
     Route::get('/postari/{post:slug}', PostShow::class)->name('postari.show');
     Route::get('/etichete/{tag:slug}', TagShow::class)->name('etichete.show');
 });
+
