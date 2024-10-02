@@ -5,6 +5,7 @@
 @section('og_image', $post->imagine_principala ? asset('storage/' . $post->imagine_principala) : asset('path/to/default-og-image.jpg'))
 @section('og_type', 'article')
 
+
 <div>
 <article class="container max-w-4xl px-4 py-12 mx-auto" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="mb-8 text-center">
