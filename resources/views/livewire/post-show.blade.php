@@ -4,6 +4,7 @@
 @section('og_description', $post->meta_descriere ?? Str::limit(strip_tags($post->continut), 200))
 @section('og_image', $post->imagine_principala ? asset('storage/' . $post->imagine_principala) : asset('path/to/default-og-image.jpg'))
 @section('og_type', 'article')
+
 <div>
 <article class="container max-w-4xl px-4 py-12 mx-auto" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="mb-8 text-center">
@@ -30,12 +31,21 @@
         </figure>
     @endif
 
-     @if ($post->audio_cloudinary_id)
-        <div class="mb-8">
-            <h2 class="mb-4 text-2xl font-semibold">Ascultă articolul</h2>
-            <div id="audioplayer"></div>
+ @if ($audioUrl)
+    <div class="mx-auto mb-8">
+        <h2 class="mb-4 text-2xl font-semibold text-center text-gray-800 md:text-left font-roboto-condensed">Ascultă articolul</h2>
+        <div id="audio-player-container" class="overflow-hidden">
+            <audio id="audio-player" class="w-full" controls>
+                <source src="{{ $audioUrl }}" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
         </div>
-    @endif
+    </div>
+@else
+    <div class="p-4 mb-8 text-center bg-gray-100 rounded-lg">
+        <p class="text-emerald-500">Nu există o versiune audio pentru acest articol.</p>
+    </div>
+@endif
 
     <div class="p-2 prose prose-lg rounded shadow-lg max-w-none" itemprop="articleBody">
         {!! $post->continut !!}
@@ -74,26 +84,16 @@
     </section>
 @endif
 
-@if ($post->audio_cloudinary_id)
-    @push('scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/2.0.4/wavesurfer.min.js"></script>
+
+@push('scripts')
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var wavesurfer = WaveSurfer.create({
-                container: '#audioplayer',
-                waveColor: 'violet',
-                progressColor: 'purple',
-                responsive: true
-            });
-
-            wavesurfer.load('{{ $post->audio_url }}');
-
-            wavesurfer.on('ready', function () {
-                wavesurfer.play();
+            const player = new Plyr('#audio-player', {
+                controls: ['play', 'progress', 'current-time', 'mute', 'volume']
             });
         });
     </script>
-    @endpush
-@endif
+@endpush
 
 </div>
