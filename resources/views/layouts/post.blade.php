@@ -46,7 +46,6 @@
         gtag('config', 'G-QFL38JS6PJ');
     </script>
 
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 

@@ -5,6 +5,9 @@
 @section('og_image', $post->imagine_principala ? asset('storage/' . $post->imagine_principala) : asset('path/to/default-og-image.jpg'))
 @section('og_type', 'article')
 
+@push('styles')
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+@endpush
 
 <div>
 <article class="container max-w-4xl px-4 py-12 mx-auto" itemscope itemtype="http://schema.org/BlogPosting">
