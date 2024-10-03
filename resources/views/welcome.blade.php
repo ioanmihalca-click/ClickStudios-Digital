@@ -115,8 +115,9 @@
 </head>
 
 
-<body class="font-sans bg-white" x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">
-    <div x-data="{ loading: true }" x-init="setTimeout(() => loading = false, 700)">
+<body class="font-sans bg-white" x-data="{ scrollToTop: false, loading: true }" x-on:scroll.window="scrollToTop = window.scrollY > 100"
+    x-init="$nextTick(() => { setTimeout(() => loading = false, 700) })">
+
     <!--JS embedded fb reel-->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous"
@@ -159,14 +160,13 @@
 
     <x-footer />
 
-   <!-- Scroll to Top Button -->
+    <!-- Arrow Up Button -->
     <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
         class="fixed flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4 ">
         <i class="fa-solid fa-angles-up"></i>
     </button>
 
     @livewireScripts
-  
 </body>
 
 </html>

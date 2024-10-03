@@ -23,5 +23,8 @@ function effectsHomeSection() {
     }
 }
 
+// Call the function on scroll and initial load
+window.addEventListener('scroll', effectsHomeSection);
+effectsHomeSection();
 
 
