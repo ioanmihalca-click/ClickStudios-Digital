@@ -10,7 +10,7 @@
     <meta name="description"
         content="Descoperiți cele mai noi tendințe și informații din dezvoltare web si marketing digital.">
     <meta name="keywords"
-        content="Click Studios Digital, blog, marketing digital, sfaturi SEO, dezvoltare web, e-commerce, marketing online, web design, blog marketing">
+        content="Click Studios Digital, blog audio, marketing digital, sfaturi SEO, dezvoltare web, e-commerce, marketing online, web design, blog marketing">
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Blogul Click Studios Digital - Dezvoltare Web, Marketing Digital, SEO">
