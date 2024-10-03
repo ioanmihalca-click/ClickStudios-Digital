@@ -16,7 +16,10 @@
     <meta property="og:title" content="Blogul Click Studios Digital - Dezvoltare Web, Marketing Digital, SEO">
     <meta property="og:description"
         content="Descoperiți cele mai noi tendințe și informații din marketingul digital si Web Development pe blogul Click Studios Digital. Rămâneți la curent cu sfaturi despre SEO, dezvoltare web și multe altele.">
-    <meta property="og:image" content="{{ asset('assets/OG-Click-Studios-Digital.jpg') }}" />
+    <meta property="og:image" content="{{ asset('assets/OG-Click-Studios-Digital.webp') }}" />
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ro_RO">

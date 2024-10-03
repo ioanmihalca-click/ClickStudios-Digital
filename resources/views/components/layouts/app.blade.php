@@ -39,8 +39,10 @@
     <meta property="og:title" content="Click Studios - Dezvoltare Web & Marketing Digital" />
     <meta property="og:description"
         content="Agentia Click Studios Digital din Baia Mare, dezvoltatori Laravel si TALL Stack, aplicatii web complexe, web design, marketing digital, SEO, și producție audio-video." />
-    <meta property="og:image" content="{{ asset('assets/OG-Click-Studios-Digital.jpg') }}" />
-    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image" content="{{ asset('assets/OG-Click-Studios-Digital.webp') }}" />
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Click Studios - Dezvoltare Web si Marketing Digital" />
     <meta property="og:url" content="{{ url()->current() }}" />
     <meta property="og:type" content="website" />
