@@ -115,9 +115,8 @@
 </head>
 
 
-<body class="font-sans bg-white" x-data="{ scrollToTop: false, loading: true }" x-on:scroll.window="scrollToTop = window.scrollY > 100"
-    x-init="$nextTick(() => { setTimeout(() => loading = false, 700) })">
-
+<body class="font-sans bg-white" x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">
+    <div x-data="{ loading: true }" x-init="setTimeout(() => loading = false, 700)">
     <!--JS embedded fb reel-->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous"
@@ -134,7 +133,7 @@
 
         <!-- Video background -->
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
-            <video src="/assets/bg-video.mp4" autoplay muted loop
+            <video src="/assets/bg-test.mp4" autoplay muted loop
                 class="absolute object-cover w-full h-full scale-125 -z-20"></video>
             <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 -z-10"></div>
         </div>
@@ -142,10 +141,10 @@
         <!-- Content -->
         <div class="relative z-10 items-center justify-center text-center caption-content">
             <div
-                class="font-roboto-condensed tracking-widest md:tracking-[4px] uppercase mb-8 md:mb-10 text-sm md:text-base">
+                class="font-roboto-condensed tracking-widest md:tracking-[4px] uppercase mb-8 md:mb-10 text-base md:text-lg">
                 Noi suntem</div>
             <h1
-                class="font-roboto-condensed uppercase mb-10 md:mb-14 tracking-[6px] md:tracking-[24px] font-normal text-3xl md:text-5xl leading-relaxed md:leading-normal">
+                class="font-roboto-condensed uppercase mb-10 md:mb-14 tracking-[6px] md:tracking-[24px] font-semibold text-4xl md:text-5xl leading-relaxed md:leading-normal">
                 Click Studios Digital
             </h1>
             <a href="#about"
@@ -160,13 +159,14 @@
 
     <x-footer />
 
-    <!-- Arrow Up Button -->
+   <!-- Scroll to Top Button -->
     <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
         class="fixed flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4 ">
         <i class="fa-solid fa-angles-up"></i>
     </button>
 
     @livewireScripts
+  
 </body>
 
 </html>
