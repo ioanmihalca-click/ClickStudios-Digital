@@ -115,8 +115,20 @@
 </head>
 
 
-<body class="font-sans bg-white" x-data="{ scrollToTop: false, loading: true }" x-on:scroll.window="scrollToTop = window.scrollY > 100"
-    x-init="$nextTick(() => { setTimeout(() => loading = false, 700) })">
+<body class="font-sans bg-white" 
+      x-data="{ 
+          scrollToTop: false, 
+          loading: true,
+          handleScroll() {
+              this.scrollToTop = window.pageYOffset > 100;
+          }
+      }" 
+      x-on:scroll.window.throttle.50ms="handleScroll()"
+      x-init="$nextTick(() => { 
+          setTimeout(() => loading = false, 700);
+          handleScroll();
+          window.addEventListener('touchmove', handleScroll, { passive: true });
+      })">
 
     <!--JS embedded fb reel-->
     <div id="fb-root"></div>
@@ -160,11 +172,11 @@
 
     <x-footer />
 
-    <!-- Arrow Up Button -->
-    <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
-        class="fixed flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4 ">
-        <i class="fa-solid fa-angles-up"></i>
-    </button>
+  <button x-show="scrollToTop" 
+        @click="window.scrollTo({ top: 0, behavior: 'smooth' }); setTimeout(() => { scrollToTop = window.pageYOffset > 100; }, 100)"
+        class="fixed z-50 flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4">
+    <i class="fa-solid fa-angles-up"></i>
+</button>
 
     @livewireScripts
 </body>
