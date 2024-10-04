@@ -63,7 +63,7 @@ class PostResource extends Resource
                         ->columnSpan(2),
 
                     Forms\Components\FileUpload::make('audio_file')
-                        ->label('Fișier audio (optional')
+                        ->label('Fișier audio (optional)')
                         ->disk('public')
                         ->directory('temp-audio-uploads')
                         ->acceptedFileTypes(['audio/mpeg', 'audio/wav', 'audio/mp3'])

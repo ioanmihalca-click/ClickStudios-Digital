@@ -117,20 +117,18 @@
 </head>
 
 
-<body class="font-sans bg-white" 
-      x-data="{ 
-          scrollToTop: false, 
-          loading: true,
-          handleScroll() {
-              this.scrollToTop = window.pageYOffset > 100;
-          }
-      }" 
-      x-on:scroll.window.throttle.50ms="handleScroll()"
-      x-init="$nextTick(() => { 
-          setTimeout(() => loading = false, 700);
-          handleScroll();
-          window.addEventListener('touchmove', handleScroll, { passive: true });
-      })">
+<body class="font-sans bg-white" x-data="{
+    scrollToTop: false,
+    loading: true,
+    handleScroll() {
+        this.scrollToTop = window.pageYOffset > 100;
+    }
+}" x-on:scroll.window.throttle.50ms="handleScroll()"
+    x-init="$nextTick(() => {
+        setTimeout(() => loading = false, 700);
+        handleScroll();
+        window.addEventListener('touchmove', handleScroll, { passive: true });
+    })">
 
     <!--JS embedded fb reel-->
     <div id="fb-root"></div>
@@ -166,6 +164,15 @@
                 class="px-10 py-2 text-xs tracking-widest text-white uppercase transition-all duration-300 border border-white hover:bg-white hover:text-black font-roboto-condensed hover:border-transparent">Afla
                 mai multe</a>
         </div>
+        
+                <!-- Fixed right-side "Ce e nou?" button -->
+        <div 
+            class="fixed left-0 z-50 hidden transition-all duration-300 ease-in-out bottom-10" :class="{ 'hidden': false }"
+            x-cloak >
+            <x-slider-news />
+        </div>
+      
+
     </section>
 
     <x-despre />
@@ -174,11 +181,11 @@
 
     <x-footer />
 
-  <button x-show="scrollToTop" 
+    <button x-show="scrollToTop"
         @click="window.scrollTo({ top: 0, behavior: 'smooth' }); setTimeout(() => { scrollToTop = window.pageYOffset > 100; }, 100)"
         class="fixed z-50 flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4">
-    <i class="fa-solid fa-angles-up"></i>
-</button>
+        <i class="fa-solid fa-angles-up"></i>
+    </button>
 
     @livewireScripts
 </body>
