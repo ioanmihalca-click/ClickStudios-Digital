@@ -18,7 +18,7 @@
                                     <div class="flex items-start justify-end">
                                         {{-- <h2 class="text-2xl font-semibold leading-6 text-gray-900 font-roboto-condensed" id="slide-over-title">Articole audio recente</h2> --}}
                                         <div class="flex items-center ml-3 h-7">
-                                            <button @click="slideOverOpen=false" class="text-gray-100 hover:text-gray-300">
+                                            <button @click="slideOverOpen=false" class="text-emerald-500 hover:text-emerald-700">
                                                 <span class="sr-only">Close panel</span>
                                                 <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
