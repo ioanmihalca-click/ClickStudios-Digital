@@ -167,7 +167,7 @@
         
                 <!-- Fixed right-side "Ce e nou?" button -->
         <div 
-            class="fixed left-0 z-50 hidden transition-all duration-300 ease-in-out bottom-10" :class="{ 'hidden': false }"
+            class="fixed left-0 z-50 hidden transition-all duration-300 ease-in-out bottom-16 md:bottom-10" :class="{ 'hidden': false }"
             x-cloak >
             <x-slider-news />
         </div>
