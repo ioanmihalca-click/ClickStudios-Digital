@@ -44,9 +44,9 @@
             }
          }" 
          @mousemove="mouseX = $event.clientX; mouseY = $event.clientY"
-         class="flex items-center justify-center min-h-screen bg-gray-500">
+         class="flex items-center justify-center min-h-screen bg-gray-100">
         <div class="container max-w-5xl px-2 mx-auto">
-            <h2 class="mb-12 text-xl font-bold text-center text-gray-800 uppercase font-roboto-condensed md:text-3xl">
+            <h2 class="mb-12 text-xl font-bold text-center text-black uppercase font-roboto-condensed md:text-3xl">
                 Aplicatii Web si Site-uri
             </h2>
        
@@ -56,19 +56,19 @@
     <div @click="selectedItem = 'click-music'"
          @mouseenter="hoverItem = 'click-music'; hover = 'click-music'" 
          @mouseleave="hoverItem = null; hover = null"
-         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
-        <div class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-xl group-hover:opacity-10"></div>
-        <h3 class="text-xl font-semibold text-gray-900 transition-all duration-300 group-hover:text-emerald-600">Click Music RO</h3>
-        <div x-show="hover === 'click-music'" class="absolute left-0 right-0 px-6 text-sm text-gray-600 bottom-2">Streaming muzical de înaltă calitate</div>
+         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-t border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
+       
+        <h3 class="text-xl font-semibold text-black">Click Music RO</h3>
+        <div x-show="hover === 'click-music'" class="absolute left-0 right-0 px-6 text-sm text-gray-700 bottom-2">Platforma de streaming muzical</div>
     </div>
 
     <!-- InstaCapture -->
     <div @click="selectedItem = 'instacapture'"
          @mouseenter="hoverItem = 'instacapture'; hover = 'instacapture'" 
          @mouseleave="hoverItem = null; hover = null"
-         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
-        <div class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl group-hover:opacity-10"></div>
-        <h3 class="text-xl font-semibold text-gray-900 transition-all duration-300 group-hover:text-purple-600">InstaCapture</h3>
+         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-t border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
+       
+        <h3 class="text-xl font-semibold text-gray-900">InstaCapture</h3>
         <div x-show="hover === 'instacapture'" class="absolute left-0 right-0 px-6 text-sm text-gray-600 bottom-2">Aplicatie web fotografie profesionala</div>
     </div>
     
@@ -76,9 +76,9 @@
     <div @click="selectedItem = 'snow-n-stuff'"
          @mouseenter="hoverItem = 'snow-n-stuff'; hover = 'snow-n-stuff'" 
          @mouseleave="hoverItem = null; hover = null"
-         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
-        <div class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl group-hover:opacity-10"></div>
-        <h3 class="text-xl font-semibold text-gray-900 transition-all duration-300 group-hover:text-blue-600">Snow 'n' Stuff</h3>
+         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-t border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
+        
+        <h3 class="text-xl font-semibold text-gray-900">Snow 'n' Stuff</h3>
         <div x-show="hover === 'snow-n-stuff'" class="absolute left-0 right-0 px-6 text-sm text-gray-600 bottom-2">Label muzical internațional de top</div>
     </div>
     
@@ -86,9 +86,9 @@
     <div @click="selectedItem = 'cs-victoria-mm'"
          @mouseenter="hoverItem = 'cs-victoria-mm'; hover = 'cs-victoria-mm'" 
          @mouseleave="hoverItem = null; hover = null"
-         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
-        <div class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-r from-red-500 to-yellow-500 rounded-xl group-hover:opacity-10"></div>
-        <h3 class="text-xl font-semibold text-gray-900 transition-all duration-300 group-hover:text-red-600">CS Victoria MM</h3>
+         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-t border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
+
+        <h3 class="text-xl font-semibold text-gray-900">CS Victoria MM</h3>
         <div x-show="hover === 'cs-victoria-mm'" class="absolute left-0 right-0 px-6 text-sm text-gray-600 bottom-2">Pagina de prezentare club sportiv</div>
     </div>
     
@@ -96,9 +96,9 @@
     <div @click="selectedItem = 'ioana-mihalca'"
          @mouseenter="hoverItem = 'ioana-mihalca'; hover = 'ioana-mihalca'" 
          @mouseleave="hoverItem = null; hover = null"
-         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
-        <div class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl group-hover:opacity-10"></div>
-        <h3 class="text-xl font-semibold text-gray-900 transition-all duration-300 group-hover:text-green-600">Ioana Mihalca</h3>
+         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-t border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
+
+        <h3 class="text-xl font-semibold text-gray-900">Ioana Mihalca</h3>
         <div x-show="hover === 'ioana-mihalca'" class="absolute left-0 right-0 px-6 text-sm text-gray-600 bottom-2">Blog de jurnalistă</div>
     </div>
     
@@ -106,9 +106,9 @@
     <div @click="selectedItem = 'truland'"
          @mouseenter="hoverItem = 'truland'; hover = 'truland'" 
          @mouseleave="hoverItem = null; hover = null"
-         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
-        <div class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl group-hover:opacity-10"></div>
-        <h3 class="text-xl font-semibold text-gray-900 transition-all duration-300 group-hover:text-green-600">Truland Magazin Online</h3>
+         class="relative z-10 flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-t border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
+        
+        <h3 class="text-xl font-semibold text-gray-900 ">Truland Magazin Online</h3>
         <div x-show="hover === 'truland'" class="absolute left-0 right-0 px-6 text-sm text-gray-600 bottom-2">Magazin online de incaltaminte</div>
     </div>
 
@@ -116,7 +116,7 @@
           <!-- Hover Image -->
 <div x-show="hoverItem" 
      :style="{ left: `${mouseX + 20}px`, top: `${mouseY - 200}px` }"
-     class="fixed z-50 hidden w-64 overflow-hidden transition-all duration-300 bg-white shadow-xl rounded-xl md:block">
+     class="fixed z-50 hidden w-64 overflow-hidden transition-all duration-300 rounded-xl md:block">
     <img :src="getImagePath(hoverItem)" 
          :alt="hoverItem + ' preview'"
          class="w-full hover-image">
@@ -277,122 +277,108 @@
 
 
 
-<div id="multimedia" class="flex items-center justify-center min-h-screen bg-gray-500">
+<div id="multimedia" class="flex items-center justify-center min-h-screen bg-gray-100">
  <div class="container max-w-5xl px-2 mx-auto">
     <h2 class="mb-12 text-xl font-bold text-center text-black uppercase font-roboto-condensed md:text-3xl">
         Multimedia
     </h2>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
         <!-- Podcast Morosenesc -->
-        <div x-data="{ open: false }" class="overflow-hidden transition-all duration-300 bg-white border-b shadow-lg border-emerald-500 rounded-xl hover:shadow-xl">
-            <div class="relative group">
-                <img src="/assets/podcast-morosenesc.webp" alt="Productie Podcast Morosenesc cu Ioana Mihalca" class="object-cover w-full h-full transition duration-300 ease-in-out group-hover:opacity-75">
-                <div class="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 opacity-0 bg-gradient-to-b from-transparent to-black group-hover:opacity-100">
-                    <h3 class="text-2xl font-bold text-white transition-transform duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        Podcast Morosenesc
-                    </h3>
-                </div>
-            </div>
-            <div class="p-6">
-                <button @click="open = !open" class="flex items-center justify-between w-full text-left focus:outline-none">
-                    <h3 class="text-xl font-semibold text-gray-900">Podcast Morosenesc</h3>
-                    <svg :class="{ 'rotate-180': open }" class="w-5 h-5 text-blue-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="mt-4">
-                    <p class="mb-4 leading-relaxed text-gray-700">
-                        "Podcast Morosenesc cu Ioana Mihalca" este un proiect de succes dedicat explorării povestirilor autentice și discuțiilor captivante. Acest podcast aduce în fața ascultătorilor povești de viață inspiraționale și conversații profunde cu personalități remarcabile din diverse domenii.
-                    </p>
-                    <ul class="mb-4 ml-6 list-disc">
-                        <li>Înregistrare și Editare de înaltă calitate</li>
-                        <li>Distribuție și Promovare eficientă</li>
-                        <li>Disponibil pe principalele platforme de podcasting</li>
-                    </ul>
-                    <a href="https://www.youtube.com/@IoanaMihalca" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 bg-blue-600 rounded-lg hover:bg-blue-700">
-                        Vizionează pe YouTube
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                        </svg>
-                    </a>
-                </div>
+         <div x-data="{ open: false }" 
+         class="max-w-md mx-auto overflow-hidden transition-all duration-300 bg-white border-t border-b shadow-lg border-emerald-500 rounded-xl hover:shadow-xl">
+        <div class="relative group" 
+             :class="{ 'group-hover': open }">
+            <img src="/assets/podcast-morosenesc.webp" 
+                 alt="Productie Podcast Morosenesc cu Ioana Mihalca" 
+                 class="object-cover w-full h-auto transition duration-300 ease-in-out"
+                 :class="{ 'opacity-75': open }">
+            <div class="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 bg-gradient-to-b from-transparent to-black"
+                 :class="{ 'opacity-100': open, 'opacity-0': !open }">
+                <h3 class="text-2xl font-bold text-white transition-transform duration-300 transform"
+                    :class="{ 'translate-y-0': open, 'translate-y-2': !open }">
+                    Podcast Morosenesc
+                </h3>
             </div>
         </div>
-
-        <!-- Click Music YouTube -->
-        <div x-data="{ open: false }" class="overflow-hidden transition-all duration-300 bg-white border-b shadow-lg border-emerald-500 rounded-xl hover:shadow-xl">
-            <div class="relative group">
-                <img src="/assets/clickmusicyt.jpg" alt="Click Music canal youtube" class="object-cover w-full h-full transition duration-300 ease-in-out group-hover:opacity-75">
-                <div class="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 opacity-0 bg-gradient-to-b from-transparent to-black group-hover:opacity-100">
-                    <h3 class="text-2xl font-bold text-white transition-transform duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        Click Music YouTube
-                    </h3>
-                </div>
-            </div>
-            <div class="p-6">
-                <button @click="open = !open" class="flex items-center justify-between w-full text-left focus:outline-none">
-                    <h3 class="text-xl font-semibold text-gray-900">Click Music YouTube</h3>
-                    <svg :class="{ 'rotate-180': open }" class="w-5 h-5 text-blue-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        <div class="p-6">
+            <button @click="open = !open" class="flex items-center justify-between w-full text-left focus:outline-none">
+                <h3 class="text-xl font-semibold text-gray-900">Podcast Morosenesc</h3>
+                <svg :class="{ 'rotate-180': open }" class="w-5 h-5 transition-transform duration-300 transform text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div x-show="open" 
+                 x-transition:enter="transition ease-out duration-300" 
+                 x-transition:enter-start="opacity-0 transform scale-95" 
+                 x-transition:enter-end="opacity-100 transform scale-100" 
+                 x-transition:leave="transition ease-in duration-200" 
+                 x-transition:leave-start="opacity-100 transform scale-100" 
+                 x-transition:leave-end="opacity-0 transform scale-95" 
+                 class="mt-4">
+                <p class="mb-4 leading-relaxed text-gray-700">
+                    "Podcast Morosenesc cu Ioana Mihalca" este un proiect de succes dedicat explorării povestirilor autentice și discuțiilor captivante. Acest podcast aduce în fața ascultătorilor povești de viață inspiraționale și conversații profunde cu personalități remarcabile din diverse domenii.
+                </p>
+                <ul class="mb-4 ml-6 list-disc">
+                    <li>Înregistrare și Editare de înaltă calitate</li>
+                    <li>Distribuție și Promovare eficientă</li>
+                    <li>Disponibil pe principalele platforme de podcasting</li>
+                </ul>
+                <a href="https://www.youtube.com/@IoanaMihalca" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 rounded-lg bg-emerald-500 hover:bg-emerald-600">
+                    Vizionează pe YouTube
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                     </svg>
-                </button>
-                <div x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-95" class="mt-4">
-                    <p class="mb-4 leading-relaxed text-gray-700">
-                        Click Music Romania reprezintă o parte importantă a activității noastre în domeniul producției muzicale și al conținutului video. Prin acest canal YouTube, ne-am propus să creăm conținut de calitate pentru iubitorii de muzică.
-                    </p>
-                    <p class="mb-4 leading-relaxed text-gray-700">
-                        De-a lungul timpului, am avut plăcerea să vedem cum comunitatea noastră a crescut, ajungând la peste 50 de milioane de vizualizări. Această cifră reflectă interesul publicului pentru conținutul nostru și ne motivează să continuăm să îmbunătățim calitatea producțiilor noastre.
-                    </p>
-                    <a href="https://www.youtube.com/@clickmusicromania" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 bg-blue-600 rounded-lg hover:bg-blue-700">
-                        Explorează Canalul Nostru
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                        </svg>
-                    </a>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
 
-    <script>
-    tsParticles.load("tsparticles", {
-        fpsLimit: 60,
-        interactivity: {
-            events: {
-                onClick: { enable: true, mode: "push" },
-                onHover: { enable: true, mode: "repulse" },
-                resize: true
-            },
-            modes: {
-                push: { quantity: 4 },
-                repulse: { distance: 200, duration: 0.4 }
-            }
-        },
-        particles: {
-            color: { value: "#10B981" },
-            links: {
-                color: "#ffffff",
-                distance: 150,
-                enable: true,
-                opacity: 0.5,
-                width: 1
-            },
-            move: {
-                direction: "none",
-                enable: true,
-                outModes: { default: "bounce" },
-                random: false,
-                speed: 1,
-                straight: false
-            },
-            number: { density: { enable: true, area: 800 }, value: 80 },
-            opacity: { value: 0.5 },
-            shape: { type: "circle" },
-            size: { value: { min: 1, max: 5 } }
-        },
-        detectRetina: true
-    });
-</script>
+        <!-- Click Music YouTube -->
+         <div x-data="{ open: false }" 
+         class="max-w-md mx-auto overflow-hidden transition-all duration-300 bg-white border-t border-b shadow-lg border-emerald-500 rounded-xl hover:shadow-xl">
+        <div class="relative group" 
+             :class="{ 'group-hover': open }">
+            <img src="/assets/clickmusicyt.jpg" 
+                 alt="Click Music canal youtube" 
+                 class="object-cover w-full h-auto transition duration-300 ease-in-out"
+                 :class="{ 'opacity-75': open }">
+            <div class="absolute inset-0 flex items-end justify-start p-6 transition-opacity duration-300 bg-gradient-to-b from-transparent to-black"
+                 :class="{ 'opacity-100': open, 'opacity-0': !open }">
+                <h3 class="text-2xl font-bold text-white transition-transform duration-300 transform"
+                    :class="{ 'translate-y-0': open, 'translate-y-2': !open }">
+                    Click Music YouTube
+                </h3>
+            </div>
+        </div>
+        <div class="p-6">
+            <button @click="open = !open" class="flex items-center justify-between w-full text-left focus:outline-none">
+                <h3 class="text-xl font-semibold text-gray-900">Click Music YouTube</h3>
+                <svg :class="{ 'rotate-180': open }" class="w-5 h-5 transition-transform duration-300 transform text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div x-show="open" 
+                 x-transition:enter="transition ease-out duration-300" 
+                 x-transition:enter-start="opacity-0 transform scale-95" 
+                 x-transition:enter-end="opacity-100 transform scale-100" 
+                 x-transition:leave="transition ease-in duration-200" 
+                 x-transition:leave-start="opacity-100 transform scale-100" 
+                 x-transition:leave-end="opacity-0 transform scale-95" 
+                 class="mt-4">
+                <p class="mb-4 leading-relaxed text-gray-700">
+                    Click Music Romania reprezintă o parte importantă a activității noastre în domeniul producției muzicale și al conținutului video. Prin acest canal YouTube, ne-am propus să creăm conținut de calitate pentru iubitorii de muzică.
+                </p>
+                <p class="mb-4 leading-relaxed text-gray-700">
+                    De-a lungul timpului, am avut plăcerea să vedem cum comunitatea noastră a crescut, ajungând la peste 50 de milioane de vizualizări. Această cifră reflectă interesul publicului pentru conținutul nostru și ne motivează să continuăm să îmbunătățim calitatea producțiilor noastre.
+                </p>
+                <a href="https://www.youtube.com/@clickmusicromania" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 rounded-lg bg-emerald-500 hover:bg-emerald-600">
+                    Explorează Canalul Nostru
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
 
 </div>
