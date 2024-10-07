@@ -1,7 +1,6 @@
  <div>
-     <section class="bg-white">
 
-         <div class="relative h-screen bg-fixed bg-center bg-cover shadow-xl"
+         <div class="relative h-screen bg-fixed bg-center bg-cover shadow-2xl"
              style="background-image: url('assets/portofoliu.webp')" alt="click studios digital portofoliu">
                <div id="tsparticles"></div>
              <div class="absolute inset-0 bg-black/50"></div>
@@ -29,7 +28,7 @@
 
          </div>
 
-</section>
+
 
    <div id="aplicatii-web" 
          x-data="{ 
@@ -44,9 +43,9 @@
             }
          }" 
          @mousemove="mouseX = $event.clientX; mouseY = $event.clientY"
-         class="flex items-center justify-center min-h-screen bg-gray-100">
+         class="flex items-center justify-center min-h-screen bg-white">
         <div class="container max-w-5xl px-2 mx-auto">
-            <h2 class="mb-12 text-xl font-bold text-center text-black uppercase font-roboto-condensed md:text-3xl">
+            <h2 class="my-12 text-xl font-bold text-center text-black uppercase font-roboto-condensed md:text-3xl">
                 Aplicatii Web si Site-uri
             </h2>
        
@@ -113,6 +112,7 @@
     </div>
 
 
+
           <!-- Hover Image -->
 <div x-show="hoverItem" 
      :style="{ left: `${mouseX + 20}px`, top: `${mouseY - 200}px` }"
@@ -123,6 +123,7 @@
 </div>
 
 
+            
 
     <!-- Slide-over panel -->
     <div x-cloak x-show="selectedItem !== null" 
@@ -272,14 +273,19 @@
             </div>
         </div>
     </div>
+                    {{-- <div class="hidden text-3xl text-center text-emerald-500 mt-14 hover:text-emerald-400 animate-bounce">
+                    <a href="#multimedia">
+                        <i class="fa fa-angle-down"></i>
+                    </a>
+                </div> --}}
 </div>
 </div>
 
 
 
-<div id="multimedia" class="flex items-center justify-center min-h-screen bg-gray-100">
+<div id="multimedia" class="flex items-center justify-center min-h-screen bg-gradient-to-t from-gray-500 to-white">
  <div class="container max-w-5xl px-2 mx-auto">
-    <h2 class="mb-12 text-xl font-bold text-center text-black uppercase font-roboto-condensed md:text-3xl">
+    <h2 class="my-12 text-xl font-bold text-center text-black uppercase font-roboto-condensed md:text-3xl">
         Multimedia
     </h2>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -382,3 +388,9 @@
     </div>
 
 </div>
+  <hr class="my-10 border-gray-700">
+
+        <div class="text-center">
+            <p class="text-white">&copy; <span x-text="new Date().getFullYear()"></span> <strong
+                    class="font-semibold text-white">Click Studios Digital</strong>. Toate drepturile rezervate.</p>
+        </div>

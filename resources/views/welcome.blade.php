@@ -130,11 +130,6 @@
         window.addEventListener('touchmove', handleScroll, { passive: true });
     })">
 
-    <!--JS embedded fb reel-->
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v20.0&appId=819059106273620" nonce="7pZctJEG">
-    </script>
 
     <x-navigation-main />
 

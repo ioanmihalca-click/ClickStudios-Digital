@@ -138,7 +138,9 @@
         {{ $slot }}
     </main>
 
+@if(! Route::is('portofoliu'))
     <x-footer />
+@endif
 
     <!-- Scroll to Top Button -->
     <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"

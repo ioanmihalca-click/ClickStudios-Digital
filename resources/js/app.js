@@ -27,41 +27,61 @@ function effectsHomeSection() {
 window.addEventListener('scroll', effectsHomeSection);
 effectsHomeSection();
 
+
 // tsParticles 
-tsParticles.load("tsparticles", {
-  fpsLimit: 60,
-  interactivity: {
-      events: {
-          onClick: { enable: true, mode: "push" },
-          onHover: { enable: true, mode: "repulse" },
-          resize: true
-      },
-      modes: {
-          push: { quantity: 4 },
-          repulse: { distance: 200, duration: 0.4 }
-      }
-  },
-  particles: {
-      color: { value: "#10B981" },
-      links: {
-          color: "#ffffff",
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1
-      },
-      move: {
-          direction: "none",
-          enable: true,
-          outModes: { default: "bounce" },
-          random: false,
-          speed: 1,
-          straight: false
-      },
-      number: { density: { enable: true, area: 800 }, value: 80 },
-      opacity: { value: 0.5 },
-      shape: { type: "circle" },
-      size: { value: { min: 1, max: 5 } }
-  },
-  detectRetina: true
+// Funcția de inițializare pentru tsParticles
+async function initializeTsParticles() {
+  if (typeof tsParticles !== 'undefined') {
+      await tsParticles.load("tsparticles", {
+          fpsLimit: 60,
+          interactivity: {
+              events: {
+                  onClick: { enable: true, mode: "push" },
+                  onHover: { enable: true, mode: "repulse" },
+                  resize: true
+              },
+              modes: {
+                  push: { quantity: 4 },
+                  repulse: { distance: 200, duration: 0.4 }
+              }
+          },
+          particles: {
+              color: { value: "#10B981" },
+              links: {
+                  color: "#ffffff",
+                  distance: 150,
+                  enable: true,
+                  opacity: 0.5,
+                  width: 1
+              },
+              move: {
+                  direction: "none",
+                  enable: true,
+                  outModes: { default: "bounce" },
+                  random: false,
+                  speed: 1,
+                  straight: false
+              },
+              number: { density: { enable: true, area: 800 }, value: 80 },
+              opacity: { value: 0.5 },
+              shape: { type: "circle" },
+              size: { value: { min: 1, max: 5 } }
+          },
+          detectRetina: true
+      });
+  } else {
+      console.error('tsParticles nu este definit. Asigurați-vă că scriptul este încărcat corect.');
+  }
+}
+
+// Ascultător pentru evenimentul de navigare Livewire
+document.addEventListener("livewire:navigated", () => {
+  if (window.location.pathname === "/portofoliu") {
+      initializeTsParticles();
+  }
 });
+
+// Inițializăm tsParticles când pagina este încărcată inițial
+if (window.location.pathname === "/portofoliu") {
+  window.addEventListener('load', initializeTsParticles);
+}
