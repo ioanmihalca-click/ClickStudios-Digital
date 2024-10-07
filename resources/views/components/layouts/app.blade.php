@@ -107,6 +107,9 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFL38JS6PJ"></script>
     <script>
@@ -144,8 +147,8 @@
     </button>
 
     <!-- Deferred and async scripts -->
-    <script src="https://connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v20.0&appId=819059106273620" async defer
-        crossorigin="anonymous"></script>
+    {{-- <script src="https://connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v20.0&appId=819059106273620" async defer
+        crossorigin="anonymous"></script> --}}
 
 </body>
 
