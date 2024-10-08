@@ -103,7 +103,7 @@
              x-transition:enter-end="opacity-100 transform translate-y-0">
             <div class="w-full sm:w-2/12 sm:mx-auto">
                 <div class="text-3xl text-center hover:text-emerald-500 animate-bounce">
-                    <a href="#dezvoltare-web">
+                    <a href="#contact">
                         <i class="fa fa-angle-down"></i>
                     </a>
                 </div>

@@ -3,6 +3,7 @@
 use App\Livewire\TagShow;
 use App\Livewire\PostList;
 use App\Livewire\PostShow;
+use App\Livewire\DezvoltareWeb;
 use App\Livewire\Servicii;
 use App\Livewire\Portofoliu;
 
@@ -15,6 +16,7 @@ use App\Http\Controllers\SubscriberController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/dezvoltare-web' , DezvoltareWeb::class)->name('dezvoltare-web'); 
 Route::get('/portofoliu' , Portofoliu::class)->name('portofoliu'); 
 Route::get('/servicii' , Servicii::class)->name('servicii');
 

@@ -172,8 +172,6 @@
 
     <x-despre />
 
-    <x-dezvoltare-web />
-
     <x-footer />
 
     <button x-show="scrollToTop"

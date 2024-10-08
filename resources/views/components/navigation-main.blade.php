@@ -26,8 +26,7 @@
         <!-- Desktop menu -->
         <div class="hidden space-x-4 md:flex">
             <a href="/" wire:navigate class="text-white hover:text-emerald-500 font-roboto-condensed">Acasa</a>
-            <a href="/#about" class="text-white hover:text-emerald-500 font-roboto-condensed">Despre noi</a>
-            <a href="/#dezvoltare-web" class="text-white hover:text-emerald-500 font-roboto-condensed">Dezvoltare Web</a>
+            <a href="/dezvoltare-web" wire:navigate class="text-white hover:text-emerald-500 font-roboto-condensed">Dezvoltare Web</a>
             <a href="/servicii" wire:navigate class="text-white hover:text-emerald-500 font-roboto-condensed">Servicii</a>
             <a href="/portofoliu" wire:navigate class="text-white hover:text-emerald-500 font-roboto-condensed">Portofoliu</a>
             <a href="/blog" wire:navigate class="text-white hover:text-emerald-500 font-roboto-condensed">Blog</a>
@@ -48,8 +47,7 @@
          x-cloak>
         <div class="px-2 pb-3 space-y-1 sm:px-3">
             <a href="/" wire:navigate @click="isOpen = false" class="block px-3 py-2 text-white rounded-md font-roboto-condensed hover:bg-gray-800">Acasa</a>
-            <a href="/#about" @click="isOpen = false" class="block px-3 py-2 text-white rounded-md font-roboto-condensed hover:bg-gray-800">Despre noi</a>
-            <a href="/#dezvoltare-web" @click="isOpen = false" class="block px-3 py-2 text-white rounded-md font-roboto-condensed hover:bg-gray-800">Dezvoltare Web</a>
+            <a href="/dezvoltare-web" wire:navigate @click="isOpen = false" class="block px-3 py-2 text-white rounded-md font-roboto-condensed hover:bg-gray-800">Dezvoltare Web</a>
             <a href="/servicii" wire:navigate @click="isOpen = false" class="block px-3 py-2 text-white rounded-md font-roboto-condensed hover:bg-gray-800">Servicii</a>
             <a href="/portofoliu" wire:navigate @click="isOpen = false" class="block px-3 py-2 text-white rounded-md font-roboto-condensed hover:bg-gray-800">Portofoliu</a>
             <a href="/blog" wire:navigate @click="isOpen = false" class="block px-3 py-2 text-white rounded-md font-roboto-condensed hover:bg-gray-800">Blog</a>

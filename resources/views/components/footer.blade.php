@@ -36,11 +36,11 @@
             <div class="text-center md:text-left">
                 <h3 class="mb-6 text-xl font-bold text-emerald-400">Link-uri Rapide</h3>
                 <ul class="space-y-4">
-                    <li><a href="/#about" class="transition duration-300 hover:text-emerald-400">Despre Noi</a></li>
-                    <li><a href="/#servicii" class="transition duration-300 hover:text-emerald-400">Servicii</a></li>
-                    <li><a href="/#portofoliu" class="transition duration-300 hover:text-emerald-400">Portofoliu</a>
+                    <li><a href="/dezvoltare-web" wire:navigate class="transition duration-300 hover:text-emerald-400">Dezvoltare Web</a></li>
+                    <li><a href="/servicii" wire:navigate class="transition duration-300 hover:text-emerald-400">Servicii</a></li>
+                    <li><a href="/portofoliu" wire:navigate class="transition duration-300 hover:text-emerald-400">Portofoliu</a>
                     </li>
-                    <li><a href="/#contact" class="transition duration-300 hover:text-emerald-400">Contact</a></li>
+                    <li><a href="/blog" wire:navigate class="transition duration-300 hover:text-emerald-400">Blog</a></li>
                 </ul>
             </div>
 

@@ -388,9 +388,4 @@
     </div>
 
 </div>
-  <hr class="my-10 border-gray-700">
-
-        <div class="text-center">
-            <p class="text-white">&copy; <span x-text="new Date().getFullYear()"></span> <strong
-                    class="font-semibold text-white">Click Studios Digital</strong>. Toate drepturile rezervate.</p>
-        </div>
+ 
