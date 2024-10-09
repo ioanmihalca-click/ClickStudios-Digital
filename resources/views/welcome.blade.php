@@ -161,11 +161,18 @@
         </div>
         
                 <!-- Fixed right-side "Ce e nou?" button -->
-        <div 
-            class="fixed left-0 z-50 hidden transition-all duration-300 ease-in-out bottom-24 md:bottom-10" :class="{ 'hidden': false }"
-            x-cloak >
-            <x-slider-news />
-        </div>
+<div 
+    x-data="{ isLoaded: false }"
+    x-init="setTimeout(() => isLoaded = true, 500)"
+    x-show="isLoaded"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0 transform translate-y-4"
+    x-transition:enter-end="opacity-100 transform translate-y-0"
+    class="fixed left-0 z-50 transition-all duration-300 ease-in-out bottom-24 md:bottom-10"
+    x-cloak
+>
+    <x-slider-news />
+</div>
       
 
     </section>
