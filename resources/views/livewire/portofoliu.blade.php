@@ -146,7 +146,7 @@
             <!-- Click Music App Details -->
             <div x-show="selectedItem === 'click-music'">
                 <h2 class="mb-4 text-2xl font-bold">Click Music RO</h2>
-                <img src="/assets/ClickMusic-OG-Site.jpg" alt="Click Music Streaming App" class="w-full mb-4 rounded-lg">
+                <img src="/assets/portofoliu/click-music.jpg" alt="Click Music Streaming App" class="w-full rounded-lg">
                 <p class="mb-4">Clickmusic.ro este rezultatul eforturilor noastre constante de a crea soluții digitale de înaltă calitate, îmbunătățind experiența utilizatorilor în domeniul streaming-ului muzical.</p>
                 <ul class="mb-4 ml-6 list-disc">
                     <li>Sistem de Autentificare</li>
@@ -158,7 +158,7 @@
                     <li>Sistem de Plată cu Stripe</li>
                     <li>Panou de control</li>
                 </ul>
-                <a href="https://clickmusic.ro" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 rounded-lg bg-emerald-500 hover:bg-emerald-600">
+                <a href="https://clickmusic.ro" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 mb-6 text-white transition-colors duration-300 rounded-lg bg-emerald-500 hover:bg-emerald-600">
                     Vizitează Site-ul
                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -169,7 +169,7 @@
             <!-- InstaCapture Details -->
             <div x-show="selectedItem === 'instacapture'">
                 <h2 class="mb-4 text-2xl font-bold">InstaCapture</h2>
-                <img src="/assets/OG-instacapture.jpg" alt="Aplicație de Fotografie Profesională InstaCapture" class="w-full mb-4 rounded-lg">
+                <img src="/assets/portofoliu/instacapture.jpg" alt="Aplicație de Fotografie Profesională InstaCapture" class="w-full rounded-lg">
                 <p class="mb-4">InstaCapture.ro este o aplicație web inovatoare dezvoltată de agenția noastră pentru firma de fotografie profesională InstaCapture din Cluj-Napoca.</p>
                 <ul class="mb-4 ml-6 list-disc">
                     <li>Dezvoltată în Laravel</li>
@@ -190,7 +190,7 @@
             <!-- Snow 'n' Stuff Details -->
             <div x-show="selectedItem === 'snow-n-stuff'">
                 <h2 class="mb-4 text-2xl font-bold">Snow 'n' Stuff</h2>
-                <img src="/assets/OG-SnownStuff.jpg" alt="Website Prezentare Snow 'n' Stuff" class="w-full mb-4 rounded-lg">
+                <img src="/assets/portofoliu/snow-n-stuff.jpg" alt="Website Prezentare Snow 'n' Stuff" class="w-full rounded-lg">
                 <p class="mb-4">Snow 'n' Stuff este un label muzical internațional de top, specializat în genurile Tech House, Deep House, House și Techno.</p>
                 <ul class="mb-4 ml-6 list-disc">
                     <li>Dezvoltat în Laravel</li>
@@ -212,7 +212,7 @@
             <!-- CS Victoria MM Details -->
             <div x-show="selectedItem === 'cs-victoria-mm'">
                 <h2 class="mb-4 text-2xl font-bold">CS Victoria MM</h2>
-                <img src="/assets/victoria-maramures.jpg" alt="Branding Club Sportiv Victoria Maramureș" class="w-full mb-4 rounded-lg">
+                <img src="/assets/portofoliu/csvictoriamm.jpg" alt="Branding Club Sportiv Victoria Maramureș" class="w-full rounded-lg">
                 <p class="mb-4">Proiectul de branding pentru Clubul Sportiv Victoria Maramureș este o călătorie fascinantă în definirea și exprimarea identității acestuia în mediul online și offline.</p>
                 <ul class="mb-4 ml-6 list-disc">
                     <li>Creare Identitate Vizuală</li>
@@ -233,7 +233,7 @@
             <!-- Ioana Mihalca Details -->
             <div x-show="selectedItem === 'ioana-mihalca'">
                 <h2 class="mb-4 text-2xl font-bold">Ioana Mihalca</h2>
-                <img src="/assets/ioanamihalca.ro.jpg" alt="Site-ul Ioanei Mihalca" class="w-full mb-4 rounded-lg">
+                <img src="/assets/portofoliu/ioana-mihalca.jpg" alt="Site-ul Ioanei Mihalca" class="w-full rounded-lg">
                 <p class="mb-4">Am creat un site de prezentare și blog pentru Ioana Mihalca, jurnalistă și moderatoare de emisiuni și evenimente.</p>
                 <ul class="mb-4 ml-6 list-disc">
                     <li>Dezvoltat în WordPress</li>
@@ -254,14 +254,13 @@
             <!-- Truland Details -->
             <div x-show="selectedItem === 'truland'">
                 <h2 class="mb-4 text-2xl font-bold">Truland Magazin Online</h2>
-                <img src="/assets/truland.jpg" alt="Truland Magazin Online" class="w-full mb-4 rounded-lg">
+                <img src="/assets/portofoliu/truland.jpg" alt="Truland Magazin Online" class="w-full rounded-lg">
                 <p class="mb-4">Truland este un magazin online specializat în încălțăminte de calitate, oferind o gamă variată de pantofi, mocasini, ghete și sandale pentru femei.</p>
                 <ul class="mb-4 ml-6 list-disc">
                     <li>Platformă Prestashop</li>
                     <li>Design Modern</li>
                     <li>Navigare Ușoară</li>
                     <li>Experiență de Cumpărături Optimizată</li>
-                    <li>Produse din Piele Naturală</li>
                     <li>Interfață Intuitivă</li>
                 </ul>
                 <a href="https://truland.ro" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 bg-emerald-500 hover:bg-emerald-600">
