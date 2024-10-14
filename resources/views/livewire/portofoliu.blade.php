@@ -49,67 +49,66 @@
                 Aplicatii Web si Site-uri
             </h2>
        
-<div class="grid grid-cols-1 gap-6 md:grid-cols-3" x-data="{ hover: null }">
+ <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3" x-data="{ hover: null }">
+            <!-- Click Music App -->
+            <div @click="selectedItem = 'click-music'"
+                 @mouseenter="hoverItem = 'click-music'; hover = 'click-music'" 
+                 @mouseleave="hoverItem = null; hover = null"
+                 class="relative p-6 transition-all duration-300 bg-white border-b-4 cursor-pointer group hover:shadow-xl rounded-xl border-emerald-500 hover:border-emerald-600">
+                <h3 class="text-xl font-semibold text-gray-800 transition-all duration-300 group-hover:text-emerald-600">Click Music RO</h3>
+                <p class="mt-2 text-sm text-gray-600">Platforma de streaming muzical</p>
+                <div class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-emerald-50 group-hover:opacity-10 rounded-xl"></div>
+            </div>
 
-    <!-- Click Music App -->
-    <div @click="selectedItem = 'click-music'"
-         @mouseenter="hoverItem = 'click-music'; hover = 'click-music'" 
-         @mouseleave="hoverItem = null; hover = null"
-         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-t border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
-       
-        <h3 class="text-xl font-semibold text-black">Click Music RO</h3>
-        <div x-show="hover === 'click-music'" class="absolute left-0 right-0 px-6 text-sm text-gray-700 bottom-2">Platforma de streaming muzical</div>
-    </div>
-
-    <!-- InstaCapture -->
-    <div @click="selectedItem = 'instacapture'"
-         @mouseenter="hoverItem = 'instacapture'; hover = 'instacapture'" 
-         @mouseleave="hoverItem = null; hover = null"
-         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-t border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
-       
-        <h3 class="text-xl font-semibold text-gray-900">InstaCapture</h3>
-        <div x-show="hover === 'instacapture'" class="absolute left-0 right-0 px-6 text-sm text-gray-600 bottom-2">Aplicatie web fotografie profesionala</div>
-    </div>
-    
-    <!-- Snow 'n' Stuff -->
-    <div @click="selectedItem = 'snow-n-stuff'"
-         @mouseenter="hoverItem = 'snow-n-stuff'; hover = 'snow-n-stuff'" 
-         @mouseleave="hoverItem = null; hover = null"
-         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-t border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
-        
-        <h3 class="text-xl font-semibold text-gray-900">Snow 'n' Stuff</h3>
-        <div x-show="hover === 'snow-n-stuff'" class="absolute left-0 right-0 px-6 text-sm text-gray-600 bottom-2">Label muzical internațional de top</div>
-    </div>
-    
-    <!-- CS Victoria MM -->
-    <div @click="selectedItem = 'cs-victoria-mm'"
-         @mouseenter="hoverItem = 'cs-victoria-mm'; hover = 'cs-victoria-mm'" 
-         @mouseleave="hoverItem = null; hover = null"
-         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-t border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
-
-        <h3 class="text-xl font-semibold text-gray-900">CS Victoria MM</h3>
-        <div x-show="hover === 'cs-victoria-mm'" class="absolute left-0 right-0 px-6 text-sm text-gray-600 bottom-2">Pagina de prezentare club sportiv</div>
-    </div>
-    
-    <!-- Ioana Mihalca -->
-    <div @click="selectedItem = 'ioana-mihalca'"
-         @mouseenter="hoverItem = 'ioana-mihalca'; hover = 'ioana-mihalca'" 
-         @mouseleave="hoverItem = null; hover = null"
-         class="relative flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-t border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
-
-        <h3 class="text-xl font-semibold text-gray-900">Ioana Mihalca</h3>
-        <div x-show="hover === 'ioana-mihalca'" class="absolute left-0 right-0 px-6 text-sm text-gray-600 bottom-2">Blog de jurnalistă</div>
-    </div>
-    
-    <!-- Truland --> 
-    <div @click="selectedItem = 'truland'"
-         @mouseenter="hoverItem = 'truland'; hover = 'truland'" 
-         @mouseleave="hoverItem = null; hover = null"
-         class="relative z-10 flex flex-col justify-center h-24 p-6 text-center transition-all duration-300 bg-white border-t border-b cursor-pointer border-emerald-500 hover:shadow-2xl rounded-xl">
-        
-        <h3 class="text-xl font-semibold text-gray-900 ">Truland Magazin Online</h3>
-        <div x-show="hover === 'truland'" class="absolute left-0 right-0 px-6 text-sm text-gray-600 bottom-2">Magazin online de incaltaminte</div>
-    </div>
+            <!-- InstaCapture -->
+            <div @click="selectedItem = 'instacapture'"
+                 @mouseenter="hoverItem = 'instacapture'; hover = 'instacapture'" 
+                 @mouseleave="hoverItem = null; hover = null"
+                 class="relative p-6 transition-all duration-300 bg-white border-b-4 cursor-pointer group hover:shadow-xl rounded-xl border-emerald-500 hover:border-emerald-600">
+                <h3 class="text-xl font-semibold text-gray-800 transition-all duration-300 group-hover:text-emerald-600">InstaCapture</h3>
+                <p class="mt-2 text-sm text-gray-600">Aplicație web fotografie profesională</p>
+                <div class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-emerald-50 group-hover:opacity-10 rounded-xl"></div>
+            </div>
+            
+            <!-- Snow 'n' Stuff -->
+            <div @click="selectedItem = 'snow-n-stuff'"
+                 @mouseenter="hoverItem = 'snow-n-stuff'; hover = 'snow-n-stuff'" 
+                 @mouseleave="hoverItem = null; hover = null"
+                 class="relative p-6 transition-all duration-300 bg-white border-b-4 cursor-pointer group hover:shadow-xl rounded-xl border-emerald-500 hover:border-emerald-600">
+                <h3 class="text-xl font-semibold text-gray-800 transition-all duration-300 group-hover:text-emerald-600">Snow 'n' Stuff</h3>
+                <p class="mt-2 text-sm text-gray-600">Label muzical internațional de top</p>
+                <div class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-emerald-50 group-hover:opacity-10 rounded-xl"></div>
+            </div>
+            
+            <!-- CS Victoria MM -->
+            <div @click="selectedItem = 'cs-victoria-mm'"
+                 @mouseenter="hoverItem = 'cs-victoria-mm'; hover = 'cs-victoria-mm'" 
+                 @mouseleave="hoverItem = null; hover = null"
+                 class="relative p-6 transition-all duration-300 bg-white border-b-4 cursor-pointer group hover:shadow-xl rounded-xl border-emerald-500 hover:border-emerald-600">
+                <h3 class="text-xl font-semibold text-gray-800 transition-all duration-300 group-hover:text-emerald-600">CS Victoria MM</h3>
+                <p class="mt-2 text-sm text-gray-600">Pagină de prezentare club sportiv</p>
+                <div class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-emerald-50 group-hover:opacity-10 rounded-xl"></div>
+            </div>
+            
+            <!-- Ioana Mihalca -->
+            <div @click="selectedItem = 'ioana-mihalca'"
+                 @mouseenter="hoverItem = 'ioana-mihalca'; hover = 'ioana-mihalca'" 
+                 @mouseleave="hoverItem = null; hover = null"
+                 class="relative p-6 transition-all duration-300 bg-white border-b-4 cursor-pointer group hover:shadow-xl rounded-xl border-emerald-500 hover:border-emerald-600">
+                <h3 class="text-xl font-semibold text-gray-800 transition-all duration-300 group-hover:text-emerald-600">Ioana Mihalca</h3>
+                <p class="mt-2 text-sm text-gray-600">Blog de jurnalistă</p>
+                <div class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-emerald-50 group-hover:opacity-10 rounded-xl"></div>
+            </div>
+            
+            <!-- Truland --> 
+            <div @click="selectedItem = 'truland'"
+                 @mouseenter="hoverItem = 'truland'; hover = 'truland'" 
+                 @mouseleave="hoverItem = null; hover = null"
+                 class="relative p-6 transition-all duration-300 bg-white border-b-4 cursor-pointer group hover:shadow-xl rounded-xl border-emerald-500 hover:border-emerald-600">
+                <h3 class="text-xl font-semibold text-gray-800 transition-all duration-300 group-hover:text-emerald-600">Truland Magazin Online</h3>
+                <p class="mt-2 text-sm text-gray-600">Magazin online de încălțăminte</p>
+                <div class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-emerald-50 group-hover:opacity-10 rounded-xl"></div>
+            </div>
 
 
 

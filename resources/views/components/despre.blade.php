@@ -1,4 +1,4 @@
-<section id="about" class="relative z-30 px-4 py-16 bg-white" 
+<section id="about" class="relative z-30 h-screen px-4 py-16 bg-white" 
          x-data="{ 
             show: false, 
             typewriter: '',
