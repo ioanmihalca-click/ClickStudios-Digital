@@ -141,7 +141,7 @@
 
         <!-- Video background -->
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
-            <video src="/assets/bg-video-digital.mp4" autoplay muted loop
+            <video src="/assets/bg-video-new.mp4" autoplay muted loop
                 class="absolute object-cover w-full h-full scale-125 -z-20"></video>
             <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 -z-10"></div>
         </div>
