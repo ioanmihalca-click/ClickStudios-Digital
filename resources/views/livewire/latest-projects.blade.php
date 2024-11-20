@@ -1,4 +1,4 @@
-<div class="py-12">
+<div class="py-4">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <h3 class="text-2xl font-roboto-condensed uppercase tracking-[4px] text-center text-gray-900 mb-10">
             Proiecte recente
