@@ -18,14 +18,14 @@ class LatestProjects extends Component
             'title' => 'Click Music RO',
             'description' => 'Platforma de streaming muzical, blog & magazin',
             'image' => '/assets/projects/clickmusic-ro.webp',
-            'url' => '#',
+            'url' => 'https://clickmusic.ro',
             'technologies' => ['Laravel', 'Alpine.js', 'Tailwind', 'Livewire']
         ],
         [
             'title' => 'Povestitorul Magic',
             'description' => 'Platformă de povești cu ilustrații pentru copii, generate cu AI ',
             'image' => '/assets/projects/povestitorul-magic.webp',
-            'url' => '#',
+            'url' => 'https://povestitorulmagic.ro',
             'technologies' => ['Laravel', 'Alpine.js', 'Tailwind', 'Livewire', 'AI & LLMs']
         ]
     ];
