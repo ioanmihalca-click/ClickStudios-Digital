@@ -5,9 +5,9 @@
     typewriterSpeed: 100,
     currentParagraph: 0,
     paragraphs: [
-        'Suntem o agenție de dezvoltare web din Baia Mare, specializată în aplicații Laravel și integrări AI.',
-        'Dezvoltăm soluții web rapide și scalabile, completate de servicii de marketing digital și publicitate online.',
-        'Transformăm viziunea clienților în rezultate extraordinare prin inovație tehnică și creativitate.'
+        'Suntem o agentie de dezvoltare web din Baia Mare, specializată în aplicatii Laravel și integrări AI.',
+        'Dezvoltăm solutii web rapide și scalabile, completate de servicii de marketing digital și publicitate online.',
+        'Transformăm viziunea clientilor în rezultate extraordinare prin inovatie tehnică și creativitate.'
     ],
     startAnimation() {
         this.show = true;
