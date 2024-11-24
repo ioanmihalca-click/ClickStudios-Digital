@@ -172,6 +172,49 @@
                     </ul>
                 </div>
 
+                <!-- Card Spoturi Publicitare -->
+                <div
+                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-orange-500/50">
+                    <div
+                        class="flex items-center justify-center w-12 h-12 mb-4 text-orange-500 rounded-lg bg-orange-500/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h4 class="mb-2 text-xl font-semibold text-white">Spoturi Publicitare</h4>
+                    <p class="mb-4 text-gray-400">Creație și producție spoturi publicitare profesionale pentru TV,
+                        radio și digital.</p>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-orange-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Reclame TV & Online
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-orange-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Producție Audio
+                        </li>
+                      
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-orange-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Voice-over Profesional
+                        </li>
+                    </ul>
+                </div>
+
                 <!-- E-commerce -->
                 <div
                     class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-yellow-500/50">
@@ -250,49 +293,6 @@
                                     d="M5 13l4 4L19 7" />
                             </svg>
                             Analiză predictivă
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Card Spoturi Publicitare -->
-                <div
-                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-orange-500/50">
-                    <div
-                        class="flex items-center justify-center w-12 h-12 mb-4 text-orange-500 rounded-lg bg-orange-500/10">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <h4 class="mb-2 text-xl font-semibold text-white">Spoturi Publicitare</h4>
-                    <p class="mb-4 text-gray-400">Creație și producție spoturi publicitare profesionale pentru TV,
-                        radio și digital.</p>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-orange-500" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Reclame TV & Online
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-orange-500" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Producție Audio
-                        </li>
-                      
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-orange-500" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Voice-over Profesional
                         </li>
                     </ul>
                 </div>
