@@ -52,6 +52,23 @@
 
              <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3" x-data="{ hover: null }">
 
+                 
+                 <!--AIpofta -->
+
+                 <div @click="selectedItem = 'aipofta'"
+                     @mouseenter="hoverItem = 'aipofta'; hover = 'aipofta'"
+                     @mouseleave="hoverItem = null; hover = null"
+                     class="relative p-6 transition-all duration-300 bg-white border-b-4 cursor-pointer group hover:shadow-xl rounded-xl border-emerald-500 hover:border-emerald-600">
+                     <h3
+                         class="text-xl font-semibold text-gray-800 transition-all duration-300 group-hover:text-emerald-600">
+                         AIpofta</h3>
+                     <p class="mt-2 text-sm text-gray-600">Platformă care genereaza retete personalizate pe baza de AI</p>
+                     <div
+                         class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-emerald-50 group-hover:opacity-10 rounded-xl">
+                     </div>
+                 </div>
+
+                 
                  <!--Povestitorul Magic -->
 
                  <div @click="selectedItem = 'povestitorul-magic'"
@@ -178,6 +195,29 @@
                                      d="M6 18L18 6M6 6l12 12"></path>
                              </svg>
                          </button>
+                     </div>
+
+                     <!-- AIpofta -->
+                     <div x-show="selectedItem === 'aipofta'">
+                         <h2 class="mb-4 text-2xl font-bold">AIpofta</h2>
+                         <img src="/assets/portofoliu/aipofta.webp" alt="Platforma AIpofta"
+                             class="w-full rounded-lg">
+                         <p class="mb-4">AIpofta este primul generator de rețete personalizate din România bazat pe inteligență artificială</p>
+                         <ul class="mb-4 ml-6 list-disc">
+                             <li>Dezvoltată în Laravel</li>
+                             <li>Integrare Modele AI</li>
+                             <li>Generare Retete Personalizate</li>
+                         </ul>
+                         <a href="https://aipofta.com" target="_blank" rel="noopener noreferrer"
+                             class="inline-flex items-center px-4 py-2 text-white transition-colors duration-300 bg-emerald-500 hover:bg-emerald-600">
+                             Vizitează Site-ul
+                             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                     d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                                 </path>
+                             </svg>
+                         </a>
                      </div>
 
                      <!-- Povestitorul Magic Details -->
