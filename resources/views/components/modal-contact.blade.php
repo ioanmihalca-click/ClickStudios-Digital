@@ -2,7 +2,7 @@
 <div 
     x-data="{ fullscreenModal: false }"
     x-init="
-    $watch('fullscreenModal', function(value){
+        $watch('fullscreenModal', function(value){
             if(value === true){
                 document.body.classList.add('overflow-hidden');
             }else{
@@ -11,7 +11,8 @@
         })
     "
     @keydown.escape="fullscreenModal=false"
-    >
+    @open-contact-modal.window="fullscreenModal=true"
+>
     <button @click="fullscreenModal=true" class="inline-flex items-center justify-center h-10 px-4 py-2 text-base font-medium tracking-wide text-white transition-colors border rounded-md font-roboto-condensed hover:bg-emerald-700 focus:bg-emerald-500">Contacteaza-ne</button>
     <template x-teleport="body">
 

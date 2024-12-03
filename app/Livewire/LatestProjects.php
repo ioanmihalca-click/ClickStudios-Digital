@@ -8,11 +8,19 @@ class LatestProjects extends Component
 {
     public $projects = [
         [
+            'title' => 'SportClubPro',
+            'description' => 'Platformă gratuită pentru managementul cluburilor sportive',
+            'image' => '/assets/projects/sportclubpro.webp',
+            'url' => 'https://sportclubpro.ro',
+            'technologies' => ['Laravel PHP', 'Alpine.js', 'Tailwind', 'Livewire']
+        ],
+      
+        [
             'title' => 'AIpoftă',
             'description' => 'Prima platforma de Rețete Personalizate Generate cu AI  din Romania',
             'image' => '/assets/projects/aipofta-com.webp',
             'url' => 'https://aipofta.com',
-            'technologies' => ['Laravel', 'Alpine.js', 'Tailwind', 'Livewire', 'AI & LLMs']
+            'technologies' => ['Laravel', 'Tailwind', 'Livewire', 'AI & LLMs']
         ],
         [
             'title' => 'Click Music RO',
@@ -20,13 +28,6 @@ class LatestProjects extends Component
             'image' => '/assets/projects/clickmusic-ro.webp',
             'url' => 'https://clickmusic.ro',
             'technologies' => ['Laravel', 'Alpine.js', 'Tailwind', 'Livewire']
-        ],
-        [
-            'title' => 'Povestitorul Magic',
-            'description' => 'Platformă de povești cu ilustrații pentru copii, generate cu AI ',
-            'image' => '/assets/projects/povestitorul-magic.webp',
-            'url' => 'https://povestitorulmagic.ro',
-            'technologies' => ['Laravel', 'Alpine.js', 'Tailwind', 'Livewire', 'AI & LLMs']
         ]
     ];
 

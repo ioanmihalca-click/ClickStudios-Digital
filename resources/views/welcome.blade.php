@@ -120,6 +120,7 @@
 <body class="font-sans bg-white" x-data="{
     scrollToTop: false,
     loading: true,
+    showContactModal: false,
     handleScroll() {
         this.scrollToTop = window.pageYOffset > 100;
     }
@@ -129,59 +130,150 @@
         handleScroll();
         window.addEventListener('touchmove', handleScroll, { passive: true });
     })">
-
-
     <x-navigation-main />
 
-    <section class="relative flex items-center justify-center h-screen text-white home-parallax home-fade">
+    <!-- Hero Section Modern -->
+    <section class="relative flex items-center justify-center min-h-screen text-white">
         <!-- Loading Spinner -->
         <div x-show="loading" class="absolute inset-0 z-50 flex items-center justify-center bg-black">
             <div class="w-16 h-16 border-t-4 border-solid rounded-full border-emerald-700 animate-spin"></div>
         </div>
 
-        <!-- Video background -->
+        <!-- Video background cu overlay gradient -->
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
             <video src="/assets/bg-video-new.mp4" autoplay muted loop
                 class="absolute object-cover w-full h-full scale-125 -z-20"></video>
-            <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 -z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-gray-900 -z-10"></div>
         </div>
 
-        <!-- Content -->
-        <div class="relative z-10 items-center justify-center text-center caption-content">
-            <div
-                class="font-roboto-condensed tracking-widest md:tracking-[4px] uppercase mb-8 md:mb-10 text-base md:text-lg">
-                Noi suntem</div>
-            <h1
-                class="font-roboto-condensed uppercase mb-10 md:mb-14 tracking-[6px] md:tracking-[24px] font-semibold text-4xl md:text-5xl leading-relaxed md:leading-normal">
-                Click Studios Digital
+        <!-- Hero Content -->
+        <div class="container relative z-10 px-4 mx-auto text-center">
+            <span
+                class="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-emerald-400 bg-emerald-500/10 rounded-full">
+                Web Development & Digital Marketing
+            </span>
+            <h1 class="max-w-4xl mx-auto mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+                Transformăm idei în
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
+                    experiențe digitale
+                </span>
+                memorabile
             </h1>
-            <a href="#about"
-                class="px-10 py-2 text-xs tracking-widest text-white uppercase transition-all duration-300 border border-white hover:bg-white hover:text-black font-roboto-condensed hover:border-transparent">Afla
-                mai multe</a>
+            <p class="max-w-2xl mx-auto mb-8 text-lg text-gray-300 md:text-xl">
+                Specializați în dezvoltare Laravel și integrări AI, creăm soluții web inovatoare care propulsează
+                afacerea ta în era digitală.
+            </p>
+            <div class="flex flex-col justify-center gap-4 sm:flex-row">
+                <a href="#about"
+                    class="px-8 py-3 text-sm font-medium tracking-wider text-white uppercase transition-all duration-300 rounded-lg bg-emerald-600 hover:bg-emerald-700">
+                    Descoperă Click Studios
+                </a>
+                <button @click="$dispatch('open-contact-modal')"
+                    class="px-8 py-3 text-sm font-medium tracking-wider text-white uppercase transition-all duration-300 border rounded-lg border-white/30 hover:bg-white/10">
+                    Contactează-ne
+                </button>
+            </div>
         </div>
-        
-                <!-- Fixed right-side "Ce e nou?" button -->
-<div 
-    x-data="{ isLoaded: false }"
-    x-init="setTimeout(() => isLoaded = true, 500)"
-    x-show="isLoaded"
-    x-transition:enter="transition ease-out duration-300"
-    x-transition:enter-start="opacity-0 transform translate-y-4"
-    x-transition:enter-end="opacity-100 transform translate-y-0"
-    class="fixed left-0 z-50 transition-all duration-300 ease-in-out bottom-24 md:bottom-10"
-    x-cloak
->
-    <x-slider-news />
-</div>
-      
 
+        <!-- Slider News (păstrat conform cerințelor) -->
+        <div class="fixed left-0 z-50 transition-all duration-300 ease-in-out bottom-14 md:bottom-10">
+            <x-slider-news />
+        </div>
     </section>
 
-    <x-despre />
+    <!-- Despre Section Modernizat -->
+    <section id="about" class="relative z-30 py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="container px-4 mx-auto">
+            <div class="max-w-3xl mx-auto text-center">
+                <span
+                    class="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-emerald-400 bg-emerald-500/10 rounded-full">
+                    Despre Noi
+                </span>
+                <h2 class="mb-6 text-3xl font-bold text-white md:text-4xl">
+                    Expertiză în Dezvoltare Web și Marketing Digital
+                </h2>
+                <p class="mb-12 text-gray-300">
+                    Cu focus pe tehnologii moderne și rezultate măsurabile, suntem partenerul ideal pentru prezența ta
+                    digitală.
+                </p>
+            </div>
 
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 gap-8 mb-16 md:grid-cols-3">
+                <div class="p-6 text-center bg-gray-800/50 rounded-xl">
+                    <div class="text-3xl font-bold text-emerald-400">100%</div>
+                    <div class="mt-2 text-gray-300">Satisfacție Clienți</div>
+                </div>
+                <div class="p-6 text-center bg-gray-800/50 rounded-xl">
+                    <div class="text-3xl font-bold text-emerald-400">50+</div>
+                    <div class="mt-2 text-gray-300">Proiecte Finalizate</div>
+                </div>
+                <div class="p-6 text-center bg-gray-800/50 rounded-xl">
+                    <div class="text-3xl font-bold text-emerald-400">24/7</div>
+                    <div class="mt-2 text-gray-300">Suport Tehnic</div>
+                </div>
+            </div>
+
+            <!-- Feature Grid -->
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div
+                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-emerald-500/50">
+                    <div
+                        class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-emerald-500 bg-emerald-500/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-semibold text-white">Dezvoltare Laravel</h3>
+                    <p class="text-gray-300">Aplicații web robuste și scalabile folosind cel mai popular framework PHP.
+                    </p>
+                </div>
+
+                <div
+                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-cyan-500/50">
+                    <div
+                        class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-cyan-500 bg-cyan-500/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-semibold text-white">Integrări AI</h3>
+                    <p class="text-gray-300">Automatizări inteligente și chatboți pentru optimizarea proceselor de
+                        business.</p>
+                </div>
+
+                <div
+                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-purple-500/50">
+                    <div
+                        class="flex items-center justify-center w-12 h-12 mb-4 text-purple-500 rounded-lg bg-purple-500/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                        </svg>
+                    </div>
+                    <h3 class="mb-2 text-xl font-semibold text-white">Marketing Digital</h3>
+                    <p class="text-gray-300">Strategii complete de marketing online pentru creșterea afacerii tale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Projects Section -->
+    <section class="py-4 bg-gray-800">
+        <div class="container px-4 mx-auto">
+            
+            <livewire:latest-projects />
+        </div>
+    </section>
 
     <x-footer />
 
+    <!-- Scroll to Top Button -->
     <button x-show="scrollToTop"
         @click="window.scrollTo({ top: 0, behavior: 'smooth' }); setTimeout(() => { scrollToTop = window.pageYOffset > 100; }, 100)"
         class="fixed z-50 flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4">
