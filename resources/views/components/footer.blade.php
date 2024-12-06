@@ -27,8 +27,8 @@
                         <i class="mr-3 fas fa-map-marker-alt"></i>Baia-Mare, Maramures
                     </li>
                     <li class="flex items-center justify-center md:justify-start">
-                     <x-modal-contact />
-                     </li>
+                        <x-modal-contact />
+                    </li>
                 </ul>
             </div>
 
@@ -36,11 +36,15 @@
             <div class="text-center md:text-left">
                 <h3 class="mb-6 text-xl font-bold text-emerald-400">Link-uri Rapide</h3>
                 <ul class="space-y-4">
-                    <li><a href="/dezvoltare-web" wire:navigate class="transition duration-300 hover:text-emerald-400">Dezvoltare Web</a></li>
-                    <li><a href="/servicii" wire:navigate class="transition duration-300 hover:text-emerald-400">Servicii</a></li>
-                    <li><a href="/portofoliu" wire:navigate class="transition duration-300 hover:text-emerald-400">Portofoliu</a>
+                    <li><a href="/dezvoltare-web" wire:navigate
+                            class="transition duration-300 hover:text-emerald-400">Dezvoltare Web</a></li>
+                    <li><a href="/servicii" wire:navigate
+                            class="transition duration-300 hover:text-emerald-400">Servicii</a></li>
+                    <li><a href="/portofoliu" wire:navigate
+                            class="transition duration-300 hover:text-emerald-400">Portofoliu</a>
                     </li>
-                    <li><a href="/blog" wire:navigate class="transition duration-300 hover:text-emerald-400">Blog</a></li>
+                    <li><a href="/blog" wire:navigate class="transition duration-300 hover:text-emerald-400">Blog</a>
+                    </li>
                 </ul>
             </div>
 
@@ -58,6 +62,10 @@
                     <a href="https://www.instagram.com/clickstudios_digital/" target="_blank" rel="noopener noreferrer"
                         class="text-gray-400 transition duration-300 hover:text-emerald-500">
                         <i class="text-3xl fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCGDEgJXwO7g58XvYidCJc9w" target="_blank"
+                        rel="noopener noreferrer" class="text-gray-400 transition duration-300 hover:text-emerald-500">
+                        <i class="text-3xl fab fa-youtube"></i>
                     </a>
                 </div>
             </div>
