@@ -10,7 +10,7 @@ class LatestProjects extends Component
         [
             'title' => 'SportClubPro',
             'description' => 'Platformă gratuită pentru managementul cluburilor sportive',
-            'image' => '/assets/projects/sportclubpro.webp',
+            'image' => '/assets/projects/sportclubpro.jpg',
             'url' => 'https://sportclubpro.ro',
             'technologies' => ['Laravel PHP', 'Alpine.js', 'Tailwind', 'Livewire']
         ],
