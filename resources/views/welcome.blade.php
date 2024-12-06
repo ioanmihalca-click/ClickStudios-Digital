@@ -176,7 +176,7 @@
         </div>
 
         <!-- Slider News (păstrat conform cerințelor) -->
-        <div class="fixed left-0 z-50 transition-all duration-300 ease-in-out bottom-14 md:bottom-10">
+        <div class="fixed left-0 z-50 transition-all duration-300 ease-in-out bottom-8 md:bottom-10">
             <x-slider-news />
         </div>
     </section>
