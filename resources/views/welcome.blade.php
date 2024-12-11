@@ -11,6 +11,15 @@
     <meta name="keywords"
         content="Click Studios Digital, Laravel, TALL stack, agenție marketing digital, dezvoltare web, servicii SEO, web design responsiv, e-commerce, strategii marketing online, optimizare site, creștere trafic organic, campanii PPC, social media marketing, content marketing, consultanță digitală, agenție web Baia Mare" />
 
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('assets/favicon/favicon-96x96.png') }}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{ asset('assets/favicon/favicon.svg') }}" />
+    <link rel="shortcut icon" href="{{ asset('assets/favicon/favicon.ico') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}" />
+    <meta name="apple-mobile-web-app-title" content="ClickStudiosDigital" />
+    <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}" />
+
     <!-- Open Graph Tags for Social Media Sharing -->
     <meta property="og:title" content="Click Studios - Dezvoltare Web & Marketing Digital" />
     <meta property="og:description"
@@ -79,16 +88,6 @@
   }
 }
 </script>
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}">
-    <link rel="mask-icon" href="{{ asset('assets/favicon/safari-pinned-tab.svg') }}" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#10b981">
-    <meta name="theme-color" content="#ffffff">
-
 
 
     <!-- Font Awesome -->
@@ -266,7 +265,7 @@
     <!-- Latest Projects Section -->
     <section class="py-4 bg-gray-800">
         <div class="container px-4 mx-auto">
-            
+
             <livewire:latest-projects />
         </div>
     </section>
