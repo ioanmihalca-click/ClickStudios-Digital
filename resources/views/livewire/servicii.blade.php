@@ -130,6 +130,131 @@
                     </ul>
                 </div>
 
+                <!-- Business Automation Card -->
+                <div
+                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-emerald-500/50">
+                    <div
+                        class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-emerald-500 bg-emerald-500/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h4 class="mb-2 text-xl font-semibold text-white">Automatizare Procese Business</h4>
+                    <p class="mb-4 text-gray-400">Optimizăm și automatizăm procesele de business prin tehnologii
+                        moderne:</p>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-emerald-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Chatboți 24/7 pentru suport clienți
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-emerald-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Procesare automată documente
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-emerald-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Sisteme de facturare automată
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Soluții AI Enterprise -->
+
+                <div
+                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-pink-500/50">
+                    <div
+                        class="flex items-center justify-center w-12 h-12 mb-4 text-pink-500 rounded-lg bg-pink-500/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h4 class="mb-2 text-xl font-semibold text-white">Soluții AI Enterprise</h4>
+                    <p class="mb-4 text-gray-400">Sisteme avansate de inteligență artificială:</p>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-pink-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Computer Vision & OCR
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-pink-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Procesare Limbaj Natural
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-pink-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Sisteme Recomandare Enterprise
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Sales & Marketing Optimization Card -->
+                <div
+                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-blue-500/50">
+                    <div
+                        class="flex items-center justify-center w-12 h-12 mb-4 text-blue-500 rounded-lg bg-blue-500/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h4 class="mb-2 text-xl font-semibold text-white">Optimizare Vânzări & Marketing</h4>
+                    <p class="mb-4 text-gray-400">Soluții inteligente pentru creșterea performanței:</p>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Recomandări personalizate AI
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Analiză predictivă clienți
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Marketing automatizat
+                        </li>
+                    </ul>
+                </div>
+
                 <!-- Digital Marketing -->
                 <div
                     class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-green-500/50">
@@ -203,7 +328,7 @@
                             </svg>
                             Producție Audio
                         </li>
-                      
+
                         <li class="flex items-center">
                             <svg class="w-4 h-4 mr-2 text-orange-500" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
@@ -252,47 +377,6 @@
                                     d="M5 13l4 4L19 7" />
                             </svg>
                             Integrări plăți
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- AI Integration -->
-                <div
-                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-pink-500/50">
-                    <div
-                        class="flex items-center justify-center w-12 h-12 mb-4 text-pink-500 rounded-lg bg-pink-500/10">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <h4 class="mb-2 text-xl font-semibold text-white">Integrări AI & ML</h4>
-                    <p class="mb-4 text-gray-400">Soluții inteligente pentru business:</p>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-pink-500" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Chatboți AI
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-pink-500" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Automatizări
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-pink-500" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Analiză predictivă
                         </li>
                     </ul>
                 </div>
