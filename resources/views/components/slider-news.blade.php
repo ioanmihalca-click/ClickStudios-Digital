@@ -1,4 +1,32 @@
-<div x-data="{ slideOverOpen: false }" class="relative z-50 w-auto h-auto">
+<div x-data="{ 
+    slideOverOpen: false,
+    showButton: false,
+    lastScrollTop: 0,
+    handleScroll() {
+        let st = window.pageYOffset;
+        this.showButton = st < 100 || (st < this.lastScrollTop && st > 100);
+        this.lastScrollTop = st;
+    }
+}" 
+    x-init="
+        // Inițial setăm showButton la false
+        showButton = false;
+        // După 1000ms verificăm poziția și setăm starea corectă
+        setTimeout(() => {
+            showButton = window.pageYOffset < 100;
+        }, 1000);
+        window.addEventListener('scroll', () => handleScroll());
+    "
+    class="fixed left-0 z-50 transition-all duration-300 ease-in-out bottom-4 md:bottom-10"
+    x-show="showButton"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0 transform translate-y-10"
+    x-transition:enter-end="opacity-100 transform translate-y-0"
+    x-transition:leave="transition ease-in duration-300"
+    x-transition:leave-start="opacity-100 transform translate-y-0"
+    x-transition:leave-end="opacity-0 transform translate-y-10"
+    x-cloak
+>
     <!-- Buton Trigger cu Animație -->
     <button @click="slideOverOpen=true" 
             class="flex items-center px-4 py-2 text-sm font-medium tracking-wider text-white uppercase transition-all duration-300 rounded-r-lg shadow-lg group bg-emerald-500 hover:bg-emerald-600 focus:outline-none font-roboto-condensed">
