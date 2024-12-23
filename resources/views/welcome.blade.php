@@ -189,7 +189,7 @@
                     Despre Noi
                 </span>
                 <h2 class="mb-6 text-3xl font-bold text-white md:text-4xl">
-                    Expertiză în Dezvoltare Web și Marketing Digital
+                    Expertiză în Dezvoltare Web
                 </h2>
                 <p class="mb-12 text-gray-300">
                     Cu focus pe tehnologii moderne și rezultate măsurabile, suntem partenerul ideal pentru prezența ta
