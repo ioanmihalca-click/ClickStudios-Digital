@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="{{ asset('assets/favicon/favicon.ico') }}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}" />
     <meta name="apple-mobile-web-app-title" content="ClickStudiosDigital" />
-    <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}" />
+    {{-- <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}" /> --}}
 
     <!-- Open Graph Tags for Social Media Sharing -->
     <meta property="og:title" content="Click Studios - Web Development & Digital Marketing" />

@@ -1,5 +1,6 @@
 import './bootstrap';
 
+
 //Parallax effect
 function effectsHomeSection() {
     const homeSection = document.querySelector('.home-parallax, .home-fade');

@@ -79,7 +79,7 @@
                                 <h2 class="mb-4 text-3xl font-bold text-white">{{ $item['title'] }}</h2>
 
                                 <div class="relative overflow-hidden rounded-xl">
-                                    <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}"
+                                    <img src="{{ asset($item['image']) }}" alt="{{ $item['title'] }}"
                                         class="w-full h-auto transition-transform duration-300 transform rounded-xl hover:scale-105">
                                 </div>
 

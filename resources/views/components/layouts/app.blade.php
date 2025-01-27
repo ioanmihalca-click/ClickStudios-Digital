@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="{{ asset('assets/favicon/favicon.ico') }}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}" />
     <meta name="apple-mobile-web-app-title" content="ClickStudiosDigital" />
-    <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}" />
+    {{-- <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}" /> --}}
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/669bfeabc1.js" crossorigin="anonymous"></script>
