@@ -16,9 +16,9 @@ use App\Http\Controllers\SubscriberController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/dezvoltare-web' , DezvoltareWeb::class)->name('dezvoltare-web'); 
-Route::get('/portofoliu' , Portofoliu::class)->name('portofoliu'); 
-Route::get('/servicii' , Servicii::class)->name('servicii');
+Route::get('/web-development' , DezvoltareWeb::class)->name('web-development'); 
+Route::get('/portfolio' , Portofoliu::class)->name('portfolio'); 
+Route::get('/services' , Servicii::class)->name('services');
 
 Route::post('/subscribers', [SubscriberController::class, 'store'])->name('subscribers.store');
 Route::get('/unsubscribe/{token}', Unsubscribe::class)->name('unsubscribe');

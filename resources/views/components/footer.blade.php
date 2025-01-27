@@ -24,7 +24,7 @@
                         </a>
                     </li>
                     <li class="flex items-center justify-center md:justify-start">
-                        <i class="mr-3 fas fa-map-marker-alt"></i>Baia-Mare, Maramures
+                        <i class="mr-3 fas fa-map-marker-alt"></i>Baia-Mare, Maramures, RO
                     </li>
                     <li class="flex items-center justify-center md:justify-start">
                         <x-modal-contact />
@@ -34,17 +34,16 @@
 
             <!-- Quick Links -->
             <div class="text-center md:text-left">
-                <h3 class="mb-6 text-xl font-bold text-emerald-400">Link-uri Rapide</h3>
+                <h3 class="mb-6 text-xl font-bold text-emerald-400">Quick Links</h3>
                 <ul class="space-y-4">
-                    <li><a href="/dezvoltare-web" wire:navigate
-                            class="transition duration-300 hover:text-emerald-400">Dezvoltare Web</a></li>
-                    <li><a href="/servicii" wire:navigate
-                            class="transition duration-300 hover:text-emerald-400">Servicii</a></li>
-                    <li><a href="/portofoliu" wire:navigate
-                            class="transition duration-300 hover:text-emerald-400">Portofoliu</a>
-                    </li>
-                    <li><a href="/blog" wire:navigate class="transition duration-300 hover:text-emerald-400">Blog</a>
-                    </li>
+                    <li><a href="{{ route('web-development') }}" wire:navigate
+                            class="transition duration-300 hover:text-emerald-400">Web Development</a></li>
+                    <li><a href="{{ route('services') }}" wire:navigate
+                            class="transition duration-300 hover:text-emerald-400">Services</a></li>
+                    <li><a href="{{ route('portfolio') }}" wire:navigate
+                            class="transition duration-300 hover:text-emerald-400">Portfolio</a></li>
+                    <li><a href="{{ route('blog') }}" wire:navigate
+                            class="transition duration-300 hover:text-emerald-400">Blog</a></li>
                 </ul>
             </div>
 
@@ -53,7 +52,7 @@
 
             <!-- Social Media -->
             <div class="text-center md:text-right">
-                <h3 class="mb-6 text-xl font-bold text-emerald-400">Urmăriți-ne</h3>
+                <h3 class="mb-6 text-xl font-bold text-emerald-400">Follow us</h3>
                 <div class="flex justify-center space-x-6 md:justify-end">
                     <a href="https://www.facebook.com/profile.php?id=61560427317860" target="_blank"
                         rel="noopener noreferrer" class="text-gray-400 transition duration-300 hover:text-emerald-500">
@@ -75,7 +74,7 @@
 
         <div class="text-center">
             <p class="text-gray-400">&copy; <span x-text="new Date().getFullYear()"></span> <strong
-                    class="font-semibold text-white">Click Studios Digital</strong>. Toate drepturile rezervate.</p>
+                    class="font-semibold text-white">Click Studios Digital</strong>. All rights reserved.</p>
         </div>
     </div>
 </footer>

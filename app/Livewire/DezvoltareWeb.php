@@ -5,7 +5,7 @@ namespace App\Livewire;
 use Livewire\Component;
 use Livewire\Attributes\Title;
 
-#[Title('Dezvoltare Web | Click Studios Digital')]
+#[Title('Web Development | Click Studios Digital')]
 class DezvoltareWeb extends Component
 {
     public function render()
