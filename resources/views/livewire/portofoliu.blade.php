@@ -79,8 +79,8 @@
                                 <h2 class="mb-4 text-3xl font-bold text-white">{{ $item['title'] }}</h2>
 
                                 <div class="relative overflow-hidden rounded-xl">
-                                    <img src="{{ asset($item['image']) }}" alt="{{ $item['title'] }}"
-                                        class="w-full h-auto transition-transform duration-300 transform rounded-xl hover:scale-105">
+                                   <img src="{{ Storage::url($item['image']) }}" alt="{{ $item['title'] }}"
+    class="w-full h-auto transition-transform duration-300 transform rounded-xl hover:scale-105">
                                 </div>
 
                                 <p class="text-gray-300">{{ $item['description'] }}</p>
