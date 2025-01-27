@@ -87,7 +87,7 @@
 
                                 @if (!empty($item['features']))
                                     <div class="space-y-2">
-                                        <h3 class="text-lg font-semibold text-emerald-400">Caracteristici principale
+                                        <h3 class="text-lg font-semibold text-emerald-400">Key Features
                                         </h3>
                                         <ul class="space-y-2 text-gray-300">
                                             @foreach ($item['features'] as $feature)
@@ -106,7 +106,7 @@
 
                                 @if (!empty($item['youtube_url']))
                                     <div class="space-y-2">
-                                        <h3 class="text-lg font-semibold text-emerald-400">Video Presentation</h3>
+                                        <h3 class="text-lg font-semibold text-emerald-400">Video:</h3>
                                         <div class="relative overflow-hidden rounded-xl aspect-video">
                                             @php
                                                 $youtubeUrl = $item['youtube_url'];
