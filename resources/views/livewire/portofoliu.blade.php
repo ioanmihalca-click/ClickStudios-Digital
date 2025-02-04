@@ -132,7 +132,7 @@
                                 @if (isset($item['website_url']))
                                     <a href="{{ $item['website_url'] }}" target="_blank" rel="noopener noreferrer"
                                         class="inline-flex items-center px-6 py-3 text-white transition-colors duration-300 rounded-lg bg-emerald-600 hover:bg-emerald-700">
-                                        Vizitează Site-ul
+                                        Visit website
                                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

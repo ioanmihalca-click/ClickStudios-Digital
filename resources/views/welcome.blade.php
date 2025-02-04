@@ -315,79 +315,84 @@
     </section>
 
     <!-- Laravel & AI Tutorials Section -->
-<section class="relative z-30 py-20 bg-gray-800">
-    <div class="container px-4 mx-auto">
-        <div class="max-w-3xl mx-auto text-center">
-            <span class="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-emerald-400 bg-emerald-500/10 rounded-full">
-                Laravel & AI Tutorials
-            </span>
-            <h2 class="mb-6 text-3xl font-bold text-white md:text-4xl">
-                Resources and Tutorials for Modern Development
-            </h2>
-            <p class="mb-12 text-gray-300">
-                Explore our series of tutorials about Laravel and AI integrations, created specifically for
-                developers and entrepreneurs.
-            </p>
-        </div>
-
-        <!-- YouTube Links Cards -->
-        <div class="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2">
-            <a href="https://www.youtube.com/@clickstudiosdigital" target="_blank" rel="noopener noreferrer"
-                class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-red-500/50">
-                <div class="flex items-center gap-4">
-                    <div class="flex items-center justify-center w-12 h-12 text-red-500 rounded-lg bg-red-500/10">
-                        <i class="text-2xl fa-brands fa-youtube"></i>
-                    </div>
-                    <div>
-                        <h3 class="mb-2 text-xl font-semibold text-white">Our YouTube Channel</h3>
-                        <p class="text-gray-300">Subscribe for tutorials and resources about modern web development</p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://www.youtube.com/playlist?list=PLQ7Vo4mPYozh-Kyub4v0xab2TxSLi-S8j" target="_blank"
-                rel="noopener noreferrer"
-                class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-red-500/50">
-                <div class="flex items-center gap-4">
-                    <div class="flex items-center justify-center w-12 h-12 text-red-500 rounded-lg bg-red-500/10">
-                        <i class="text-xl fa-solid fa-play"></i>
-                    </div>
-                    <div>
-                        <h3 class="mb-2 text-xl font-semibold text-white">Tutorials Playlist</h3>
-                        <p class="text-gray-300">Complete series of Laravel and AI integration tutorials</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <!-- Benefits Grid -->
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div class="p-6 transition-all duration-300 border bg-gray-800/50 rounded-xl border-gray-700/50">
-                <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-emerald-500 bg-emerald-500/10">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                </div>
-                <h3 class="mb-2 text-xl font-semibold text-white">Practical Learning</h3>
-                <p class="text-gray-300">Real examples and practical implementations for modern projects</p>
+    <section class="relative z-30 py-20 bg-gray-800">
+        <div class="container px-4 mx-auto">
+            <div class="max-w-3xl mx-auto text-center">
+                <span
+                    class="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-emerald-400 bg-emerald-500/10 rounded-full">
+                    Laravel & AI Tutorials
+                </span>
+                <h2 class="mb-6 text-3xl font-bold text-white md:text-4xl">
+                    Resources and Tutorials for Modern Development
+                </h2>
+                <p class="mb-12 text-gray-300">
+                    Explore our series of tutorials about Laravel and AI integrations, created specifically for
+                    developers and entrepreneurs.
+                </p>
             </div>
 
-            <div class="p-6 transition-all duration-300 border bg-gray-800/50 rounded-xl border-gray-700/50">
-                <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-emerald-500 bg-emerald-500/10">
-                    <i class="fa-solid fa-robot"></i>
-                </div>
-                <h3 class="mb-2 text-xl font-semibold text-white">AI Integrations</h3>
-                <p class="text-gray-300">Discover how to integrate AI technologies into your web applications</p>
+            <!-- YouTube Links Cards -->
+            <div class="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2">
+                <a href="https://www.youtube.com/@clickstudiosdigital" target="_blank" rel="noopener noreferrer"
+                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-red-500/50">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center justify-center w-12 h-12 text-red-500 rounded-lg bg-red-500/10">
+                            <i class="text-2xl fa-brands fa-youtube"></i>
+                        </div>
+                        <div>
+                            <h3 class="mb-2 text-xl font-semibold text-white">Our YouTube Channel</h3>
+                            <p class="text-gray-300">Subscribe for tutorials and resources about modern web development
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://www.youtube.com/playlist?list=PLQ7Vo4mPYozh-Kyub4v0xab2TxSLi-S8j" target="_blank"
+                    rel="noopener noreferrer"
+                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-red-500/50">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center justify-center w-12 h-12 text-red-500 rounded-lg bg-red-500/10">
+                            <i class="text-xl fa-solid fa-play"></i>
+                        </div>
+                        <div>
+                            <h3 class="mb-2 text-xl font-semibold text-white">Tutorials Playlist</h3>
+                            <p class="text-gray-300">Complete series of Laravel and AI integration tutorials</p>
+                        </div>
+                    </div>
+                </a>
             </div>
 
-            <div class="p-6 transition-all duration-300 border bg-gray-800/50 rounded-xl border-gray-700/50">
-                <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-emerald-500 bg-emerald-500/10">
-                    <i class="fa-solid fa-code"></i>
+            <!-- Benefits Grid -->
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div class="p-6 transition-all duration-300 border bg-gray-800/50 rounded-xl border-gray-700/50">
+                    <div
+                        class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-emerald-500 bg-emerald-500/10">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="mb-2 text-xl font-semibold text-white">Practical Learning</h3>
+                    <p class="text-gray-300">Real examples and practical implementations for modern projects</p>
                 </div>
-                <h3 class="mb-2 text-xl font-semibold text-white">Source Code</h3>
-                <p class="text-gray-300">Access to code examples and resources for featured projects</p>
+
+                <div class="p-6 transition-all duration-300 border bg-gray-800/50 rounded-xl border-gray-700/50">
+                    <div
+                        class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-emerald-500 bg-emerald-500/10">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="mb-2 text-xl font-semibold text-white">AI Integrations</h3>
+                    <p class="text-gray-300">Discover how to integrate AI technologies into your web applications</p>
+                </div>
+
+                <div class="p-6 transition-all duration-300 border bg-gray-800/50 rounded-xl border-gray-700/50">
+                    <div
+                        class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-emerald-500 bg-emerald-500/10">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="mb-2 text-xl font-semibold text-white">Source Code</h3>
+                    <p class="text-gray-300">Access to code examples and resources for featured projects</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Latest Projects Section -->
     {{-- <section class="py-4 bg-gray-800">
