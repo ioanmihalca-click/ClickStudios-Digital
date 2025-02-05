@@ -29,8 +29,8 @@ class PortfolioItemResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->live(onBlur: true)
-                    ->afterStateUpdated(fn (string $operation, $state, Forms\Set $set) => 
-                        $operation === 'create' ? $set('slug', Str::slug($state)) : null),
+                    ->afterStateUpdated(fn(string $operation, $state, Forms\Set $set) =>
+                    $operation === 'create' ? $set('slug', Str::slug($state)) : null),
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->unique(ignoreRecord: true),
@@ -74,6 +74,10 @@ class PortfolioItemResource extends Resource
                     ]),
                 Forms\Components\Toggle::make('is_active')
                     ->default(true),
+                // În PortfolioItemResource.php, în metoda form()
+                Forms\Components\Toggle::make('is_featured')
+                    ->label('Show in Featured Apps section')
+                    ->default(false),
                 Forms\Components\TextInput::make('sort_order')
                     ->numeric()
                     ->default(0),

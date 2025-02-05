@@ -153,7 +153,7 @@
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
                     Digital Experiences
                 </span>
-                That Matter
+
             </h1>
             <p class="max-w-2xl mx-auto mb-8 text-lg text-gray-300 md:text-xl">
                 Specialized in Laravel development and AI integrations, we create innovative web solutions.
@@ -189,8 +189,14 @@
     </div>
     </section>
 
+    <!-- Featured Apps -->
+
+    <section id='about' class="bg-gradient-to-b from-gray-900 to-gray-800">
+        <livewire:featured-apps />
+    </section>
+
     <!-- About Section Modernized -->
-    <section id="about" class="relative z-30 py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+    {{-- <section id="about" class="relative z-30 py-20 bg-gradient-to-b from-gray-900 to-gray-800">
         <div class="container px-4 mx-auto">
             <div class="max-w-3xl mx-auto text-center">
                 <span
@@ -312,10 +318,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Laravel & AI Tutorials Section -->
-    <section class="relative z-30 py-20 bg-gray-800">
+    {{-- <section class="relative z-30 py-20 bg-gray-800">
         <div class="container px-4 mx-auto">
             <div class="max-w-3xl mx-auto text-center">
                 <span
@@ -392,7 +398,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Latest Projects Section -->
     {{-- <section class="py-4 bg-gray-800">

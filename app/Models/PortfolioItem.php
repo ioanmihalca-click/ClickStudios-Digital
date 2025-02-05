@@ -19,6 +19,7 @@ class PortfolioItem extends Model
         'is_active',
         'sort_order',
         'youtube_url',
+        'is_featured',
     ];
 
     protected $casts = [
