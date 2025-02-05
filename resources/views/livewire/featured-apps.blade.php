@@ -1,4 +1,4 @@
-<section class="relative z-30 py-12 border-b bg-gradient-to-b border-emerald-500 from-gray-900 to-gray-800">
+<section class="relative z-30 py-12 bg-gradient-to-b from-gray-900 to-gray-800">
     <div class="container px-4 mx-auto">
         <div class="max-w-3xl mx-auto text-center">
             <span class="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-emerald-400 bg-emerald-500/10 rounded-full">
