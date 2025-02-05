@@ -77,11 +77,11 @@
             @endforeach
         </div>
 
-        <div class="mt-8 text-center">
+        <div class="mt-12 text-center">
             <a href="{{ route('portfolio') }}" 
-               class="inline-flex items-center justify-center px-5 py-2 text-sm font-medium text-white transition-all duration-300 rounded-lg bg-emerald-600 hover:bg-emerald-700">
+               class="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white transition-all duration-300 rounded-lg bg-emerald-600 hover:bg-emerald-700 min-w-[200px]">
                 See All Apps
-                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
             </a>
