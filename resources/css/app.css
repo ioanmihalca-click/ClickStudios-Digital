@@ -54,3 +54,64 @@ body {
     object-fit: cover;
 }
 
+
+/* Efecte 3D pentru cardurile de proiecte */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.transform-style-3d {
+    transform-style: preserve-3d;
+}
+
+.translate-z-12 {
+    transform: translateZ(12px);
+}
+
+/* Animație float pentru hover */
+@keyframes float {
+    0% { transform: translateZ(0) translateY(0); }
+    50% { transform: translateZ(10px) translateY(-5px); }
+    100% { transform: translateZ(0) translateY(0); }
+}
+
+.group:hover {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Rotații și efecte pentru carduri pe desktop */
+@media (min-width: 768px) {
+    .md\:rotate-y-30 {
+        transform: rotateY(35deg);
+    }
+    
+    .md\:-rotate-y-30 {
+        transform: rotateY(-35deg);
+    }
+    
+    .md\:hover\:rotate-y-0:hover {
+        transform: rotateY(0deg);
+    }
+    
+    .md\:hover\:translate-z-10:hover {
+        transform: translateZ(10px);
+    }
+    
+    .center-card {
+        height: calc(100% - 2.5rem);
+        margin-top: 1.2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Tranziții smooth pentru toate efectele */
+.transition-transform {
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+/* Efect de hover pentru carduri */
+.hover\:shadow-xl:hover {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5);
+}
