@@ -5,12 +5,15 @@
         setTimeout(() => isVisible = true, 100);
     })">
 
-    <!-- Background Image cu Overlay Gradient -->
-    <div class="absolute inset-0 z-0 overflow-hidden">
+
+    <!-- Background image -->
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img src="{{ asset('assets/carusel-bg.webp') }}" alt=""
-            class="absolute inset-0 object-cover w-full h-full opacity-70">
-        <div class="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-800/90 to-gray-900/90"></div>
+            class="absolute inset-0 object-cover w-full h-full opacity-75 animate-enhanced-kenburns">
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-900/85 via-gray-800/85 to-gray-900/85"></div>
     </div>
+
+
 
     <!-- Background Pattern -->
     <div
