@@ -11,7 +11,19 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        // Register middleware groups
+        $middleware->web(\App\Http\Middleware\EncryptCookies::class);
+        $middleware->web(\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class);
+        $middleware->web(\Illuminate\Session\Middleware\StartSession::class);
+        $middleware->web(\Illuminate\View\Middleware\ShareErrorsFromSession::class);
+        $middleware->web(\App\Http\Middleware\VerifyCsrfToken::class);
+        $middleware->web(\Illuminate\Routing\Middleware\SubstituteBindings::class);
+        $middleware->web(\App\Http\Middleware\SetLocale::class);
+
+        // Register middleware aliases
+        $middleware->alias([
+            'setlocale' => \App\Http\Middleware\SetLocale::class
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

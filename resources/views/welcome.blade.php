@@ -145,27 +145,27 @@
         <!-- Hero Content -->
         <div class="container relative z-10 px-4 mx-auto text-center">
             <span
-                class="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-emerald-400 bg-emerald-500/10 rounded-full">
-                Web Development & Digital Marketing
+                class="inline-block px-5 py-2 mb-8 text-sm font-medium border rounded-full text-emerald-400 bg-emerald-500/10 backdrop-blur-sm border-emerald-500/20">
+                <i class="mr-2 fa-solid fa-code"></i> {{ __('messages.hero.tagline') }}
             </span>
-            <h1 class="max-w-4xl mx-auto mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
-                Transforming Ideas into
+            <h1 class="max-w-3xl mx-auto mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+                {{ __('messages.hero.title') }}
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-                    Digital Experiences
+                    {{ __('messages.hero.title-gradient') }}
                 </span>
 
             </h1>
-            <p class="max-w-2xl mx-auto mb-8 text-lg text-gray-300 md:text-xl">
-                Specialized in Laravel development and AI integrations, we create innovative web solutions.
+            <p class="max-w-4xl mx-auto mb-8 text-lg text-gray-300 md:text-xl">
+                {{ __('messages.hero.subtitle') }}
             </p>
             <div class="flex flex-col justify-center gap-4 sm:flex-row">
                 <a href="#about"
                     class="px-8 py-3 text-sm font-medium tracking-wider text-white uppercase transition-all duration-300 rounded-lg bg-emerald-600 hover:bg-emerald-700">
-                    Discover Click Studios
+                    {{ __('messages.hero.discover_button') }}
                 </a>
                 <button @click="$dispatch('open-contact-modal')"
                     class="px-8 py-3 text-sm font-medium tracking-wider text-white uppercase transition-all duration-300 border rounded-lg border-white/30 hover:bg-white/10">
-                    Contact Us
+                    {{ __('messages.hero.contact_button') }}
                 </button>
             </div>
 
@@ -175,238 +175,14 @@
                     class="text-gray-400 transition-colors duration-300 hover:text-white">
                     <i class="text-5xl fa-brands fa-github"></i>
                 </a>
-                {{-- <a href="https://www.youtube.com/@clickstudiosdigital" target="_blank" rel="noopener noreferrer"
-                    class="text-gray-400 transition-colors duration-300 hover:text-white">
-                    <i class="text-2xl fa-brands fa-youtube"></i>
-                </a> --}}
             </div>
         </div>
-    </section>
-
-    <!-- Slider News (păstrat conform cerințelor) -->
-    <div class="fixed left-0 z-50 transition-all duration-300 ease-in-out bottom-4 md:bottom-10">
-        <x-slider-news />
-    </div>
     </section>
 
     <!-- Featured Apps -->
-
     <section id='about' class="bg-gradient-to-b from-gray-900 to-gray-800">
         <livewire:featured-apps />
     </section>
-
-    <!-- About Section Modernized -->
-    {{-- <section id="about" class="relative z-30 py-20 bg-gradient-to-b from-gray-900 to-gray-800">
-        <div class="container px-4 mx-auto">
-            <div class="max-w-3xl mx-auto text-center">
-                <span
-                    class="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-emerald-400 bg-emerald-500/10 rounded-full">
-                    About Us
-                </span>
-                <h2 class="mb-6 text-3xl font-bold text-white md:text-4xl">
-                    Web Development Expertise
-                </h2>
-                <p class="mb-12 text-gray-300">
-                    With a focus on modern technologies and measurable results, we are your ideal partner for digital
-                    presence.
-                </p>
-            </div>
-
-            <!-- Stats Grid -->
-            <div class="grid grid-cols-1 gap-8 mb-16 md:grid-cols-3">
-                <div class="p-6 text-center bg-gray-800/50 rounded-xl">
-                    <div class="text-3xl font-bold text-emerald-400">100%</div>
-                    <div class="mt-2 text-gray-300">Client Satisfaction</div>
-                </div>
-                <div class="p-6 text-center bg-gray-800/50 rounded-xl">
-                    <div class="text-3xl font-bold text-emerald-400">50+</div>
-                    <div class="mt-2 text-gray-300">Completed Projects</div>
-                </div>
-                <div class="p-6 text-center bg-gray-800/50 rounded-xl">
-                    <div class="text-3xl font-bold text-emerald-400">24/7</div>
-                    <div class="mt-2 text-gray-300">Technical Support</div>
-                </div>
-            </div>
-
-            <!-- Feature Grid -->
-            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <div
-                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-emerald-500/50">
-                    <div
-                        class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-emerald-500 bg-emerald-500/10">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                        </svg>
-                    </div>
-                    <h3 class="mb-2 text-xl font-semibold text-white">Laravel Development</h3>
-                    <p class="text-gray-300">Robust and scalable web applications using the most popular PHP framework.
-                    </p>
-                </div>
-
-                <div
-                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-emerald-500/50">
-                    <div
-                        class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-emerald-500 bg-emerald-500/10">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-                    <h3 class="mb-2 text-xl font-semibold text-white">Business Automation</h3>
-                    <p class="text-gray-300">
-                        24/7 intelligent chatbots, automated document processing, and AI-based management systems.
-                    </p>
-                </div>
-
-                <div
-                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-cyan-500/50">
-                    <div
-                        class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-cyan-500 bg-cyan-500/10">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-                    <h3 class="mb-2 text-xl font-semibold text-white">Intelligent Marketing</h3>
-                    <p class="text-gray-300">
-                        AI recommendation systems, predictive analytics, and marketing automation to increase sales.
-                    </p>
-                </div>
-
-                <div
-                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-purple-500/50">
-                    <div
-                        class="flex items-center justify-center w-12 h-12 mb-4 text-purple-500 rounded-lg bg-purple-500/10">
-                        <i class="fa-solid fa-gears"></i>
-                    </div>
-                    <h3 class="mb-2 text-xl font-semibold text-white">Workflows</h3>
-                    <p class="text-gray-300">
-                        Process optimization through custom automations and AI integrations.
-                    </p>
-                </div>
-
-                <div
-                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-orange-500/50">
-                    <div
-                        class="flex items-center justify-center w-12 h-12 mb-4 text-orange-500 rounded-lg bg-orange-500/10">
-                        <i class="fa-solid fa-comments"></i>
-                    </div>
-                    <h3 class="mb-2 text-xl font-semibold text-white">Digital Support</h3>
-                    <p class="text-gray-300">
-                        Intelligent chatbots and automated customer assistance systems available 24/7.
-                    </p>
-                </div>
-
-                <div
-                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-emerald-500/50">
-                    <div
-                        class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-emerald-500 bg-emerald-500/10">
-                        <i class="fa-solid fa-file-invoice"></i>
-                    </div>
-                    <h3 class="mb-2 text-xl font-semibold text-white">Automated Management</h3>
-                    <p class="text-gray-300">
-                        Integrated invoicing and document management systems with AI processing.
-                    </p>
-                </div>
-
-                <div
-                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-blue-500/50">
-                    <div
-                        class="flex items-center justify-center w-12 h-12 mb-4 text-blue-500 rounded-lg bg-blue-500/10">
-                        <i class="fa-solid fa-gauge-high"></i>
-                    </div>
-                    <h3 class="mb-2 text-xl font-semibold text-white">Real-Time Analytics</h3>
-                    <p class="text-gray-300">
-                        Interactive dashboards and predictive analytics for informed decisions.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
-    <!-- Laravel & AI Tutorials Section -->
-    {{-- <section class="relative z-30 py-20 bg-gray-800">
-        <div class="container px-4 mx-auto">
-            <div class="max-w-3xl mx-auto text-center">
-                <span
-                    class="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-emerald-400 bg-emerald-500/10 rounded-full">
-                    Laravel & AI Tutorials
-                </span>
-                <h2 class="mb-6 text-3xl font-bold text-white md:text-4xl">
-                    Resources and Tutorials for Modern Development
-                </h2>
-                <p class="mb-12 text-gray-300">
-                    Explore our series of tutorials about Laravel and AI integrations, created specifically for
-                    developers and entrepreneurs.
-                </p>
-            </div>
-
-            <!-- YouTube Links Cards -->
-            <div class="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2">
-                <a href="https://www.youtube.com/@clickstudiosdigital" target="_blank" rel="noopener noreferrer"
-                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-red-500/50">
-                    <div class="flex items-center gap-4">
-                        <div class="flex items-center justify-center w-12 h-12 text-red-500 rounded-lg bg-red-500/10">
-                            <i class="text-2xl fa-brands fa-youtube"></i>
-                        </div>
-                        <div>
-                            <h3 class="mb-2 text-xl font-semibold text-white">Our YouTube Channel</h3>
-                            <p class="text-gray-300">Subscribe for tutorials and resources about modern web development
-                            </p>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="https://www.youtube.com/playlist?list=PLQ7Vo4mPYozh-Kyub4v0xab2TxSLi-S8j" target="_blank"
-                    rel="noopener noreferrer"
-                    class="p-6 transition-all duration-300 border group bg-gray-800/50 rounded-xl border-gray-700/50 hover:border-red-500/50">
-                    <div class="flex items-center gap-4">
-                        <div class="flex items-center justify-center w-12 h-12 text-red-500 rounded-lg bg-red-500/10">
-                            <i class="text-xl fa-solid fa-play"></i>
-                        </div>
-                        <div>
-                            <h3 class="mb-2 text-xl font-semibold text-white">Tutorials Playlist</h3>
-                            <p class="text-gray-300">Complete series of Laravel and AI integration tutorials</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Benefits Grid -->
-            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <div class="p-6 transition-all duration-300 border bg-gray-800/50 rounded-xl border-gray-700/50">
-                    <div
-                        class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-emerald-500 bg-emerald-500/10">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="mb-2 text-xl font-semibold text-white">Practical Learning</h3>
-                    <p class="text-gray-300">Real examples and practical implementations for modern projects</p>
-                </div>
-
-                <div class="p-6 transition-all duration-300 border bg-gray-800/50 rounded-xl border-gray-700/50">
-                    <div
-                        class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-emerald-500 bg-emerald-500/10">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-                    <h3 class="mb-2 text-xl font-semibold text-white">AI Integrations</h3>
-                    <p class="text-gray-300">Discover how to integrate AI technologies into your web applications</p>
-                </div>
-
-                <div class="p-6 transition-all duration-300 border bg-gray-800/50 rounded-xl border-gray-700/50">
-                    <div
-                        class="flex items-center justify-center w-12 h-12 mb-4 rounded-lg text-emerald-500 bg-emerald-500/10">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-                    <h3 class="mb-2 text-xl font-semibold text-white">Source Code</h3>
-                    <p class="text-gray-300">Access to code examples and resources for featured projects</p>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
-    <!-- Latest Projects Section -->
-    {{-- <section class="py-4 bg-gray-800">
-        <div class="container px-4 mx-auto">
-
-            <livewire:latest-projects />
-        </div>
-    </section> --}}
 
     <x-footer />
 

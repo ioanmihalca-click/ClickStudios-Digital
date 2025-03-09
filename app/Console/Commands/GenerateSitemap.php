@@ -6,8 +6,6 @@ use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
-use App\Models\Post;
-use App\Models\Tag;
 
 class GenerateSitemap extends Command
 {
@@ -20,18 +18,16 @@ class GenerateSitemap extends Command
         
         $sitemap = Sitemap::create();
 
-        // Adăugare pagină principală
-        $sitemap->add(Url::create('/')
-            ->setLastModificationDate(Carbon::now())
-            ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
-            ->setPriority(1.0));
-
-        // Adăugare pagini statice
+        // Add static pages with their priorities
         $staticPages = [
-            '/dezvoltare-web' => 0.9,
-            '/servicii' => 0.9,
-            '/portofoliu' => 0.9,
-            '/blog' => 0.9,
+            '/' => 1.0,
+            '/ro' => 1.0,
+            '/en/web-development' => 0.9,
+            '/ro/web-development' => 0.9,
+            '/en/services' => 0.9,
+            '/ro/services' => 0.9,
+            '/en/portfolio' => 0.8,
+            '/ro/portfolio' => 0.8,
         ];
 
         foreach ($staticPages as $url => $priority) {
@@ -41,21 +37,7 @@ class GenerateSitemap extends Command
                 ->setPriority($priority));
         }
 
-        // Adăugare postări blog
-        Post::all()->each(function (Post $post) use ($sitemap) {
-            $sitemap->add(Url::create("/blog/postari/{$post->slug}")
-                ->setLastModificationDate($post->updated_at)
-                ->setPriority(0.8));
-        });
-
-        // Adăugare pagini de etichete
-        Tag::all()->each(function (Tag $tag) use ($sitemap) {
-            $sitemap->add(Url::create("/blog/etichete/{$tag->slug}")
-                ->setLastModificationDate($tag->updated_at)
-                ->setPriority(0.7));
-        });
-
-        // Salvare sitemap
+        // Save sitemap
         $sitemap->writeToFile(public_path('sitemap.xml'));
         
         $this->info('Sitemap generated successfully!');

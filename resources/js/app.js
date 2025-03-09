@@ -77,12 +77,13 @@ async function initializeTsParticles() {
 
 // Ascultător pentru evenimentul de navigare Livewire
 document.addEventListener("livewire:navigated", () => {
-  if (window.location.pathname === "/portofoliu") {
+  // Check if current path matches /locale/portfolio pattern
+  if (/^\/[a-z]{2}\/portfolio$/.test(window.location.pathname)) {
       initializeTsParticles();
   }
 });
 
 // Inițializăm tsParticles când pagina este încărcată inițial
-if (window.location.pathname === "/portofoliu") {
+if (/^\/[a-z]{2}\/portfolio$/.test(window.location.pathname)) {
   window.addEventListener('load', initializeTsParticles);
 }

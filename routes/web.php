@@ -1,32 +1,36 @@
 <?php
 
-use App\Livewire\TagShow;
-use App\Livewire\PostList;
-use App\Livewire\PostShow;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LanguageController;
 use App\Livewire\DezvoltareWeb;
-use App\Livewire\Servicii;
 use App\Livewire\Portofoliu;
-
-
+use App\Livewire\Servicii;
 use App\Livewire\Unsubscribe;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubscriberController;
+use App\Livewire\Contact;
+use Illuminate\Support\Facades\Route;
 
+// Default redirect to user's preferred language
+Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/', function () {
-    return view('welcome');
+// Language Switcher - Must be before localized routes
+Route::get('/switch-language/{locale}', [LanguageController::class, 'switchLocale'])
+    ->where('locale', 'en|ro');
+
+// Localized Routes
+Route::group(['prefix' => '{locale}', 'middleware' => ['web', 'setlocale'], 'where' => ['locale' => 'en|ro']], function () {
+    // Home page
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('home');
+
+    // Main navigation routes
+    Route::get('/web-development', DezvoltareWeb::class)->name('web-development');
+    Route::get('/services', Servicii::class)->name('services');
+    Route::get('/portfolio', Portofoliu::class)->name('portfolio');
+    Route::get('/contact', Contact::class)->name('contact');
+    Route::get('/unsubscribe/{token}', Unsubscribe::class)->name('unsubscribe');
+
+    // Form submissions
+    Route::post('/subscribers', [SubscriberController::class, 'store'])->name('subscribers.store');
 });
-Route::get('/web-development' , DezvoltareWeb::class)->name('web-development'); 
-Route::get('/portfolio' , Portofoliu::class)->name('portfolio'); 
-Route::get('/services' , Servicii::class)->name('services');
-
-Route::post('/subscribers', [SubscriberController::class, 'store'])->name('subscribers.store');
-Route::get('/unsubscribe/{token}', Unsubscribe::class)->name('unsubscribe');
-
-    // Blog
-    Route::prefix('blog')->group(function () {
-    Route::get('/', PostList::class)->name('blog'); 
-    Route::get('/postari/{post:slug}', PostShow::class)->name('postari.show');
-    Route::get('/etichete/{tag:slug}', TagShow::class)->name('etichete.show');
-});
-
