@@ -9,10 +9,14 @@ class SetLocale
 {
     public function handle(Request $request, Closure $next)
     {
+        // Skip for admin panel routes
+        if (str_starts_with($request->path(), 'admin')) {
+            return $next($request);
+        }
+
         $locale = $request->route('locale');
 
         // Skip locale check for routes that don't have a locale parameter
-        // This allows the root URL to work without a locale
         if ($locale === null) {
             return $next($request);
         }
