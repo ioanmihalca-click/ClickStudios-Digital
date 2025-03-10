@@ -11,14 +11,16 @@ class PortfolioItem extends Model
         'title',
         'title_ro',
         'slug',
+        'short_description',
+        'short_description_ro',
         'description',
         'description_ro',
         'image',
         'technologies',
-        'technologies_ro',
         'features',
         'features_ro',
         'website_url',
+        'youtube_url',
         'is_featured',
         'is_active',
         'sort_order',
@@ -26,7 +28,6 @@ class PortfolioItem extends Model
 
     protected $casts = [
         'technologies' => 'array',
-        'technologies_ro' => 'array',
         'features' => 'array',
         'features_ro' => 'array',
         'is_active' => 'boolean',
@@ -35,8 +36,15 @@ class PortfolioItem extends Model
 
     public function getTitleAttribute($value)
     {
-        return App::getLocale() === 'ro' && !empty($this->title_ro) 
-            ? $this->title_ro 
+        return App::getLocale() === 'ro' && !empty($this->title_ro)
+            ? $this->title_ro
+            : $value;
+    }
+
+    public function getShortDescriptionAttribute($value)
+    {
+        return App::getLocale() === 'ro' && !empty($this->short_description_ro)
+            ? $this->short_description_ro
             : $value;
     }
 
@@ -49,11 +57,7 @@ class PortfolioItem extends Model
 
     public function getTechnologiesAttribute($value)
     {
-        $technologies = App::getLocale() === 'ro' && !empty($this->technologies_ro)
-            ? $this->technologies_ro
-            : $value;
-        
-        return $technologies ?? [];
+        return $value ?? [];
     }
 
     public function getFeaturesAttribute($value)
@@ -61,7 +65,7 @@ class PortfolioItem extends Model
         $features = App::getLocale() === 'ro' && !empty($this->features_ro)
             ? $this->features_ro
             : $value;
-            
+
         return $features ?? [];
     }
 }

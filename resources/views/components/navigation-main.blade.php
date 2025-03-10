@@ -172,7 +172,7 @@
         <div class="px-2 pt-2 pb-3 space-y-1 border-t backdrop-blur-md bg-black/80 border-white/10">
             <a href="{{ route('home', ['locale' => App::getLocale()]) }}" @click="isOpen = false" wire:navigate
                 class="flex items-center px-4 py-3 text-base font-medium text-white transition-all duration-300 rounded-lg hover:bg-white/10">
-                <i class="w-5 mr-3 fa-solid fa-code text-emerald-400"></i>
+                <i class="w-5 mr-3 fa-solid fa-home text-emerald-400"></i>
                 {{ __('messages.menu.home') }}
             </a>
             <a href="{{ route('web-development', ['locale' => App::getLocale()]) }}" @click="isOpen = false"
