@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click Studios - Web Development & Digital Marketing</title>
+    <title>{{ __('app.title') }}</title>
     <link rel="canonical" href="{{ url()->current() }}">
-    <meta name="description"
-        content="Click Studios Digital Agency from Baia Mare, Laravel and TALL Stack developers, complex web applications, web design, digital marketing, SEO, and audio-video production." />
-    <meta name="keywords"
-        content="Click Studios Digital, Laravel, TALL stack, digital marketing agency, web development, SEO services, responsive web design, e-commerce, online marketing strategies, site optimization, organic traffic growth, PPC campaigns, social media marketing, content marketing, digital consultancy, web agency Baia Mare" />
+    <meta name="description" content="{{ __('app.meta_description') }}" />
+    <meta name="keywords" content="{{ __('app.meta_keywords') }}" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('assets/favicon/favicon-96x96.png') }}" sizes="96x96" />
@@ -20,9 +18,8 @@
     {{-- <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}" /> --}}
 
     <!-- Open Graph Tags for Social Media Sharing -->
-    <meta property="og:title" content="Click Studios - Web Development & Digital Marketing" />
-    <meta property="og:description"
-        content="Click Studios Digital Agency from Baia Mare, Laravel and TALL Stack developers, complex web applications, web design, digital marketing, SEO, and audio-video production." />
+    <meta property="og:title" content="{{ __('app.og.title') }}" />
+    <meta property="og:description" content="{{ __('app.og.description') }}" />
     <meta property="og:image" content="{{ asset('assets/OG-Click-Studios-Digital.webp') }}" />
     <meta property="og:image:type" content="image/webp">
     <meta property="og:image:width" content="1200">
@@ -39,7 +36,7 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Click Studios Digital",
-      "description": "Click Studios Digital Agency from Baia Mare, Laravel and TALL Stack developers, complex web applications, web design, digital marketing, SEO, and audio-video production.",
+      "description": "{{ __('app.schema.description') }}",
       "image": "{{ asset('assets/logo.jpg') }}",
       "url": "{{ url('/') }}",
       "telephone": "+40734411115",

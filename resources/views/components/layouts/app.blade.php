@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $title ?? 'Click Studios Digital' }}</title>
+    <title>{{ $title ?? __('app.title') }}</title>
     <link rel="canonical" href="{{ url()->current() }}">
 
-    <meta name="description"
-        content="Agentia Click Studios Digital din Baia Mare, dezvoltatori Laravel si TALL Stack, aplicatii web complexe, web design, marketing digital, SEO, și producție audio-video.">
-    <meta name="keywords"
-        content="Click Studios Digital, Laravel, TALL stack, Blog Audio agenție marketing digital, dezvoltare web, servicii SEO, web design responsiv, e-commerce, strategii marketing online, optimizare site, creștere trafic organic, campanii PPC, social media marketing, content marketing, consultanță digitală, agenție web Baia Mare" />
+    <meta name="description" content="{{ __('app.meta_description') }}">
+    <meta name="keywords" content="{{ __('app.meta_keywords') }}" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('assets/favicon/favicon-96x96.png') }}" sizes="96x96" />
@@ -33,9 +31,8 @@
     <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
 
     <!-- Open Graph Tags for Social Media Sharing -->
-    <meta property="og:title" content="Click Studios - Dezvoltare Web & Marketing Digital" />
-    <meta property="og:description"
-        content="Agentia Click Studios Digital din Baia Mare, dezvoltatori Laravel si TALL Stack, aplicatii web complexe, web design, marketing digital, SEO, și producție audio-video." />
+    <meta property="og:title" content="{{ __('app.og.title') }}" />
+    <meta property="og:description" content="{{ __('app.og.description') }}" />
     <meta property="og:image" content="{{ asset('assets/OG-Click-Studios-Digital.webp') }}" />
     <meta property="og:image:type" content="image/webp">
     <meta property="og:image:width" content="1200">
@@ -52,7 +49,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Click Studios Digital",
-  "description": "Agentia Click Studios Digital din Baia Mare, dezvoltatori Laravel si TALL Stack, aplicatii web complexe, web design, marketing digital, SEO, și producție audio-video.",
+  "description": "{{ __('app.schema.description') }}",
   "image": "{{ asset('assets/logo.jpg') }}",
   "url": "{{ url('/') }}",
   "telephone": "+40734411115",
@@ -129,7 +126,7 @@
     <main>
         <!-- Loading Spinner -->
         <div x-show="loading" class="fixed inset-0 z-50 flex items-center justify-center bg-black" aria-busy="true"
-            aria-label="Loading">
+            aria-label="{{ __('messages.loading') }}">
             <div class="w-16 h-16 border-t-4 border-solid rounded-full border-emerald-700 animate-spin"></div>
         </div>
         {{ $slot }}
