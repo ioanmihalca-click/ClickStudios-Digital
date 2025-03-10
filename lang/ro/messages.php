@@ -277,6 +277,46 @@ return [
         'rights' => 'Toate drepturile rezervate',
     ],
 
+    // Contact page
+    'contact' => [
+        'tagline' => 'Contactează-ne',
+        'title' => 'Hai să',
+        'title_gradient' => 'discutăm',
+        'subtitle' => 'Ai întrebări sau dorești să discutăm despre un proiect? Completează formularul de mai jos și te vom contacta în cel mai scurt timp.',
+
+        'form' => [
+            'title' => 'Trimite-ne un mesaj',
+            'name' => 'Nume',
+            'name_placeholder' => 'Introdu numele tău',
+            'email' => 'Email',
+            'email_placeholder' => 'Introdu adresa ta de email',
+            'phone' => 'Telefon (opțional)',
+            'phone_placeholder' => 'Introdu numărul tău de telefon',
+            'subject' => 'Subiect',
+            'subject_placeholder' => 'Despre ce dorești să discutăm?',
+            'message' => 'Mesaj',
+            'message_placeholder' => 'Scrie-ne mesajul tău aici...',
+            'submit' => 'Trimite mesaj',
+            'submitting' => 'Se trimite...',
+            'success' => 'Mesajul tău a fost trimis cu succes! Te vom contacta în curând.',
+            'error' => 'A apărut o eroare la trimiterea mesajului. Te rugăm să încerci din nou mai târziu.'
+        ],
+
+        'info' => [
+            'title' => 'Informații de contact',
+            'phone' => 'Telefon',
+            'email' => 'Email',
+            'address' => 'Adresă',
+            'hours' => 'Program de lucru',
+            'hours_value' => 'Luni - Vineri: 09:00 - 17:00',
+            'social' => 'Rețele sociale'
+        ],
+
+        'map' => [
+            'title' => 'Locația noastră'
+        ]
+    ],
+
     // Common
     'loading' => 'Se încarcă...',
     'learn_more' => 'Află Mai Multe',

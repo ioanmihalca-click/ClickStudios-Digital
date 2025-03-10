@@ -277,6 +277,46 @@ return [
         'rights' => 'All rights reserved',
     ],
 
+    // Contact page
+    'contact' => [
+        'tagline' => 'Get in Touch',
+        'title' => 'Let\'s',
+        'title_gradient' => 'talk',
+        'subtitle' => 'Have questions or want to discuss a project? Fill out the form below and we\'ll get back to you as soon as possible.',
+
+        'form' => [
+            'title' => 'Send us a message',
+            'name' => 'Name',
+            'name_placeholder' => 'Enter your name',
+            'email' => 'Email',
+            'email_placeholder' => 'Enter your email address',
+            'phone' => 'Phone (optional)',
+            'phone_placeholder' => 'Enter your phone number',
+            'subject' => 'Subject',
+            'subject_placeholder' => 'What would you like to discuss?',
+            'message' => 'Message',
+            'message_placeholder' => 'Write your message here...',
+            'submit' => 'Send Message',
+            'submitting' => 'Sending...',
+            'success' => 'Your message has been sent successfully! We\'ll contact you soon.',
+            'error' => 'An error occurred while sending your message. Please try again later.'
+        ],
+
+        'info' => [
+            'title' => 'Contact Information',
+            'phone' => 'Phone',
+            'email' => 'Email',
+            'address' => 'Address',
+            'hours' => 'Working Hours',
+            'hours_value' => 'Monday - Friday: 09:00 - 17:00',
+            'social' => 'Social Media'
+        ],
+
+        'map' => [
+            'title' => 'Our Location'
+        ]
+    ],
+
     // Common
     'loading' => 'Loading...',
     'learn_more' => 'Learn More',

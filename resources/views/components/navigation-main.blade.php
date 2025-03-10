@@ -44,6 +44,10 @@
                         class="px-3 py-2 font-medium text-white transition-all duration-300 rounded-lg hover:bg-white/10 hover:text-emerald-400">
                         {{ __('messages.menu.portfolio') }}
                     </a>
+                    <a href="{{ route('contact', ['locale' => App::getLocale()]) }}" wire:navigate
+                        class="px-3 py-2 font-medium text-white transition-all duration-300 rounded-lg hover:bg-white/10 hover:text-emerald-400">
+                        {{ __('messages.menu.contact') }}
+                    </a>
                 </div>
 
                 <!-- Desktop Language Switcher Modernizat -->
@@ -190,6 +194,11 @@
                 class="flex items-center px-4 py-3 text-base font-medium text-white transition-all duration-300 rounded-lg hover:bg-white/10">
                 <i class="w-5 mr-3 fa-solid fa-briefcase text-emerald-400"></i>
                 {{ __('messages.menu.portfolio') }}
+            </a>
+            <a href="{{ route('contact', ['locale' => App::getLocale()]) }}" @click="isOpen = false" wire:navigate
+                class="flex items-center px-4 py-3 text-base font-medium text-white transition-all duration-300 rounded-lg hover:bg-white/10">
+                <i class="w-5 mr-3 fa-solid fa-envelope text-emerald-400"></i>
+                {{ __('messages.menu.contact') }}
             </a>
 
             <!-- Mobile Language Switcher Modernizat -->
