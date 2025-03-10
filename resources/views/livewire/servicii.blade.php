@@ -415,7 +415,7 @@
                         <p class="max-w-2xl mx-auto mb-10 text-lg leading-relaxed text-gray-300">
                             {{ __('messages.services.cta.description') }}
                         </p>
-                        <a href="#contact"
+                        <a href="{{ route('contact', ['locale' => App::getLocale()]) }}" wire:navigate
                             class="inline-flex items-center px-8 py-4 text-sm font-semibold tracking-wider text-blue-800 uppercase transition-all duration-300 bg-white rounded-lg hover:bg-blue-50 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-600/20">
                             <i class="mr-2 fa-solid fa-paper-plane"></i> Contact Us Now
                         </a>
