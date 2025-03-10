@@ -9,7 +9,7 @@
     <!-- Background image -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img src="{{ asset('assets/carusel-bg.webp') }}" alt=""
-            class="absolute inset-0 object-cover w-full h-full opacity-75 animate-enhanced-kenburns">
+            class="absolute inset-0 object-cover w-full h-full animate-enhanced-kenburns">
         <div class="absolute inset-0 bg-gradient-to-b from-gray-900/85 via-gray-800/85 to-gray-900/85"></div>
     </div>
 
