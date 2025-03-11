@@ -18,18 +18,35 @@ class Portofoliu extends Component
             ->get();
 
         $this->portfolioItems = $items->map(function ($item) {
-            $data = $item->toArray();
+            $data = [
+                'id' => $item->id,
+                'title' => $item->getLocalizedTitle(),
+                'slug' => $item->slug,
+                'short_description' => $item->getLocalizedShortDescription(),
+                'description' => $item->getLocalizedDescription(),
+                'image' => $item->image,
+                'website_url' => $item->website_url,
+                'youtube_url' => $item->youtube_url,
+                'is_featured' => $item->is_featured,
+                'is_active' => $item->is_active,
+                'sort_order' => $item->sort_order,
+            ];
 
-            // Convertim string-ul de technologies în array
-            if (!empty($data['technologies'])) {
-                $data['technologies'] = explode(',', $data['technologies']);
+            // Procesează tehnologiile
+            if (!empty($item->technologies)) {
+                $data['technologies'] = is_string($item->technologies)
+                    ? explode(',', $item->technologies)
+                    : $item->technologies;
             } else {
                 $data['technologies'] = [];
             }
 
-            // Convertim string-ul de features în array
-            if (!empty($data['features'])) {
-                $data['features'] = explode(',', $data['features']);
+            // Procesează funcționalitățile
+            $localizedFeatures = $item->getLocalizedFeatures();
+            if (!empty($localizedFeatures)) {
+                $data['features'] = is_string($localizedFeatures)
+                    ? explode(',', $localizedFeatures)
+                    : $localizedFeatures;
             } else {
                 $data['features'] = [];
             }

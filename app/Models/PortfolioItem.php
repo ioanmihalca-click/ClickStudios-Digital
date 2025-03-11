@@ -34,38 +34,37 @@ class PortfolioItem extends Model
         'is_featured' => 'boolean',
     ];
 
-    public function getTitleAttribute($value)
+    // Metode pentru obținerea conținutului localizat
+    public function getLocalizedTitle()
     {
         return App::getLocale() === 'ro' && !empty($this->title_ro)
             ? $this->title_ro
-            : $value;
+            : $this->title;
     }
 
-    public function getShortDescriptionAttribute($value)
+    public function getLocalizedShortDescription()
     {
         return App::getLocale() === 'ro' && !empty($this->short_description_ro)
             ? $this->short_description_ro
-            : $value;
+            : $this->short_description;
     }
 
-    public function getDescriptionAttribute($value)
+    public function getLocalizedDescription()
     {
         return App::getLocale() === 'ro' && !empty($this->description_ro)
             ? $this->description_ro
-            : $value;
+            : $this->description;
+    }
+
+    public function getLocalizedFeatures()
+    {
+        return App::getLocale() === 'ro' && !empty($this->features_ro)
+            ? $this->features_ro
+            : $this->features;
     }
 
     public function getTechnologiesAttribute($value)
     {
         return $value ?? [];
-    }
-
-    public function getFeaturesAttribute($value)
-    {
-        $features = App::getLocale() === 'ro' && !empty($this->features_ro)
-            ? $this->features_ro
-            : $value;
-
-        return $features ?? [];
     }
 }
