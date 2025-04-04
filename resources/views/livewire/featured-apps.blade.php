@@ -30,7 +30,7 @@
 
                     <div class="flex flex-col h-full p-4">
                         <h3 class="mb-2 text-xl font-bold text-white">
-                            {{ $item['title'] }}
+                            {!! htmlspecialchars_decode($item['title']) !!}
                         </h3>
 
                         @if ($item['website_url'])
@@ -41,7 +41,7 @@
                         @endif
 
                         <p class="mb-4 text-sm text-gray-300">
-                            {{ $item['description'] }}
+                            {!! htmlspecialchars_decode($item['description']) !!}
                         </p>
 
                         @if (!empty($item['features']))
@@ -51,13 +51,15 @@
                                 </h4>
                                 <ul class="space-y-1.5">
                                     @foreach ($item['features'] as $feature)
-                                        <li class="flex items-center gap-2 text-sm text-gray-300">
-                                            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor"
+                                        <li class="flex items-start gap-2 text-sm text-gray-300">
+                                            <svg class="flex-shrink-0 w-4 h-4 mt-1 text-emerald-500" fill="none" stroke="currentColor"
                                                 viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M5 13l4 4L19 7"></path>
                                             </svg>
-                                            {{ $feature }}
+                                            <span>
+                                                {!! mb_convert_encoding(preg_replace('/u([0-9a-fA-F]{4})/', '&#x\\1;', $feature), 'UTF-8', 'HTML-ENTITIES') !!}
+                                            </span>
                                         </li>
                                     @endforeach
                                 </ul>

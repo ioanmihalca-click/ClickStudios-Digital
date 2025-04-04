@@ -163,7 +163,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                <span>{{ trim($feature, "\" '") }}</span>
+                                                <span>{!! mb_convert_encoding(preg_replace('/u([0-9a-fA-F]{4})/', '&#x\\1;', $feature), 'UTF-8', 'HTML-ENTITIES') !!}</span>
                                             </li>
                                         @endforeach
                                     </ul>
