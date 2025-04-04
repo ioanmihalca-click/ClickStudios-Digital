@@ -42,9 +42,30 @@ class FeaturedApps extends Component
                 // Procesează funcționalitățile
                 $localizedFeatures = $item->getLocalizedFeatures();
                 if (!empty($localizedFeatures)) {
-                    $data['features'] = is_string($localizedFeatures)
-                        ? explode(',', $localizedFeatures)
-                        : $localizedFeatures;
+                    if (is_string($localizedFeatures)) {
+                        // Verifică dacă e un JSON string
+                        if (str_starts_with($localizedFeatures, '[') && str_ends_with($localizedFeatures, ']')) {
+                            $data['features'] = json_decode($localizedFeatures, true);
+                        } 
+                        // Verifică dacă conține newlines
+                        elseif (str_contains($localizedFeatures, '\n')) {
+                            $data['features'] = explode('\n', str_replace('"', '', $localizedFeatures));
+                        } 
+                        // Altfel, tratează ca un string separat prin virgule
+                        else {
+                            $data['features'] = explode(',', $localizedFeatures);
+                        }
+                        
+                        // Curăță fiecare element
+                        $data['features'] = array_map(function($feat) {
+                            return trim(str_replace(['"', "'", "\\"], '', $feat));
+                        }, $data['features']);
+                    } else {
+                        // Este deja un array
+                        $data['features'] = array_map(function($feat) {
+                            return trim(str_replace(['"', "'", "\\"], '', $feat));
+                        }, $localizedFeatures);
+                    }
                 } else {
                     $data['features'] = [];
                 }
