@@ -15,7 +15,7 @@ return [
         'tagline' => 'Web Development & Digital Marketing',
         'title' => 'Transforming Ideas into',
         'title-gradient' => 'Digital Experiences',
-        'subtitle' => 'Specialized in Laravel development and AI integrations, we create innovative web solutions.',
+        'subtitle' => 'We develop custom applications, with expertise in Laravel and advanced Artificial Intelligence integrations.',
         'discover_button' => 'Discover Click Studios',
         'contact_button' => 'Contact Us',
     ],

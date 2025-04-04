@@ -15,7 +15,7 @@ return [
         'tagline' => 'Dezvoltare Web & Marketing Digital',
         'title' => 'Transformăm Ideile în',
         'title-gradient' => 'Experiențe Digitale',
-        'subtitle' => 'Specializați în dezvoltare Laravel și integrări AI, creăm soluții web inovatoare.',
+        'subtitle' => 'Dezvoltăm aplicații personalizate, cu expertiză în Laravel și integrări avansate de Inteligență Artificială.',
         'discover_button' => 'Descoperă Click Studios',
         'contact_button' => 'Contactează-ne',
     ],
