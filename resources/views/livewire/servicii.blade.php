@@ -396,32 +396,7 @@
                 </div>
             </div>
 
-            <!-- Call to Action - Modernizat -->
-            <div class="mt-20">
-                <div
-                    class="relative max-w-4xl px-8 mx-auto overflow-hidden border py-14 bg-blue-600/10 border-blue-500/20 rounded-2xl backdrop-blur-sm">
-                    <!-- Background design elements -->
-                    <div class="absolute w-40 h-40 rounded-full -bottom-10 -right-10 bg-blue-500/10 blur-2xl"></div>
-                    <div class="absolute w-40 h-40 rounded-full -top-10 -left-10 bg-cyan-500/10 blur-2xl"></div>
 
-                    <div class="relative z-10 text-center">
-                        <span
-                            class="px-4 py-1.5 text-xs font-medium tracking-wider uppercase bg-blue-500/20 rounded-full text-blue-300 mb-6 inline-block">
-                            Let's Talk
-                        </span>
-                        <h3 class="mb-6 text-3xl font-bold text-white md:text-4xl">
-                            {{ __('messages.services.cta.title') }}
-                        </h3>
-                        <p class="max-w-2xl mx-auto mb-10 text-lg leading-relaxed text-gray-300">
-                            {{ __('messages.services.cta.description') }}
-                        </p>
-                        <a href="{{ route('contact', ['locale' => App::getLocale()]) }}" wire:navigate
-                            class="inline-flex items-center px-8 py-4 text-sm font-semibold tracking-wider text-blue-800 uppercase transition-all duration-300 bg-white rounded-lg hover:bg-blue-50 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-600/20">
-                            <i class="mr-2 fa-solid fa-paper-plane"></i> Contact Us Now
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
