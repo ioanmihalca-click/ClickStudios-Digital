@@ -24,9 +24,6 @@
     <!-- Font Roboto -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
 
-    <!-- Font Roboto -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
-
     <!-- Font Volkov -->
     <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
 
@@ -121,8 +118,8 @@
 
 </head>
 
-<body class="font-sans bg-white" x-data="{ scrollToTop: false, loading: true }" x-on:scroll.window="scrollToTop = window.scrollY > 100"
-    x-init="() => { setTimeout(() => loading = false, 700) }">
+<body class="bg-white font-roboto-condensed" x-data="{ scrollToTop: false, loading: true }"
+    x-on:scroll.window="scrollToTop = window.scrollY > 100" x-init="() => { setTimeout(() => loading = false, 700) }">
     <x-navigation-main />
 
     <main>

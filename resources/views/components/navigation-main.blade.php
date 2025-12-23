@@ -5,7 +5,7 @@
         this.scrolledFromTop = window.pageYOffset > 20
     }
 }"
-    :class="{ 'bg-emerald/80 shadow-lg': scrolledFromTop || isOpen, 'bg-transparent': !scrolledFromTop && !isOpen }"
+    :class="{ 'bg-gray-900/80 shadow-lg': scrolledFromTop || isOpen, 'bg-transparent': !scrolledFromTop && !isOpen }"
     @scroll.window="handleScroll" x-init="handleScroll">
 
     <div class="container px-4 mx-auto">

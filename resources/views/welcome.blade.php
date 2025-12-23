@@ -112,7 +112,7 @@
 </head>
 
 
-<body class="font-sans bg-white" x-data="{
+<body class="bg-white font-roboto-condensed" x-data="{
     scrollToTop: false,
     loading: true,
     showContactModal: false,
@@ -128,7 +128,7 @@
     <x-navigation-main />
 
     <!-- Hero Section Modern -->
-    <section class="relative flex items-center justify-center min-h-screen text-white">
+    <section class="relative flex items-center justify-center min-h-screen pt-20 text-white">
         <!-- Loading Spinner -->
         <div x-show="loading" class="absolute inset-0 z-50 flex items-center justify-center bg-black">
             <div class="w-16 h-16 border-t-4 border-solid rounded-full border-emerald-700 animate-spin"></div>
@@ -139,6 +139,11 @@
             <video src="/assets/bg-video-new.mp4" autoplay muted loop
                 class="absolute object-cover w-full h-full scale-125 -z-20"></video>
             <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-gray-900 -z-10"></div>
+
+            <!-- Subtle pattern overlay for depth -->
+            <div
+                class="absolute inset-0 opacity-10 -z-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJ3aGl0ZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIyIiBjeT0iMiIgcj0iMSIvPjwvZz48L3N2Zz4=')]">
+            </div>
         </div>
 
         <!-- Hero Content -->
@@ -159,11 +164,11 @@
             </p>
             <div class="flex flex-col justify-center gap-4 sm:flex-row">
                 <a href="#about"
-                    class="px-8 py-3 text-sm font-medium tracking-wider text-white uppercase transition-all duration-300 rounded-lg bg-emerald-600 hover:bg-emerald-700">
+                    class="px-8 py-3 text-sm font-semibold tracking-wider text-white uppercase transition-all duration-300 rounded-lg bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-black">
                     {{ __('messages.hero.discover_button') }}
                 </a>
                 <button @click="$dispatch('open-contact-modal')"
-                    class="px-8 py-3 text-sm font-medium tracking-wider text-white uppercase transition-all duration-300 border rounded-lg border-white/30 hover:bg-white/10">
+                    class="px-8 py-3 text-sm font-semibold tracking-wider text-white uppercase transition-all duration-300 border rounded-lg border-white/30 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black">
                     {{ __('messages.hero.contact_button') }}
                 </button>
             </div>

@@ -80,7 +80,7 @@ body {
     }
 }
 
-.group:hover {
+.hover-float:hover {
     animation: float 6s ease-in-out infinite;
 }
 

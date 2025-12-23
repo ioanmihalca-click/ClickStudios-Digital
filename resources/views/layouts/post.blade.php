@@ -51,7 +51,7 @@
     @livewireStyles
 </head>
 
-<body class="flex flex-col min-h-screen font-sans bg-white" x-data="{ scrollToTop: false }"
+<body class="flex flex-col min-h-screen bg-white font-roboto-condensed" x-data="{ scrollToTop: false }"
     x-on:scroll.window="scrollToTop = window.scrollY > 100">
     <x-navigation-main />
 
