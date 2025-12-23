@@ -40,14 +40,19 @@ return [
             'explore_button' => 'Explorează Serviciile',
             'contact_button' => 'Contactează-ne',
         ],
+        'section' => [
+            'tagline' => 'Servicii',
+            'title' => 'Dezvoltare Laravel & Integrări AI',
+            'subtitle' => 'Construiesc aplicații Laravel rapide, sigure și scalabile, plus integrări AI/LLM (chat, RAG, automatizări) adaptate pe fluxurile tale de business.',
+        ],
         'categories' => [
             'laravel' => [
                 'title' => 'Dezvoltare Laravel',
-                'description' => 'Aplicații web robuste și scalabile folosind cel mai popular framework PHP. Specializați în:',
+                'description' => 'Aplicații web robuste și scalabile cu Laravel + Livewire. Pot livra end-to-end:',
                 'features' => [
-                    'API-uri RESTful',
-                    'Integrări AI',
-                    'Sisteme CRM'
+                    'API-uri & integrări (REST, webhooks)',
+                    'Autentificare, roluri, audit & securitate',
+                    'Dashboard-uri admin, rapoarte, SaaS'
                 ]
             ],
             'web_design' => [
@@ -61,20 +66,20 @@ return [
             ],
             'automation' => [
                 'title' => 'Automatizare Procese de Business',
-                'description' => 'Optimizăm și automatizăm procese de business folosind tehnologii moderne:',
+                'description' => 'Automatizări și workflow-uri solide (queues, jobs, scheduled tasks) pentru operațiuni fără fricțiune:',
                 'features' => [
-                    'Chatboți 24/7 pentru Suport Clienți',
-                    'Procesare Automată de Documente',
-                    'Sisteme Automate de Facturare'
+                    'Fluxuri automate, notificări, sincronizări',
+                    'Procesare documente (OCR) & extragere date',
+                    'Facturare, plăți, integrări ERP/CRM'
                 ]
             ],
             'ai_solutions' => [
                 'title' => 'Soluții AI pentru Companii',
-                'description' => 'Sisteme avansate de inteligență artificială:',
+                'description' => 'Integrări AI/LLM în aplicații existente sau noi, cu accent pe utilitate și control:',
                 'features' => [
-                    'Computer Vision & OCR',
-                    'Procesare Limbaj Natural',
-                    'Sisteme de Recomandare pentru Companii'
+                    'Chat AI în aplicație (asistenți, copilots)',
+                    'RAG (căutare în documente + răspunsuri)',
+                    'Automatizări agentice + evaluare calitate'
                 ]
             ],
             'marketing' => [
@@ -106,20 +111,20 @@ return [
             ],
             'ecommerce' => [
                 'title' => 'Soluții E-commerce',
-                'description' => 'Magazine online complete și scalabile:',
+                'description' => 'Magazine online și integrări e-commerce (Laravel) cu focus pe conversie și stabilitate:',
                 'features' => [
-                    'PrestaShop',
-                    'Bagisto Laravel',
-                    'Integrări Plăți'
+                    'Bagisto (Laravel) & implementări custom',
+                    'Checkout, plăți, facturare, curieri',
+                    'Integrări stocuri, ERP, marketplace'
                 ]
             ],
             'maintenance' => [
                 'title' => 'Mentenanță și Suport',
-                'description' => 'Servicii complete de mentenanță:',
+                'description' => 'Suport tehnic și mentenanță pentru aplicații Laravel, cu predictibilitate și transparență:',
                 'features' => [
-                    'Monitorizare 24/7',
-                    'Backup și Securitate',
-                    'Optimizare Performanță'
+                    'Monitorizare, loguri, alerte, uptime',
+                    'Update-uri, securitate, backup & recovery',
+                    'Optimizare performanță (DB/cache/queries)'
                 ]
             ]
         ],
@@ -131,10 +136,23 @@ return [
 
     // Web Development Page
     'web_development' => [
+        'meta' => [
+            'title' => 'Dezvoltare Web Laravel & Integrări AI | Click Studios Digital',
+            'description' => 'Dezvolt aplicații Laravel (TALL stack) și integrez AI/LLM: chat, RAG (căutare în documente), automatizări, OCR și integrări API. Livrare end-to-end, focus pe performanță și securitate.',
+        ],
         'tagline' => 'Dezvoltare Web',
         'title' => 'Transformăm Ideile în',
         'title_gradient' => 'Experiențe Digitale',
         'quote' => '"Imaginația este mai importantă decât cunoașterea."',
+        'summary' => [
+            'title' => 'Laravel, TALL Stack și AI care aduc rezultate',
+            'subtitle' => 'O pagină dedicată pentru tot ce înseamnă dezvoltare web modernă în Laravel: arhitectură, UI interactiv, integrări AI și automatizări care reduc costuri și cresc viteza echipei.',
+            'bullets' => [
+                'Aplicații Laravel + Livewire: dashboard-uri, SaaS, portaluri și API-uri',
+                'Integrări AI/LLM: chat în aplicație, RAG pe documente, asistenți și automatizări',
+                'Focus pe calitate: securitate, performanță, caching, observability și scalare',
+            ],
+        ],
         'tabs' => [
             'tall' => 'TALL Stack',
             'services' => 'Servicii Web',

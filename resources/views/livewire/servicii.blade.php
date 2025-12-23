@@ -37,7 +37,7 @@
                     class="px-8 py-4 text-sm font-semibold tracking-wider text-white uppercase transition-all duration-300 bg-blue-600 rounded-lg hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 transform hover:-translate-y-0.5">
                     <i class="mr-2 fa-solid fa-arrow-down"></i>{{ __('messages.services.hero.explore_button') }}
                 </a>
-                <a href="#contact"
+                <a href="{{ \App\Helpers\LocaleHelper::getLocalizedRoute('contact') }}" wire:navigate
                     class="px-8 py-4 text-sm font-semibold tracking-wider text-white uppercase transition-all duration-300 border rounded-lg border-white/30 hover:bg-white/10 hover:border-white/50 transform hover:-translate-y-0.5">
                     <i class="mr-2 fa-solid fa-envelope"></i>{{ __('messages.services.hero.contact_button') }}
                 </a>
@@ -63,12 +63,11 @@
             <div class="text-center">
                 <span
                     class="px-4 py-1.5 text-xs font-medium tracking-wider uppercase bg-blue-500/10 rounded-full text-blue-400">
-                    Services
+                    {{ __('messages.services.section.tagline') }}
                 </span>
-                <h2 class="mt-4 text-4xl font-bold text-white">Our Digital Services</h2>
+                <h2 class="mt-4 text-4xl font-bold text-white">{{ __('messages.services.section.title') }}</h2>
                 <div class="w-24 h-1 mx-auto mt-4 mb-6 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400"></div>
-                <p class="max-w-2xl mx-auto text-gray-400">Explore our comprehensive range of digital services designed
-                    to help your business succeed in the digital landscape.</p>
+                <p class="max-w-2xl mx-auto text-gray-400">{{ __('messages.services.section.subtitle') }}</p>
             </div>
         </div>
 
@@ -205,112 +204,6 @@
                             @foreach (__('messages.services.categories.ai_solutions.features') as $feature)
                                 <li class="flex items-center">
                                     <svg class="w-5 h-5 mr-3 text-pink-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    {{ $feature }}
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Sales & Marketing -->
-                <div
-                    class="relative p-6 transition-all duration-500 border group bg-gray-800/50 backdrop-blur-sm rounded-xl border-gray-700/50 hover:border-blue-500/50 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/5">
-                    <div
-                        class="absolute transition-opacity duration-500 opacity-0 -inset-px bg-gradient-to-r from-blue-500/20 to-transparent group-hover:opacity-100 rounded-xl blur">
-                    </div>
-                    <div class="relative">
-                        <div
-                            class="flex items-center justify-center mb-5 text-blue-500 transition-colors duration-300 rounded-lg w-14 h-14 bg-blue-500/10 group-hover:bg-blue-500/20">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                            </svg>
-                        </div>
-                        <h4
-                            class="mb-3 text-xl font-bold text-white transition-colors duration-300 group-hover:text-blue-400">
-                            {{ __('messages.services.categories.marketing.title') }}
-                        </h4>
-                        <p class="mb-5 text-gray-400 transition-colors duration-300 group-hover:text-gray-300">
-                            {{ __('messages.services.categories.marketing.description') }}</p>
-                        <ul class="space-y-3 text-gray-400">
-                            @foreach (__('messages.services.categories.marketing.features') as $feature)
-                                <li class="flex items-center">
-                                    <svg class="w-5 h-5 mr-3 text-blue-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    {{ $feature }}
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Digital Marketing -->
-                <div
-                    class="relative p-6 transition-all duration-500 border group bg-gray-800/50 backdrop-blur-sm rounded-xl border-gray-700/50 hover:border-green-500/50 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-green-500/5">
-                    <div
-                        class="absolute transition-opacity duration-500 opacity-0 -inset-px bg-gradient-to-r from-green-500/20 to-transparent group-hover:opacity-100 rounded-xl blur">
-                    </div>
-                    <div class="relative">
-                        <div
-                            class="flex items-center justify-center mb-5 text-green-500 transition-colors duration-300 rounded-lg w-14 h-14 bg-green-500/10 group-hover:bg-green-500/20">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                            </svg>
-                        </div>
-                        <h4
-                            class="mb-3 text-xl font-bold text-white transition-colors duration-300 group-hover:text-green-400">
-                            {{ __('messages.services.categories.digital_marketing.title') }}</h4>
-                        <p class="mb-5 text-gray-400 transition-colors duration-300 group-hover:text-gray-300">
-                            {{ __('messages.services.categories.digital_marketing.description') }}</p>
-                        <ul class="space-y-3 text-gray-400">
-                            @foreach (__('messages.services.categories.digital_marketing.features') as $feature)
-                                <li class="flex items-center">
-                                    <svg class="w-5 h-5 mr-3 text-green-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    {{ $feature }}
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Advertising Spots -->
-                <div
-                    class="relative p-6 transition-all duration-500 border group bg-gray-800/50 backdrop-blur-sm rounded-xl border-gray-700/50 hover:border-orange-500/50 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-500/5">
-                    <div
-                        class="absolute transition-opacity duration-500 opacity-0 -inset-px bg-gradient-to-r from-orange-500/20 to-transparent group-hover:opacity-100 rounded-xl blur">
-                    </div>
-                    <div class="relative">
-                        <div
-                            class="flex items-center justify-center mb-5 text-orange-500 transition-colors duration-300 rounded-lg w-14 h-14 bg-orange-500/10 group-hover:bg-orange-500/20">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <h4
-                            class="mb-3 text-xl font-bold text-white transition-colors duration-300 group-hover:text-orange-400">
-                            {{ __('messages.services.categories.advertising.title') }}</h4>
-                        <p class="mb-5 text-gray-400 transition-colors duration-300 group-hover:text-gray-300">
-                            {{ __('messages.services.categories.advertising.description') }}</p>
-                        <ul class="space-y-3 text-gray-400">
-                            @foreach (__('messages.services.categories.advertising.features') as $feature)
-                                <li class="flex items-center">
-                                    <svg class="w-5 h-5 mr-3 text-orange-500" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M5 13l4 4L19 7" />

@@ -26,13 +26,43 @@
             <span class="px-4 py-1.5 text-sm font-medium text-blue-400 bg-blue-500/10 rounded-full mb-4 inline-block">
                 {{ __('messages.web_development.tagline') }}
             </span>
-            <h2 class="mb-4 text-4xl font-bold tracking-wide text-white font-roboto-condensed">
+            <h1 class="mb-4 text-4xl font-bold tracking-wide text-white font-roboto-condensed md:text-5xl">
                 {{ __('messages.web_development.title') }} <span
                     class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">{{ __('messages.web_development.title_gradient') }}</span>
-            </h2>
-            <p class="max-w-2xl mx-auto text-lg italic text-gray-300 font-vollkorn">
+            </h1>
+            <p class="max-w-2xl mx-auto text-lg italic text-gray-300 font-volkov">
                 {{ __('messages.web_development.quote') }}
             </p>
+        </div>
+
+        <!-- Static SEO Summary (always visible, indexable) -->
+        <div class="max-w-5xl mx-auto mb-12">
+            <div class="p-6 border rounded-xl backdrop-blur-sm bg-gray-800/30 border-gray-700/50">
+                <div class="grid gap-6 md:grid-cols-2">
+                    <div>
+                        <h2 class="mb-2 text-xl font-semibold text-white">
+                            {{ __('messages.web_development.summary.title') }}
+                        </h2>
+                        <p class="text-gray-300">
+                            {{ __('messages.web_development.summary.subtitle') }}
+                        </p>
+                    </div>
+                    <div>
+                        <ul class="space-y-2 text-gray-300">
+                            @foreach (__('messages.web_development.summary.bullets') as $bullet)
+                                <li class="flex items-start">
+                                    <svg class="w-4 h-4 mt-1 mr-2 text-blue-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span>{{ $bullet }}</span>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Tab Navigation -->
@@ -136,8 +166,8 @@
                     <div class="flex items-start mb-4">
                         <div
                             class="flex items-center justify-center w-12 h-12 mr-4 text-red-400 rounded-lg bg-red-500/10">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                             </svg>

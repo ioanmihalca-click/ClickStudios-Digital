@@ -40,14 +40,19 @@ return [
             'explore_button' => 'Explore Services',
             'contact_button' => 'Contact Us',
         ],
+        'section' => [
+            'tagline' => 'Services',
+            'title' => 'Laravel Development & AI Integrations',
+            'subtitle' => 'I build fast, secure, scalable Laravel applications and add practical AI/LLM integrations (chat, RAG, automation) tailored to your business workflows.',
+        ],
         'categories' => [
             'laravel' => [
                 'title' => 'Laravel Development',
-                'description' => 'Robust and scalable web applications using the most popular PHP framework. Specialized in:',
+                'description' => 'Robust and scalable web applications with Laravel + Livewire. End-to-end delivery:',
                 'features' => [
-                    'RESTful APIs',
-                    'AI Integrations',
-                    'CRM Systems'
+                    'APIs & integrations (REST, webhooks)',
+                    'Auth, roles, auditing & security',
+                    'Admin dashboards, reporting, SaaS'
                 ]
             ],
             'web_design' => [
@@ -61,20 +66,20 @@ return [
             ],
             'automation' => [
                 'title' => 'Business Process Automation',
-                'description' => 'We optimize and automate business processes using modern technologies:',
+                'description' => 'Reliable automation and workflows (queues, jobs, scheduled tasks) to remove friction:',
                 'features' => [
-                    '24/7 Chatbots for Customer Support',
-                    'Automated Document Processing',
-                    'Automated Billing Systems'
+                    'Automated workflows, notifications, syncs',
+                    'Document processing (OCR) & data extraction',
+                    'Billing, payments, ERP/CRM integrations'
                 ]
             ],
             'ai_solutions' => [
                 'title' => 'Enterprise AI Solutions',
-                'description' => 'Advanced artificial intelligence systems:',
+                'description' => 'AI/LLMs integration into new or existing apps with a focus on usefulness and control:',
                 'features' => [
-                    'Computer Vision & OCR',
-                    'Natural Language Processing',
-                    'Enterprise Recommendation Systems'
+                    'In-app AI chat (assistants, copilots)',
+                    'RAG (document search + answers)',
+                    'Agentic automation + quality evaluation'
                 ]
             ],
             'marketing' => [
@@ -106,20 +111,20 @@ return [
             ],
             'ecommerce' => [
                 'title' => 'E-commerce Solutions',
-                'description' => 'Complete and scalable online stores:',
+                'description' => 'E-commerce builds and integrations (Laravel) with a focus on stability and conversion:',
                 'features' => [
-                    'PrestaShop',
-                    'Bagisto Laravel',
-                    'Payment Integrations'
+                    'Bagisto (Laravel) & custom builds',
+                    'Checkout, payments, invoicing, shipping',
+                    'Stock, ERP, marketplace integrations'
                 ]
             ],
             'maintenance' => [
                 'title' => 'Maintenance & Support',
-                'description' => 'Complete maintenance services:',
+                'description' => 'Technical support and maintenance for Laravel apps, with predictable delivery:',
                 'features' => [
-                    '24/7 Monitoring',
-                    'Backup & Security',
-                    'Performance Optimization'
+                    'Monitoring, logs, alerts, uptime',
+                    'Updates, security, backup & recovery',
+                    'Performance tuning (DB/cache/queries)'
                 ]
             ]
         ],
@@ -131,10 +136,23 @@ return [
 
     // Web Development Page
     'web_development' => [
+        'meta' => [
+            'title' => 'Laravel Web Development & AI Integrations | Click Studios Digital',
+            'description' => 'I build Laravel (TALL stack) applications and ship practical AI/LLM integrations: in-app chat, RAG (document search), automation, OCR, and API integrations. End-to-end delivery with a focus on performance and security.',
+        ],
         'tagline' => 'Web Development',
         'title' => 'Transforming Ideas into',
         'title_gradient' => 'Digital Experiences',
         'quote' => '"Imagination is more important than knowledge."',
+        'summary' => [
+            'title' => 'Laravel, TALL Stack, and AI that drives outcomes',
+            'subtitle' => 'A dedicated page for modern Laravel web development: solid architecture, interactive UI, AI integrations, and automations that reduce costs and speed up teams.',
+            'bullets' => [
+                'Laravel + Livewire apps: dashboards, SaaS products, portals, and APIs',
+                'AI/LLM integrations: in-app chat, document RAG, assistants, and automations',
+                'Quality-first: security, performance, caching, observability, and scaling',
+            ],
+        ],
         'tabs' => [
             'tall' => 'TALL Stack',
             'services' => 'Web Services',

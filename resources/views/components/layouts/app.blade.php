@@ -7,7 +7,7 @@
     <title>{{ $title ?? __('app.title') }}</title>
     <link rel="canonical" href="{{ url()->current() }}">
 
-    <meta name="description" content="{{ __('app.meta_description') }}">
+    <meta name="description" content="{{ $description ?? __('app.meta_description') }}">
     <meta name="keywords" content="{{ __('app.meta_keywords') }}" />
 
     <!-- Favicon -->
