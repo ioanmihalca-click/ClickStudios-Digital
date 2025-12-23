@@ -32,6 +32,7 @@
 
     <!-- Local Business Schema Markup -->
     <script type="application/ld+json">
+    @verbatim
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
@@ -82,6 +83,7 @@
         "name": "Romania"
       }
     }
+    @endverbatim
     </script>
 
     <!-- Font Awesome -->
