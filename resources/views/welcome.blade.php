@@ -184,9 +184,9 @@
     </section>
 
     <!-- Featured Apps -->
-    <section id='about' class="bg-gradient-to-b from-gray-900 to-gray-800">
+    {{-- <section id='about' class="bg-gradient-to-b from-gray-900 to-gray-800">
         <livewire:featured-apps />
-    </section>
+    </section> --}}
 
     <x-footer />
 

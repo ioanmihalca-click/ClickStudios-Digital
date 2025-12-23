@@ -26,10 +26,12 @@
             <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                 @foreach ($portfolioItems as $item)
                     <!-- Card cu design modernizat, mai compact, încadrat în layout -->
-                    <div
-                        class="group relative overflow-hidden rounded-lg h-[200px] bg-gradient-to-br from-slate-800/80 to-slate-900/80 shadow-md border border-slate-700/30 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-emerald-600/10 hover:border-emerald-500/30">
+                    <div role="button" tabindex="0" @click="selectedItem = @js($item['slug'])"
+                        @keydown.enter.prevent="selectedItem = @js($item['slug'])"
+                        @keydown.space.prevent="selectedItem = @js($item['slug'])"
+                        class="group relative overflow-hidden rounded-lg h-[200px] cursor-pointer bg-gradient-to-br from-slate-800/80 to-slate-900/80 shadow-md border border-slate-700/30 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-emerald-600/10 hover:border-emerald-500/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
                         <!-- Overlay gradient -->
-                        <div
+                        <div aria-hidden="true"
                             class="absolute inset-0 transition-opacity duration-500 opacity-0 bg-gradient-to-t from-emerald-900/60 to-slate-900/40 group-hover:opacity-100">
                         </div>
 
@@ -62,7 +64,7 @@
                             </div>
 
                             <!-- Button subtle în colțul din dreapta jos -->
-                            <button @click="selectedItem = '{{ $item['slug'] }}'"
+                            <button @click.stop="selectedItem = @js($item['slug'])"
                                 class="absolute right-3 bottom-3 p-1.5 text-xs bg-emerald-500/10 hover:bg-emerald-600/30 text-emerald-400 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 border border-emerald-500/20"
                                 title="View Project Details">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,7 +82,7 @@
                                 <h3 class="mb-2 text-lg font-bold text-emerald-400">{{ $item['title'] }}</h3>
                                 <p class="mb-4 text-xs text-center text-white/90 line-clamp-3">
                                     {{ $item['short_description'] }}</p>
-                                <button @click="selectedItem = '{{ $item['slug'] }}'"
+                                <button @click.stop="selectedItem = @js($item['slug'])"
                                     class="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs rounded-md transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-md hover:shadow-emerald-600/30 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:ring-offset-1 focus:ring-offset-slate-900">
                                     <span class="flex items-center">
                                         <svg class="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor"
@@ -116,7 +118,8 @@
             <div x-show="selectedItem !== null" x-transition:enter="transform transition ease-in-out duration-400"
                 x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0"
                 x-transition:leave="transform transition ease-in-out duration-400"
-                x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full"
+                x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full" role="dialog"
+                aria-modal="true" aria-label="Project details"
                 class="fixed inset-y-0 right-0 w-full max-w-md z-[1000] shadow-2xl bg-gradient-to-b from-slate-900 to-slate-800 border-l border-emerald-500/20">
 
                 <!-- Header modernizat cu glow effect -->
@@ -137,14 +140,15 @@
                 <!-- Conținut modal -->
                 <div class="p-5 overflow-y-auto max-h-[calc(100vh-4rem)]">
                     @foreach ($portfolioItems as $item)
-                        <div x-show="selectedItem === '{{ $item['slug'] }}'" class="space-y-6">
+                        <div x-show="selectedItem === @js($item['slug'])" x-transition.opacity.duration.150ms
+                            class="space-y-6">
                             <h2 class="mb-3 text-2xl font-bold text-white">{{ $item['title'] }}</h2>
 
                             <!-- Imagine cu blur load effect -->
                             <div class="relative overflow-hidden rounded-lg group">
                                 <img src="{{ Storage::url($item['image']) }}" alt="{{ $item['title'] }}"
-                                    class="w-full h-auto transition-transform duration-500 transform rounded-lg group-hover:scale-102"
-                                    loading="lazy">
+                                    class="w-full h-auto transition-transform duration-500 transform rounded-lg group-hover:scale-105"
+                                    loading="lazy" decoding="async" fetchpriority="low">
                                 <div
                                     class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/50 to-transparent group-hover:opacity-100">
                                 </div>
@@ -153,7 +157,7 @@
                             <p class="text-sm leading-relaxed text-gray-300">{{ $item['description'] }}</p>
 
                             @if (!empty($item['features']))
-                                <div class="p-4 space-y-3 rounded-lg ">
+                                <div class="p-4 space-y-3 rounded-lg bg-slate-800/40 border border-slate-700/30">
                                     <h3 class="text-base font-semibold text-emerald-400">Key Features</h3>
                                     <ul class="space-y-2 text-sm text-gray-300">
                                         @foreach ($item['features'] as $feature)
@@ -163,7 +167,7 @@
                                                     <path stroke-linecap="round" stroke-linejoin="round"
                                                         stroke-width="2" d="M5 13l4 4L19 7"></path>
                                                 </svg>
-                                                <span>{!! mb_convert_encoding(preg_replace('/u([0-9a-fA-F]{4})/', '&#x\\1;', $feature), 'UTF-8', 'HTML-ENTITIES') !!}</span>
+                                                <span>{{ $feature }}</span>
                                             </li>
                                         @endforeach
                                     </ul>
