@@ -235,7 +235,7 @@ return [
                 'title' => 'Chatboți AI Personalizați',
                 'subtitle' => 'Asistență virtuală inteligentă',
                 'features' => [
-                    'Integrare GPT-4',
+                    'Integrare LLM',
                     'Suport multilingv',
                     'Personalizare avansată'
                 ]

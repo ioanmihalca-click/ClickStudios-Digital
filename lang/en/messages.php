@@ -235,7 +235,7 @@ return [
                 'title' => 'Custom AI Chatbots',
                 'subtitle' => 'Intelligent virtual assistance',
                 'features' => [
-                    'GPT-4 integration',
+                    'LLM integration',
                     'Multilingual support',
                     'Advanced customization'
                 ]
