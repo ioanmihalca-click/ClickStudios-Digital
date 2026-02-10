@@ -2,10 +2,11 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
+use App\Livewire\Contact;
 use App\Livewire\DezvoltareWeb;
+use App\Livewire\Homepage;
 use App\Livewire\Portofoliu;
 use App\Livewire\Servicii;
-use App\Livewire\Contact;
 use Illuminate\Support\Facades\Route;
 
 // Default redirect to user's preferred language
@@ -22,9 +23,7 @@ Route::prefix('{locale}')
     ->group(function () {
 
         // Home page
-        Route::get('/', function () {
-            return view('welcome');
-        })->name('home');
+        Route::livewire('/', Homepage::class)->name('home');
 
         // Main navigation routes
         Route::livewire('/web-development', DezvoltareWeb::class)->name('web-development');

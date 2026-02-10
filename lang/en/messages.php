@@ -7,6 +7,7 @@ return [
         'web_development' => 'Web Development',
         'services' => 'Services',
         'portfolio' => 'Portfolio',
+        'about' => 'About Us',
         'contact' => 'Contact',
     ],
 
@@ -16,7 +17,8 @@ return [
         'title' => 'Transforming Ideas into',
         'title-gradient' => 'Digital Experiences',
         'subtitle' => 'We develop custom applications, with expertise in Laravel and advanced Artificial Intelligence integrations.',
-        'discover_button' => 'Discover Click Studios',
+        'company_name' => 'Click Studios Digital:',
+        'discover_button' => 'View Project',
         'contact_button' => 'Contact Us',
     ],
 
@@ -52,8 +54,8 @@ return [
                 'features' => [
                     'APIs & integrations (REST, webhooks)',
                     'Auth, roles, auditing & security',
-                    'Admin dashboards, reporting, SaaS'
-                ]
+                    'Admin dashboards, reporting, SaaS',
+                ],
             ],
             'web_design' => [
                 'title' => 'Modern Web Design',
@@ -61,8 +63,8 @@ return [
                 'features' => [
                     'UI/UX Design',
                     'Mobile First',
-                    'UX Optimization'
-                ]
+                    'UX Optimization',
+                ],
             ],
             'automation' => [
                 'title' => 'Business Process Automation',
@@ -70,8 +72,8 @@ return [
                 'features' => [
                     'Automated workflows, notifications, syncs',
                     'Document processing (OCR) & data extraction',
-                    'Billing, payments, ERP/CRM integrations'
-                ]
+                    'Billing, payments, ERP/CRM integrations',
+                ],
             ],
             'ai_solutions' => [
                 'title' => 'Enterprise AI Solutions',
@@ -79,8 +81,8 @@ return [
                 'features' => [
                     'In-app AI chat (assistants, copilots)',
                     'RAG (document search + answers)',
-                    'Agentic automation + quality evaluation'
-                ]
+                    'Agentic automation + quality evaluation',
+                ],
             ],
             'marketing' => [
                 'title' => 'Sales & Marketing Optimization',
@@ -88,8 +90,8 @@ return [
                 'features' => [
                     'AI-Powered Personalized Recommendations',
                     'Predictive Customer Analytics',
-                    'Automated Marketing'
-                ]
+                    'Automated Marketing',
+                ],
             ],
             'digital_marketing' => [
                 'title' => 'Digital Marketing',
@@ -97,8 +99,8 @@ return [
                 'features' => [
                     'SEO & Content',
                     'Social Media',
-                    'Google Ads'
-                ]
+                    'Google Ads',
+                ],
             ],
             'advertising' => [
                 'title' => 'Advertising Spots',
@@ -106,8 +108,8 @@ return [
                 'features' => [
                     'TV & Online Ads',
                     'Audio Production',
-                    'Professional Voice-over'
-                ]
+                    'Professional Voice-over',
+                ],
             ],
             'ecommerce' => [
                 'title' => 'E-commerce Solutions',
@@ -115,8 +117,8 @@ return [
                 'features' => [
                     'Bagisto (Laravel) & custom builds',
                     'Checkout, payments, invoicing, shipping',
-                    'Stock, ERP, marketplace integrations'
-                ]
+                    'Stock, ERP, marketplace integrations',
+                ],
             ],
             'maintenance' => [
                 'title' => 'Maintenance & Support',
@@ -124,14 +126,14 @@ return [
                 'features' => [
                     'Monitoring, logs, alerts, uptime',
                     'Updates, security, backup & recovery',
-                    'Performance tuning (DB/cache/queries)'
-                ]
-            ]
+                    'Performance tuning (DB/cache/queries)',
+                ],
+            ],
         ],
         'cta' => [
             'title' => 'Ready to start your digital project?',
             'description' => "Let's turn your ideas into a successful digital reality. Our expertise in Laravel and AI allows us to deliver customized solutions for your business.",
-        ]
+        ],
     ],
 
     // Web Development Page
@@ -156,7 +158,7 @@ return [
         'tabs' => [
             'tall' => 'TALL Stack',
             'services' => 'Web Services',
-            'ai' => 'AI & LLM'
+            'ai' => 'AI & LLM',
         ],
         'tall_stack' => [
             'tailwind' => [
@@ -164,33 +166,33 @@ return [
                 'subtitle' => 'Responsive and modern design',
                 'features' => [
                     'Advanced customization',
-                    'Performance optimization'
-                ]
+                    'Performance optimization',
+                ],
             ],
             'alpine' => [
                 'title' => 'Alpine.js',
                 'subtitle' => 'Dynamic interactivity',
                 'features' => [
                     'Reactive behavior',
-                    'Simplified DOM manipulation'
-                ]
+                    'Simplified DOM manipulation',
+                ],
             ],
             'laravel' => [
                 'title' => 'Laravel',
                 'subtitle' => 'Robust and scalable backend',
                 'features' => [
                     'Modern architecture',
-                    'Advanced security'
-                ]
+                    'Advanced security',
+                ],
             ],
             'livewire' => [
                 'title' => 'Livewire',
                 'subtitle' => 'Real-time updates',
                 'features' => [
                     'Dynamic components',
-                    'SPA-like experience'
-                ]
-            ]
+                    'SPA-like experience',
+                ],
+            ],
         ],
         'web_services' => [
             'websites' => [
@@ -199,8 +201,8 @@ return [
                 'features' => [
                     'SEO optimization',
                     'Responsive design',
-                    'Fast loading'
-                ]
+                    'Fast loading',
+                ],
             ],
             'mobile' => [
                 'title' => 'Mobile Apps & PWA',
@@ -208,8 +210,8 @@ return [
                 'features' => [
                     'Progressive Web Apps',
                     'Cross-platform',
-                    'Offline mode'
-                ]
+                    'Offline mode',
+                ],
             ],
             'applications' => [
                 'title' => 'Complex Web Applications',
@@ -217,8 +219,8 @@ return [
                 'features' => [
                     'Scalable architecture',
                     'API integrations',
-                    'Cloud ready'
-                ]
+                    'Cloud ready',
+                ],
             ],
             'admin' => [
                 'title' => 'Admin Panels',
@@ -226,9 +228,9 @@ return [
                 'features' => [
                     'Custom dashboards',
                     'Advanced reports',
-                    'User management'
-                ]
-            ]
+                    'User management',
+                ],
+            ],
         ],
         'ai_services' => [
             'chatbots' => [
@@ -237,8 +239,8 @@ return [
                 'features' => [
                     'LLM integration',
                     'Multilingual support',
-                    'Advanced customization'
-                ]
+                    'Advanced customization',
+                ],
             ],
             'automation' => [
                 'title' => 'AI Automation',
@@ -246,8 +248,8 @@ return [
                 'features' => [
                     'Workflow automation',
                     'Document processing',
-                    'Data analysis'
-                ]
+                    'Data analysis',
+                ],
             ],
             'ml' => [
                 'title' => 'Machine Learning',
@@ -255,8 +257,8 @@ return [
                 'features' => [
                     'Predictive models',
                     'Sentiment analysis',
-                    'Automatic classification'
-                ]
+                    'Automatic classification',
+                ],
             ],
             'integrations' => [
                 'title' => 'Advanced AI Integrations',
@@ -264,10 +266,10 @@ return [
                 'features' => [
                     'AI API integrations',
                     'Custom AI Models',
-                    'Auto-scaling'
-                ]
-            ]
-        ]
+                    'Auto-scaling',
+                ],
+            ],
+        ],
     ],
 
     // Portfolio page
@@ -317,7 +319,7 @@ return [
             'submit' => 'Send Message',
             'submitting' => 'Sending...',
             'success' => 'Your message has been sent successfully! We\'ll contact you soon.',
-            'error' => 'An error occurred while sending your message. Please try again later.'
+            'error' => 'An error occurred while sending your message. Please try again later.',
         ],
 
         'info' => [
@@ -327,12 +329,12 @@ return [
             'address' => 'Address',
             'hours' => 'Working Hours',
             'hours_value' => 'Monday - Friday: 09:00 - 17:00',
-            'social' => 'Social Media'
+            'social' => 'Social Media',
         ],
 
         'map' => [
-            'title' => 'Our Location'
-        ]
+            'title' => 'Our Location',
+        ],
     ],
 
     // Common

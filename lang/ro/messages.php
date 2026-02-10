@@ -7,6 +7,7 @@ return [
         'web_development' => 'Dezvoltare Web',
         'services' => 'Servicii',
         'portfolio' => 'Portofoliu',
+        'about' => 'Despre Noi',
         'contact' => 'Contact',
     ],
 
@@ -16,7 +17,8 @@ return [
         'title' => 'Transformăm Ideile în',
         'title-gradient' => 'Experiențe Digitale',
         'subtitle' => 'Dezvoltăm aplicații personalizate, cu expertiză în Laravel și integrări avansate de Inteligență Artificială.',
-        'discover_button' => 'Descoperă Click Studios',
+        'company_name' => 'Click Studios Digital:',
+        'discover_button' => 'Vezi Proiectul',
         'contact_button' => 'Contactează-ne',
     ],
 
@@ -52,8 +54,8 @@ return [
                 'features' => [
                     'API-uri & integrări (REST, webhooks)',
                     'Autentificare, roluri, audit & securitate',
-                    'Dashboard-uri admin, rapoarte, SaaS'
-                ]
+                    'Dashboard-uri admin, rapoarte, SaaS',
+                ],
             ],
             'web_design' => [
                 'title' => 'Design Web Modern',
@@ -61,8 +63,8 @@ return [
                 'features' => [
                     'Design UI/UX',
                     'Mobile First',
-                    'Optimizare UX'
-                ]
+                    'Optimizare UX',
+                ],
             ],
             'automation' => [
                 'title' => 'Automatizare Procese de Business',
@@ -70,8 +72,8 @@ return [
                 'features' => [
                     'Fluxuri automate, notificări, sincronizări',
                     'Procesare documente (OCR) & extragere date',
-                    'Facturare, plăți, integrări ERP/CRM'
-                ]
+                    'Facturare, plăți, integrări ERP/CRM',
+                ],
             ],
             'ai_solutions' => [
                 'title' => 'Soluții AI pentru Companii',
@@ -79,8 +81,8 @@ return [
                 'features' => [
                     'Chat AI în aplicație (asistenți, copilots)',
                     'RAG (căutare în documente + răspunsuri)',
-                    'Automatizări agentice + evaluare calitate'
-                ]
+                    'Automatizări agentice + evaluare calitate',
+                ],
             ],
             'marketing' => [
                 'title' => 'Optimizare Vânzări și Marketing',
@@ -88,8 +90,8 @@ return [
                 'features' => [
                     'Recomandări Personalizate bazate pe AI',
                     'Analiză Predictivă Clienți',
-                    'Marketing Automatizat'
-                ]
+                    'Marketing Automatizat',
+                ],
             ],
             'digital_marketing' => [
                 'title' => 'Marketing Digital',
@@ -97,8 +99,8 @@ return [
                 'features' => [
                     'SEO și Content',
                     'Social Media',
-                    'Google Ads'
-                ]
+                    'Google Ads',
+                ],
             ],
             'advertising' => [
                 'title' => 'Spoturi Publicitare',
@@ -106,8 +108,8 @@ return [
                 'features' => [
                     'Reclame TV și Online',
                     'Producție Audio',
-                    'Voice-over Profesional'
-                ]
+                    'Voice-over Profesional',
+                ],
             ],
             'ecommerce' => [
                 'title' => 'Soluții E-commerce',
@@ -115,8 +117,8 @@ return [
                 'features' => [
                     'Bagisto (Laravel) & implementări custom',
                     'Checkout, plăți, facturare, curieri',
-                    'Integrări stocuri, ERP, marketplace'
-                ]
+                    'Integrări stocuri, ERP, marketplace',
+                ],
             ],
             'maintenance' => [
                 'title' => 'Mentenanță și Suport',
@@ -124,14 +126,14 @@ return [
                 'features' => [
                     'Monitorizare, loguri, alerte, uptime',
                     'Update-uri, securitate, backup & recovery',
-                    'Optimizare performanță (DB/cache/queries)'
-                ]
-            ]
+                    'Optimizare performanță (DB/cache/queries)',
+                ],
+            ],
         ],
         'cta' => [
             'title' => 'Ești pregătit să începi proiectul tău digital?',
             'description' => 'Hai să transformăm ideile tale într-o realitate digitală de succes. Expertiza noastră în Laravel și AI ne permite să oferim soluții personalizate pentru afacerea ta.',
-        ]
+        ],
     ],
 
     // Web Development Page
@@ -156,7 +158,7 @@ return [
         'tabs' => [
             'tall' => 'TALL Stack',
             'services' => 'Servicii Web',
-            'ai' => 'AI & LLM'
+            'ai' => 'AI & LLM',
         ],
         'tall_stack' => [
             'tailwind' => [
@@ -164,33 +166,33 @@ return [
                 'subtitle' => 'Design modern și responsive',
                 'features' => [
                     'Personalizare avansată',
-                    'Optimizare performanță'
-                ]
+                    'Optimizare performanță',
+                ],
             ],
             'alpine' => [
                 'title' => 'Alpine.js',
                 'subtitle' => 'Interactivitate dinamică',
                 'features' => [
                     'Comportament reactiv',
-                    'Manipulare DOM simplificată'
-                ]
+                    'Manipulare DOM simplificată',
+                ],
             ],
             'laravel' => [
                 'title' => 'Laravel',
                 'subtitle' => 'Backend robust și scalabil',
                 'features' => [
                     'Arhitectură modernă',
-                    'Securitate avansată'
-                ]
+                    'Securitate avansată',
+                ],
             ],
             'livewire' => [
                 'title' => 'Livewire',
                 'subtitle' => 'Actualizări în timp real',
                 'features' => [
                     'Componente dinamice',
-                    'Experiență tip SPA'
-                ]
-            ]
+                    'Experiență tip SPA',
+                ],
+            ],
         ],
         'web_services' => [
             'websites' => [
@@ -199,8 +201,8 @@ return [
                 'features' => [
                     'Optimizare SEO',
                     'Design responsive',
-                    'Încărcare rapidă'
-                ]
+                    'Încărcare rapidă',
+                ],
             ],
             'mobile' => [
                 'title' => 'Aplicații Mobile & PWA',
@@ -208,8 +210,8 @@ return [
                 'features' => [
                     'Aplicații Web Progressive',
                     'Cross-platform',
-                    'Mod offline'
-                ]
+                    'Mod offline',
+                ],
             ],
             'applications' => [
                 'title' => 'Aplicații Web Complexe',
@@ -217,8 +219,8 @@ return [
                 'features' => [
                     'Arhitectură scalabilă',
                     'Integrări API',
-                    'Pregătit pentru cloud'
-                ]
+                    'Pregătit pentru cloud',
+                ],
             ],
             'admin' => [
                 'title' => 'Panouri Administrative',
@@ -226,9 +228,9 @@ return [
                 'features' => [
                     'Dashboard-uri personalizate',
                     'Rapoarte avansate',
-                    'Managementul utilizatorilor'
-                ]
-            ]
+                    'Managementul utilizatorilor',
+                ],
+            ],
         ],
         'ai_services' => [
             'chatbots' => [
@@ -237,8 +239,8 @@ return [
                 'features' => [
                     'Integrare LLM',
                     'Suport multilingv',
-                    'Personalizare avansată'
-                ]
+                    'Personalizare avansată',
+                ],
             ],
             'automation' => [
                 'title' => 'Automatizare AI',
@@ -246,8 +248,8 @@ return [
                 'features' => [
                     'Automatizare workflow',
                     'Procesare documente',
-                    'Analiză date'
-                ]
+                    'Analiză date',
+                ],
             ],
             'ml' => [
                 'title' => 'Machine Learning',
@@ -255,8 +257,8 @@ return [
                 'features' => [
                     'Modele predictive',
                     'Analiza sentimentelor',
-                    'Clasificare automată'
-                ]
+                    'Clasificare automată',
+                ],
             ],
             'integrations' => [
                 'title' => 'Integrări AI Avansate',
@@ -264,10 +266,10 @@ return [
                 'features' => [
                     'Integrări API AI',
                     'Modele AI Personalizate',
-                    'Auto-scalare'
-                ]
-            ]
-        ]
+                    'Auto-scalare',
+                ],
+            ],
+        ],
     ],
 
     // Portfolio page
@@ -317,7 +319,7 @@ return [
             'submit' => 'Trimite mesaj',
             'submitting' => 'Se trimite...',
             'success' => 'Mesajul tău a fost trimis cu succes! Te vom contacta în curând.',
-            'error' => 'A apărut o eroare la trimiterea mesajului. Te rugăm să încerci din nou mai târziu.'
+            'error' => 'A apărut o eroare la trimiterea mesajului. Te rugăm să încerci din nou mai târziu.',
         ],
 
         'info' => [
@@ -327,12 +329,12 @@ return [
             'address' => 'Adresă',
             'hours' => 'Program de lucru',
             'hours_value' => 'Luni - Vineri: 09:00 - 17:00',
-            'social' => 'Rețele sociale'
+            'social' => 'Rețele sociale',
         ],
 
         'map' => [
-            'title' => 'Locația noastră'
-        ]
+            'title' => 'Locația noastră',
+        ],
     ],
 
     // Common

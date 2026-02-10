@@ -124,9 +124,9 @@
 
     <main>
         <!-- Loading Spinner -->
-        <div x-show="loading" class="fixed inset-0 z-50 flex items-center justify-center bg-black" aria-busy="true"
+        <div x-show="loading" class="fixed inset-0 z-50 flex items-center justify-center bg-white" aria-busy="true"
             aria-label="{{ __('messages.loading') }}">
-            <div class="w-16 h-16 border-t-4 border-solid rounded-full border-emerald-700 animate-spin"></div>
+            <div class="w-16 h-16 border-t-4 border-solid rounded-full border-emerald-500 animate-spin"></div>
         </div>
         {{ $slot }}
     </main>

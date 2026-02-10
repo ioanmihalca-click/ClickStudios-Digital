@@ -4,5 +4,9 @@
       "Bash(composer update:*)",
       "WebFetch(domain:livewire.laravel.com)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "laravel-boost"
+  ],
+  "enableAllProjectMcpServers": true
 }
