@@ -110,30 +110,7 @@
                 </ul>
             </div>
 
-            <!-- Newsletter -->
             <div>
-                <h3 class="mb-4 text-sm font-semibold tracking-wider uppercase text-emerald-400">
-                    {{ __('messages.footer.newsletter.title') }}
-                </h3>
-                <p class="mb-4 text-sm text-gray-400">
-                    {{ __('messages.footer.newsletter.subtitle') }}
-                </p>
-                <form class="flex flex-col gap-2">
-                    <div class="flex-grow">
-                        <label for="email-address"
-                            class="sr-only">{{ __('messages.footer.newsletter.placeholder') }}</label>
-                        <input id="email-address" name="email" type="email" autocomplete="email" required
-                            class="w-full min-w-0 px-4 py-2 text-base text-gray-900 placeholder-gray-500 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                            placeholder="{{ __('messages.footer.newsletter.placeholder') }}">
-                    </div>
-                    <div class="sm:mt-0">
-                        <button type="submit"
-                            class="w-full px-4 py-2 text-sm font-medium text-white transition-colors duration-300 rounded-lg bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                            {{ __('messages.footer.newsletter.button') }}
-                        </button>
-                    </div>
-                </form>
-
                 <!-- Selector Limbă -->
                 <div class="mt-6">
                     <h3 class="mb-3 text-sm font-semibold tracking-wider uppercase text-emerald-400">

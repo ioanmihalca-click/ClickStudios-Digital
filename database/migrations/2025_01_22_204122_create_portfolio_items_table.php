@@ -6,31 +6,31 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('portfolio_items', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('title_ro')->nullable();
             $table->string('slug')->unique();
             $table->text('description');
+            $table->text('description_ro')->nullable();
             $table->string('short_description');
+            $table->string('short_description_ro')->nullable();
             $table->string('image')->nullable();
-            $table->string('preview_image')->nullable();
             $table->string('website_url')->nullable();
+            $table->string('youtube_url')->nullable();
             $table->json('technologies')->nullable();
+            $table->string('technologies_ro')->nullable();
             $table->json('features')->nullable();
+            $table->text('features_ro')->nullable();
             $table->boolean('is_active')->default(true);
+            $table->boolean('is_featured')->default(false);
             $table->integer('sort_order')->default(0);
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('portfolio_items');

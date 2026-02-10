@@ -5,8 +5,6 @@ use App\Http\Controllers\LanguageController;
 use App\Livewire\DezvoltareWeb;
 use App\Livewire\Portofoliu;
 use App\Livewire\Servicii;
-use App\Livewire\Unsubscribe;
-use App\Http\Controllers\SubscriberController;
 use App\Livewire\Contact;
 use Illuminate\Support\Facades\Route;
 
@@ -33,8 +31,4 @@ Route::prefix('{locale}')
         Route::livewire('/services', Servicii::class)->name('services');
         Route::livewire('/portfolio', Portofoliu::class)->name('portfolio');
         Route::livewire('/contact', Contact::class)->name('contact');
-        Route::livewire('/unsubscribe/{token}', Unsubscribe::class)->name('unsubscribe');
-
-        // Form submissions
-        Route::post('/subscribers', [SubscriberController::class, 'store'])->name('subscribers.store');
     });
