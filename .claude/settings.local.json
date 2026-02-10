@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(composer update:*)"
+      "Bash(composer update:*)",
+      "WebFetch(domain:livewire.laravel.com)"
     ]
   }
 }

@@ -29,11 +29,11 @@ Route::prefix('{locale}')
         })->name('home');
 
         // Main navigation routes
-        Route::get('/web-development', DezvoltareWeb::class)->name('web-development');
-        Route::get('/services', Servicii::class)->name('services');
-        Route::get('/portfolio', Portofoliu::class)->name('portfolio');
-        Route::get('/contact', Contact::class)->name('contact');
-        Route::get('/unsubscribe/{token}', Unsubscribe::class)->name('unsubscribe');
+        Route::livewire('/web-development', DezvoltareWeb::class)->name('web-development');
+        Route::livewire('/services', Servicii::class)->name('services');
+        Route::livewire('/portfolio', Portofoliu::class)->name('portfolio');
+        Route::livewire('/contact', Contact::class)->name('contact');
+        Route::livewire('/unsubscribe/{token}', Unsubscribe::class)->name('unsubscribe');
 
         // Form submissions
         Route::post('/subscribers', [SubscriberController::class, 'store'])->name('subscribers.store');
