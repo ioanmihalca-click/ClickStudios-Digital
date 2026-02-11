@@ -51,39 +51,31 @@
                 <!-- Desktop Language Switcher -->
                 <div class="relative group">
                     <button
-                        class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 transition-all duration-300 rounded-lg bg-gray-100/80 hover:bg-gray-200">
+                        class="flex items-center px-2 py-2 text-sm font-medium text-gray-700 transition-all duration-300 rounded-lg bg-gray-100/80 hover:bg-gray-200">
                         @if (App::getLocale() === 'en')
-                            <span class="flex items-center">
-                                <span
-                                    class="inline-flex items-center justify-center w-5 h-5 mr-2 overflow-hidden rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-full h-full">
-                                        <rect width="512" height="512" fill="#012169" />
-                                        <path d="M512 0L0 512" stroke="#fff" stroke-width="74" />
-                                        <path d="M0 0L512 512" stroke="#fff" stroke-width="74" />
-                                        <path d="M0 0L512 512" stroke="#c8102e" stroke-width="40" />
-                                        <path d="M512 0L0 512" stroke="#c8102e" stroke-width="40" />
-                                        <rect width="170" height="512" x="171" fill="#fff" />
-                                        <rect width="512" height="170" y="171" fill="#fff" />
-                                        <rect width="102" height="512" x="205" fill="#c8102e" />
-                                        <rect width="512" height="102" y="205" fill="#c8102e" />
-                                    </svg>
-                                </span>
-                                <span>English</span>
+                            <span class="inline-flex items-center justify-center w-6 h-6 overflow-hidden rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-full h-full">
+                                    <rect width="512" height="512" fill="#012169" />
+                                    <path d="M512 0L0 512" stroke="#fff" stroke-width="74" />
+                                    <path d="M0 0L512 512" stroke="#fff" stroke-width="74" />
+                                    <path d="M0 0L512 512" stroke="#c8102e" stroke-width="40" />
+                                    <path d="M512 0L0 512" stroke="#c8102e" stroke-width="40" />
+                                    <rect width="170" height="512" x="171" fill="#fff" />
+                                    <rect width="512" height="170" y="171" fill="#fff" />
+                                    <rect width="102" height="512" x="205" fill="#c8102e" />
+                                    <rect width="512" height="102" y="205" fill="#c8102e" />
+                                </svg>
                             </span>
                         @else
-                            <span class="flex items-center">
-                                <span
-                                    class="inline-flex items-center justify-center w-5 h-5 mr-2 overflow-hidden rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" class="w-full h-full">
-                                        <rect width="1" height="2" fill="#002B7F" />
-                                        <rect width="1" height="2" x="1" fill="#FCD116" />
-                                        <rect width="1" height="2" x="2" fill="#CE1126" />
-                                    </svg>
-                                </span>
-                                <span>Română</span>
+                            <span class="inline-flex items-center justify-center w-6 h-6 overflow-hidden rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" class="w-full h-full">
+                                    <rect width="1" height="2" fill="#002B7F" />
+                                    <rect width="1" height="2" x="1" fill="#FCD116" />
+                                    <rect width="1" height="2" x="2" fill="#CE1126" />
+                                </svg>
                             </span>
                         @endif
-                        <svg class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:rotate-180"
+                        <svg class="w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="6 9 12 15 18 9"></polyline>
@@ -197,7 +189,7 @@
                     <a href="{{ route(Route::currentRouteName(), ['locale' => 'en'] + Route::current()->parameters()) }}"
                         class="flex items-center justify-center py-2.5 px-3 rounded-lg transition-all duration-300 {{ App::getLocale() === 'en' ? 'bg-emerald-50 text-emerald-600 border border-emerald-200' : 'bg-gray-50 text-gray-700 border border-gray-200 hover:bg-gray-100' }}">
                         <span
-                            class="inline-flex items-center justify-center w-5 h-5 mr-2 overflow-hidden rounded-full">
+                            class="inline-flex items-center justify-center w-6 h-6 overflow-hidden rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-full h-full">
                                 <rect width="512" height="512" fill="#012169" />
                                 <path d="M512 0L0 512" stroke="#fff" stroke-width="74" />
@@ -210,19 +202,17 @@
                                 <rect width="512" height="102" y="205" fill="#c8102e" />
                             </svg>
                         </span>
-                        <span class="text-sm font-medium">English</span>
                     </a>
                     <a href="{{ route(Route::currentRouteName(), ['locale' => 'ro'] + Route::current()->parameters()) }}"
                         class="flex items-center justify-center py-2.5 px-3 rounded-lg transition-all duration-300 {{ App::getLocale() === 'ro' ? 'bg-emerald-50 text-emerald-600 border border-emerald-200' : 'bg-gray-50 text-gray-700 border border-gray-200 hover:bg-gray-100' }}">
                         <span
-                            class="inline-flex items-center justify-center w-5 h-5 mr-2 overflow-hidden rounded-full">
+                            class="inline-flex items-center justify-center w-6 h-6 overflow-hidden rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" class="w-full h-full">
                                 <rect width="1" height="2" fill="#002B7F" />
                                 <rect width="1" height="2" x="1" fill="#FCD116" />
                                 <rect width="1" height="2" x="2" fill="#CE1126" />
                             </svg>
                         </span>
-                        <span class="text-sm font-medium">Română</span>
                     </a>
                 </div>
             </div>
