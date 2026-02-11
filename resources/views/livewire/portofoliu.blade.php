@@ -46,22 +46,6 @@
                             <!-- Descriere scurtă - mai compactă -->
                             <p class="mb-3 text-xs text-gray-400 line-clamp-2">{{ $item['short_description'] }}</p>
 
-                            <!-- Tehnologii folosite - design mai compact -->
-                            <div class="mt-auto">
-                                <div class="flex flex-wrap gap-1.5">
-                                    @if (!empty($item['technologies']))
-                                        @foreach ($item['technologies'] as $tech)
-                                            <span
-                                                class="px-1.5 py-0.5 text-[10px] font-medium rounded bg-emerald-900/20 text-emerald-400/80 border-l border-emerald-500/30">
-                                                @php
-                                                    $techText = trim($tech, "\" '");
-                                                @endphp
-                                                {{ $techText }}
-                                            </span>
-                                        @endforeach
-                                    @endif
-                                </div>
-                            </div>
 
                             <!-- Button subtle în colțul din dreapta jos -->
                             <button @click.stop="selectedItem = @js($item['slug'])"
@@ -156,23 +140,6 @@
 
                             <p class="text-sm leading-relaxed text-gray-300">{{ $item['description'] }}</p>
 
-                            @if (!empty($item['features']))
-                                <div class="p-4 space-y-3 rounded-lg bg-slate-800/40 border border-slate-700/30">
-                                    <h3 class="text-base font-semibold text-emerald-400">Key Features</h3>
-                                    <ul class="space-y-2 text-sm text-gray-300">
-                                        @foreach ($item['features'] as $feature)
-                                            <li class="flex items-start gap-2">
-                                                <svg class="flex-shrink-0 w-4 h-4 mt-0.5 text-emerald-500"
-                                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                                </svg>
-                                                <span>{{ $feature }}</span>
-                                            </li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
 
                             @if (!empty($item['youtube_url']))
                                 <div class="space-y-3">

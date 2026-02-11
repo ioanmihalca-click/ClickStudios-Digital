@@ -15,15 +15,11 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('description');
             $table->text('description_ro')->nullable();
-            $table->string('short_description');
-            $table->string('short_description_ro')->nullable();
+            $table->text('short_description');
+            $table->text('short_description_ro')->nullable();
             $table->string('image')->nullable();
             $table->string('website_url')->nullable();
             $table->string('youtube_url')->nullable();
-            $table->json('technologies')->nullable();
-            $table->string('technologies_ro')->nullable();
-            $table->json('features')->nullable();
-            $table->text('features_ro')->nullable();
             $table->boolean('is_active')->default(true);
             $table->boolean('is_featured')->default(false);
             $table->integer('sort_order')->default(0);

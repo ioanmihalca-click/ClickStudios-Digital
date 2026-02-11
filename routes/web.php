@@ -3,7 +3,6 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
 use App\Livewire\Contact;
-use App\Livewire\DezvoltareWeb;
 use App\Livewire\Homepage;
 use App\Livewire\Portofoliu;
 use App\Livewire\Servicii;
@@ -26,7 +25,6 @@ Route::prefix('{locale}')
         Route::livewire('/', Homepage::class)->name('home');
 
         // Main navigation routes
-        Route::livewire('/web-development', DezvoltareWeb::class)->name('web-development');
         Route::livewire('/services', Servicii::class)->name('services');
         Route::livewire('/portfolio', Portofoliu::class)->name('portfolio');
         Route::livewire('/contact', Contact::class)->name('contact');

@@ -8,7 +8,7 @@
 
         <!-- Modern Overlay with multiple layers -->
         <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-gray-900/90"></div>
-        <div class="absolute inset-0 backdrop-filter backdrop-blur-[2px]"></div>
+        <div class="absolute inset-0 backdrop-blur-[2px]"></div>
         <div class="absolute inset-0 bg-blue-900/10 mix-blend-overlay"></div>
 
         <!-- Optional pattern overlay -->

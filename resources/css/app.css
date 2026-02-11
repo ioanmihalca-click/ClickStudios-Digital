@@ -1,6 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-roboto-condensed: "Roboto Condensed", sans-serif;
+  --font-volkov: "Volkhov", serif;
+}
 
 [x-cloak] {
     display: none !important;
@@ -51,4 +55,3 @@ body {
     aspect-ratio: 9/16;
     object-fit: cover;
 }
-
