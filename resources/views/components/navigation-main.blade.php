@@ -12,7 +12,7 @@
     }"
     @scroll.window="handleScroll" x-init="handleScroll">
 
-    <div class="container px-4 mx-auto">
+    <div class="max-w-5xl px-4 mx-auto">
         <div class="flex items-center justify-between h-20">
             <!-- Logo -->
             <a href="{{ route('home', ['locale' => App::getLocale()]) }}"

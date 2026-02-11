@@ -1,6 +1,6 @@
 <div class="relative w-full h-full overflow-hidden font-roboto-condensed">
     {{-- Content --}}
-    <div class="relative z-10 flex flex-col justify-between h-full px-4 pt-20 pb-2 mx-auto container md:pt-24">
+    <div class="relative z-10 flex flex-col justify-between h-full px-4 pt-20 pb-2 mx-auto max-w-5xl md:pt-24">
         <!-- Hero Section -->
         <section class="flex flex-col items-center justify-center flex-grow-0 mt-2 text-center md:mt-4">
             <h1 class="mb-1 uppercase tracking-tight leading-none">
