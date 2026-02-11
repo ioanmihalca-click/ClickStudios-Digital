@@ -17,9 +17,9 @@
             <!-- Logo -->
             <a href="{{ route('home', ['locale' => App::getLocale()]) }}"
                 class="flex items-center transition-all duration-300 group">
-                <div class="flex items-center justify-center w-10 h-10 p-1 transition-all duration-300 rounded-lg">
+                <div class="flex items-center justify-center w-10 h-10 p-1 transition-all duration-300">
                     <img src="{{ asset('assets/logo.jpg') }}" alt="Click Studios Digital Logo"
-                        class="w-full h-full rounded-lg">
+                        class="w-full h-full">
                 </div>
             </a>
 
