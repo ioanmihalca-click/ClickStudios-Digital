@@ -141,6 +141,35 @@
     </main>
 
 
+    <!-- Footer -->
+    <footer class="fixed bottom-0 left-0 right-0 z-30 w-full bg-white md:bg-transparent px-4 py-2">
+        <div class="flex items-center justify-between mx-auto max-w-5xl border-t border-gray-200 pt-2">
+            <!-- Social Links -->
+            <div class="flex items-center gap-4">
+                <a href="https://www.tiktok.com/@clickstudiosdigital" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-500 hover:text-gray-900 transition-colors">
+                    <i class="fa-brands fa-tiktok text-lg"></i>
+                </a>
+                <a href="https://www.youtube.com/@clickstudiosdigital" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-500 hover:text-gray-900 transition-colors">
+                    <i class="fa-brands fa-youtube text-lg"></i>
+                </a>
+            </div>
+
+            <!-- Logo -->
+            {{-- <img src="{{ asset('assets/logo.jpg') }}" alt="Click Studios Digital" class="h-7"> --}}
+
+            <!-- Contact -->
+            <div class="flex items-center gap-2 text-xs text-gray-500">
+                <span class="hidden md:inline">{{ __('messages.footer.contact_info') }}</span>
+                <a href="mailto:contact@clickstudiosdigital.com"
+                    class="text-gray-700 hover:text-emerald-600 transition-colors">
+                    contact@clickstudiosdigital.com
+                </a>
+            </div>
+        </div>
+    </footer>
+
     <!-- Scroll to Top Button -->
     <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
         class="fixed z-50 flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4 ">

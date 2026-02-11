@@ -1,5 +1,5 @@
 <section class="relative z-30 py-2 w-full">
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
+    <div class="grid grid-cols-1 gap-4 max-w-[280px] ml-auto md:max-w-none md:mx-auto md:grid-cols-3 md:gap-6">
             @foreach ($featuredApps->take(3) as $item)
                 <div class="flex flex-col bg-white shadow-lg rounded-2xl h-full border border-gray-100">
                     @if ($item['image'])
