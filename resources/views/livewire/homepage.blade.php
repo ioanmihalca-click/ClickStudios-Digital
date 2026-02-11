@@ -1,67 +1,50 @@
-<div class="w-full relative bg-top bg-no-repeat bg-cover font-roboto-condensed overflow-x-hidden"
-    style="background-image: url('{{ asset('assets/bg/desktop.webp') }}');">
-    
-    <style>
-        @media (max-width: 768px) {
-            .bg-custom-mobile {
-                background-image: url('{{ asset('assets/bg/mobile.webp') }}') !important;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center top;
-            }
-        }
-    </style>
-
-    <div class="bg-custom-mobile absolute inset-0 z-0 md:hidden"></div>
-
-    <div class="relative z-10 flex flex-col justify-between min-h-screen pt-24 pb-8 md:pt-28 md:pb-4 container mx-auto px-4">
+<div class="relative w-full h-full overflow-hidden font-roboto-condensed">
+    {{-- Content --}}
+    <div class="relative z-10 flex flex-col justify-between h-full px-4 pt-20 pb-2 mx-auto container md:pt-24">
         <!-- Hero Section -->
-        <section class="flex flex-col items-center justify-center text-center flex-grow-0 mb-4 md:mb-8">
-            <h1 class="mb-2 tracking-tight uppercase leading-none">
-                <span class="block text-2xl font-extrabold text-emerald-600 md:text-4xl lg:text-5xl mb-1">
+        <section class="flex flex-col items-center justify-center flex-grow-0 mt-2 text-center md:mt-4">
+            <h1 class="mb-1 uppercase tracking-tight leading-none">
+                <span class="block mb-1 text-2xl font-extrabold text-emerald-600 md:text-5xl lg:text-6xl">
                     Click Studios Digital:
                 </span>
-                <span class="block text-3xl font-black text-gray-900 md:text-5xl lg:text-6xl leading-tight">
+                <span class="block text-3xl font-black text-gray-900 md:text-6xl lg:text-7xl leading-tight">
                     Transformăm Ideile în <br /> Experiențe Digitale
                 </span>
             </h1>
             
-            <p class="max-w-2xl mx-auto mb-4 text-base text-gray-600 md:text-lg font-medium leading-tight">
+            <p class="max-w-3xl mx-auto mb-4 text-sm font-medium text-gray-600 md:text-lg leading-tight">
                 Dezvoltăm aplicații personalizate, cu expertiză în Laravel și integrări avansate <br class="hidden md:block" /> de Inteligență Artificială.
             </p>
             
             <a href="#featured" 
-                class="inline-block px-6 py-2 text-xs md:text-sm font-bold tracking-widest text-white uppercase transition-transform duration-300 rounded-full bg-emerald-500 hover:bg-emerald-600 hover:scale-105 shadow-lg shadow-emerald-500/30">
+                class="inline-block px-6 py-2 text-xs font-bold tracking-widest text-white uppercase transition-transform duration-300 rounded-full bg-emerald-500 hover:bg-emerald-600 hover:scale-105 shadow-lg shadow-emerald-500/30 md:text-sm">
                 Vezi Proiectul
             </a>
         </section>
 
-        <!-- Featured Apps -->
-        <section id="featured" class="w-full mb-4 md:mb-2">
+        <!-- Featured Apps (Center) - Compact -->
+        <section id="featured" class="flex-grow w-full flex items-center justify-center py-1">
             <livewire:featured-apps />
         </section>
 
-        <!-- Enterprise AI Section -->
-        <section class="text-center mt-auto">
-            <h2 class="mb-8 text-xl font-bold uppercase tracking-wider text-gray-900 md:text-3xl">
-                Proiecte Enterprise Integrați AI
+        <!-- Enterprise AI Section (Bottom) -->
+        <section class="flex-shrink-0 text-center w-full">
+            <h2 class="mb-1 text-base font-bold uppercase tracking-wider text-gray-900 md:text-xl md:mb-2">
+                Proiecte Enterprise & Integrări AI
             </h2>
             
-            <!-- Spacer for Background Icons/Flow -->
-            <!-- We keep this transparency to let the background flow show through -->
-            <div class="h-24 md:h-32 w-full flex items-center justify-center">
-                 <!-- The background image has the flow icons, so we keep this empty or minimal -->
-            </div>
+            <!-- Spacer for Background Icons/Flow - Adjusted height for better fit -->
+            <div class="w-full h-16 md:h-24 lg:h-28"></div>
 
-            <div class="mt-4">
+            <div class="flex flex-col items-center justify-center gap-3 pb-2 md:flex-row md:pb-4">
                 <a href="{{ route('contact', ['locale' => App::getLocale()]) }}" wire:navigate
-                    class="inline-block px-8 py-3 text-xs md:text-sm font-bold tracking-widest text-white uppercase transition-transform duration-300 bg-gray-900 rounded-full hover:bg-gray-800 hover:scale-105 shadow-xl">
-                    Contactează-ne pentru următorul tău proiect
+                    class="inline-block px-6 py-2 text-xs font-bold tracking-widest text-white uppercase transition-transform duration-300 bg-gray-900 rounded-full hover:bg-gray-800 hover:scale-105 shadow-xl md:text-sm md:px-8 md:py-3">
+                    Contactează-ne
                 </a>
             </div>
-
-            <div class="mt-4 md:mt-6 text-right text-xs text-gray-500 md:absolute md:bottom-4 md:right-4">
-                <p>Contact info: <a href="mailto:contact@clickstudios-digital.com" class="hover:text-emerald-600">contact@clickstudios-digital.com</a></p>
+             <!-- Contact Info absolute bottom right to not interfere -->
+             <div class="absolute bottom-2 right-4 text-[10px] text-gray-500 md:text-xs">
+                <a href="mailto:contact@clickstudios-digital.com" class="hover:text-emerald-600 transition-colors">contact@clickstudios-digital.com</a>
              </div>
         </section>
     </div>

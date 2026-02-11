@@ -118,11 +118,25 @@
 
 </head>
 
-<body class="bg-white font-roboto-condensed" x-data="{ scrollToTop: false, loading: true }"
+<body class="bg-white font-roboto-condensed overflow-x-hidden antialiased" x-data="{ scrollToTop: false, loading: true }"
     x-on:scroll.window="scrollToTop = window.scrollY > 100" x-init="() => { setTimeout(() => loading = false, 700) }">
+
+    {{-- Universal Background --}}
+    <div class="fixed inset-0 z-0 w-screen h-screen">
+        {{-- Desktop Background --}}
+        <div class="absolute inset-0 hidden w-full h-full bg-center bg-no-repeat bg-cover md:block"
+            style="background-image: url('{{ asset('assets/bg/desktop.webp') }}');">
+        </div>
+
+        {{-- Mobile Background --}}
+        <div class="absolute inset-0 block w-full h-full bg-top bg-no-repeat bg-cover md:hidden"
+            style="background-image: url('{{ asset('assets/bg/mobile.webp') }}');">
+        </div>
+    </div>
+
     <x-navigation-main />
 
-    <main>
+    <main class="relative z-10 w-full min-h-screen">
         <!-- Loading Spinner -->
         <div x-show="loading" class="fixed inset-0 z-50 flex items-center justify-center bg-white" aria-busy="true"
             aria-label="{{ __('messages.loading') }}">
@@ -137,10 +151,6 @@
         class="fixed z-50 flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4 ">
         <i class="fa-solid fa-angles-up"></i>
     </button>
-
-    <!-- Deferred and async scripts -->
-    {{-- <script src="https://connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v20.0&appId=819059106273620" async defer
-        crossorigin="anonymous"></script> --}}
 
 </body>
 
