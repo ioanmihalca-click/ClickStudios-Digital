@@ -22,7 +22,7 @@
     <script src="https://kit.fontawesome.com/669bfeabc1.js" crossorigin="anonymous"></script>
 
     <!-- Font Roboto -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Font Volkov -->
     <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
