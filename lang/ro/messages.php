@@ -16,7 +16,7 @@ return [
         'tagline' => 'Dezvoltare Web & Marketing Digital',
         'title' => 'Transformăm Ideile în',
         'title-gradient' => 'Experiențe Digitale',
-        'subtitle' => 'Dezvoltăm aplicații personalizate, cu expertiză în Laravel și integrări avansate de Inteligență Artificială.',
+        'subtitle' => 'Dezvoltăm aplicații personalizate, cu expertiză în Laravel și sisteme avansate de Inteligență Artificială.',
         'company_name' => 'Click Studios Digital:',
         'discover_button' => 'Vezi Proiectul',
         'contact_button' => 'Contactează-ne',
@@ -30,6 +30,11 @@ return [
         'visit_website' => 'Vizitează Website-ul',
         'key_features' => 'Caracteristici Cheie',
         'view_all' => 'Vezi Toate Aplicațiile',
+    ],
+
+    // Enterprise Section
+    'enterprise' => [
+        'title' => 'Proiecte Enterprise & Sisteme AI',
     ],
 
     // Services page

@@ -16,7 +16,7 @@ return [
         'tagline' => 'Web Development & Digital Marketing',
         'title' => 'Transforming Ideas into',
         'title-gradient' => 'Digital Experiences',
-        'subtitle' => 'We develop custom applications, with expertise in Laravel and advanced Artificial Intelligence integrations.',
+        'subtitle' => 'We develop custom applications, with expertise in Laravel and advanced Artificial Intelligence Systems.',
         'company_name' => 'Click Studios Digital:',
         'discover_button' => 'View Project',
         'contact_button' => 'Contact Us',
@@ -30,6 +30,11 @@ return [
         'visit_website' => 'Visit Website',
         'key_features' => 'Key Features',
         'view_all' => 'See All Apps',
+    ],
+
+    // Enterprise Section
+    'enterprise' => [
+        'title' => 'Enterprise Projects & AI Systems',
     ],
 
     // Services page
