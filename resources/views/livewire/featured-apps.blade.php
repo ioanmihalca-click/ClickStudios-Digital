@@ -25,7 +25,7 @@
                         <div class="mt-auto">
                             @if ($item['website_url'])
                                 <a href="{{ $item['website_url'] }}" target="_blank"
-                                    class="inline-flex items-center justify-center px-5 py-1.5 text-[10px] md:text-xs font-bold tracking-widest uppercase rounded-full border border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-colors duration-300">
+                                    class="inline-flex items-center justify-center px-5 py-1.5 text-[10px] md:text-xs font-bold tracking-widest uppercase rounded-full border border-emerald-600 text-emerald-700 hover:bg-emerald-600 hover:text-white transition-colors duration-300">
                                     {{ __('messages.featured.visit_website') }}
                                 </a>
                             @endif
