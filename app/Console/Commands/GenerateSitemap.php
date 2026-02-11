@@ -22,12 +22,12 @@ class GenerateSitemap extends Command
         $staticPages = [
             '/' => 1.0,
             '/ro' => 1.0,
-            '/en/web-development' => 0.9,
-            '/ro/web-development' => 0.9,
             '/en/services' => 0.9,
             '/ro/services' => 0.9,
             '/en/portfolio' => 0.8,
             '/ro/portfolio' => 0.8,
+            '/en/contact' => 0.8,
+            '/ro/contact' => 0.8,
         ];
 
         foreach ($staticPages as $url => $priority) {
