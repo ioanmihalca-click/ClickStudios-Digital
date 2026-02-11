@@ -25,25 +25,25 @@
 
             <!-- Desktop Navigation -->
             <div class="items-center hidden md:flex">
-                <div class="flex items-center mr-6 space-x-1">
+                <div class="flex items-center mr-8 space-x-6">
                     <a href="{{ route('home', ['locale' => App::getLocale()]) }}" wire:navigate
-                        class="px-3 py-2 font-medium text-gray-800 transition-all duration-300 rounded-lg hover:text-emerald-600">
+                        class="text-sm font-bold tracking-wide uppercase transition-colors duration-300 hover:text-emerald-600 {{ Route::currentRouteName() == 'home' ? 'text-emerald-600' : 'text-gray-900' }}">
                         {{ __('messages.menu.home') }}
                     </a>
                     <a href="{{ route('services', ['locale' => App::getLocale()]) }}" wire:navigate
-                        class="px-3 py-2 font-medium text-gray-800 transition-all duration-300 rounded-lg hover:text-emerald-600">
+                        class="text-sm font-bold tracking-wide uppercase transition-colors duration-300 hover:text-emerald-600 {{ Route::currentRouteName() == 'services' ? 'text-emerald-600' : 'text-gray-900' }}">
                         {{ __('messages.menu.services') }}
                     </a>
                     <a href="{{ route('portfolio', ['locale' => App::getLocale()]) }}" wire:navigate
-                        class="px-3 py-2 font-medium text-gray-800 transition-all duration-300 rounded-lg hover:text-emerald-600">
+                        class="text-sm font-bold tracking-wide uppercase transition-colors duration-300 hover:text-emerald-600 {{ Route::currentRouteName() == 'portfolio' ? 'text-emerald-600' : 'text-gray-900' }}">
                         {{ __('messages.menu.portfolio') }}
                     </a>
-                    <a href="#about"
-                        class="px-3 py-2 font-medium text-gray-800 transition-all duration-300 rounded-lg hover:text-emerald-600">
+                     <a href="#about"
+                        class="text-sm font-bold tracking-wide uppercase transition-colors duration-300 hover:text-emerald-600 text-gray-900">
                         {{ __('messages.menu.about') }}
                     </a>
                     <a href="{{ route('contact', ['locale' => App::getLocale()]) }}" wire:navigate
-                        class="px-3 py-2 font-medium text-gray-800 transition-all duration-300 rounded-lg hover:text-emerald-600">
+                        class="text-sm font-bold tracking-wide uppercase transition-colors duration-300 hover:text-emerald-600 {{ Route::currentRouteName() == 'contact' ? 'text-emerald-600' : 'text-gray-900' }}">
                         {{ __('messages.menu.contact') }}
                     </a>
                 </div>
