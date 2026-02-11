@@ -1,6 +1,5 @@
 <section class="relative z-30 py-2 w-full">
-    <div class="container px-4 mx-auto w-full">
-        <div class="grid grid-cols-1 gap-4 mx-auto md:grid-cols-3 md:gap-6 max-w-7xl">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
             @foreach ($featuredApps->take(3) as $item)
                 <div class="flex flex-col bg-white shadow-lg rounded-2xl h-full border border-gray-100">
                     @if ($item['image'])
@@ -15,7 +14,7 @@
                     @endif
 
                     <div class="flex flex-col flex-grow p-4 text-center">
-                        <h3 class="mb-2 text-sm md:text-base font-bold uppercase text-gray-900 tracking-wide">
+                        <h3 class="mb-2 text-sm md:text-base font-bold uppercase text-gray-900 tracking-wide font-jakarta">
                             {!! htmlspecialchars_decode($item['title']) !!}
                         </h3>
 
@@ -34,6 +33,5 @@
                     </div>
                 </div>
             @endforeach
-        </div>
     </div>
 </section>

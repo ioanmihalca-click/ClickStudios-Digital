@@ -67,7 +67,7 @@
                                 <p class="mb-4 text-xs text-center text-white/90 line-clamp-3">
                                     {{ $item['short_description'] }}</p>
                                 <button @click.stop="selectedItem = @js($item['slug'])"
-                                    class="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs rounded-md transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-md hover:shadow-emerald-600/30 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:ring-offset-1 focus:ring-offset-slate-900">
+                                    class="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs rounded-md transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-md hover:shadow-emerald-600/30 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:ring-offset-1 focus:ring-offset-slate-900 font-jakarta">
                                     <span class="flex items-center">
                                         <svg class="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
@@ -169,7 +169,7 @@
                             <div class="pt-3">
                                 @if (isset($item['website_url']))
                                     <a href="{{ $item['website_url'] }}" target="_blank" rel="noopener noreferrer"
-                                        class="inline-flex items-center px-5 py-2 text-sm font-medium text-white transition-all duration-300 rounded-md bg-emerald-600 hover:bg-emerald-700 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-600/20">
+                                        class="inline-flex items-center px-5 py-2 text-sm font-medium text-white transition-all duration-300 rounded-md bg-emerald-600 hover:bg-emerald-700 transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-600/20 font-jakarta">
                                         Visit website
                                         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">

@@ -1,9 +1,9 @@
-<div class="relative w-full h-full overflow-hidden font-roboto-condensed">
+<div class="relative w-full h-full overflow-hidden font-inter">
     {{-- Content --}}
     <div class="relative z-10 flex flex-col justify-between h-full px-4 pt-20 pb-2 mx-auto max-w-5xl md:pt-24">
         <!-- Hero Section -->
         <section class="flex flex-col items-start justify-center grow-0 mt-2 md:mt-6">
-            <h1 class="mb-3 uppercase tracking-wide leading-none">
+            <h1 class="mb-3 uppercase tracking-wide leading-none font-jakarta">
                 <span class="block mb-1 text-2xl font-extrabold text-emerald-700 md:text-4xl lg:text-5xl">
                     Click Studios Digital:
                 </span>
@@ -26,7 +26,7 @@
 
         <!-- Enterprise AI Section (Bottom) -->
         <section class="flex-shrink-0 text-center w-full">
-            <h2 class="mb-1 text-base font-bold uppercase tracking-wider text-gray-900 md:text-xl md:mb-2">
+            <h2 class="mb-1 text-base font-bold uppercase tracking-wider text-gray-900 md:text-xl md:mb-2 font-jakarta">
                 Proiecte Enterprise & Integrări AI
             </h2>
 

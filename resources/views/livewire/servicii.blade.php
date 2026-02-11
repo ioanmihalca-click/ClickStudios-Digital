@@ -34,11 +34,11 @@
             </div>
             <div class="flex flex-col gap-5 sm:flex-row">
                 <a href="#servicii"
-                    class="px-8 py-4 text-sm font-semibold tracking-wider text-white uppercase transition-all duration-300 bg-blue-600 rounded-lg hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 transform hover:-translate-y-0.5">
+                    class="px-8 py-4 text-sm font-semibold tracking-wider text-white uppercase transition-all duration-300 bg-blue-600 rounded-lg hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 transform hover:-translate-y-0.5 font-jakarta">
                     <i class="mr-2 fa-solid fa-arrow-down"></i>{{ __('messages.services.hero.explore_button') }}
                 </a>
                 <a href="{{ \App\Helpers\LocaleHelper::getLocalizedRoute('contact') }}" wire:navigate
-                    class="px-8 py-4 text-sm font-semibold tracking-wider text-white uppercase transition-all duration-300 border rounded-lg border-white/30 hover:bg-white/10 hover:border-white/50 transform hover:-translate-y-0.5">
+                    class="px-8 py-4 text-sm font-semibold tracking-wider text-white uppercase transition-all duration-300 border rounded-lg border-white/30 hover:bg-white/10 hover:border-white/50 transform hover:-translate-y-0.5 font-jakarta">
                     <i class="mr-2 fa-solid fa-envelope"></i>{{ __('messages.services.hero.contact_button') }}
                 </a>
             </div>

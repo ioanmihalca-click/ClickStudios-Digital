@@ -21,11 +21,6 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/669bfeabc1.js" crossorigin="anonymous"></script>
 
-    <!-- Font Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- Font Volkov -->
-    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
 
     <!-- Open Graph Tags for Social Media Sharing -->
     <meta property="og:title" content="{{ __('app.og.title') }}" />
@@ -118,7 +113,7 @@
 
 </head>
 
-<body class="bg-white font-roboto-condensed overflow-x-hidden antialiased" x-data="{ scrollToTop: false, loading: true }"
+<body class="bg-white font-inter overflow-x-hidden antialiased" x-data="{ scrollToTop: false, loading: true }"
     x-on:scroll.window="scrollToTop = window.scrollY > 100" x-init="() => { setTimeout(() => loading = false, 700) }">
 
     {{-- Universal Background --}}

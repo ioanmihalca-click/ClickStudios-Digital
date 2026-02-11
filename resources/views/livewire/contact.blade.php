@@ -17,7 +17,7 @@
             <span class="px-4 py-1.5 text-sm font-medium text-blue-400 bg-blue-500/10 rounded-full mb-4 inline-block">
                 {{ __('messages.contact.tagline') }}
             </span>
-            <h2 class="mb-4 text-4xl font-bold tracking-wide text-white font-roboto-condensed">
+            <h2 class="mb-4 text-4xl font-bold tracking-wide text-white font-jakarta">
                 {{ __('messages.contact.title') }} <span
                     class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">{{ __('messages.contact.title_gradient') }}</span>
             </h2>
@@ -118,7 +118,7 @@
                         </div>
 
                         <button type="submit"
-                            class="w-full px-6 py-3 text-white transition-all duration-300 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600"
+                            class="w-full px-6 py-3 text-white transition-all duration-300 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 font-jakarta"
                             wire:loading.attr="disabled" wire:loading.class="opacity-75">
                             <span wire:loading.remove>{{ __('messages.contact.form.submit') }}</span>
                             <span wire:loading>
