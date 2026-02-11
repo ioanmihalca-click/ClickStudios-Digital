@@ -1,4 +1,4 @@
-<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" x-data="{
+<nav x-cloak class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" x-data="{
     isOpen: false,
     scrolledFromTop: false,
     handleScroll() {
