@@ -17,7 +17,7 @@
             @scroll.passive="updateMobileActive($event)">
             @foreach ($featuredApps->take(3) as $item)
                 <div class="w-[280px] min-w-[280px] snap-start shrink-0">
-                    <div class="flex flex-col bg-white shadow-lg rounded-2xl h-full border border-gray-100">
+                    <div class="flex flex-col bg-gradient-to-br from-teal-50/60 to-white/80 backdrop-blur-md shadow-lg rounded-2xl h-full border border-gray-200/50">
                         @if ($item['image'])
                             <div class="p-3">
                                 <div class="rounded-xl shadow-lg shadow-gray-900/35 ring-1 ring-gray-900/10">
@@ -68,7 +68,7 @@
     {{-- Desktop: 3-column grid --}}
     <div class="hidden md:grid max-w-none mx-auto grid-cols-3 gap-6">
         @foreach ($featuredApps->take(3) as $item)
-            <div class="flex flex-col bg-white shadow-lg rounded-2xl h-full border border-gray-100">
+            <div class="flex flex-col bg-gradient-to-br from-teal-50/60 to-white/80 backdrop-blur-md shadow-lg rounded-2xl h-full border border-gray-200/50">
                 @if ($item['image'])
                     <div class="p-3">
                         <div class="rounded-xl shadow-lg shadow-gray-900/35 ring-1 ring-gray-900/10">

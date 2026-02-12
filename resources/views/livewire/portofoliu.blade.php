@@ -39,11 +39,11 @@
 
         {{-- Mobile: Horizontal scroll slider --}}
         <div class="md:hidden max-w-[280px] ml-auto">
-            <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-2" x-ref="mobileTrack"
+            <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-6 pt-4 -mt-4" x-ref="mobileTrack"
                 @scroll.passive="updateMobileActive($event)">
                 @foreach ($portfolioItems as $item)
                     <div class="w-[280px] min-w-[280px] snap-start shrink-0">
-                        <div class="flex flex-col h-full bg-white border shadow-lg rounded-2xl border-gray-100">
+                        <div class="flex flex-col h-full bg-gradient-to-br from-teal-50/60 to-white/80 backdrop-blur-md shadow-lg rounded-2xl border border-gray-200/50">
                             @if ($item['image'])
                                 <div class="p-3">
                                     <div class="rounded-xl shadow-lg shadow-gray-900/35 ring-1 ring-gray-900/10">
@@ -114,12 +114,12 @@
             </template>
 
             {{-- Slider container --}}
-            <div class="overflow-hidden">
+            <div class="overflow-hidden py-6 -my-6">
                 <div class="flex -mx-3 transition-transform duration-500 ease-in-out"
                     :style="{ transform: 'translateX(-' + offset + '%)' }">
                     @foreach ($portfolioItems as $item)
                         <div class="w-1/3 shrink-0 px-3">
-                            <div class="flex flex-col h-full bg-white border shadow-lg rounded-2xl border-gray-100">
+                            <div class="flex flex-col h-full bg-gradient-to-br from-teal-50/60 to-white/80 backdrop-blur-md shadow-lg rounded-2xl border border-gray-200/50">
                                 @if ($item['image'])
                                     <div class="p-3">
                                         <div class="rounded-xl shadow-lg shadow-gray-900/35 ring-1 ring-gray-900/10">

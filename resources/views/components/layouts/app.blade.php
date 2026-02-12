@@ -107,8 +107,8 @@
 
 </head>
 
-<body class="bg-white font-inter overflow-x-hidden antialiased" x-data="{ scrollToTop: false, loading: true }"
-    x-on:scroll.window="scrollToTop = window.scrollY > 100" x-init="() => { setTimeout(() => loading = false, 700) }">
+<body class="bg-white font-inter overflow-x-hidden antialiased" x-data="{ scrollToTop: false }"
+    x-on:scroll.window="scrollToTop = window.scrollY > 100">
 
     {{-- Universal Background --}}
     <div class="fixed inset-0 z-0 w-screen h-screen">
@@ -126,11 +126,6 @@
     <x-navigation-main />
 
     <main class="relative z-10 w-full min-h-screen">
-        <!-- Loading Spinner -->
-        <div x-show="loading" class="fixed inset-0 z-50 flex items-center justify-center bg-white" aria-busy="true"
-            aria-label="{{ __('messages.loading') }}">
-            <div class="w-16 h-16 border-t-4 border-solid rounded-full border-emerald-500 animate-spin"></div>
-        </div>
         {{ $slot }}
     </main>
 

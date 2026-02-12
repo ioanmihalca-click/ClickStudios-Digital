@@ -47,13 +47,13 @@
 
             {{-- Mobile: Horizontal scroll slider --}}
             <div class="md:hidden max-w-[280px] ml-auto">
-                <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-2" x-ref="mobileTrack"
+                <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-6 pt-4 -mt-4" x-ref="mobileTrack"
                     @scroll.passive="updateMobileActive($event)">
                     @foreach ($categories as $key => $iconPath)
                         <div class="w-[280px] min-w-[280px] snap-start shrink-0">
-                            <div class="flex flex-col h-full bg-white shadow-lg rounded-2xl border border-gray-100 p-5">
+                            <div class="flex flex-col h-full bg-gradient-to-br from-teal-50/60 to-white/80 backdrop-blur-md shadow-lg rounded-2xl border border-gray-200/50 p-5">
                                 {{-- Icon --}}
-                                <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-xl bg-emerald-50 text-emerald-600">
+                                <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-xl bg-white/70 text-emerald-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         {!! $iconPath !!}
                                     </svg>
@@ -122,14 +122,14 @@
                 </template>
 
                 {{-- Slider container --}}
-                <div class="overflow-hidden">
+                <div class="overflow-hidden py-6 -my-6">
                     <div class="flex -mx-3 transition-transform duration-500 ease-in-out"
                         :style="{ transform: 'translateX(-' + offset + '%)' }">
                         @foreach ($categories as $key => $iconPath)
                             <div class="w-1/3 shrink-0 px-3">
-                                <div class="flex flex-col h-full bg-white shadow-lg rounded-2xl border border-gray-100 p-6">
+                                <div class="flex flex-col h-full bg-gradient-to-br from-teal-50/60 to-white/80 backdrop-blur-md shadow-lg rounded-2xl border border-gray-200/50 p-6">
                                     {{-- Icon --}}
-                                    <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-xl bg-emerald-50 text-emerald-600">
+                                    <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-xl bg-white/70 text-emerald-600">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             {!! $iconPath !!}
                                         </svg>
