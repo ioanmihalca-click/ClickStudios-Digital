@@ -28,9 +28,9 @@ return [
         'title' => 'Proiecte Evidențiate',
         'subtitle' => 'Descoperă câteva dintre soluțiile noastre inovatoare',
         'visit_website' => 'Vizitează Website-ul',
-        'see_more' => 'Vezi Mai Multe',
+        'see_more' => 'Vezi mai multe',
         'key_features' => 'Caracteristici Cheie',
-        'view_all' => 'Vezi Toate Aplicațiile',
+        'view_all' => 'Vezi toate aplicațiile',
     ],
 
     // Enterprise Section
