@@ -1,2 +1,0 @@
-aici modificam asa:
-Călătoria mea în dezvoltarea web a coincis cu un moment istoric: nașterea și expansiunea Inteligenței Artificiale generative. Am pariat pe Inteligența Artificială când alții erau încă sceptici. Această decizie mi-a definit cariera și modul în care construiesc software. Cu pasiune și curiozitate, am dezvoltat aplicații unice în România (precum Clipcraft sau BizzOS - alături de o super echipa), împingând limitele a ceea ce un singur developer și o echipă mică pot livra astăzi.
