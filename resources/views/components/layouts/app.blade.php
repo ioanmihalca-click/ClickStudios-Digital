@@ -7,6 +7,11 @@
     <title>{{ $title ?? __('app.title') }}</title>
     <link rel="canonical" href="{{ url()->current() }}">
 
+    <link rel="preload" as="image" type="image/webp" href="{{ asset('assets/bg/mobile.webp') }}"
+        media="(max-width: 767px)">
+    <link rel="preload" as="image" type="image/webp" href="{{ asset('assets/bg/desktop.webp') }}"
+        media="(min-width: 768px)">
+
     <meta name="description" content="{{ $description ?? __('app.meta_description') }}">
     <meta name="keywords" content="{{ __('app.meta_keywords') }}" />
 
@@ -109,15 +114,13 @@
 
     {{-- Universal Background --}}
     <div class="fixed inset-0 z-0 w-screen h-screen">
-        {{-- Desktop Background --}}
-        <div class="absolute inset-0 hidden w-full h-full bg-center bg-no-repeat bg-cover md:block"
-            style="background-image: url('{{ asset('assets/bg/desktop.webp') }}');">
-        </div>
-
-        {{-- Mobile Background --}}
-        <div class="absolute inset-0 block w-full h-full bg-[35%_top] bg-no-repeat bg-cover md:hidden"
-            style="background-image: url('{{ asset('assets/bg/mobile.webp') }}');">
-        </div>
+        <picture>
+            <source media="(min-width: 768px)" srcset="{{ asset('assets/bg/desktop.webp') }}" type="image/webp"
+                width="1920" height="1080">
+            <img src="{{ asset('assets/bg/mobile.webp') }}" alt="" role="presentation" fetchpriority="high"
+                loading="eager" decoding="async" width="1080" height="1920"
+                class="absolute inset-0 w-full h-full object-cover object-[5%_top] md:object-center">
+        </picture>
     </div>
 
     <x-navigation-main />
