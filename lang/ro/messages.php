@@ -57,7 +57,7 @@ return [
         'hero' => [
             'title_accent' => 'Arhitectură Digitală',
             'title' => '& Inteligență Aplicată',
-            'subtitle' => 'Nu doar scriem cod. Construim inteligența din spatele afacerii tale. Proiectăm ecosisteme digitale, unde stabilitatea Laravel întâlnește intuiția calculată a Inteligenței Artificiale.',
+            'subtitle' => 'Construim inteligența din spatele afacerii tale. Proiectăm ecosisteme digitale, unde stabilitatea Laravel întâlnește intuiția calculată a Inteligenței Artificiale.',
         ],
         'categories' => [
             'infrastructure' => [

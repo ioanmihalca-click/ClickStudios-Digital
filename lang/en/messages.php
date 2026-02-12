@@ -57,7 +57,7 @@ return [
         'hero' => [
             'title_accent' => 'Digital Architecture',
             'title' => '& Applied Intelligence',
-            'subtitle' => "We don't just write code. We build the intelligence behind your business. We design digital ecosystems where Laravel stability meets the calculated intuition of Artificial Intelligence.",
+            'subtitle' => "We build the intelligence behind your business. We design digital ecosystems where Laravel stability meets the calculated intuition of Artificial Intelligence.",
         ],
         'categories' => [
             'infrastructure' => [
