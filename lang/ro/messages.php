@@ -283,6 +283,7 @@ return [
         'tagline' => 'Proiecte Evidențiate',
         'title' => 'Portofoliu',
         'subtitle' => 'Descoperă soluțiile și poveștile noastre de succes',
+        'statement' => 'De la idee la plan, de la plan la acțiune.',
         'project_details' => 'Detalii Proiect',
         'technologies' => 'Tehnologii Utilizate',
         'video_preview' => 'Previzualizare Video',

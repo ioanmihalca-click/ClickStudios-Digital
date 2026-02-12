@@ -103,3 +103,12 @@ body {
     aspect-ratio: 9/16;
     object-fit: cover;
 }
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}

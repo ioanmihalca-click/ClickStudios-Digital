@@ -283,6 +283,7 @@ return [
         'tagline' => 'Featured Projects',
         'title' => 'Portfolio',
         'subtitle' => 'Discover our innovative solutions and success stories',
+        'statement' => 'From idea to plan, from plan to action.',
         'project_details' => 'Project Details',
         'technologies' => 'Technologies Used',
         'video_preview' => 'Video Preview',
