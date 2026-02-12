@@ -15,7 +15,7 @@
         </section>
 
         {{-- Content Card --}}
-        <div class="mt-3 md:mt-8 pb-12 md:pb-16 max-w-[280px] ml-auto md:max-w-none">
+        <div class="mt-3 md:mt-8 pb-20 md:pb-16 max-w-[280px] ml-auto md:max-w-none">
             <div
                 class="relative p-4 md:p-6 bg-gradient-to-br from-teal-50/60 to-white/80 backdrop-blur-md shadow-lg rounded-2xl border border-gray-200/50">
 
