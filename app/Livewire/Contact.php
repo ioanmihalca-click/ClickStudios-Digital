@@ -2,26 +2,40 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
-use Livewire\Attributes\Title;
-use Livewire\Attributes\Layout;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactFormMail;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\RateLimiter;
+use Livewire\Attributes\Title;
+use Livewire\Component;
 
 #[Title('Contact | Click Studios Digital')]
 class Contact extends Component
 {
-    public $name;
-    public $email;
-    public $phone;
-    public $subject;
-    public $message;
+    public string $name = '';
 
-    public $success = false;
-    public $error = false;
+    public string $email = '';
 
-    protected function rules()
+    public string $phone = '';
+
+    public string $subject = '';
+
+    public string $message = '';
+
+    public string $website = '';
+
+    public int $formLoadedAt = 0;
+
+    public bool $success = false;
+
+    public bool $error = false;
+
+    public function mount(): void
+    {
+        $this->formLoadedAt = time();
+    }
+
+    /** @return array<string, string> */
+    protected function rules(): array
     {
         return [
             'name' => 'required|min:3|max:100',
@@ -32,12 +46,35 @@ class Contact extends Component
         ];
     }
 
-    public function submit()
+    public function submit(): void
     {
+        if ($this->website !== '') {
+            $this->success = true;
+            $this->error = false;
+
+            return;
+        }
+
+        if ((time() - $this->formLoadedAt) < 3) {
+            $this->success = true;
+            $this->error = false;
+
+            return;
+        }
+
+        $rateLimitKey = 'contact-form:'.request()->ip();
+
+        if (RateLimiter::tooManyAttempts($rateLimitKey, 3)) {
+            $this->addError('message', 'Prea multe încercări. Vă rugăm să așteptați un minut.');
+
+            return;
+        }
+
         $this->validate();
 
         try {
-            // Trimite email
+            RateLimiter::hit($rateLimitKey, 60);
+
             Mail::to('contact@clickstudios-digital.com')->send(new ContactFormMail(
                 $this->name,
                 $this->email,
@@ -46,10 +83,9 @@ class Contact extends Component
                 $this->message
             ));
 
-            // Resetează formularul
             $this->reset(['name', 'email', 'phone', 'subject', 'message']);
+            $this->formLoadedAt = time();
 
-            // Afișează mesajul de succes
             $this->success = true;
             $this->error = false;
         } catch (\Exception $e) {
@@ -58,11 +94,8 @@ class Contact extends Component
         }
     }
 
-    public function render()
+    public function render(): \Illuminate\Contracts\View\View
     {
-        // Get current locale
-        $locale = App::getLocale();
-
         return view('livewire.contact');
     }
 }

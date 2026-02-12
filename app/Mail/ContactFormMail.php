@@ -3,7 +3,6 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
@@ -13,22 +12,17 @@ class ContactFormMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $name;
-    public $email;
-    public $phone;
-    public $subject;
-    public $messageContent;
-
     /**
      * Create a new message instance.
      */
-    public function __construct($name, $email, $phone, $subject, $messageContent)
-    {
-        $this->name = $name;
-        $this->email = $email;
-        $this->phone = $phone ?? 'Nu este furnizat';
-        $this->subject = $subject;
-        $this->messageContent = $messageContent;
+    public function __construct(
+        public string $name,
+        public string $email,
+        public string $phone,
+        public string $subject,
+        public string $messageContent,
+    ) {
+        $this->phone = $phone ?: 'Nu este furnizat';
     }
 
     /**
@@ -37,7 +31,7 @@ class ContactFormMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Formular de contact: ' . $this->subject,
+            subject: 'Formular de contact: '.$this->subject,
             replyTo: $this->email,
         );
     }
