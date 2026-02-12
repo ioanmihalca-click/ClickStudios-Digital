@@ -34,10 +34,9 @@
 
     <!-- Local Business Schema Markup -->
     <script type="application/ld+json">
-    @verbatim
 {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@@context": "https://schema.org",
+  "@@type": "ProfessionalService",
   "name": "Click Studios Digital",
   "description": "{{ __('app.schema.description') }}",
   "image": "{{ asset('assets/logo.jpg') }}",
@@ -45,7 +44,7 @@
   "telephone": "+40734411115",
   "email": "contact@clickstudios-digital.com",
   "address": {
-    "@type": "PostalAddress",
+    "@@type": "PostalAddress",
     "streetAddress": "Nisiparilor 35",
     "addressLocality": "Baia Mare",
     "addressRegion": "Maramures",
@@ -53,7 +52,7 @@
     "addressCountry": "RO"
   },
   "geo": {
-    "@type": "GeoCoordinates",
+    "@@type": "GeoCoordinates",
     "latitude": "47.6573",
     "longitude": "23.5705"
   },
@@ -62,14 +61,13 @@
   ],
   "sameAs": [
     "https://web.facebook.com/profile.php?id=61560427317860",
-    
     "https://www.instagram.com/clickstudios_digital"
   ],
   "priceRange": "$$",
   "paymentAccepted": ["cash", "credit card"],
   "currenciesAccepted": "RON",
   "logo": {
-    "@type": "ImageObject",
+    "@@type": "ImageObject",
     "url": "{{ asset('assets/logo.jpg') }}"
   },
   "services": [
@@ -82,11 +80,10 @@
     "PPC Advertising"
   ],
   "areaServed": {
-    "@type": "Country",
+    "@@type": "Country",
     "name": "Romania"
   }
 }
-    @endverbatim
 </script>
 
 
@@ -118,7 +115,7 @@
         </div>
 
         {{-- Mobile Background --}}
-        <div class="absolute inset-0 block w-full h-full bg-[35%_top]bg-no-repeat bg-cover md:hidden"
+        <div class="absolute inset-0 block w-full h-full bg-[35%_top] bg-no-repeat bg-cover md:hidden"
             style="background-image: url('{{ asset('assets/bg/mobile.webp') }}');">
         </div>
     </div>
@@ -128,7 +125,6 @@
     <main class="relative z-10 w-full min-h-screen">
         {{ $slot }}
     </main>
-
 
     <!-- Footer -->
     <footer class="fixed bottom-0 left-0 right-0 z-30 w-full bg-white md:bg-transparent px-4 py-2">
