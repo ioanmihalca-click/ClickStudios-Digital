@@ -154,10 +154,10 @@
         @endforeach
     </div>
 
-    {{-- <div class="mt-8 text-center max-w-[280px] ml-auto md:max-w-none md:mx-auto">
+    <div class="mt-6 text-center max-w-[280px] ml-auto md:max-w-none md:mx-auto">
         <a href="{{ route('portfolio', ['locale' => App::getLocale()]) }}" wire:navigate
-            class="inline-flex items-center justify-center px-6 py-2 text-xs md:text-sm font-bold tracking-widest uppercase rounded-full bg-emerald-600 text-white hover:bg-emerald-700 transition-colors duration-300">
-            {{ __('messages.featured.see_more') }}
+            class="text-sm font-normal text-emerald-600 hover:text-emerald-700 transition-colors duration-300">
+            {{ __('messages.featured.see_more') }} &rarr;
         </a>
-    </div> --}}
+    </div>
 </section>
