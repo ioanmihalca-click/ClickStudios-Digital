@@ -16,11 +16,8 @@
     <link rel="shortcut icon" href="{{ asset('assets/favicon/favicon.ico') }}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}" />
     <meta name="apple-mobile-web-app-title" content="ClickStudiosDigital" />
-    {{-- <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}" /> --}}
-
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/669bfeabc1.js" crossorigin="anonymous"></script>
-
 
     <!-- Open Graph Tags for Social Media Sharing -->
     <meta property="og:title" content="{{ __('app.og.title') }}" />
@@ -97,7 +94,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
 
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFL38JS6PJ"></script>
     <script>
@@ -159,9 +155,6 @@
                     <i class="fa-brands fa-youtube text-lg"></i>
                 </a>
             </div>
-
-            <!-- Logo -->
-            {{-- <img src="{{ asset('assets/logo.jpg') }}" alt="Click Studios Digital" class="h-7"> --}}
 
             <!-- Contact -->
             <div class="flex items-center text-xs">

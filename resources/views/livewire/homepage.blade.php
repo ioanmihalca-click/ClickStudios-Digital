@@ -1,6 +1,5 @@
 <div class="relative w-full h-full overflow-hidden font-inter">
-    {{-- Content --}}
-    <div class="relative z-10 flex flex-col justify-between h-full px-4 pt-10 pb-2 mx-auto max-w-5xl md:pt-14">
+    <div class="relative z-10 flex flex-col justify-between h-full px-4 pt-10 pb-2 mx-auto max-w-5xl md:pt-16">
         <!-- Hero Section -->
         <section
             class="flex flex-col items-start justify-center grow-0 mt-10 md:mt-6 max-w-[280px] ml-auto md:max-w-none md:mx-0">
@@ -16,22 +15,11 @@
             <p class="max-w-lg mb-5 text-sm text-gray-600 md:text-lg leading-snug">
                 {{ __('messages.hero.subtitle') }}
             </p>
-
         </section>
 
-        <!-- Featured Apps (Center) - Compact -->
+        <!-- Featured Apps -->
         <section id="featured" class="flex-grow w-full flex items-center justify-center py-1">
             <livewire:featured-apps />
         </section>
-
-        <!-- Enterprise AI Section (Bottom) -->
-        {{-- <section class="flex-shrink-0 text-center w-full">
-            <h2 class="mb-1 mt-8 text-md uppercase tracking-wide text-gray-700 md:text-lg md:mb-2 ">
-                {{ __('messages.enterprise.title') }}
-            </h2> --}}
-
-
-        </section>
-
     </div>
 </div>
