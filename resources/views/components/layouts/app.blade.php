@@ -13,6 +13,7 @@
         media="(min-width: 768px)">
 
     <meta name="description" content="{{ $description ?? __('app.meta_description') }}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="keywords" content="{{ __('app.meta_keywords') }}" />
 
     <!-- Favicon -->
@@ -41,7 +42,7 @@
     <script type="application/ld+json">
 {
   "@@context": "https://schema.org",
-  "@@type": "ProfessionalService",
+  "@@type": ["ProfessionalService", "Organization"],
   "name": "Click Studios Digital",
   "description": "{{ __('app.schema.description') }}",
   "image": "{{ asset('assets/logo.jpg') }}",
@@ -64,26 +65,69 @@
   "openingHours": [
     "Mo-Fr 09:00-17:00"
   ],
-  "sameAs": [
-    "https://web.facebook.com/profile.php?id=61560427317860",
-    "https://www.instagram.com/clickstudios_digital"
+  "knowsAbout": [
+    "Laravel Development",
+    "Artificial Intelligence",
+    "Web Development",
+    "Software Architecture"
   ],
-  "priceRange": "$$",
+  "hasOfferCatalog": {
+    "@@type": "OfferCatalog",
+    "name": "Digital Services",
+    "itemListElement": [
+      {
+        "@@type": "Offer",
+        "itemOffered": {
+          "@@type": "Service",
+          "name": "Software Engineering & Laravel Architecture",
+          "description": "Mission-critical web applications, complex APIs, and microservices with maximum security and zero downtime."
+        }
+      },
+      {
+        "@@type": "Offer",
+        "itemOffered": {
+          "@@type": "Service",
+          "name": "AI Solutions & Process Automation",
+          "description": "AI model integrations (Chat, RAG, Analysis) that automate repetitive tasks, read documents, and provide instant answers."
+        }
+      },
+      {
+        "@@type": "Offer",
+        "itemOffered": {
+          "@@type": "Service",
+          "name": "Product Design & User Experience",
+          "description": "Interfaces that hide heavy logic behind fluid visual experiences, designed for conversion and clarity."
+        }
+      },
+      {
+        "@@type": "Offer",
+        "itemOffered": {
+          "@@type": "Service",
+          "name": "Scalable E-commerce Ecosystems",
+          "description": "Sales systems built for stability, from inventory management to optimized checkouts with continuous and secure transactional flow."
+        }
+      },
+      {
+        "@@type": "Offer",
+        "itemOffered": {
+          "@@type": "Service",
+          "name": "Maintenance & Cloud Infrastructure",
+          "description": "Proactive technical support with security updates, uptime monitoring, and server optimization for long-term partnership."
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "https://github.com/ioanmihalca-click",
+    "https://www.tiktok.com/@clickstudiosdigital",
+    "https://www.youtube.com/@clickstudiosdigital"
+  ],
   "paymentAccepted": ["cash", "credit card"],
   "currenciesAccepted": "RON",
   "logo": {
     "@@type": "ImageObject",
     "url": "{{ asset('assets/logo.jpg') }}"
   },
-  "services": [
-    "Web Design",
-    "Dezvoltare Web",
-    "SEO",
-    "Marketing Digital",
-    "Social Media Marketing",
-    "Content Marketing",
-    "PPC Advertising"
-  ],
   "areaServed": {
     "@@type": "Country",
     "name": "Romania"
@@ -112,8 +156,13 @@
 <body class="bg-white font-inter overflow-x-hidden antialiased" x-data="{ scrollToTop: false }"
     x-on:scroll.window="scrollToTop = window.scrollY > 100">
 
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-emerald-700 focus:font-bold">
+        Sari la conținut principal
+    </a>
+
     {{-- Universal Background --}}
-    <div class="fixed inset-0 z-0 w-screen h-screen">
+    <div class="fixed inset-0 z-0 w-screen h-screen bg-gray-50">
         <picture>
             <source media="(min-width: 768px)" srcset="{{ asset('assets/bg/desktop.webp') }}" type="image/webp"
                 width="1920" height="1080">
@@ -125,7 +174,7 @@
 
     <x-navigation-main />
 
-    <main class="relative z-10 w-full min-h-screen">
+    <main id="main-content" class="relative z-10 w-full min-h-screen">
         {{ $slot }}
     </main>
 
@@ -134,15 +183,18 @@
         <div class="flex items-center justify-between mx-auto max-w-5xl border-t border-gray-200 pt-2">
             <!-- Social Links -->
             <div class="flex items-center gap-4">
-                <a href="https://github.com/ioanmihalca-click" target="_blank" rel="noopener noreferrer"
+                <a href="https://github.com/ioanmihalca-click" target="_blank" rel="noopener noreferrer nofollow"
+                    aria-label="Vizitează profilul nostru de GitHub"
                     class="text-gray-500 hover:text-gray-900 transition-colors">
                     <i class="fa-brands fa-github text-lg"></i>
                 </a>
-                <a href="https://www.tiktok.com/@clickstudiosdigital" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.tiktok.com/@clickstudiosdigital" target="_blank" rel="noopener noreferrer nofollow"
+                    aria-label="Urmărește-ne pe TikTok"
                     class="text-gray-500 hover:text-gray-900 transition-colors">
                     <i class="fa-brands fa-tiktok text-lg"></i>
                 </a>
-                <a href="https://www.youtube.com/@clickstudiosdigital" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.youtube.com/@clickstudiosdigital" target="_blank" rel="noopener noreferrer nofollow"
+                    aria-label="Abonează-te la canalul nostru YouTube"
                     class="text-gray-500 hover:text-gray-900 transition-colors">
                     <i class="fa-brands fa-youtube text-lg"></i>
                 </a>
@@ -160,6 +212,7 @@
 
     <!-- Scroll to Top Button -->
     <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        aria-label="Derulează la începutul paginii"
         class="fixed z-50 flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4 ">
         <i class="fa-solid fa-angles-up"></i>
     </button>
