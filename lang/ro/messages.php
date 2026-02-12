@@ -41,104 +41,62 @@ return [
     // Services page
     'services' => [
         'hero' => [
-            'tagline' => 'Click Studios Digital',
-            'title' => 'Serviciile',
-            'title_gradient' => 'Noastre',
-            'quote' => 'O magie digitală a cuprins întreaga noastră creație, la fel ca aceste momente strălucitoare de inovație pe care le trăim cu toată pasiunea noastră.',
-            'explore_button' => 'Explorează Serviciile',
-            'contact_button' => 'Contactează-ne',
-        ],
-        'section' => [
-            'tagline' => 'Servicii',
-            'title' => 'Dezvoltare Laravel & Integrări AI',
-            'subtitle' => 'Construiesc aplicații Laravel rapide, sigure și scalabile, plus integrări AI/LLM (chat, RAG, automatizări) adaptate pe fluxurile tale de business.',
+            'title_accent' => 'Arhitectură Digitală',
+            'title' => '& Inteligență Aplicată',
+            'subtitle' => 'Nu doar scriem cod. Construim inteligența din spatele afacerii tale. Proiectăm ecosisteme digitale, unde stabilitatea Laravel întâlnește intuiția calculată a Inteligenței Artificiale.',
         ],
         'categories' => [
-            'laravel' => [
-                'title' => 'Dezvoltare Laravel',
-                'description' => 'Aplicații web robuste și scalabile cu Laravel + Livewire. Pot livra end-to-end:',
-                'features' => [
-                    'API-uri & integrări (REST, webhooks)',
-                    'Autentificare, roluri, audit & securitate',
-                    'Dashboard-uri admin, rapoarte, SaaS',
+            'infrastructure' => [
+                'title' => 'Inginerie Software & Arhitectură Laravel',
+                'description' => 'Coloana vertebrală a platformei tale. Construim aplicații web critice, API-uri complexe și microservicii care garantează securitate maximă și zero timpi morți, indiferent de scalare.',
+                'delivery' => [
+                    'Platforme SaaS',
+                    'CRM Custom',
+                    'Arhitectură Cloud',
                 ],
             ],
-            'web_design' => [
-                'title' => 'Design Web Modern',
-                'description' => 'Design-uri responsive și moderne care încântă utilizatorii. Ne concentrăm pe:',
-                'features' => [
-                    'Design UI/UX',
-                    'Mobile First',
-                    'Optimizare UX',
+            'ai' => [
+                'title' => 'Soluții AI & Automatizare Procese',
+                'description' => 'Transformăm aplicațiile pasive în asistenți activi. Integrăm modele AI (Chat, RAG, Analiză) care preiau sarcinile repetitive, citesc documente și oferă răspunsuri instantanee.',
+                'delivery' => [
+                    'Sisteme RAG (antrenate pe datele firmei)',
+                    'Asistenți Virtuali',
+                    'OCR Inteligent',
                 ],
             ],
-            'automation' => [
-                'title' => 'Automatizare Procese de Business',
-                'description' => 'Automatizări și workflow-uri solide (queues, jobs, scheduled tasks) pentru operațiuni fără fricțiune:',
-                'features' => [
-                    'Fluxuri automate, notificări, sincronizări',
-                    'Procesare documente (OCR) & extragere date',
-                    'Facturare, plăți, integrări ERP/CRM',
-                ],
-            ],
-            'ai_solutions' => [
-                'title' => 'Soluții AI pentru Companii',
-                'description' => 'Integrări AI/LLM în aplicații existente sau noi, cu accent pe utilitate și control:',
-                'features' => [
-                    'Chat AI în aplicație (asistenți, copilots)',
-                    'RAG (căutare în documente + răspunsuri)',
-                    'Automatizări agentice + evaluare calitate',
-                ],
-            ],
-            'marketing' => [
-                'title' => 'Optimizare Vânzări și Marketing',
-                'description' => 'Soluții inteligente pentru creșterea performanței:',
-                'features' => [
-                    'Recomandări Personalizate bazate pe AI',
-                    'Analiză Predictivă Clienți',
-                    'Marketing Automatizat',
-                ],
-            ],
-            'digital_marketing' => [
-                'title' => 'Marketing Digital',
-                'description' => 'Strategii complete de marketing online pentru dezvoltarea afacerii tale:',
-                'features' => [
-                    'SEO și Content',
-                    'Social Media',
-                    'Google Ads',
-                ],
-            ],
-            'advertising' => [
-                'title' => 'Spoturi Publicitare',
-                'description' => 'Creație și producție profesională de spoturi publicitare pentru TV, radio și digital.',
-                'features' => [
-                    'Reclame TV și Online',
-                    'Producție Audio',
-                    'Voice-over Profesional',
+            'ui_ux' => [
+                'title' => 'Design de Produs & Experiență Utilizator',
+                'description' => 'Complexitate în backend, simplitate în frontend. Creăm interfețe care ascund logica grea în spatele unor experiențe vizuale fluide, gândite strict pentru conversie și claritate.',
+                'delivery' => [
+                    'Design Sisteme',
+                    'Prototipare',
+                    'Audit UX Mobile-First',
                 ],
             ],
             'ecommerce' => [
-                'title' => 'Soluții E-commerce',
-                'description' => 'Magazine online și integrări e-commerce (Laravel) cu focus pe conversie și stabilitate:',
-                'features' => [
-                    'Bagisto (Laravel) & implementări custom',
-                    'Checkout, plăți, facturare, curieri',
-                    'Integrări stocuri, ERP, marketplace',
+                'title' => 'Ecosisteme E-commerce Scalabile',
+                'description' => 'Sisteme de vânzare construite pentru stabilitate. De la gestiunea stocurilor la checkout-uri optimizate, asigurăm un flux tranzacțional continuu și sigur.',
+                'delivery' => [
+                    'Magazine Custom',
+                    'Integrări ERP/Curieri',
+                    'Optimizare Checkout',
                 ],
             ],
             'maintenance' => [
-                'title' => 'Mentenanță și Suport',
-                'description' => 'Suport tehnic și mentenanță pentru aplicații Laravel, cu predictibilitate și transparență:',
-                'features' => [
-                    'Monitorizare, loguri, alerte, uptime',
-                    'Update-uri, securitate, backup & recovery',
-                    'Optimizare performanță (DB/cache/queries)',
+                'title' => 'Mentenanță & Infrastructură Cloud',
+                'description' => 'Lansarea este doar începutul. Oferim suport tehnic proactiv pentru ca tu să te concentrezi pe business, nu pe servere. Siguranță, uptime și parteneriat pe termen lung.',
+                'delivery' => [
+                    'Monitorizare & Uptime 24/7',
+                    'Update-uri Securitate & Backup',
+                    'Optimizare Servere & Cloud',
                 ],
             ],
         ],
+        'delivery_label' => 'Ce livrăm:',
         'cta' => [
-            'title' => 'Ești pregătit să începi proiectul tău digital?',
-            'description' => 'Hai să transformăm ideile tale într-o realitate digitală de succes. Expertiza noastră în Laravel și AI ne permite să oferim soluții personalizate pentru afacerea ta.',
+            'title' => 'Gata să construim viitorul companiei tale?',
+            'subtitle' => 'Lasă tehnologia în seama noastră. Tu concentrează-te pe viziune.',
+            'button' => 'Configurează Ecosistemul Tău',
         ],
     ],
 

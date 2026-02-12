@@ -8,7 +8,7 @@ Aceste texte sunt gata de pus pe site. Sunt concise, elimină detaliile inutile 
 2. INTRODUCERE SECȚIUNE (Procesul)
    (Tranziția Metaforică)
    H2 (Titlu Secțiune): De la Logica de Backend la Intuiția AI
-   Paragraf: Într-o lume a complexității, noi aducem claritate. Unim infrastructura robustă cu agilitatea cognitivă pentru a transforma datele brute în decizii strategice automate.
+   Paragraf: Într-o lume a complexității, noi aducem claritate. Unim infrastructura robustă cu puterea inteligenței artificiale pentru a transforma datele brute în decizii strategice automate.
 3. LISTA DE SERVICII (Pilonii Sistemului)
    (Fiecare serviciu este prezentat ca o componentă vitală a organismului digital)
    A. Infrastructură & Nucleu (Laravel Enterprise)
@@ -28,17 +28,9 @@ Aceste texte sunt gata de pus pe site. Sunt concise, elimină detaliile inutile 
    Descriere: Sisteme de vânzare construite pentru stabilitate. De la gestiunea stocurilor la checkout-uri optimizate, asigurăm un flux tranzacțional continuu și sigur.
    Ce livrăm: Magazine Custom, Integrări ERP/Curieri, Optimizare Checkout.
    E. Mentenanță & DevOps
-   Focus: Siguranță, uptime și parteneriat pe termen lung.
-   Descriere:
-   Lansarea este doar începutul. Oferim suport tehnic proactiv pentru ca tu să te concentrezi pe business, nu pe servere.
-   Ce includem:
-   Monitorizare performanță și uptime 24/7.
-   Update-uri de securitate și backup-uri automate.
-   Optimizare servere și infrastructură Cloud.
-   Call to Action (Finalul paginii)
-   Titlu: Ai o provocare tehnică?
-   Text: Fie că e vorba de o refactorizare complexă sau de integrarea AI în business-ul tău, suntem aici să construim soluția.
-   Buton: Discută cu noi
+   Titlu: Mentenanță & Infrastructură Cloud
+   Descriere: Lansarea este doar începutul. Oferim suport tehnic proactiv pentru ca tu să te concentrezi pe business, nu pe servere. Siguranță, uptime și parteneriat pe termen lung.
+   Ce livrăm: Monitorizare & Uptime 24/7, Update-uri Securitate & Backup, Optimizare Servere & Cloud.
 
 4. CALL TO ACTION (Final)
    (Concluzia Parteneriatului)

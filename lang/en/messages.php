@@ -41,104 +41,62 @@ return [
     // Services page
     'services' => [
         'hero' => [
-            'tagline' => 'Click Studios Digital',
-            'title' => 'Our',
-            'title_gradient' => 'Services',
-            'quote' => 'A digital magic has embraced our entire creation, just like these brilliant moments of innovation that we live with all our passion.',
-            'explore_button' => 'Explore Services',
-            'contact_button' => 'Contact Us',
-        ],
-        'section' => [
-            'tagline' => 'Services',
-            'title' => 'Laravel Development & AI Integrations',
-            'subtitle' => 'I build fast, secure, scalable Laravel applications and add practical AI/LLM integrations (chat, RAG, automation) tailored to your business workflows.',
+            'title_accent' => 'Digital Architecture',
+            'title' => '& Applied Intelligence',
+            'subtitle' => "We don't just write code. We build the intelligence behind your business. We design digital ecosystems where Laravel stability meets the calculated intuition of Artificial Intelligence.",
         ],
         'categories' => [
-            'laravel' => [
-                'title' => 'Laravel Development',
-                'description' => 'Robust and scalable web applications with Laravel + Livewire. End-to-end delivery:',
-                'features' => [
-                    'APIs & integrations (REST, webhooks)',
-                    'Auth, roles, auditing & security',
-                    'Admin dashboards, reporting, SaaS',
+            'infrastructure' => [
+                'title' => 'Software Engineering & Laravel Architecture',
+                'description' => 'The backbone of your platform. We build mission-critical web applications, complex APIs, and microservices that guarantee maximum security and zero downtime, regardless of scale.',
+                'delivery' => [
+                    'SaaS Platforms',
+                    'Custom CRM',
+                    'Cloud Architecture',
                 ],
             ],
-            'web_design' => [
-                'title' => 'Modern Web Design',
-                'description' => 'Responsive and modern designs that delight users. We focus on:',
-                'features' => [
-                    'UI/UX Design',
-                    'Mobile First',
-                    'UX Optimization',
+            'ai' => [
+                'title' => 'AI Solutions & Process Automation',
+                'description' => 'We transform passive applications into active assistants. We integrate AI models (Chat, RAG, Analysis) that take over repetitive tasks, read documents, and provide instant answers.',
+                'delivery' => [
+                    'RAG Systems (trained on your data)',
+                    'Virtual Assistants',
+                    'Intelligent OCR',
                 ],
             ],
-            'automation' => [
-                'title' => 'Business Process Automation',
-                'description' => 'Reliable automation and workflows (queues, jobs, scheduled tasks) to remove friction:',
-                'features' => [
-                    'Automated workflows, notifications, syncs',
-                    'Document processing (OCR) & data extraction',
-                    'Billing, payments, ERP/CRM integrations',
-                ],
-            ],
-            'ai_solutions' => [
-                'title' => 'Enterprise AI Solutions',
-                'description' => 'AI/LLMs integration into new or existing apps with a focus on usefulness and control:',
-                'features' => [
-                    'In-app AI chat (assistants, copilots)',
-                    'RAG (document search + answers)',
-                    'Agentic automation + quality evaluation',
-                ],
-            ],
-            'marketing' => [
-                'title' => 'Sales & Marketing Optimization',
-                'description' => 'Smart solutions for boosting performance:',
-                'features' => [
-                    'AI-Powered Personalized Recommendations',
-                    'Predictive Customer Analytics',
-                    'Automated Marketing',
-                ],
-            ],
-            'digital_marketing' => [
-                'title' => 'Digital Marketing',
-                'description' => 'Complete online marketing strategies for growing your business:',
-                'features' => [
-                    'SEO & Content',
-                    'Social Media',
-                    'Google Ads',
-                ],
-            ],
-            'advertising' => [
-                'title' => 'Advertising Spots',
-                'description' => 'Professional creation and production of advertising spots for TV, radio, and digital.',
-                'features' => [
-                    'TV & Online Ads',
-                    'Audio Production',
-                    'Professional Voice-over',
+            'ui_ux' => [
+                'title' => 'Product Design & User Experience',
+                'description' => 'Complexity in the backend, simplicity in the frontend. We create interfaces that hide heavy logic behind fluid visual experiences, designed strictly for conversion and clarity.',
+                'delivery' => [
+                    'Design Systems',
+                    'Prototyping',
+                    'Mobile-First UX Audit',
                 ],
             ],
             'ecommerce' => [
-                'title' => 'E-commerce Solutions',
-                'description' => 'E-commerce builds and integrations (Laravel) with a focus on stability and conversion:',
-                'features' => [
-                    'Bagisto (Laravel) & custom builds',
-                    'Checkout, payments, invoicing, shipping',
-                    'Stock, ERP, marketplace integrations',
+                'title' => 'Scalable E-commerce Ecosystems',
+                'description' => 'Sales systems built for stability. From inventory management to optimized checkouts, we ensure a continuous and secure transactional flow.',
+                'delivery' => [
+                    'Custom Stores',
+                    'ERP/Courier Integrations',
+                    'Checkout Optimization',
                 ],
             ],
             'maintenance' => [
-                'title' => 'Maintenance & Support',
-                'description' => 'Technical support and maintenance for Laravel apps, with predictable delivery:',
-                'features' => [
-                    'Monitoring, logs, alerts, uptime',
-                    'Updates, security, backup & recovery',
-                    'Performance tuning (DB/cache/queries)',
+                'title' => 'Maintenance & Cloud Infrastructure',
+                'description' => 'Launch is just the beginning. We provide proactive technical support so you can focus on business, not servers. Security, uptime, and long-term partnership.',
+                'delivery' => [
+                    'Monitoring & 24/7 Uptime',
+                    'Security Updates & Backup',
+                    'Server & Cloud Optimization',
                 ],
             ],
         ],
+        'delivery_label' => 'What we deliver:',
         'cta' => [
-            'title' => 'Ready to start your digital project?',
-            'description' => "Let's turn your ideas into a successful digital reality. Our expertise in Laravel and AI allows us to deliver customized solutions for your business.",
+            'title' => "Ready to build your company's future?",
+            'subtitle' => 'Leave the technology to us. You focus on the vision.',
+            'button' => 'Configure Your Ecosystem',
         ],
     ],
 
