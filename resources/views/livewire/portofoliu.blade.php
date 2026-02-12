@@ -18,7 +18,7 @@
 }">
     <div class="max-w-5xl mx-auto px-4">
         {{-- Header Section --}}
-        <section class="max-w-[280px] ml-auto md:max-w-none md:mx-0 pt-24 pb-8">
+        <section class="max-w-[280px] ml-auto md:max-w-none md:mx-0 pt-24">
             <h1 class="mb-1 uppercase tracking-wide leading-none font-jakarta">
                 <span class="block text-lg font-extrabold text-emerald-700 md:text-4xl lg:text-5xl">
                     {{ __('messages.portfolio.title') }}
@@ -27,6 +27,8 @@
 
             <h2 class="mb-3 text-lg font-bold text-gray-900 uppercase tracking-wide leading-[1.1] font-jakarta md:text-2xl lg:text-3xl">
                 {{ __('messages.portfolio.statement') }}
+                <br class="hidden md:block">
+                {{ __('messages.portfolio.statement_highlight') }}
             </h2>
 
             <h3 class="max-w-lg mb-5 text-sm text-gray-600 md:text-lg leading-snug">
@@ -172,15 +174,15 @@
                 </div>
             @endif
         </div>
-    </div>
 
-    {{-- Tech icons --}}
-    <div class="flex items-center justify-center gap-6 py-12 text-gray-400">
-        <i class="text-2xl fa-brands fa-laravel"></i>
-        <i class="text-2xl fa-brands fa-php"></i>
-        <i class="text-2xl fa-brands fa-js"></i>
-        <i class="text-2xl fa-brands fa-vuejs"></i>
-        <i class="text-2xl fa-solid fa-microchip"></i>
+        {{-- Tech icons --}}
+        <div class="flex items-center justify-center gap-6 py-10 md:py-12 text-gray-400 max-w-[280px] ml-auto md:max-w-none md:mx-0">
+            <i class="text-2xl fa-brands fa-laravel"></i>
+            <i class="text-2xl fa-brands fa-php"></i>
+            <i class="text-2xl fa-brands fa-js"></i>
+            <i class="text-2xl fa-brands fa-vuejs"></i>
+            <i class="text-2xl fa-solid fa-microchip"></i>
+        </div>
     </div>
 
     <x-portfolio-detail-modal :items="$portfolioItems" />

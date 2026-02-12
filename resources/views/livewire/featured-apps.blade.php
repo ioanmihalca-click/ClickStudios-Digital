@@ -71,7 +71,7 @@
         @endforeach
     </div>
 
-    <div class="mt-6 text-center max-w-[280px] ml-auto md:max-w-none md:mx-auto">
+    <div class="mt-3 mb-10 md:mt-6 md:mb-0 text-center max-w-[280px] ml-auto md:max-w-none md:mx-auto">
         <a href="{{ route('portfolio', ['locale' => App::getLocale()]) }}" wire:navigate
             class="text-sm font-normal text-emerald-600 hover:text-emerald-700 transition-colors duration-300">
             {{ __('messages.featured.see_more') }} &rarr;
