@@ -59,7 +59,7 @@ return [
                 'title' => 'Soluții AI & Automatizare Procese',
                 'description' => 'Transformăm aplicațiile pasive în asistenți activi. Integrăm modele AI (Chat, RAG, Analiză) care preiau sarcinile repetitive, citesc documente și oferă răspunsuri instantanee.',
                 'delivery' => [
-                    'Sisteme RAG (antrenate pe datele firmei)',
+                    'Sisteme RAG',
                     'Asistenți Virtuali',
                     'OCR Inteligent',
                 ],

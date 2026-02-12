@@ -59,7 +59,7 @@ return [
                 'title' => 'AI Solutions & Process Automation',
                 'description' => 'We transform passive applications into active assistants. We integrate AI models (Chat, RAG, Analysis) that take over repetitive tasks, read documents, and provide instant answers.',
                 'delivery' => [
-                    'RAG Systems (trained on your data)',
+                    'RAG Systems',
                     'Virtual Assistants',
                     'Intelligent OCR',
                 ],
