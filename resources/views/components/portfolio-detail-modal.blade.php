@@ -1,5 +1,6 @@
 @props(['items'])
 
+<template x-teleport="body">
 <div x-cloak x-show="selectedItem !== null" class="fixed inset-0 z-[60] flex items-center justify-center p-4"
     x-effect="document.body.classList.toggle('overflow-hidden', selectedItem !== null)"
     @keydown.escape.window="selectedItem = null">
@@ -46,9 +47,9 @@
                     </h2>
 
                     {{-- Description --}}
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        {!! htmlspecialchars_decode($item['description']) !!}
-                    </p>
+                    <div class="text-sm text-gray-600 leading-relaxed space-y-3">
+                        {!! nl2br(e($item['description'])) !!}
+                    </div>
 
                     {{-- YouTube embed --}}
                     @if (!empty($item['youtube_url']))
@@ -97,3 +98,4 @@
         @endforeach
     </div>
 </div>
+</template>

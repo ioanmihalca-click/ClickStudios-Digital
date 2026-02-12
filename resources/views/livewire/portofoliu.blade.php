@@ -25,7 +25,8 @@
                 </span>
             </h1>
 
-            <h2 class="mb-3 text-lg font-bold text-gray-900 uppercase tracking-wide leading-[1.1] font-jakarta md:text-2xl lg:text-3xl">
+            <h2
+                class="mb-3 text-lg font-bold text-gray-900 uppercase tracking-wide leading-[1.1] font-jakarta md:text-2xl lg:text-3xl">
                 {{ __('messages.portfolio.statement') }}
                 <br class="hidden md:block">
                 {{ __('messages.portfolio.statement_highlight') }}
@@ -38,8 +39,7 @@
 
         {{-- Mobile: Horizontal scroll slider --}}
         <div class="md:hidden max-w-[280px] ml-auto">
-            <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-2"
-                x-ref="mobileTrack"
+            <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-2" x-ref="mobileTrack"
                 @scroll.passive="updateMobileActive($event)">
                 @foreach ($portfolioItems as $item)
                     <div class="w-[280px] min-w-[280px] snap-start shrink-0">
@@ -50,7 +50,8 @@
                                         <div class="relative overflow-hidden rounded-xl aspect-video">
                                             <img src="{{ Storage::url($item['image']) }}" alt="{{ $item['title'] }}"
                                                 class="object-cover w-full h-full">
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -61,7 +62,7 @@
                                     {!! htmlspecialchars_decode($item['title']) !!}
                                 </h3>
 
-                                <div class="mb-3 text-xs leading-relaxed text-gray-600 line-clamp-2">
+                                <div class="mb-3 text-xs leading-relaxed text-gray-600 line-clamp-3">
                                     {!! htmlspecialchars_decode($item['short_description'] ?? $item['description']) !!}
                                 </div>
 
@@ -81,11 +82,9 @@
             @if (count($portfolioItems) > 1)
                 <div class="flex justify-center gap-2 mt-4">
                     @foreach ($portfolioItems as $index => $item)
-                        <button
-                            class="w-2 h-2 rounded-full transition-colors duration-300"
+                        <button class="w-2 h-2 rounded-full transition-colors duration-300"
                             :class="mobileActive === {{ $index }} ? 'bg-emerald-600' : 'bg-gray-300'"
-                            @click="$refs.mobileTrack.children[{{ $index }}].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })"
-                        ></button>
+                            @click="$refs.mobileTrack.children[{{ $index }}].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })"></button>
                     @endforeach
                 </div>
             @endif
@@ -96,25 +95,19 @@
             {{-- Navigation arrows (only when more than 3 items) --}}
             <template x-if="itemCount > perPage">
                 <div>
-                    <button
-                        @click="prev()"
-                        :disabled="current === 0"
+                    <button @click="prev()" :disabled="current === 0"
                         class="absolute -left-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center transition-opacity duration-300"
-                        :class="current === 0 ? 'opacity-30 cursor-not-allowed' : 'opacity-100 hover:bg-emerald-50'"
-                    >
+                        :class="current === 0 ? 'opacity-30 cursor-not-allowed' : 'opacity-100 hover:bg-emerald-50'">
                         <svg class="w-5 h-5 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                         </svg>
                     </button>
 
-                    <button
-                        @click="next()"
-                        :disabled="current >= maxIndex"
+                    <button @click="next()" :disabled="current >= maxIndex"
                         class="absolute -right-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center transition-opacity duration-300"
-                        :class="current >= maxIndex ? 'opacity-30 cursor-not-allowed' : 'opacity-100 hover:bg-emerald-50'"
-                    >
+                        :class="current >= maxIndex ? 'opacity-30 cursor-not-allowed' : 'opacity-100 hover:bg-emerald-50'">
                         <svg class="w-5 h-5 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>
                     </button>
                 </div>
@@ -131,20 +124,23 @@
                                     <div class="p-3">
                                         <div class="rounded-xl shadow-lg shadow-gray-900/35 ring-1 ring-gray-900/10">
                                             <div class="relative overflow-hidden rounded-xl aspect-video">
-                                                <img src="{{ Storage::url($item['image']) }}" alt="{{ $item['title'] }}"
-                                                    class="object-cover w-full h-full">
-                                                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                                                <img src="{{ Storage::url($item['image']) }}"
+                                                    alt="{{ $item['title'] }}" class="object-cover w-full h-full">
+                                                <div
+                                                    class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 @endif
 
                                 <div class="flex flex-col flex-grow p-4 text-center">
-                                    <h3 class="mb-2 text-base font-bold tracking-wide text-gray-900 uppercase font-jakarta">
+                                    <h3
+                                        class="mb-2 text-base font-bold tracking-wide text-gray-900 uppercase font-jakarta">
                                         {!! htmlspecialchars_decode($item['title']) !!}
                                     </h3>
 
-                                    <div class="mb-3 text-xs leading-relaxed text-gray-600 line-clamp-2">
+                                    <div class="mb-3 text-xs leading-relaxed text-gray-600 line-clamp-3">
                                         {!! htmlspecialchars_decode($item['short_description'] ?? $item['description']) !!}
                                     </div>
 
@@ -165,18 +161,17 @@
             @if (count($portfolioItems) > 3)
                 <div class="flex justify-center gap-2 mt-6">
                     @for ($i = 0; $i <= count($portfolioItems) - 3; $i++)
-                        <button
-                            class="w-2.5 h-2.5 rounded-full transition-colors duration-300"
+                        <button class="w-2.5 h-2.5 rounded-full transition-colors duration-300"
                             :class="current === {{ $i }} ? 'bg-emerald-600' : 'bg-gray-300'"
-                            @click="current = {{ $i }}"
-                        ></button>
+                            @click="current = {{ $i }}"></button>
                     @endfor
                 </div>
             @endif
         </div>
 
         {{-- Tech icons --}}
-        <div class="flex items-center justify-center gap-6 py-10 md:py-12 text-gray-400 max-w-[280px] ml-auto md:max-w-none md:mx-0">
+        <div
+            class="flex items-center justify-center gap-6 py-6 md:py-12 text-gray-400 max-w-[280px] ml-auto md:max-w-none md:mx-0">
             <i class="text-2xl fa-brands fa-laravel"></i>
             <i class="text-2xl fa-brands fa-php"></i>
             <i class="text-2xl fa-brands fa-js"></i>

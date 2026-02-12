@@ -35,6 +35,7 @@ class PortfolioItemForm
                                     ->columnSpanFull(),
                                 Textarea::make('description')
                                     ->required()
+                                    ->rows(7)
                                     ->columnSpanFull(),
                             ]),
                         Tab::make('Content RO')
@@ -43,6 +44,7 @@ class PortfolioItemForm
                                 Textarea::make('short_description_ro')
                                     ->columnSpanFull(),
                                 Textarea::make('description_ro')
+                                    ->rows(7)
                                     ->columnSpanFull(),
                             ]),
                         Tab::make('Media')
