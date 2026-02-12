@@ -5,7 +5,7 @@
             <div class="flex flex-col bg-white shadow-lg rounded-2xl h-full border border-gray-100">
                 @if ($item['image'])
                     <div class="p-3">
-                        <div class="rounded-xl shadow-lg">
+                        <div class="rounded-xl shadow-lg shadow-gray-900/35 ring-1 ring-gray-900/10">
                             <div class="relative overflow-hidden rounded-xl aspect-video">
                                 <img src="{{ Storage::url($item['image']) }}" alt="{{ $item['title'] }}"
                                     class="object-cover w-full h-full">
@@ -43,7 +43,7 @@
             <div class="flex flex-col bg-white shadow-lg rounded-2xl h-full border border-gray-100">
                 @if ($item['image'])
                     <div class="p-3">
-                        <div class="rounded-xl shadow-lg">
+                        <div class="rounded-xl shadow-lg shadow-gray-900/35 ring-1 ring-gray-900/10">
                             <div class="relative overflow-hidden rounded-xl aspect-video">
                                 <img src="{{ Storage::url($item['image']) }}" alt="{{ $item['title'] }}"
                                     class="object-cover w-full h-full">

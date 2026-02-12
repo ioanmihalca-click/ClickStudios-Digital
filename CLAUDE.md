@@ -43,10 +43,6 @@ This project has domain-specific skills available. You MUST activate the relevan
 - Stick to existing directory structure; don't create new base folders without approval.
 - Do not change the application's dependencies without approval.
 
-## Frontend Bundling
-
-- If the user doesn't see a frontend change reflected in the UI, it could mean they need to run `npm run build`, `npm run dev`, or `composer run dev`. Ask them.
-
 ## Documentation Files
 
 - You must only create documentation files if explicitly requested by the user.
@@ -260,4 +256,51 @@ protected function isAccessible(User $user, ?string $path = null): bool
 - Always use existing Tailwind conventions; check project patterns before adding new ones.
 - IMPORTANT: Always use `search-docs` tool for version-specific Tailwind CSS documentation and updated code examples. Never rely on training data.
 - IMPORTANT: Activate `tailwindcss-development` every time you're working with a Tailwind CSS or styling-related task.
+=== design rules ===
+
+# Design System
+
+## Core Layout & Structure
+- **Global Backgrounds**: Managed in `layouts/app.blade.php` via `fixed inset-0 z-0`. Use distinct images for mobile (`bg-top`) and desktop (`bg-center`) with `bg-cover`.
+- **Viewport**: Use `min-h-screen`, `w-screen`, `overflow-x-hidden` on main containers.
+- **Grids/Containers**: Standard width `max-w-5xl mx-auto px-4`.
+- **Z-Index Strategy**:
+  - `z-0`: Backgrounds
+  - `z-10`: Main Content
+  - `z-30`: Footer
+  - `z-50`: Fixed Navigation, Modals, Loading Screens
+
+## Typography & Fonts
+- **Primary Font**: `font-inter` (Inter) for body text.
+- **Headings**: `font-jakarta` (Plus Jakarta Sans) for headings.
+- **Heading Styles**: Use `uppercase tracking-wide leading-none`. Hero titles often mix `font-extrabold text-emerald-700` with `text-gray-900`.
+
+## Color Palette (Emerald Theme)
+- **Primary Accent**: Emerald Green (`emerald-500`, `emerald-600`, `emerald-700` for text/borders).
+- **Backgrounds**: `bg-emerald-50` for subtle accents, `bg-white`, `bg-gray-50`, `bg-gray-100`.
+- **Text Hierarchy**:
+  - `text-gray-900`: Headings/Strong text.
+  - `text-gray-600` / `text-gray-700`: Body copy.
+  - `text-gray-500`: Muted text/Metadata.
+- **Overlays**: Use `bg-gradient-to-t from-black/20 to-transparent` for image overlays.
+
+## Component Patterns
+
+### Navigation (`navigation-main`)
+- **Sticky Header**: `fixed top-0` using Alpine.js for scroll detection.
+- **Transition**: Starts `bg-transparent`, becomes `bg-white/90 backdrop-blur-md` on scroll (`window.pageYOffset > 20`).
+- **Links**: `uppercase font-bold tracking-wide text-sm`. Active state: `text-emerald-600`.
+
+### Cards (Featured Apps / General)
+- **Container**: `bg-white shadow-lg rounded-2xl border border-gray-100`.
+- **Content Padding**: `p-3` for image containers (inner `rounded-xl shadow-xl shadow-gray-900/20 ring-1 ring-gray-900/10`), `p-4` for text content.
+- **Images**: `aspect-video object-cover` with gradient overlay.
+- **Buttons**: `rounded-full border border-emerald-600 text-emerald-700 hover:bg-emerald-600 hover:text-white transition-colors duration-300 uppercase font-bold tracking-widest`.
+
+## Interactions & Animation
+- **SPA Navigation**: Use `wire:navigate` on internal links for fast transitions.
+- **Alpine.js**: Use for UI state (mobile menu, scroll detection, loading screens).
+- **Loading State**: Implement `x-init` derived loading screens (`fixed inset-0 z-50 bg-white`) with fade-out.
+- **Transitions**: Standardize on `transition-all duration-300` for hover effects.
+
 </laravel-boost-guidelines>
