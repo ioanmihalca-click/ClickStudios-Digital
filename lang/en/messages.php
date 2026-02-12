@@ -28,6 +28,7 @@ return [
         'title' => 'Our Featured Projects',
         'subtitle' => 'Discover some of our innovative solutions',
         'visit_website' => 'Visit Website',
+        'see_more' => 'See More',
         'key_features' => 'Key Features',
         'view_all' => 'See All Apps',
     ],

@@ -28,6 +28,7 @@ return [
         'title' => 'Proiecte Evidențiate',
         'subtitle' => 'Descoperă câteva dintre soluțiile noastre inovatoare',
         'visit_website' => 'Vizitează Website-ul',
+        'see_more' => 'Vezi Mai Multe',
         'key_features' => 'Caracteristici Cheie',
         'view_all' => 'Vezi Toate Aplicațiile',
     ],
