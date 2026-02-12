@@ -30,8 +30,8 @@
                         class="text-sm font-bold tracking-wide uppercase transition-colors duration-300 hover:text-emerald-600 {{ Route::currentRouteName() == 'home' ? 'text-emerald-600' : 'text-gray-900' }}">
                         {{ __('messages.menu.home') }}
                     </a>
-                    <a href="#about"
-                        class="text-sm font-bold tracking-wide uppercase transition-colors duration-300 hover:text-emerald-600 text-gray-900">
+                    <a href="{{ route('about', ['locale' => App::getLocale()]) }}" wire:navigate
+                        class="text-sm font-bold tracking-wide uppercase transition-colors duration-300 hover:text-emerald-600 {{ Route::currentRouteName() == 'about' ? 'text-emerald-600' : 'text-gray-900' }}">
                         {{ __('messages.menu.about') }}
                     </a>
                     <a href="{{ route('services', ['locale' => App::getLocale()]) }}" wire:navigate
@@ -161,7 +161,7 @@
                 <i class="w-5 mr-3 fa-solid fa-home text-emerald-500"></i>
                 {{ __('messages.menu.home') }}
             </a>
-            <a href="#about" @click="isOpen = false"
+            <a href="{{ route('about', ['locale' => App::getLocale()]) }}" @click="isOpen = false" wire:navigate
                 class="flex items-center px-4 py-3 text-base font-medium text-gray-800 transition-all duration-300 rounded-lg hover:bg-gray-50">
                 <i class="w-5 mr-3 fa-solid fa-users text-emerald-500"></i>
                 {{ __('messages.menu.about') }}

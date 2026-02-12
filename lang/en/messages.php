@@ -38,6 +38,20 @@ return [
         'title' => 'Enterprise Projects & AI Systems',
     ],
 
+    // About page
+    'about' => [
+        'title' => 'About',
+        'subtitle' => 'More than code. A vision for the future.',
+        'heading' => 'Who I am and why I build differently',
+        'paragraph_1' => 'Developing software means more than writing code. It\'s about strategy, architecture, and intelligent systems that solve real problems.',
+        'paragraph_2' => 'My journey in web development coincided with a historic moment: the birth and expansion of generative Artificial Intelligence. I bet on AI when others were still skeptical. This decision defined my career and the way I build software. With passion and curiosity, I developed unique applications in Romania (such as Clipcraft or BizzOS - alongside an amazing team), pushing the limits of what a single developer and a small team can deliver today.',
+        'paragraph_3' => 'Where others saw a threat, I saw an opportunity. Technology must serve people, not the other way around. AI makes the good ones exceptional. The human factor — empathy, strategy, and architecture — remains vital. I use these technologies to remove technical barriers and focus on what truly matters: delivering value, innovation, and speed of execution. I approach every project with the mindset of a partner, not a freelancer.',
+        'closing' => 'I\'m not looking for clients. I\'m looking for collaborations that matter.',
+        'signature_name' => 'Ioan Mihalca',
+        'signature_role' => 'Founder & Lead Developer,',
+        'signature_company' => 'Click Studios Digital',
+    ],
+
     // Services page
     'services' => [
         'hero' => [

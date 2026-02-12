@@ -38,6 +38,20 @@ return [
         'title' => 'Proiecte Enterprise & Sisteme AI',
     ],
 
+    // About page
+    'about' => [
+        'title' => 'Despre',
+        'subtitle' => 'Mai mult decât cod. O viziune despre viitor.',
+        'heading' => 'Cine sunt și de ce construiesc diferit',
+        'paragraph_1' => 'A dezvolta software înseamnă mai mult decât a scrie cod. E despre strategie, arhitectură și sisteme inteligente care rezolvă probleme reale.',
+        'paragraph_2' => 'Călătoria mea în dezvoltarea web a coincis cu un moment istoric: nașterea și expansiunea Inteligenței Artificiale generative. Am pariat pe Inteligența Artificială când alții erau încă sceptici. Această decizie mi-a definit cariera și modul în care construiesc software. Cu pasiune și curiozitate, am dezvoltat aplicații unice în România (precum Clipcraft sau BizzOS - alături de o super echipa), împingând limitele a ceea ce un singur developer și o echipă mică pot livra astăzi.',
+        'paragraph_3' => 'Acolo unde alții au văzut o amenințare, eu am văzut o oportunitate. Tehnologia trebuie să servească omul, nu invers. AI-ul îi face pe cei buni, excepționali. Factorul uman — empatia, strategia și arhitectura — rămâne vital. Folosesc aceste tehnologii pentru a elimina barierele tehnice și pentru a mă concentra pe ceea ce contează cu adevărat: să ofer valoare, inovație și viteză de execuție. Abordez fiecare proiect cu mentalitate de partener, nu de freelancer.',
+        'closing' => 'Nu caut clienți. Caut colaborări care merită.',
+        'signature_name' => 'Ioan Mihalca',
+        'signature_role' => 'Founder & Lead Developer,',
+        'signature_company' => 'Click Studios Digital',
+    ],
+
     // Services page
     'services' => [
         'hero' => [
