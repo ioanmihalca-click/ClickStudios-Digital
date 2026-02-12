@@ -7,7 +7,7 @@ return [
         'web_development' => 'Dezvoltare Web',
         'services' => 'Servicii',
         'portfolio' => 'Portofoliu',
-        'about' => 'Despre Noi',
+        'about' => 'Despre',
         'contact' => 'Contact',
     ],
 

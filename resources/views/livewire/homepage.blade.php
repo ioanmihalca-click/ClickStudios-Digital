@@ -25,10 +25,10 @@
         </section>
 
         <!-- Enterprise AI Section (Bottom) -->
-        <section class="flex-shrink-0 text-center w-full">
+        {{-- <section class="flex-shrink-0 text-center w-full">
             <h2 class="mb-1 mt-8 text-md uppercase tracking-wide text-gray-700 md:text-lg md:mb-2 ">
                 {{ __('messages.enterprise.title') }}
-            </h2>
+            </h2> --}}
 
 
         </section>

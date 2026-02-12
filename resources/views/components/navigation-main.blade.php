@@ -30,6 +30,10 @@
                         class="text-sm font-bold tracking-wide uppercase transition-colors duration-300 hover:text-emerald-600 {{ Route::currentRouteName() == 'home' ? 'text-emerald-600' : 'text-gray-900' }}">
                         {{ __('messages.menu.home') }}
                     </a>
+                    <a href="#about"
+                        class="text-sm font-bold tracking-wide uppercase transition-colors duration-300 hover:text-emerald-600 text-gray-900">
+                        {{ __('messages.menu.about') }}
+                    </a>
                     <a href="{{ route('services', ['locale' => App::getLocale()]) }}" wire:navigate
                         class="text-sm font-bold tracking-wide uppercase transition-colors duration-300 hover:text-emerald-600 {{ Route::currentRouteName() == 'services' ? 'text-emerald-600' : 'text-gray-900' }}">
                         {{ __('messages.menu.services') }}
@@ -37,10 +41,6 @@
                     <a href="{{ route('portfolio', ['locale' => App::getLocale()]) }}" wire:navigate
                         class="text-sm font-bold tracking-wide uppercase transition-colors duration-300 hover:text-emerald-600 {{ Route::currentRouteName() == 'portfolio' ? 'text-emerald-600' : 'text-gray-900' }}">
                         {{ __('messages.menu.portfolio') }}
-                    </a>
-                     <a href="#about"
-                        class="text-sm font-bold tracking-wide uppercase transition-colors duration-300 hover:text-emerald-600 text-gray-900">
-                        {{ __('messages.menu.about') }}
                     </a>
                     <a href="{{ route('contact', ['locale' => App::getLocale()]) }}" wire:navigate
                         class="text-sm font-bold tracking-wide uppercase transition-colors duration-300 hover:text-emerald-600 {{ Route::currentRouteName() == 'contact' ? 'text-emerald-600' : 'text-gray-900' }}">
@@ -161,6 +161,11 @@
                 <i class="w-5 mr-3 fa-solid fa-home text-emerald-500"></i>
                 {{ __('messages.menu.home') }}
             </a>
+            <a href="#about" @click="isOpen = false"
+                class="flex items-center px-4 py-3 text-base font-medium text-gray-800 transition-all duration-300 rounded-lg hover:bg-gray-50">
+                <i class="w-5 mr-3 fa-solid fa-users text-emerald-500"></i>
+                {{ __('messages.menu.about') }}
+            </a>
             <a href="{{ route('services', ['locale' => App::getLocale()]) }}" @click="isOpen = false" wire:navigate
                 class="flex items-center px-4 py-3 text-base font-medium text-gray-800 transition-all duration-300 rounded-lg hover:bg-gray-50">
                 <i class="w-5 mr-3 fa-solid fa-list-check text-emerald-500"></i>
@@ -170,11 +175,6 @@
                 class="flex items-center px-4 py-3 text-base font-medium text-gray-800 transition-all duration-300 rounded-lg hover:bg-gray-50">
                 <i class="w-5 mr-3 fa-solid fa-briefcase text-emerald-500"></i>
                 {{ __('messages.menu.portfolio') }}
-            </a>
-            <a href="#about" @click="isOpen = false"
-                class="flex items-center px-4 py-3 text-base font-medium text-gray-800 transition-all duration-300 rounded-lg hover:bg-gray-50">
-                <i class="w-5 mr-3 fa-solid fa-users text-emerald-500"></i>
-                {{ __('messages.menu.about') }}
             </a>
             <a href="{{ route('contact', ['locale' => App::getLocale()]) }}" @click="isOpen = false" wire:navigate
                 class="flex items-center px-4 py-3 text-base font-medium text-gray-800 transition-all duration-300 rounded-lg hover:bg-gray-50">

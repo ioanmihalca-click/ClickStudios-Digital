@@ -146,6 +146,10 @@
         <div class="flex items-center justify-between mx-auto max-w-5xl border-t border-gray-200 pt-2">
             <!-- Social Links -->
             <div class="flex items-center gap-4">
+                <a href="https://github.com/ioanmihalca-click" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-500 hover:text-gray-900 transition-colors">
+                    <i class="fa-brands fa-github text-lg"></i>
+                </a>
                 <a href="https://www.tiktok.com/@clickstudiosdigital" target="_blank" rel="noopener noreferrer"
                     class="text-gray-500 hover:text-gray-900 transition-colors">
                     <i class="fa-brands fa-tiktok text-lg"></i>
@@ -160,8 +164,7 @@
             {{-- <img src="{{ asset('assets/logo.jpg') }}" alt="Click Studios Digital" class="h-7"> --}}
 
             <!-- Contact -->
-            <div class="flex items-center gap-2 text-xs text-gray-500">
-                <span class="hidden md:inline">{{ __('messages.footer.contact_info') }}</span>
+            <div class="flex items-center text-xs">
                 <a href="mailto:contact@clickstudiosdigital.com"
                     class="text-gray-700 hover:text-emerald-600 transition-colors">
                     contact@clickstudiosdigital.com
