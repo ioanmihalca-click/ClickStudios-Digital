@@ -281,7 +281,7 @@ return [
     // Portfolio page
     'portfolio' => [
         'tagline' => 'Featured Projects',
-        'title' => 'Our Portfolio',
+        'title' => 'Portfolio',
         'subtitle' => 'Discover our innovative solutions and success stories',
         'project_details' => 'Project Details',
         'technologies' => 'Technologies Used',

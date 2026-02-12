@@ -281,7 +281,7 @@ return [
     // Portfolio page
     'portfolio' => [
         'tagline' => 'Proiecte Evidențiate',
-        'title' => 'Portofoliul Nostru',
+        'title' => 'Portofoliu',
         'subtitle' => 'Descoperă soluțiile și poveștile noastre de succes',
         'project_details' => 'Detalii Proiect',
         'technologies' => 'Tehnologii Utilizate',
