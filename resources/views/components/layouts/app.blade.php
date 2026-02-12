@@ -118,7 +118,7 @@
         </div>
 
         {{-- Mobile Background --}}
-        <div class="absolute inset-0 block w-full h-full bg-top bg-no-repeat bg-cover md:hidden"
+        <div class="absolute inset-0 block w-full h-full bg-[35%_top]bg-no-repeat bg-cover md:hidden"
             style="background-image: url('{{ asset('assets/bg/mobile.webp') }}');">
         </div>
     </div>
