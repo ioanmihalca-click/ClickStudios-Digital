@@ -1,4 +1,4 @@
-<section class="relative z-30 py-2 w-full">
+<section class="relative z-30 py-2 w-full" x-data="{ selectedItem: null }">
     {{-- Mobile: Stacked cards --}}
     <div class="flex flex-col gap-4 md:hidden max-w-[280px] ml-auto">
         @foreach ($featuredApps->take(3) as $item)
@@ -25,12 +25,10 @@
                     </div>
 
                     <div class="mt-auto">
-                        @if ($item['website_url'])
-                            <a href="{{ $item['website_url'] }}" target="_blank"
-                                class="inline-flex items-center justify-center px-5 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded-full border border-emerald-600 text-emerald-700 hover:bg-emerald-600 hover:text-white transition-colors duration-300">
-                                {{ __('messages.featured.visit_website') }}
-                            </a>
-                        @endif
+                        <button @click="selectedItem = @js($item['slug'])"
+                            class="inline-flex items-center justify-center px-5 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded-full border border-emerald-600 text-emerald-700 hover:bg-emerald-600 hover:text-white transition-colors duration-300">
+                            {{ __('messages.view_details') }}
+                        </button>
                     </div>
                 </div>
             </div>
@@ -63,12 +61,10 @@
                     </div>
 
                     <div class="mt-auto">
-                        @if ($item['website_url'])
-                            <a href="{{ $item['website_url'] }}" target="_blank"
-                                class="inline-flex items-center justify-center px-5 py-1.5 text-xs font-bold tracking-widest uppercase rounded-full border border-emerald-600 text-emerald-700 hover:bg-emerald-600 hover:text-white transition-colors duration-300">
-                                {{ __('messages.featured.visit_website') }}
-                            </a>
-                        @endif
+                        <button @click="selectedItem = @js($item['slug'])"
+                            class="inline-flex items-center justify-center px-5 py-1.5 text-xs font-bold tracking-widest uppercase rounded-full border border-emerald-600 text-emerald-700 hover:bg-emerald-600 hover:text-white transition-colors duration-300">
+                            {{ __('messages.view_details') }}
+                        </button>
                     </div>
                 </div>
             </div>
@@ -81,4 +77,6 @@
             {{ __('messages.featured.see_more') }} &rarr;
         </a>
     </div>
+
+    <x-portfolio-detail-modal :items="$featuredApps" />
 </section>

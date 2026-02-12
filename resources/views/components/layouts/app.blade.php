@@ -92,8 +92,6 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFL38JS6PJ"></script>
     <script>
