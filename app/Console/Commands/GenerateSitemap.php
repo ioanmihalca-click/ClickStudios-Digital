@@ -10,36 +10,36 @@ use Spatie\Sitemap\Tags\Url;
 class GenerateSitemap extends Command
 {
     protected $signature = 'sitemap:generate';
+
     protected $description = 'Generate the sitemap.';
 
-    public function handle()
+    public function handle(): void
     {
         $this->info('Generating sitemap...');
-        
+
         $sitemap = Sitemap::create();
 
-        // Add static pages with their priorities
-        $staticPages = [
-            '/' => 1.0,
-            '/ro' => 1.0,
-            '/en/services' => 0.9,
-            '/ro/services' => 0.9,
-            '/en/portfolio' => 0.8,
-            '/ro/portfolio' => 0.8,
-            '/en/contact' => 0.8,
-            '/ro/contact' => 0.8,
+        $routes = [
+            'home' => 1.0,
+            'services' => 0.9,
+            'about' => 0.8,
+            'portfolio' => 0.8,
+            'contact' => 0.7,
         ];
 
-        foreach ($staticPages as $url => $priority) {
-            $sitemap->add(Url::create($url)
-                ->setLastModificationDate(Carbon::now())
-                ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
-                ->setPriority($priority));
+        foreach (config('app.supported_locales') as $locale) {
+            foreach ($routes as $name => $priority) {
+                $sitemap->add(
+                    Url::create(route($name, ['locale' => $locale]))
+                        ->setLastModificationDate(Carbon::now())
+                        ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
+                        ->setPriority($priority)
+                );
+            }
         }
 
-        // Save sitemap
         $sitemap->writeToFile(public_path('sitemap.xml'));
-        
+
         $this->info('Sitemap generated successfully!');
     }
 }
