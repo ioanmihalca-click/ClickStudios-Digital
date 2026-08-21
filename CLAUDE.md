@@ -260,47 +260,10 @@ protected function isAccessible(User $user, ?string $path = null): bool
 
 # Design System
 
-## Core Layout & Structure
-- **Global Backgrounds**: Managed in `layouts/app.blade.php` via `fixed inset-0 z-0`. Use distinct images for mobile (`bg-top`) and desktop (`bg-center`) with `bg-cover`.
-- **Viewport**: Use `min-h-screen`, `w-screen`, `overflow-x-hidden` on main containers.
-- **Grids/Containers**: Standard width `max-w-5xl mx-auto px-4`.
-- **Z-Index Strategy**:
-  - `z-0`: Backgrounds
-  - `z-10`: Main Content
-  - `z-30`: Footer
-  - `z-50`: Fixed Navigation, Modals, Loading Screens
-
-## Typography & Fonts
-- **Primary Font**: `font-inter` (Inter) for body text.
-- **Headings**: `font-jakarta` (Plus Jakarta Sans) for headings.
-- **Heading Styles**: Use `uppercase tracking-wide leading-none`. Hero titles often mix `font-extrabold text-emerald-700` with `text-gray-900`.
-
-## Color Palette (Emerald Theme)
-- **Primary Accent**: Emerald Green (`emerald-500`, `emerald-600`, `emerald-700` for text/borders).
-- **Backgrounds**: `bg-emerald-50` for subtle accents, `bg-white`, `bg-gray-50`, `bg-gray-100`.
-- **Text Hierarchy**:
-  - `text-gray-900`: Headings/Strong text.
-  - `text-gray-600` / `text-gray-700`: Body copy.
-  - `text-gray-500`: Muted text/Metadata.
-- **Overlays**: Use `bg-gradient-to-t from-black/20 to-transparent` for image overlays.
-
-## Component Patterns
-
-### Navigation (`navigation-main`)
-- **Sticky Header**: `fixed top-0` using Alpine.js for scroll detection.
-- **Transition**: Starts `bg-transparent`, becomes `bg-white/90 backdrop-blur-md` on scroll (`window.pageYOffset > 20`).
-- **Links**: `uppercase font-bold tracking-wide text-sm`. Active state: `text-emerald-600`.
-
-### Cards (Featured Apps / General)
-- **Container**: `bg-white shadow-lg rounded-2xl border border-gray-100`.
-- **Content Padding**: `p-3` for image containers (inner `rounded-xl shadow-xl shadow-gray-900/20 ring-1 ring-gray-900/10`), `p-4` for text content.
-- **Images**: `aspect-video object-cover` with gradient overlay.
-- **Buttons**: `rounded-full border border-emerald-600 text-emerald-700 hover:bg-emerald-600 hover:text-white transition-colors duration-300 uppercase font-bold tracking-widest`.
-
-## Interactions & Animation
-- **SPA Navigation**: Use `wire:navigate` on internal links for fast transitions.
-- **Alpine.js**: Use for UI state (mobile menu, scroll detection, loading screens).
-- **Loading State**: Implement `x-init` derived loading screens (`fixed inset-0 z-50 bg-white`) with fade-out.
-- **Transitions**: Standardize on `transition-all duration-300` for hover effects.
+- The design system lives in `x-docs/design-system.md` and is imported at the bottom of this file. Read it BEFORE any styling or UI work.
+- It carries the exact tokens, component recipes, responsive breakpoints, i18n rules and verified pitfalls. Use those values verbatim; do not round them to a 4/8px grid or swap in close-enough Tailwind defaults.
+- Do not restyle from memory or from the older emerald / `rounded-2xl` / `rounded-full` vocabulary. Pages still on the old look are listed there as pending migration.
 
 </laravel-boost-guidelines>
+
+@x-docs/design-system.md

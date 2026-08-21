@@ -1,65 +1,42 @@
 <div>
-    <div class="max-w-5xl mx-auto px-4 pt-10 md:pt-16">
+    <header class="max-w-[1280px] mx-auto px-6 md:px-12 pt-20 pb-14 border-b border-rule">
+        <div class="font-mono text-xs tracking-[0.14em] uppercase text-emerald-600 mb-[22px]">
+            {{ __('messages.about.title') }}
+        </div>
+        <h1
+            class="font-jakarta font-extrabold text-[30px] md:text-[clamp(40px,4.5vw,60px)] leading-[1.05] tracking-[-0.02em] uppercase text-gray-900 text-balance">
+            {{ __('messages.about.subtitle') }}
+        </h1>
+    </header>
 
-        {{-- Hero Section --}}
-        <section class="max-w-[280px] ml-auto md:max-w-none md:mx-0 mt-10 md:mt-6">
-            <h1
-                class="mb-0.5 md:mb-1 text-lg md:text-4xl lg:text-5xl uppercase tracking-wide leading-none font-jakarta font-extrabold text-emerald-700">
-                {{ __('messages.about.title') }}
-            </h1>
-
-            <h2
-                class="text-lg md:text-2xl lg:text-3xl font-bold text-gray-900 uppercase tracking-wide leading-[1.1] font-jakarta">
-                {{ __('messages.about.subtitle') }}
+    <section class="grid md:grid-cols-[minmax(0,1fr)_300px] gap-12 max-w-[1280px] mx-auto px-6 md:px-12 py-14">
+        <div class="max-w-[680px]">
+            <h2 class="mb-8 font-jakarta font-extrabold text-[26px] uppercase tracking-[0.01em]">
+                {{ __('messages.about.heading') }}
             </h2>
-        </section>
 
-        {{-- Content Card --}}
-        <div class="mt-3 md:mt-8 pb-20 md:pb-16 max-w-[280px] ml-auto md:max-w-none">
-            <div
-                class="relative p-4 md:p-6 bg-gradient-to-br from-teal-50/60 to-white/80 backdrop-blur-md shadow-lg rounded-2xl border border-gray-200/50">
+            <div class="flex flex-col gap-6 text-[17px] leading-[1.6] text-gray-600 text-pretty">
+                <p>{{ __('messages.about.paragraph_1') }}</p>
+                <p>{{ __('messages.about.paragraph_2') }}</p>
+                <p>{{ __('messages.about.paragraph_3') }}</p>
+            </div>
 
-                {{-- Opening quote mark --}}
-                <span
-                    class="absolute -top-3 left-4 md:-top-4 md:left-5 text-5xl md:text-7xl font-bold text-emerald-500/40 leading-none font-jakarta select-none">&ldquo;</span>
+            <p
+                class="mt-10 py-8 border-y border-rule font-jakarta font-bold italic text-[22px] leading-[1.3] text-emerald-700 text-balance">
+                {{ __('messages.about.closing') }}
+            </p>
+        </div>
 
-                <div class="space-y-4 md:space-y-6 pt-4 md:pt-6">
-
-                    <p class="text-xs md:text-sm text-gray-700 leading-relaxed">
-                        {{ __('messages.about.paragraph_1') }}
-                    </p>
-
-                    <p class="text-xs md:text-sm text-gray-700 leading-relaxed">
-                        {{ __('messages.about.paragraph_2') }}
-                    </p>
-
-                    <p class="text-xs md:text-sm text-gray-700 leading-relaxed">
-                        {{ __('messages.about.paragraph_3') }}
-                    </p>
-
-                    <p class="text-xs md:text-sm font-bold text-emerald-700 italic">
-                        {{ __('messages.about.closing') }}
-                    </p>
-                </div>
-
-                {{-- Closing quote mark --}}
-                <span
-                    class="block text-right text-5xl md:text-7xl font-bold text-emerald-500/40 leading-none font-jakarta select-none -mb-2">&rdquo;</span>
-
-                {{-- Signature --}}
-                <div class="mt-2 md:mt-3 pt-4 md:pt-6 border-t border-gray-200/50">
-                    <p class="text-sm md:text-base font-bold text-gray-900 font-jakarta">
-                        {{ __('messages.about.signature_name') }}
-                    </p>
-                    <p class="text-xs md:text-sm text-gray-500">
-                        {{ __('messages.about.signature_role') }}
-                    </p>
-                    <p class="text-xs md:text-sm text-gray-500">
-                        {{ __('messages.about.signature_company') }}
-                    </p>
-                </div>
+        <div class="pt-8 border-t border-rule md:pt-0 md:border-t-0 md:pl-8 md:border-l">
+            <div class="font-jakarta font-bold text-[15px]">
+                {{ __('messages.about.signature_name') }}
+            </div>
+            <div class="text-[12.5px] text-gray-500 mt-[3px]">
+                {{ __('messages.about.signature_role') }}
+            </div>
+            <div class="text-[12.5px] text-gray-500">
+                {{ __('messages.about.signature_company') }}
             </div>
         </div>
-    </div>
-</div>
+    </section>
 </div>

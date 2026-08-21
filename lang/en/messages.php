@@ -9,6 +9,7 @@ return [
         'portfolio' => 'Portfolio',
         'about' => 'About',
         'contact' => 'Contact',
+        'toggle' => 'Menu',
     ],
 
     // Home page
@@ -20,6 +21,22 @@ return [
         'company_name' => 'Click Studios Digital:',
         'discover_button' => 'View Project',
         'contact_button' => 'Contact Us',
+        'eyebrow' => 'Web Development × Artificial Intelligence',
+        'portfolio_button' => 'View portfolio',
+        'credentials' => [
+            'laravel' => [
+                'title' => 'Laravel Enterprise',
+                'note' => 'Critical APIs, zero downtime',
+            ],
+            'ai' => [
+                'title' => 'Applied AI',
+                'note' => 'RAG chatbots, OCR, automation',
+            ],
+            'partnership' => [
+                'title' => 'Partnership',
+                'note' => 'We are not looking for clients. We are looking for collaborations.',
+            ],
+        ],
     ],
 
     // Featured Apps Section
@@ -57,7 +74,7 @@ return [
         'hero' => [
             'title_accent' => 'Digital Architecture',
             'title' => '& Applied Intelligence',
-            'subtitle' => "We build the intelligence behind your business. We design digital ecosystems where Laravel stability meets the calculated intuition of Artificial Intelligence.",
+            'subtitle' => 'We build the intelligence behind your business. We design digital ecosystems where Laravel stability meets the calculated intuition of Artificial Intelligence.',
         ],
         'categories' => [
             'infrastructure' => [
@@ -106,6 +123,7 @@ return [
                 ],
             ],
         ],
+        'home_title' => 'The pillars of the ecosystem',
         'delivery_label' => 'What we deliver:',
         'cta' => [
             'title' => "Ready to build your company's future?",
@@ -321,6 +339,7 @@ return [
     'loading' => 'Loading...',
     'learn_more' => 'Learn More',
     'view_details' => 'View Details',
+    'close' => 'Close',
     'close' => 'Close',
     'language' => 'Language',
 ];

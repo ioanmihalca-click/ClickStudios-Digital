@@ -52,6 +52,15 @@
 @theme {
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
   --font-inter: "Inter", sans-serif;
+  --font-mono: ui-monospace, Menlo, monospace;
+
+  /* Design tokens - agency redesign */
+  --color-canvas: #fafaf8;
+  --color-rule: #e5e5e0;
+  --color-night: #0c1210;
+  --color-night-muted: #86a396;
+  --color-row-hover: #f4f6f4;
+  --color-on-emerald: #06231a;
 }
 
 [x-cloak] {
@@ -69,14 +78,14 @@
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #d1d5db;
+    background-color: #e5e5e0;
     border-radius: 3px;
 }
 
 /* Scrollbar - Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #10b981 #d1d5db;
+    scrollbar-color: #10b981 #e5e5e0;
 }
 
 /* Scrollbar - IE/Edge */

@@ -9,6 +9,7 @@ return [
         'portfolio' => 'Portofoliu',
         'about' => 'Despre',
         'contact' => 'Contact',
+        'toggle' => 'Meniu',
     ],
 
     // Home page
@@ -20,6 +21,22 @@ return [
         'company_name' => 'Click Studios Digital:',
         'discover_button' => 'Vezi Proiectul',
         'contact_button' => 'Contactează-ne',
+        'eyebrow' => 'Dezvoltare Web × Inteligență Artificială',
+        'portfolio_button' => 'Vezi portofoliul',
+        'credentials' => [
+            'laravel' => [
+                'title' => 'Laravel Enterprise',
+                'note' => 'API-uri critice, zero timpi morți',
+            ],
+            'ai' => [
+                'title' => 'AI aplicat',
+                'note' => 'Chatboți RAG, OCR, automatizări',
+            ],
+            'partnership' => [
+                'title' => 'Parteneriat',
+                'note' => 'Nu căutăm clienți. Căutăm colaborări.',
+            ],
+        ],
     ],
 
     // Featured Apps Section
@@ -106,6 +123,7 @@ return [
                 ],
             ],
         ],
+        'home_title' => 'Pilonii ecosistemului',
         'delivery_label' => 'Ce livrăm:',
         'cta' => [
             'title' => 'Gata să construim viitorul companiei tale?',
@@ -321,6 +339,7 @@ return [
     'loading' => 'Se încarcă...',
     'learn_more' => 'Află Mai Multe',
     'view_details' => 'Vezi Detalii',
+    'close' => 'Închide',
     'close' => 'Închide',
     'language' => 'Limba',
 ];

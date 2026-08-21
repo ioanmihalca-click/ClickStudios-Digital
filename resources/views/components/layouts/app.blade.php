@@ -7,11 +7,6 @@
     <title>{{ $title ?? __('app.title') }}</title>
     <link rel="canonical" href="{{ url()->current() }}">
 
-    <link rel="preload" as="image" type="image/webp" href="{{ asset('assets/bg/mobile.webp') }}"
-        media="(max-width: 767px)">
-    <link rel="preload" as="image" type="image/webp" href="{{ asset('assets/bg/desktop.webp') }}"
-        media="(min-width: 768px)">
-
     <meta name="description" content="{{ $description ?? __('app.meta_description') }}">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="keywords" content="{{ __('app.meta_keywords') }}" />
@@ -153,67 +148,42 @@
 
 </head>
 
-<body class="bg-white font-inter overflow-x-hidden antialiased" x-data="{ scrollToTop: false }"
-    x-on:scroll.window="scrollToTop = window.scrollY > 100">
+<body class="flex flex-col min-h-screen bg-canvas font-inter text-gray-900 overflow-x-hidden antialiased"
+    x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">
 
     <a href="#main-content"
         class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-emerald-700 focus:font-bold">
         Sari la conținut principal
     </a>
 
-    {{-- Universal Background --}}
-    <div class="fixed inset-0 z-0 w-screen h-screen bg-gray-50">
-        <picture>
-            <source media="(min-width: 768px)" srcset="{{ asset('assets/bg/desktop.webp') }}" type="image/webp"
-                width="1920" height="1080">
-            <img src="{{ asset('assets/bg/mobile.webp') }}" alt="" role="presentation" fetchpriority="high"
-                loading="eager" decoding="async" width="1080" height="1920"
-                class="absolute inset-0 w-full h-full object-cover object-[5%_top] md:object-center">
-        </picture>
-    </div>
-
     <x-navigation-main />
 
-    <main id="main-content" class="relative z-10 w-full min-h-screen">
+    <main id="main-content" class="relative z-10 flex-1 w-full">
         {{ $slot }}
     </main>
 
     <!-- Footer -->
-    <footer class="fixed bottom-0 left-0 right-0 z-30 w-full bg-white md:bg-transparent px-4 py-2">
-        <div class="flex items-center justify-between mx-auto max-w-5xl border-t border-gray-200 pt-2">
-            <!-- Social Links -->
-            <div class="flex items-center gap-4">
+    <footer class="relative z-30 w-full">
+        <div
+            class="flex flex-wrap items-center justify-between gap-4 max-w-[1280px] mx-auto px-6 md:px-12 py-4 text-xs text-gray-500">
+            <span>&copy; {{ date('Y') }} Click Studios Digital &middot; Baia Mare</span>
+            <span class="flex flex-wrap gap-[18px]">
                 <a href="https://github.com/ioanmihalca-click" target="_blank" rel="noopener noreferrer nofollow"
-                    aria-label="Vizitează profilul nostru de GitHub"
-                    class="text-gray-500 hover:text-gray-900 transition-colors">
-                    <i class="fa-brands fa-github text-lg"></i>
-                </a>
+                    class="text-gray-500 hover:text-gray-900 transition-colors">GitHub</a>
                 <a href="https://www.tiktok.com/@clickstudiosdigital" target="_blank" rel="noopener noreferrer nofollow"
-                    aria-label="Urmărește-ne pe TikTok"
-                    class="text-gray-500 hover:text-gray-900 transition-colors">
-                    <i class="fa-brands fa-tiktok text-lg"></i>
-                </a>
+                    class="text-gray-500 hover:text-gray-900 transition-colors">TikTok</a>
                 <a href="https://www.youtube.com/@clickstudiosdigital" target="_blank" rel="noopener noreferrer nofollow"
-                    aria-label="Abonează-te la canalul nostru YouTube"
-                    class="text-gray-500 hover:text-gray-900 transition-colors">
-                    <i class="fa-brands fa-youtube text-lg"></i>
-                </a>
-            </div>
-
-            <!-- Contact -->
-            <div class="flex items-center text-xs">
-                <a href="mailto:contact@clickstudiosdigital.com"
-                    class="text-gray-700 hover:text-emerald-600 transition-colors">
-                    contact@clickstudiosdigital.com
-                </a>
-            </div>
+                    class="text-gray-500 hover:text-gray-900 transition-colors">YouTube</a>
+                <a href="mailto:contact@clickstudios-digital.com"
+                    class="text-emerald-700 hover:text-emerald-800 transition-colors">contact@clickstudios-digital.com</a>
+            </span>
         </div>
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button x-show="scrollToTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    <button x-show="scrollToTop" x-cloak @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
         aria-label="Derulează la începutul paginii"
-        class="fixed z-50 flex items-center justify-center w-8 h-8 text-xs text-black bg-gray-300 rounded-sm animate-pulse hover:bg-white bottom-4 right-4 ">
+        class="fixed bottom-4 right-4 z-50 flex items-center justify-center w-11 h-11 text-sm rounded-[4px] bg-night text-emerald-50 shadow-[2px_2px_0_#059669] transition-all duration-[120ms] hover:shadow-[1px_1px_0_#059669] hover:translate-x-px hover:translate-y-px">
         <i class="fa-solid fa-angles-up"></i>
     </button>
 
