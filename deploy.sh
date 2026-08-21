@@ -12,11 +12,9 @@
 #   php artisan make:filament-user     # userul de admin pentru /admin
 # Parola se tastează interactiv — nu stă în niciun fișier.
 #
-# Asset-urile front-end NU se construiesc aici: `public/build/` este versionat în
-# repo. Rulează `npm run build` LOCAL și comite `public/build/` înainte de deploy.
-# Dacă vreodată treci build-ul pe server, adaugă public/build în .gitignore și
-# vezi deploy.sh din ioanclickmihalca.ro pentru pașii de npm (verificare versiune
-# Node pentru vite 8 + plafonarea thread-urilor sub CloudLinux).
+# Asset-urile front-end se construiesc AICI, pe server: `public/build/` e în
+# .gitignore, deci nu vine prin git. Nu trebuie să rulezi nimic local înainte de
+# deploy — doar `git push`.
 
 set -Eeuo pipefail
 cd "$(dirname "$0")"
@@ -61,15 +59,31 @@ rm -f bootstrap/cache/config.php bootstrap/cache/routes-*.php \
       bootstrap/cache/events.php bootstrap/cache/services.php \
       bootstrap/cache/packages.php
 
+# vite 8 cere Node ^20.19 || >=22.12; sub aceste versiuni npm sare în tăcere
+# peste binding-urile native opționale (rolldown) și build-ul crapă criptic.
+# Verificăm înainte de composer, ca să pice repede, nu după 2 minute de install.
+command -v node >/dev/null && command -v npm >/dev/null \
+    || { echo "node/npm lipsesc din PATH. Dacă Node e instalat prin nvm, activează-l întâi: source ~/.nvm/nvm.sh && nvm use --lts" >&2; exit 1; }
+node -e 'const [M,m]=process.versions.node.split(".").map(Number); process.exit(M>22||(M===22&&m>=12)||(M===20&&m>=19)?0:1)' \
+    || { echo "Node $(node -v) e prea vechi pentru vite 8 (cere ^20.19 sau >=22.12)." >&2; exit 1; }
+
 "${COMPOSER[@]}" install --no-dev --optimize-autoloader --no-interaction --no-progress
 
-# public/build vine din repo. Dacă lipsește sau e incomplet (build parțial, fișier
-# uitat necomis), aplicația pică abia în runtime cu „Unable to locate file in Vite
-# manifest" — pe pagină, nu aici. Verificăm acum, cât încă suntem în mentenanță.
+# CloudLinux (LVE) limitează thread-urile per cont; rolldown/rayon ar porni câte
+# un thread per core al gazdei și moare cu EAGAIN („Resource temporarily
+# unavailable") — plafonăm explicit.
+export RAYON_NUM_THREADS=2 TOKIO_WORKER_THREADS=2 UV_THREADPOOL_SIZE=2
+
+npm ci --no-audit --no-fund
+npm run build
+rm -f public/hot # rămas din dev; dacă există, @vite ignoră manifestul și trimite browserul la serverul Vite
+
+# Plasă de siguranță: vite poate ieși cu 0 și un build parțial. Fără asta,
+# lipsa s-ar vedea abia în browser, ca „Unable to locate file in Vite manifest".
 "$PHP" -r '
 $manifest = "public/build/manifest.json";
 if (!is_file($manifest)) {
-    fwrite(STDERR, "public/build/manifest.json lipsește — rulează `npm run build` local și comite public/build/.\n");
+    fwrite(STDERR, "public/build/manifest.json lipsește după `npm run build` — build-ul a eșuat.\n");
     exit(1);
 }
 $entries = json_decode(file_get_contents($manifest), true);
@@ -106,8 +120,6 @@ else
 fi
 
 "$PHP" artisan migrate --force
-
-rm -f public/hot # rămas din dev, ar trimite browserul la serverul Vite
 
 "$PHP" artisan optimize:clear
 "$PHP" artisan filament:optimize-clear
