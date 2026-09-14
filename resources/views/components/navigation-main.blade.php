@@ -13,9 +13,9 @@
     <div class="max-w-[1280px] mx-auto flex flex-wrap items-center justify-between gap-3 md:gap-6 px-6 md:px-12 py-[18px]">
 
         <a href="{{ route('home', ['locale' => App::getLocale()]) }}" wire:navigate
-            class="relative block h-10 w-[7.25rem] md:h-11 md:w-[8.5rem] overflow-hidden shrink-0">
+            class="flex items-center shrink-0">
             <img src="{{ asset('assets/logo.jpg') }}" alt="{{ __('messages.brand') }}"
-                class="absolute left-1/2 top-1/2 h-[360%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2">
+                class="h-10 md:h-12 w-auto object-contain">
         </a>
 
         {{-- Desktop links --}}

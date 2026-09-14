@@ -120,7 +120,7 @@ hover:translate-x-[2px] hover:translate-y-[2px]
 ### Nav
 `sticky top-0 z-50 w-full border-b border-rule bg-canvas/[0.92] backdrop-blur-[8px]`.
 Rând interior `max-w-[1280px] mx-auto flex flex-wrap items-center justify-between gap-3 md:gap-6 px-6 md:px-12 py-[18px]` — același container ca paginile, ca logo-ul să coincidă cu conținutul. Bara (border) rămâne full-bleed.
-Logo imagine `assets/logo.jpg` (pătrat cu padding intern): box `h-10 w-[7.25rem] md:h-11 md:w-[8.5rem] overflow-hidden`, img `h-[360%] object` centrat. `alt` = `__('messages.brand')`.
+Logo imagine `assets/logo.jpg`: `h-10 md:h-12 w-auto object-contain` (fără crop, păstrează proporțiile). `alt` = `__('messages.brand')`.
 Link activ: `text-gray-900 border-b-2 border-emerald-600 pb-[2px]`; inactiv `text-gray-600`.
 
 ### Card
