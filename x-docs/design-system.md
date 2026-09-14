@@ -145,8 +145,8 @@ ca să treacă pe rândul doi pe mobil.
 + containerul standard. Titlu `text-emerald-50`, subtitlu `text-night-muted`.
 
 ### Citat founder (Despre)
-Tot corpul vorbit (paragrafele + closing) e un `<blockquote>` `font-newsreader italic`.
-Ghilimele pe tot blocul: RO `„…”`, EN `“…”`. Closing-ul rămâne accent `text-emerald-700 text-[24px] md:text-[26px]` cu `border-y border-rule`. Semnătura din coloana dreaptă e atribuirea. Chrome-ul paginii (eyebrow, h1, h2) rămâne Jakarta.
+Tot corpul vorbit (paragrafele + closing) e un `<blockquote>` `font-newsreader italic`, fără ghilimele.
+Closing-ul rămâne accent `text-emerald-700 text-[24px] md:text-[26px]` cu `border-y border-rule`. Semnătura din coloana dreaptă e atribuirea. Chrome-ul paginii (eyebrow, h1, h2) rămâne Jakarta.
 
 ### Header de pagină interioară
 Toate paginile în afară de homepage folosesc același antet. h1-ul e o treaptă
