@@ -177,3 +177,7 @@ This project has domain-specific skills available in `**/skills/**`. You MUST ac
 </laravel-boost-guidelines>
 
 @x-docs/design-system.md
+
+# Keep AGENTS.md and CLAUDE.md in sync
+
+If you modify `AGENTS.md` or `CLAUDE.md`, you MUST apply the same change to the other file. These two files must stay equivalent.
