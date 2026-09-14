@@ -16,7 +16,7 @@
             </h2>
 
             <blockquote class="m-0 font-newsreader italic">
-                <div class="flex flex-col gap-6 text-[19px] md:text-[20px] leading-[1.6] text-gray-700 text-pretty">
+                <div class="flex flex-col gap-6 text-[22px] md:text-[24px] leading-[1.55] text-gray-700 text-pretty">
                     <p>{{ __('messages.about.paragraph_1') }}</p>
                     <p>{{ __('messages.about.paragraph_2') }}</p>
                     <p>{{ __('messages.about.paragraph_3') }}</p>
