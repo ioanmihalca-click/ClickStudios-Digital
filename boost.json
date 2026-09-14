@@ -1,15 +1,16 @@
 {
     "agents": [
         "claude_code",
-        "gemini",
-        "copilot",
         "opencode"
     ],
+    "cloud": false,
     "guidelines": true,
-    "herd_mcp": false,
     "mcp": true,
+    "nightwatch": false,
     "sail": false,
     "skills": [
+        "infer-conventions",
+        "laravel-best-practices",
         "livewire-development",
         "tailwindcss-development"
     ]
