@@ -10,12 +10,12 @@
 <nav x-cloak x-data="{ isOpen: false }"
     class="sticky top-0 z-50 w-full border-b border-rule bg-canvas/[0.92] backdrop-blur-[8px]">
 
-    <div class="flex flex-wrap items-center justify-between gap-3 md:gap-6 px-6 md:px-12 py-[18px]">
+    <div class="max-w-[1280px] mx-auto flex flex-wrap items-center justify-between gap-3 md:gap-6 px-6 md:px-12 py-[18px]">
 
-        {{-- Wordmark --}}
         <a href="{{ route('home', ['locale' => App::getLocale()]) }}" wire:navigate
-            class="font-jakarta text-[13px] md:text-base font-extrabold tracking-[0.04em] text-gray-900 hover:text-gray-900">
-            CLICK STUDIOS<span class="text-emerald-600"> DIGITAL</span>
+            class="relative block h-10 w-[7.25rem] md:h-11 md:w-[8.5rem] overflow-hidden shrink-0">
+            <img src="{{ asset('assets/logo.jpg') }}" alt="{{ __('messages.brand') }}"
+                class="absolute left-1/2 top-1/2 h-[360%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2">
         </a>
 
         {{-- Desktop links --}}
@@ -132,7 +132,7 @@
         x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
         x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0"
         x-transition:leave-end="opacity-0 -translate-y-4" class="lg:hidden border-t border-rule bg-canvas">
-        <div class="flex flex-col px-6 py-3">
+        <div class="max-w-[1280px] mx-auto flex flex-col px-6 md:px-12 py-3">
             @foreach ($navLinks as $navRoute => $navLabel)
                 <a href="{{ route($navRoute, ['locale' => App::getLocale()]) }}" @click="isOpen = false" wire:navigate
                     @class([

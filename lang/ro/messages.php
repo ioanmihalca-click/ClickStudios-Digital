@@ -12,6 +12,8 @@ return [
         'toggle' => 'Meniu',
     ],
 
+    'brand' => 'Click Studios Digital',
+
     // Home page
     'hero' => [
         'tagline' => 'Dezvoltare Web & Marketing Digital',
@@ -90,8 +92,8 @@ return [
                 'title' => 'Soluții AI & Automatizare Procese',
                 'description' => 'Transformăm aplicațiile pasive în asistenți activi. Integrăm modele AI (Chat, RAG, Analiză) care preiau sarcinile repetitive, citesc documente și oferă răspunsuri instantanee.',
                 'delivery' => [
-                    'Sisteme RAG',
-                    'Asistenți Virtuali',
+                    'Agenți AI',
+                    'Automatizări',
                     'OCR Inteligent',
                 ],
             ],

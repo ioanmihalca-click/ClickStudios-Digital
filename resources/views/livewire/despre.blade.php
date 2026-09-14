@@ -15,16 +15,18 @@
                 {{ __('messages.about.heading') }}
             </h2>
 
-            <div class="flex flex-col gap-6 text-[17px] leading-[1.6] text-gray-600 text-pretty">
-                <p>{{ __('messages.about.paragraph_1') }}</p>
-                <p>{{ __('messages.about.paragraph_2') }}</p>
-                <p>{{ __('messages.about.paragraph_3') }}</p>
-            </div>
+            <blockquote class="m-0 font-newsreader italic">
+                <div class="flex flex-col gap-6 text-[19px] md:text-[20px] leading-[1.6] text-gray-700 text-pretty">
+                    <p>{{ App::getLocale() === 'en' ? '“' : '„' }}{{ __('messages.about.paragraph_1') }}</p>
+                    <p>{{ __('messages.about.paragraph_2') }}</p>
+                    <p>{{ __('messages.about.paragraph_3') }}</p>
+                </div>
 
-            <p
-                class="mt-10 py-8 border-y border-rule font-jakarta font-bold italic text-[22px] leading-[1.3] text-emerald-700 text-balance">
-                {{ __('messages.about.closing') }}
-            </p>
+                <p
+                    class="mt-10 py-8 border-y border-rule text-[24px] md:text-[26px] leading-[1.35] text-emerald-700 text-balance">
+                    {{ __('messages.about.closing') }}”
+                </p>
+            </blockquote>
         </div>
 
         <div class="pt-8 border-t border-rule md:pt-0 md:border-t-0 md:pl-8 md:border-l">

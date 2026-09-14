@@ -56,6 +56,7 @@ Restul culorilor sunt Tailwind standard și se folosesc ca atare:
 - **`font-jakarta`** — titluri. `font-extrabold` pentru h1/h2, `font-bold` pentru
   titluri de card și rânduri.
 - **`font-inter`** — body (setat pe `body`).
+- **`font-newsreader`** — citatul founderului pe Despre (italic real, self-hosted).
 - **`font-mono`** — doar eyebrow-uri și numerotări `01`–`05`.
 
 Scara reală folosită:
@@ -117,9 +118,9 @@ hover:translate-x-[2px] hover:translate-y-[2px]
 ```
 
 ### Nav
-`sticky top-0 z-50 w-full border-b border-rule bg-canvas/[0.92] backdrop-blur-[8px]`,
-rând interior `flex flex-wrap items-center justify-between gap-3 md:gap-6 px-6 md:px-12 py-[18px]`.
-Wordmark text (nu logo imagine): `CLICK STUDIOS` + `<span class="text-emerald-600"> DIGITAL</span>`.
+`sticky top-0 z-50 w-full border-b border-rule bg-canvas/[0.92] backdrop-blur-[8px]`.
+Rând interior `max-w-[1280px] mx-auto flex flex-wrap items-center justify-between gap-3 md:gap-6 px-6 md:px-12 py-[18px]` — același container ca paginile, ca logo-ul să coincidă cu conținutul. Bara (border) rămâne full-bleed.
+Logo imagine `assets/logo.jpg` (pătrat cu padding intern): box `h-10 w-[7.25rem] md:h-11 md:w-[8.5rem] overflow-hidden`, img `h-[360%] object` centrat. `alt` = `__('messages.brand')`.
 Link activ: `text-gray-900 border-b-2 border-emerald-600 pb-[2px]`; inactiv `text-gray-600`.
 
 ### Card
@@ -142,6 +143,10 @@ ca să treacă pe rândul doi pe mobil.
 ### Bandă CTA închisă
 `bg-night` pe secțiune; interior `flex flex-wrap items-center justify-between gap-8`
 + containerul standard. Titlu `text-emerald-50`, subtitlu `text-night-muted`.
+
+### Citat founder (Despre)
+Tot corpul vorbit (paragrafele + closing) e un `<blockquote>` `font-newsreader italic`.
+Ghilimele pe tot blocul: RO `„…”`, EN `“…”`. Closing-ul rămâne accent `text-emerald-700 text-[24px] md:text-[26px]` cu `border-y border-rule`. Semnătura din coloana dreaptă e atribuirea. Chrome-ul paginii (eyebrow, h1, h2) rămâne Jakarta.
 
 ### Header de pagină interioară
 Toate paginile în afară de homepage folosesc același antet. h1-ul e o treaptă
