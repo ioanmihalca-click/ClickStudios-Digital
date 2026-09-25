@@ -1,16 +1,46 @@
 <?php
 
 return [
-    'title' => 'Click Studios - Web Development & Digital Marketing',
-    'meta_description' => 'Click Studios Digital Agency from Baia Mare, Laravel and TALL Stack developers, complex web applications, web design, digital marketing, SEO, and audio-video production.',
-    'meta_keywords' => 'Click Studios Digital, Laravel, TALL stack, digital marketing agency, web development, SEO services, responsive web design, e-commerce, online marketing strategies, site optimization, organic traffic growth, PPC campaigns, social media marketing, content marketing, digital consultancy, web agency Baia Mare',
-    
-    'og' => [
-        'title' => 'Click Studios - Web Development & Digital Marketing',
-        'description' => 'Click Studios Digital Agency from Baia Mare, Laravel and TALL Stack developers, complex web applications, web design, digital marketing, SEO, and audio-video production.',
+    'title' => 'Click Studios Digital | Laravel Apps and Applied AI',
+    'meta_description' => 'Development studio from Baia Mare, Romania, building Laravel web applications and AI systems: RAG chatbots, OCR, automation, e-commerce and maintenance.',
+    'og_image_alt' => 'Click Studios Digital: web development and artificial intelligence',
+    'skip_to_content' => 'Skip to main content',
+    'scroll_to_top' => 'Back to top',
+    'next_page' => 'Next',
+
+    'seo' => [
+        'home' => [
+            'title' => 'Click Studios Digital | Laravel Apps and Applied AI',
+            'description' => 'Development studio from Baia Mare, Romania, building Laravel web applications and AI systems: RAG chatbots, OCR, automation, e-commerce and maintenance.',
+        ],
+        'services' => [
+            'title' => 'Laravel, AI and Design Services | Click Studios Digital',
+            'description' => 'Laravel software engineering, AI solutions and process automation, product design, scalable e-commerce and cloud maintenance by Click Studios Digital.',
+        ],
+        'portfolio' => [
+            'title' => 'Portfolio: Laravel and AI Projects | Click Studios Digital',
+            'description' => 'Case studies: SaaS platforms, AI applications and web products built by Click Studios Digital, from idea to production.',
+        ],
+        'about' => [
+            'title' => 'About Click Studios Digital and Founder Ioan Mihalca',
+            'description' => 'The story behind Click Studios Digital: web development built on Laravel and AI, with a partner\'s mindset, not a freelancer\'s.',
+        ],
+        'contact' => [
+            'title' => 'Contact | Click Studios Digital',
+            'description' => 'Tell us about your project. Click Studios Digital, Baia Mare, Romania: Laravel applications, AI integrations and digital products.',
+        ],
     ],
-    
+
     'schema' => [
-        'description' => 'Click Studios Digital Agency from Baia Mare, Laravel and TALL Stack developers, complex web applications, web design, digital marketing, SEO, and audio-video production.',
+        'description' => 'Development studio from Baia Mare, Romania: Laravel web applications, AI integrations (RAG chatbots, OCR, automation), product design, e-commerce and maintenance.',
+    ],
+
+    'markdown' => [
+        'summary' => 'Web development and applied AI studio from Baia Mare, Romania. We build Laravel applications, AI integrations (RAG chatbots, OCR, automation), product design and e-commerce.',
+        'pages' => 'Pages',
+        'projects' => 'Projects',
+        'other_language' => 'Această pagină în română',
+        'html_version' => 'HTML version',
+        'country' => 'Romania',
     ],
 ];

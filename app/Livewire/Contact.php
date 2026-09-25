@@ -3,12 +3,11 @@
 namespace App\Livewire;
 
 use App\Mail\ContactFormMail;
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\RateLimiter;
-use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Title('Contact | Click Studios Digital')]
 class Contact extends Component
 {
     public string $name = '';
@@ -94,8 +93,10 @@ class Contact extends Component
         }
     }
 
-    public function render(): \Illuminate\Contracts\View\View
+    public function render(): View
     {
-        return view('livewire.contact');
+        return view('livewire.contact')
+            ->title(__('app.seo.contact.title'))
+            ->layoutData(['description' => __('app.seo.contact.description')]);
     }
 }

@@ -17,7 +17,7 @@ class LocaleHelper
     public static function getAlternateUrls(): array
     {
         $currentRoute = Route::getCurrentRoute();
-        if (!$currentRoute) {
+        if (! $currentRoute) {
             return [];
         }
 
@@ -32,7 +32,7 @@ class LocaleHelper
 
             // Update the locale parameter while preserving other route parameters
             $params['locale'] = $locale;
-            
+
             try {
                 $url = route($name, $params, true);
                 $alternates[$locale] = $url;
@@ -44,12 +44,50 @@ class LocaleHelper
         return $alternates;
     }
 
+    /**
+     * The current page in every supported locale, for hreflang tags and the
+     * language switcher. Empty when the current route is not localized.
+     *
+     * @return array<string, string>
+     */
+    public static function getLocalizedUrls(): array
+    {
+        $route = Route::current();
+
+        if (! $route?->getName() || ! $route->hasParameter('locale')) {
+            return [];
+        }
+
+        $urls = [];
+
+        foreach (config('app.supported_locales') as $locale) {
+            $urls[$locale] = route($route->getName(), [...$route->parameters(), 'locale' => $locale]);
+        }
+
+        return $urls;
+    }
+
+    /**
+     * URL of the Markdown version of the current page, when one exists.
+     */
+    public static function getMarkdownUrl(): ?string
+    {
+        $route = Route::current();
+        $markdownRouteName = $route?->getName().'.markdown';
+
+        if (! $route?->getName() || ! Route::has($markdownRouteName)) {
+            return null;
+        }
+
+        return route($markdownRouteName, $route->parameters());
+    }
+
     public static function getCurrentLocale(): string
     {
         return App::getLocale();
     }
 
-    public static function getLocalizedRoute(string $name, array $parameters = [], string $locale = null): string
+    public static function getLocalizedRoute(string $name, array $parameters = [], ?string $locale = null): string
     {
         $locale = $locale ?? App::getLocale();
         $parameters['locale'] = $locale;
@@ -60,7 +98,7 @@ class LocaleHelper
     public static function getAlternateLocaleUrl(string $targetLocale): ?string
     {
         $currentRoute = Route::getCurrentRoute();
-        if (!$currentRoute) {
+        if (! $currentRoute) {
             return null;
         }
 
@@ -78,18 +116,18 @@ class LocaleHelper
     {
         $tags = [];
         $currentLocale = self::getCurrentLocale();
-        
+
         // Add x-default hreflang for homepage
         if (Request::path() === $currentLocale) {
-            $tags[] = '<link rel="alternate" href="' . url('/') . '" hreflang="x-default">';
+            $tags[] = '<link rel="alternate" href="'.url('/').'" hreflang="x-default">';
         }
 
         // Add current locale canonical
-        $tags[] = '<link rel="canonical" href="' . self::getCanonicalUrl() . '">';
+        $tags[] = '<link rel="canonical" href="'.self::getCanonicalUrl().'">';
 
         // Add alternate locale tags
         foreach (self::getAlternateUrls() as $locale => $url) {
-            $tags[] = '<link rel="alternate" hreflang="' . $locale . '" href="' . $url . '">';
+            $tags[] = '<link rel="alternate" hreflang="'.$locale.'" href="'.$url.'">';
         }
 
         return implode("\n    ", $tags);

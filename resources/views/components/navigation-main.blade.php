@@ -5,6 +5,7 @@
         'portfolio' => __('messages.menu.portfolio'),
         'about' => __('messages.menu.about'),
     ];
+    $localizedUrls = \App\Helpers\LocaleHelper::getLocalizedUrls();
 @endphp
 
 <nav x-cloak x-data="{ isOpen: false }"
@@ -19,14 +20,14 @@
         </a>
 
         {{-- Desktop links --}}
-        <div class="hidden lg:flex gap-7 text-[13.5px] font-medium">
+        <div class="hidden lg:flex gap-7 font-mono text-[12px] font-medium uppercase tracking-[0.08em]">
             @foreach ($navLinks as $navRoute => $navLabel)
                 <a href="{{ route($navRoute, ['locale' => App::getLocale()]) }}" wire:navigate
                     @class([
                         'transition-colors',
                         'text-gray-900 border-b-2 border-emerald-600 pb-[2px]' =>
-                            Route::currentRouteName() === $navRoute,
-                        'text-gray-600 hover:text-gray-900' => Route::currentRouteName() !== $navRoute,
+                            Route::is($navRoute, "$navRoute.*"),
+                        'text-gray-600 hover:text-gray-900' => ! Route::is($navRoute, "$navRoute.*"),
                     ])>
                     {{ $navLabel }}
                 </a>
@@ -73,7 +74,7 @@
                 <div
                     class="absolute right-0 z-50 invisible mt-1 origin-top-right scale-95 opacity-0 transition-all duration-200 bg-white border border-rule rounded-[4px] shadow-[3px_3px_0_#e5e5e0] min-w-[160px] py-1 group-hover:visible group-hover:scale-100 group-hover:opacity-100">
                     @foreach (['en' => 'English', 'ro' => 'Română'] as $switchLocale => $switchLabel)
-                        <a href="{{ route(Route::currentRouteName(), ['locale' => $switchLocale] + Route::current()->parameters()) }}"
+                        <a href="{{ $localizedUrls[$switchLocale] ?? route('home', ['locale' => $switchLocale]) }}" hreflang="{{ $switchLocale }}"
                             @class([
                                 'flex items-center w-full px-4 py-2.5 text-[13.5px] font-medium transition-colors',
                                 'bg-emerald-50 text-emerald-700' => App::getLocale() === $switchLocale,
@@ -109,7 +110,7 @@
 
             {{-- Desktop CTA --}}
             <a href="{{ route('contact', ['locale' => App::getLocale()]) }}" wire:navigate
-                class="hidden lg:inline-flex items-center text-[13px] font-semibold text-emerald-50 hover:text-emerald-50 bg-night rounded-[4px] px-5 py-[10px] shadow-[2px_2px_0_#059669] transition-all duration-[120ms] hover:shadow-[1px_1px_0_#059669] hover:translate-x-px hover:translate-y-px">
+                class="hidden lg:inline-flex items-center font-mono text-[12px] font-bold uppercase tracking-[0.06em] text-emerald-50 hover:text-emerald-50 bg-night rounded-[4px] px-5 py-[10px] shadow-[2px_2px_0_#059669] transition-all duration-[120ms] hover:shadow-[1px_1px_0_#059669] hover:translate-x-px hover:translate-y-px">
                 {{ __('messages.hero.contact_button') }}
             </a>
 
@@ -136,16 +137,16 @@
             @foreach ($navLinks as $navRoute => $navLabel)
                 <a href="{{ route($navRoute, ['locale' => App::getLocale()]) }}" @click="isOpen = false" wire:navigate
                     @class([
-                        'flex items-center py-3.5 text-[15px] font-medium border-b border-rule transition-colors',
-                        'text-emerald-700' => Route::currentRouteName() === $navRoute,
-                        'text-gray-700 hover:text-gray-900' => Route::currentRouteName() !== $navRoute,
+                        'flex items-center py-3.5 font-mono text-[13px] font-medium uppercase tracking-[0.08em] border-b border-rule transition-colors',
+                        'text-emerald-700' => Route::is($navRoute, "$navRoute.*"),
+                        'text-gray-700 hover:text-gray-900' => ! Route::is($navRoute, "$navRoute.*"),
                     ])>
                     {{ $navLabel }}
                 </a>
             @endforeach
 
             <a href="{{ route('contact', ['locale' => App::getLocale()]) }}" @click="isOpen = false" wire:navigate
-                class="inline-flex items-center justify-center mt-4 mb-2 text-[14.5px] font-semibold text-emerald-50 hover:text-emerald-50 bg-night rounded-[4px] px-6 py-3.5 shadow-[3px_3px_0_#059669] transition-all duration-[120ms] hover:shadow-[1px_1px_0_#059669] hover:translate-x-[2px] hover:translate-y-[2px]">
+                class="inline-flex items-center justify-center mt-4 mb-2 font-mono text-[13px] font-bold uppercase tracking-[0.06em] text-emerald-50 hover:text-emerald-50 bg-night rounded-[4px] px-6 py-3.5 shadow-[3px_3px_0_#059669] transition-all duration-[120ms] hover:shadow-[1px_1px_0_#059669] hover:translate-x-[2px] hover:translate-y-[2px]">
                 {{ __('messages.hero.contact_button') }}
             </a>
         </div>

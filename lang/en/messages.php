@@ -25,6 +25,8 @@ return [
         'contact_button' => 'Contact Us',
         'eyebrow' => 'Web Development × Artificial Intelligence',
         'portfolio_button' => 'View portfolio',
+        'systems' => 'Click Studios · systems',
+        'online' => ':count online',
         'credentials' => [
             'laravel' => [
                 'title' => 'Laravel Enterprise',
@@ -281,6 +283,29 @@ return [
         'technologies' => 'Technologies Used',
         'video_preview' => 'Video Preview',
         'visit_project' => 'Visit Project',
+        'status' => [
+            'live' => 'Live',
+            'beta' => 'Beta',
+            'in-development' => 'In development',
+            'archived' => 'Archived',
+        ],
+        'file' => 'Project file',
+        'fields' => [
+            'status' => 'Status',
+            'year' => 'Year',
+            'category' => 'Category',
+            'stack' => 'Stack',
+            'link' => 'Link',
+        ],
+        'all_projects' => 'All projects',
+        'previous' => 'Previous',
+        'next' => 'Next',
+        'case_study' => 'Case study',
+        'cta' => [
+            'title' => 'Have a similar project in mind?',
+            'subtitle' => 'Tell us what you want to build and we will get back to you.',
+            'button' => 'Start a conversation',
+        ],
     ],
 
     // Footer

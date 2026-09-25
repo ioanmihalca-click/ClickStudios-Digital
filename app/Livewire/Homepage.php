@@ -2,14 +2,18 @@
 
 namespace App\Livewire;
 
-use Livewire\Attributes\Title;
+use App\Models\PortfolioItem;
+use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
-#[Title('Click Studios Digital')]
 class Homepage extends Component
 {
-    public function render()
+    public function render(): View
     {
-        return view('livewire.homepage');
+        return view('livewire.homepage', [
+            'projects' => PortfolioItem::query()->visible()->get(),
+        ])
+            ->title(__('app.seo.home.title'))
+            ->layoutData(['description' => __('app.seo.home.description')]);
     }
 }

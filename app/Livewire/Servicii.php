@@ -2,23 +2,15 @@
 
 namespace App\Livewire;
 
+use Illuminate\Contracts\View\View;
 use Livewire\Component;
-use Livewire\Attributes\Title;
-use Livewire\Attributes\Layout;
-use Illuminate\Support\Facades\App;
 
-#[Title('Services | Click Studios Digital')]
 class Servicii extends Component
 {
-    public function render()
+    public function render(): View
     {
-        // Get current locale (just for reference)
-        $locale = App::getLocale();
-
-        // Don't try to load any translations here
-        // Instead, pass only the necessary data for the view
-
-        // We don't need to preload the translations - let the view handle it
-        return view('livewire.servicii');
+        return view('livewire.servicii')
+            ->title(__('app.seo.services.title'))
+            ->layoutData(['description' => __('app.seo.services.description')]);
     }
 }

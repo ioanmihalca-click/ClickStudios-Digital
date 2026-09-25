@@ -25,6 +25,8 @@ return [
         'contact_button' => 'Contactează-ne',
         'eyebrow' => 'Dezvoltare Web × Inteligență Artificială',
         'portfolio_button' => 'Vezi portofoliul',
+        'systems' => 'Click Studios · sisteme',
+        'online' => ':count online',
         'credentials' => [
             'laravel' => [
                 'title' => 'Laravel Enterprise',
@@ -281,6 +283,29 @@ return [
         'technologies' => 'Tehnologii Utilizate',
         'video_preview' => 'Previzualizare Video',
         'visit_project' => 'Vizitează Proiectul',
+        'status' => [
+            'live' => 'Live',
+            'beta' => 'Beta',
+            'in-development' => 'În dezvoltare',
+            'archived' => 'Arhivat',
+        ],
+        'file' => 'Fișă proiect',
+        'fields' => [
+            'status' => 'Status',
+            'year' => 'An',
+            'category' => 'Categorie',
+            'stack' => 'Stack',
+            'link' => 'Link',
+        ],
+        'all_projects' => 'Toate proiectele',
+        'previous' => 'Anterior',
+        'next' => 'Următor',
+        'case_study' => 'Studiu de caz',
+        'cta' => [
+            'title' => 'Ai în minte un proiect similar?',
+            'subtitle' => 'Spune-ne ce vrei să construiești și revenim cu un răspuns.',
+            'button' => 'Hai să discutăm',
+        ],
     ],
 
     // Footer

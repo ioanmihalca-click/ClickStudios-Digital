@@ -2,14 +2,15 @@
 
 namespace App\Livewire;
 
-use Livewire\Attributes\Title;
+use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
-#[Title('Despre | Click Studios Digital')]
 class Despre extends Component
 {
-    public function render()
+    public function render(): View
     {
-        return view('livewire.despre');
+        return view('livewire.despre')
+            ->title(__('app.seo.about.title'))
+            ->layoutData(['description' => __('app.seo.about.description')]);
     }
 }

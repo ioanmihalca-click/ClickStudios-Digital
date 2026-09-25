@@ -1,15 +1,105 @@
+@php
+    $locale = App::getLocale();
+    $business = config('site.business');
+    $localizedUrls = \App\Helpers\LocaleHelper::getLocalizedUrls();
+    $markdownUrl = \App\Helpers\LocaleHelper::getMarkdownUrl();
+
+    $pageTitle = $title ?? __('app.title');
+    $pageDescription = $description ?? __('app.meta_description');
+    $pageOgImage = $ogImage ?? null;
+    $ogLocales = ['ro' => 'ro_RO', 'en' => 'en_US'];
+
+    $pages = config('site.pages');
+    $currentPageIndex = array_search(Route::currentRouteName(), $pages, true);
+    $nextPage = $currentPageIndex === false ? null : $pages[($currentPageIndex + 1) % count($pages)];
+
+    $serviceOffers = [];
+    foreach (['infrastructure', 'ai', 'ui_ux', 'ecommerce', 'maintenance'] as $serviceKey) {
+        $serviceOffers[] = [
+            '@type' => 'Offer',
+            'itemOffered' => [
+                '@type' => 'Service',
+                'name' => __("messages.services.categories.$serviceKey.title"),
+                'description' => __("messages.services.categories.$serviceKey.description"),
+            ],
+        ];
+    }
+
+    $structuredData = [
+        '@context' => 'https://schema.org',
+        '@graph' => [
+            [
+                '@type' => ['ProfessionalService', 'Organization'],
+                '@id' => url('/') . '#organization',
+                'name' => $business['name'],
+                'description' => __('app.schema.description'),
+                'url' => url('/'),
+                'logo' => ['@type' => 'ImageObject', 'url' => asset('assets/logo.jpg')],
+                'image' => asset('assets/logo.jpg'),
+                'telephone' => $business['phone'],
+                'email' => $business['email'],
+                'address' => [
+                    '@type' => 'PostalAddress',
+                    'streetAddress' => $business['street'],
+                    'addressLocality' => $business['locality'],
+                    'addressRegion' => $business['region'],
+                    'postalCode' => $business['postal_code'],
+                    'addressCountry' => $business['country'],
+                ],
+                'geo' => [
+                    '@type' => 'GeoCoordinates',
+                    'latitude' => $business['latitude'],
+                    'longitude' => $business['longitude'],
+                ],
+                'openingHours' => ['Mo-Fr 09:00-17:00'],
+                'areaServed' => ['@type' => 'Country', 'name' => 'Romania'],
+                'knowsAbout' => ['Laravel', 'Artificial Intelligence', 'Web Development', 'Software Architecture'],
+                'hasOfferCatalog' => [
+                    '@type' => 'OfferCatalog',
+                    'name' => __('messages.menu.services'),
+                    'itemListElement' => $serviceOffers,
+                ],
+                'sameAs' => array_values($business['social']),
+            ],
+            [
+                '@type' => 'WebSite',
+                '@id' => url('/') . '#website',
+                'name' => $business['name'],
+                'url' => url('/'),
+                'inLanguage' => ['ro', 'en'],
+                'publisher' => ['@id' => url('/') . '#organization'],
+            ],
+            ...array_map(fn (array $node): array => array_filter($node, fn (mixed $value): bool => $value !== null), $jsonLd ?? []),
+        ],
+    ];
+@endphp
 <!DOCTYPE html>
-<html class="scroll-smooth overscroll-none" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html class="scroll-smooth overscroll-none" lang="{{ str_replace('_', '-', $locale) }}">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $title ?? __('app.title') }}</title>
+    <title>{{ $pageTitle }}</title>
+    <meta name="description" content="{{ $pageDescription }}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#fafaf8">
     <link rel="canonical" href="{{ url()->current() }}">
 
-    <meta name="description" content="{{ $description ?? __('app.meta_description') }}">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="keywords" content="{{ __('app.meta_keywords') }}" />
+    {{-- Language versions --}}
+    @foreach ($localizedUrls as $alternateLocale => $alternateUrl)
+        <link rel="alternate" hreflang="{{ $alternateLocale }}" href="{{ $alternateUrl }}">
+    @endforeach
+    @if ($localizedUrls)
+        @php
+            $defaultLanguageUrl = Route::currentRouteName() === 'home' ? url('/') : $localizedUrls[config('app.fallback_locale')];
+        @endphp
+        <link rel="alternate" hreflang="x-default" href="{{ $defaultLanguageUrl }}">
+    @endif
+
+    {{-- Markdown for agents: same page as text/markdown --}}
+    @if ($markdownUrl)
+        <link rel="alternate" type="text/markdown" href="{{ $markdownUrl }}">
+    @endif
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('assets/favicon/favicon-96x96.png') }}" sizes="96x96" />
@@ -17,119 +107,34 @@
     <link rel="shortcut icon" href="{{ asset('assets/favicon/favicon.ico') }}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}" />
     <meta name="apple-mobile-web-app-title" content="ClickStudiosDigital" />
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/669bfeabc1.js" crossorigin="anonymous"></script>
 
-    <!-- Open Graph Tags for Social Media Sharing -->
-    <meta property="og:title" content="{{ __('app.og.title') }}" />
-    <meta property="og:description" content="{{ __('app.og.description') }}" />
-    <meta property="og:image" content="{{ asset('assets/OG-Click-Studios-Digital.webp') }}" />
-    <meta property="og:image:type" content="image/webp">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Click Studios - Dezvoltare Web si Marketing Digital" />
+    <link rel="preload" href="/fonts/jetbrains-mono/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ $pageTitle }}" />
+    <meta property="og:description" content="{{ $pageDescription }}" />
     <meta property="og:url" content="{{ url()->current() }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="ro_RO" />
-    <meta property="og:site_name" content="Click Studios Digital" />
+    <meta property="og:type" content="{{ $ogType ?? 'website' }}" />
+    <meta property="og:site_name" content="{{ $business['name'] }}" />
+    <meta property="og:locale" content="{{ $ogLocales[$locale] }}" />
+    @foreach ($ogLocales as $ogLocale => $ogLocaleCode)
+        @if ($ogLocale !== $locale)
+            <meta property="og:locale:alternate" content="{{ $ogLocaleCode }}" />
+        @endif
+    @endforeach
+    @if ($pageOgImage)
+        <meta property="og:image" content="{{ $pageOgImage }}" />
+        <meta property="og:image:alt" content="{{ $pageTitle }}" />
+    @else
+        <meta property="og:image" content="{{ asset('assets/OG-Click-Studios-Digital.webp') }}" />
+        <meta property="og:image:type" content="image/webp">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt" content="{{ __('app.og_image_alt') }}" />
+    @endif
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Local Business Schema Markup -->
-    <script type="application/ld+json">
-{
-  "@@context": "https://schema.org",
-  "@@type": ["ProfessionalService", "Organization"],
-  "name": "Click Studios Digital",
-  "description": "{{ __('app.schema.description') }}",
-  "image": "{{ asset('assets/logo.jpg') }}",
-  "url": "{{ url('/') }}",
-  "telephone": "+40734411115",
-  "email": "contact@clickstudios-digital.com",
-  "address": {
-    "@@type": "PostalAddress",
-    "streetAddress": "Nisiparilor 35",
-    "addressLocality": "Baia Mare",
-    "addressRegion": "Maramures",
-    "postalCode": "430122",
-    "addressCountry": "RO"
-  },
-  "geo": {
-    "@@type": "GeoCoordinates",
-    "latitude": "47.6573",
-    "longitude": "23.5705"
-  },
-  "openingHours": [
-    "Mo-Fr 09:00-17:00"
-  ],
-  "knowsAbout": [
-    "Laravel Development",
-    "Artificial Intelligence",
-    "Web Development",
-    "Software Architecture"
-  ],
-  "hasOfferCatalog": {
-    "@@type": "OfferCatalog",
-    "name": "Digital Services",
-    "itemListElement": [
-      {
-        "@@type": "Offer",
-        "itemOffered": {
-          "@@type": "Service",
-          "name": "Software Engineering & Laravel Architecture",
-          "description": "Mission-critical web applications, complex APIs, and microservices with maximum security and zero downtime."
-        }
-      },
-      {
-        "@@type": "Offer",
-        "itemOffered": {
-          "@@type": "Service",
-          "name": "AI Solutions & Process Automation",
-          "description": "AI model integrations (Chat, RAG, Analysis) that automate repetitive tasks, read documents, and provide instant answers."
-        }
-      },
-      {
-        "@@type": "Offer",
-        "itemOffered": {
-          "@@type": "Service",
-          "name": "Product Design & User Experience",
-          "description": "Interfaces that hide heavy logic behind fluid visual experiences, designed for conversion and clarity."
-        }
-      },
-      {
-        "@@type": "Offer",
-        "itemOffered": {
-          "@@type": "Service",
-          "name": "Scalable E-commerce Ecosystems",
-          "description": "Sales systems built for stability, from inventory management to optimized checkouts with continuous and secure transactional flow."
-        }
-      },
-      {
-        "@@type": "Offer",
-        "itemOffered": {
-          "@@type": "Service",
-          "name": "Maintenance & Cloud Infrastructure",
-          "description": "Proactive technical support with security updates, uptime monitoring, and server optimization for long-term partnership."
-        }
-      }
-    ]
-  },
-  "sameAs": [
-    "https://github.com/ioanmihalca-click",
-    "https://www.tiktok.com/@clickstudiosdigital",
-    "https://www.youtube.com/@clickstudiosdigital"
-  ],
-  "paymentAccepted": ["cash", "credit card"],
-  "currenciesAccepted": "RON",
-  "logo": {
-    "@@type": "ImageObject",
-    "url": "{{ asset('assets/logo.jpg') }}"
-  },
-  "areaServed": {
-    "@@type": "Country",
-    "name": "Romania"
-  }
-}
-</script>
-
+    <script type="application/ld+json">{!! json_encode($structuredData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) !!}</script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -148,12 +153,12 @@
 
 </head>
 
-<body class="flex flex-col min-h-screen bg-canvas font-inter text-gray-900 overflow-x-hidden antialiased"
+<body class="flex flex-col min-h-screen bg-canvas bg-grid font-inter text-gray-900 overflow-x-hidden antialiased"
     x-data="{ scrollToTop: false }" x-on:scroll.window="scrollToTop = window.scrollY > 100">
 
     <a href="#main-content"
-        class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-emerald-700 focus:font-bold">
-        Sari la conținut principal
+        class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:border focus:border-night focus:rounded-[4px] focus:font-mono focus:text-[13px] focus:font-bold focus:text-emerald-700">
+        {{ __('app.skip_to_content') }}
     </a>
 
     <x-navigation-main />
@@ -162,29 +167,40 @@
         {{ $slot }}
     </main>
 
-    <!-- Footer -->
-    <footer class="relative z-30 w-full">
-        <div
-            class="flex flex-wrap items-center justify-between gap-4 max-w-[1280px] mx-auto px-6 md:px-12 py-4 text-xs text-gray-500">
-            <span>&copy; {{ date('Y') }} Click Studios Digital &middot; Baia Mare</span>
-            <span class="flex flex-wrap gap-[18px]">
-                <a href="https://github.com/ioanmihalca-click" target="_blank" rel="noopener noreferrer nofollow"
-                    class="text-gray-500 hover:text-gray-900 transition-colors">GitHub</a>
-                <a href="https://www.tiktok.com/@clickstudiosdigital" target="_blank" rel="noopener noreferrer nofollow"
-                    class="text-gray-500 hover:text-gray-900 transition-colors">TikTok</a>
-                <a href="https://www.youtube.com/@clickstudiosdigital" target="_blank" rel="noopener noreferrer nofollow"
-                    class="text-gray-500 hover:text-gray-900 transition-colors">YouTube</a>
-                <a href="mailto:contact@clickstudios-digital.com"
-                    class="text-emerald-700 hover:text-emerald-800 transition-colors">contact@clickstudios-digital.com</a>
-            </span>
+    <footer class="relative z-30 w-full border-t border-rule bg-canvas">
+        <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+            @if ($nextPage)
+                <a href="{{ route($nextPage, ['locale' => $locale]) }}" wire:navigate
+                    class="group flex items-center justify-between gap-4 py-6 border-b border-rule font-mono text-[11px] tracking-[0.16em] uppercase text-gray-500">
+                    <span>@clickstudiosdigital</span>
+                    <span class="flex items-center gap-2 text-gray-900 transition-colors group-hover:text-emerald-700">
+                        {{ __('app.next_page') }}: {{ __("messages.menu.$nextPage") }}
+                        <x-arrow class="transition-transform group-hover:translate-x-0.5" />
+                    </span>
+                </a>
+            @endif
+
+            <div class="flex flex-wrap items-center justify-between gap-4 py-4 text-xs text-gray-500">
+                <span>&copy; {{ date('Y') }} {{ $business['name'] }} &middot; {{ $business['locality'] }}</span>
+                <span class="flex flex-wrap gap-[18px]">
+                    @foreach ($business['social'] as $network => $profileUrl)
+                        <a href="{{ $profileUrl }}" target="_blank" rel="noopener noreferrer"
+                            class="text-gray-500 transition-colors hover:text-gray-900">{{ $network }}</a>
+                    @endforeach
+                    <a href="mailto:{{ $business['email'] }}"
+                        class="text-emerald-700 transition-colors hover:text-emerald-800">{{ $business['email'] }}</a>
+                </span>
+            </div>
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
     <button x-show="scrollToTop" x-cloak @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
-        aria-label="Derulează la începutul paginii"
-        class="fixed bottom-4 right-4 z-50 flex items-center justify-center w-11 h-11 text-sm rounded-[4px] bg-night text-emerald-50 shadow-[2px_2px_0_#059669] transition-all duration-[120ms] hover:shadow-[1px_1px_0_#059669] hover:translate-x-px hover:translate-y-px">
-        <i class="fa-solid fa-angles-up"></i>
+        aria-label="{{ __('app.scroll_to_top') }}"
+        class="fixed bottom-4 right-4 z-50 flex items-center justify-center w-11 h-11 rounded-[4px] bg-night text-emerald-50 shadow-[2px_2px_0_#059669] transition-all duration-[120ms] hover:shadow-[1px_1px_0_#059669] hover:translate-x-px hover:translate-y-px">
+        <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="square" aria-hidden="true">
+            <path d="M8 14V3M4 7l4-4 4 4" />
+        </svg>
     </button>
 
 </body>

@@ -77,6 +77,7 @@ export RAYON_NUM_THREADS=2 TOKIO_WORKER_THREADS=2 UV_THREADPOOL_SIZE=2
 npm ci --no-audit --no-fund
 npm run build
 rm -f public/hot # rămas din dev; dacă există, @vite ignoră manifestul și trimite browserul la serverul Vite
+rm -f public/sitemap.xml # sitemap-ul e acum rută dinamică; un fișier static rămas l-ar umbri (LiteSpeed servește întâi fișierul)
 
 # Plasă de siguranță: vite poate ieși cu 0 și un build parțial. Fără asta,
 # lipsa s-ar vedea abia în browser, ca „Unable to locate file in Vite manifest".

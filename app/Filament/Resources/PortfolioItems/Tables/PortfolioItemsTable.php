@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\PortfolioItems\Tables;
 
+use App\Enums\PortfolioStatus;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -20,6 +21,17 @@ class PortfolioItemsTable
                 ImageColumn::make('image'),
                 TextColumn::make('title')
                     ->searchable()
+                    ->sortable(),
+                TextColumn::make('status')
+                    ->badge()
+                    ->formatStateUsing(fn (PortfolioStatus $state): string => $state->label())
+                    ->color(fn (PortfolioStatus $state): string => match ($state) {
+                        PortfolioStatus::Live => 'success',
+                        PortfolioStatus::Beta => 'info',
+                        PortfolioStatus::InDevelopment => 'warning',
+                        PortfolioStatus::Archived => 'gray',
+                    }),
+                TextColumn::make('year')
                     ->sortable(),
                 IconColumn::make('is_featured')
                     ->boolean(),

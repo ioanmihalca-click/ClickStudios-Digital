@@ -1,17 +1,30 @@
+@php
+    $business = config('site.business');
+@endphp
+
 <div>
-    <header class="max-w-[1280px] mx-auto px-6 md:px-12 pt-20 pb-14 border-b border-rule">
-        <div class="font-mono text-xs tracking-[0.14em] uppercase text-emerald-600 mb-[22px]">
-            {{ __('messages.contact.tagline') }}
-        </div>
-        <h1
-            class="font-jakarta font-extrabold text-[30px] md:text-[clamp(40px,4.5vw,60px)] leading-[1.05] tracking-[-0.02em] uppercase text-gray-900 text-balance">
+    <x-page-header :eyebrow="__('messages.contact.tagline')">
+        <x-slot:title>
             {{ __('messages.contact.title') }}
             <span class="text-emerald-600">{{ __('messages.contact.title_gradient') }}</span>
-        </h1>
-        <p class="mt-6 max-w-[640px] text-[17px] leading-[1.6] text-gray-600 text-pretty">
-            {{ __('messages.contact.subtitle') }}
-        </p>
-    </header>
+        </x-slot:title>
+        <x-slot:subtitle>{{ __('messages.contact.subtitle') }}</x-slot:subtitle>
+
+        <x-slot:aside>
+            <x-status-panel :label="__('messages.contact.info.title')">
+                <x-status-panel.row glyph="triangle" :name="__('messages.contact.info.email')"
+                    :href="'mailto:' . $business['email']">
+                    <span class="text-emerald-700 break-all">{{ $business['email'] }}</span>
+                </x-status-panel.row>
+                <x-status-panel.row glyph="square" :name="__('messages.contact.info.phone')"
+                    :href="'tel:' . $business['phone']" :meta="$business['phone_display']" />
+                <x-status-panel.row glyph="circle" :name="__('messages.contact.info.address')"
+                    :meta="$business['street'] . ', ' . $business['locality']" />
+                <x-status-panel.row glyph="hexagon" :name="__('messages.contact.info.hours')"
+                    :meta="__('messages.contact.info.hours_value')" />
+            </x-status-panel>
+        </x-slot:aside>
+    </x-page-header>
 
     <section class="max-w-[1280px] mx-auto px-6 md:px-12 py-14">
         <div class="max-w-[720px]">
@@ -107,7 +120,7 @@
                 </div>
 
                 <button type="submit" wire:loading.attr="disabled" wire:loading.class="opacity-75"
-                    class="inline-flex items-center gap-[9px] bg-night text-emerald-50 font-semibold text-[14.5px] px-[30px] py-[15px] rounded-[4px] shadow-[3px_3px_0_#059669] transition-all duration-[120ms] hover:shadow-[1px_1px_0_#059669] hover:translate-x-[2px] hover:translate-y-[2px]">
+                    class="inline-flex items-center gap-[10px] bg-night text-emerald-50 font-mono font-bold text-[13px] uppercase tracking-[0.06em] px-[26px] py-[15px] rounded-[4px] shadow-[3px_3px_0_#059669] transition-all duration-[120ms] hover:shadow-[1px_1px_0_#059669] hover:translate-x-[2px] hover:translate-y-[2px]">
                     <span wire:loading.remove>{{ __('messages.contact.form.submit') }}</span>
                     <span wire:loading class="inline-flex items-center gap-2">
                         <svg class="w-4 h-4 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none"
