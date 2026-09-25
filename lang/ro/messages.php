@@ -27,6 +27,7 @@ return [
         'portfolio_button' => 'Vezi portofoliul',
         'systems' => 'Click Studios · sisteme',
         'online' => ':count online',
+        'more_projects' => '+:count proiecte',
         'credentials' => [
             'laravel' => [
                 'title' => 'Laravel Enterprise',

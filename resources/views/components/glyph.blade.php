@@ -19,6 +19,10 @@
             <path d="M6 .5l5 2.9v5.2l-5 2.9-5-2.9V3.4z" />
         @break
 
+        @case('plus')
+            <path d="M5 1h2v4h4v2H7v4H5V7H1V5h4z" />
+        @break
+
         @case('diamond')
             <path d="M6 .5L11.5 6 6 11.5.5 6z" />
         @break

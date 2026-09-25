@@ -106,6 +106,20 @@ class PortfolioPagesTest extends TestCase
             ->assertSee('1 online');
     }
 
+    public function test_the_hero_panel_lists_five_projects_and_links_to_the_rest(): void
+    {
+        foreach (range(1, 7) as $number) {
+            PortfolioItem::factory()->create(['title' => "Project $number", 'sort_order' => $number]);
+        }
+
+        $this->get('/en')
+            ->assertOk()
+            ->assertSee('Project 5')
+            ->assertDontSee('Project 6')
+            ->assertSee('+2 more projects')
+            ->assertSee('7 online');
+    }
+
     public function test_public_pages_render_without_raw_translation_keys(): void
     {
         $item = PortfolioItem::factory()->create();

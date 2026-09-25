@@ -27,6 +27,7 @@ return [
         'portfolio_button' => 'View portfolio',
         'systems' => 'Click Studios · systems',
         'online' => ':count online',
+        'more_projects' => '+:count more projects',
         'credentials' => [
             'laravel' => [
                 'title' => 'Laravel Enterprise',

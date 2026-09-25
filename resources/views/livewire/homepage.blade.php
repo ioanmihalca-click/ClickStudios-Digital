@@ -4,6 +4,8 @@
     $serviceKeys = ['infrastructure', 'ai', 'ui_ux', 'ecommerce', 'maintenance'];
     $glyphs = ['triangle', 'square', 'circle', 'hexagon', 'diamond'];
     $onlineProjects = $projects->filter(fn ($project) => $project->status?->isPubliclyAvailable() ?? filled($project->website_url));
+    $panelProjects = $projects->take(5);
+    $hiddenProjectCount = $projects->count() - $panelProjects->count();
 @endphp
 
 <div>
@@ -57,12 +59,19 @@
 
                     <x-status-panel :label="__('messages.hero.systems')"
                         :status="__('messages.hero.online', ['count' => $onlineProjects->count()])">
-                        @foreach ($projects as $project)
+                        @foreach ($panelProjects as $project)
                             <x-status-panel.row :glyph="$glyphs[$loop->index % count($glyphs)]" :name="$project->getLocalizedTitle()"
                                 :meta="$project->getLocalizedCategory() ?? $project->status?->label()"
                                 :href="route('portfolio.show', ['locale' => $locale, 'portfolioItem' => $project->slug])"
                                 wire:key="system-{{ $project->id }}" />
                         @endforeach
+
+                        @if ($hiddenProjectCount > 0)
+                            <x-status-panel.row glyph="plus" :name="__('messages.hero.more_projects', ['count' => $hiddenProjectCount])"
+                                :href="route('portfolio', ['locale' => $locale])">
+                                <x-arrow class="text-emerald-700 transition-transform group-hover:translate-x-0.5" />
+                            </x-status-panel.row>
+                        @endif
                     </x-status-panel>
                 </div>
             @endif
