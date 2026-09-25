@@ -37,10 +37,13 @@
         {{-- Right cluster --}}
         <div class="flex items-center gap-3">
 
-            {{-- Language switcher --}}
-            <div class="relative group">
-                <button type="button" aria-label="{{ __('messages.language') }}"
-                    class="flex items-center px-2 py-2 rounded-[4px] border border-rule bg-white text-gray-700 transition-colors hover:bg-row-hover">
+            {{-- Language switcher. Opens on tap/click (touch screens have no hover: Tailwind v4 wraps hover: in
+                 @media (hover: hover)), and still on hover where a pointer exists. --}}
+            <div class="relative group" x-data="{ languageOpen: false }" @click.outside="languageOpen = false"
+                @keydown.escape.window="languageOpen = false">
+                <button type="button" aria-label="{{ __('messages.language') }}" aria-haspopup="true"
+                    :aria-expanded="languageOpen" @click="languageOpen = ! languageOpen"
+                    class="flex items-center h-11 lg:h-9 px-2.5 rounded-[4px] border border-rule bg-white text-gray-700 transition-colors hover:bg-row-hover">
                     @if (App::getLocale() === 'en')
                         <span class="inline-flex items-center justify-center w-5 h-5 overflow-hidden rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-full h-full">
@@ -65,18 +68,19 @@
                         </span>
                     @endif
                     <svg class="w-4 h-4 ml-1 text-gray-500 transition-transform duration-300 group-hover:rotate-180"
+                        :class="languageOpen && 'rotate-180'"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </button>
 
-                <div
-                    class="absolute right-0 z-50 invisible mt-1 origin-top-right scale-95 opacity-0 transition-all duration-200 bg-white border border-rule rounded-[4px] shadow-[3px_3px_0_#e5e5e0] min-w-[160px] py-1 group-hover:visible group-hover:scale-100 group-hover:opacity-100">
+                <div :class="languageOpen ? 'visible scale-100 opacity-100' : 'invisible scale-95 opacity-0'"
+                    class="absolute right-0 z-50 mt-1 origin-top-right transition-all duration-200 bg-white border border-rule rounded-[4px] shadow-[3px_3px_0_#e5e5e0] min-w-[160px] py-1 group-hover:visible group-hover:scale-100 group-hover:opacity-100">
                     @foreach (['en' => 'English', 'ro' => 'Română'] as $switchLocale => $switchLabel)
                         <a href="{{ $localizedUrls[$switchLocale] ?? route('home', ['locale' => $switchLocale]) }}" hreflang="{{ $switchLocale }}"
                             @class([
-                                'flex items-center w-full px-4 py-2.5 text-[13.5px] font-medium transition-colors',
+                                'flex items-center w-full px-4 py-3 text-[13.5px] font-medium transition-colors',
                                 'bg-emerald-50 text-emerald-700' => App::getLocale() === $switchLocale,
                                 'text-gray-700 hover:bg-row-hover' => App::getLocale() !== $switchLocale,
                             ])>
